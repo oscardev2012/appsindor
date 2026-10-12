@@ -1,0 +1,48 @@
+@page "/roof-claim-process"
+@{
+    ViewData["Lang"] = "en";
+    ViewData["SeoEn"] = "/roof-claim-process";
+    ViewData["SeoEs"] = "/es/proceso-de-reclamo-de-techo";
+}
+<main class="resource-site" lang="en">
+    @await Html.PartialAsync("_SeoIntentHeader")
+    <section class="resource-hero area-charlotte">
+        <div class="site-shell">
+            <p class="eyebrow eyebrow-light">Roof insurance claim process</p>
+            <h1>Roof Claim Process: What Happens After You File</h1>
+            <p>The homeowner files the claim with the insurance company. Majestic documents the roof, can attend a scheduled adjuster visit when you authorize it, and builds to a written construction scope. The carrier decides coverage, depreciation and payment. We do not approve claims.</p>
+            <div class="hero-actions">
+                <a class="button button-gold" href="/roof-insurance-claim-charlotte-nc">Charlotte claim documentation</a>
+                <a class="button button-ghost" href="/roof-claim-denied-or-underpaid">Denied or underpaid</a>
+            </div>
+        </div>
+    </section>
+    <section class="resource-body section" id="process">
+        <div class="site-shell resource-sections">
+            <article><span>01</span><div>
+                <h2>Typical steps after a storm</h2>
+                <p>Document damage from the ground when it is safe. Call your carrier and open a claim. Request a copy of the estimate when it exists. Share photos and the claim number with Majestic if you want a contractor inspection. Compare the carrier line items to the actual roof system—not to a sales pitch.</p>
+            </div></article>
+            <article><span>02</span><div>
+                <h2>Inspection, estimate and supplements</h2>
+                <p>If the first estimate misses flashing, ventilation, code items or hidden decking, a supplement may be appropriate. That is a construction conversation with the carrier, not a promise of more money. Read <a class="official-link" href="/roof-insurance-supplements-charlotte-nc">supplements</a> and <a class="official-link" href="/roof-adjuster-visit-guide-charlotte-nc">the adjuster meeting</a>.</p>
+            </div></article>
+            <article><span>03</span><div>
+                <h2>Who decides coverage</h2>
+                <p>North Carolina consumers can use NCDOI resources for claim questions. Majestic is the roofing contractor. We do not waive deductibles, guarantee approval or speak as if we were the insurer.</p>
+            </div></article>
+        </div>
+    </section>
+    <section class="faq-section section" id="faq">
+        <div class="site-shell faq-layout">
+            <div><p class="eyebrow">FAQ</p><h2>Process questions</h2></div>
+            <div class="faq-list">
+                <details><summary>Should I file a roof insurance claim?<span>+</span></summary><p>That is a policy and deductible decision for you and your carrier. An inspection can tell you what the roof needs. It cannot tell you what the carrier will pay.</p></details>
+                <details><summary>How long does a roof insurance claim take?<span>+</span></summary><p>Timelines vary by carrier, storm volume and whether a supplement is needed. Ask your adjuster for status. Majestic cannot accelerate the insurer’s calendar.</p></details>
+                <details><summary>What is ACV vs RCV on a roof claim?<span>+</span></summary><p>Actual cash value is typically replacement cost minus depreciation. Recoverable depreciation, if your policy allows it, is often paid after work is completed and documented. Confirm with your carrier.</p></details>
+                <details><summary>Do I need a public adjuster?<span>+</span></summary><p>Some homeowners hire one. Majestic is not a public adjuster. We document construction facts and can meet the company adjuster when you schedule it.</p></details>
+            </div>
+        </div>
+    </section>
+    @await Html.PartialAsync("_SeoIntentFooter")
+</main>

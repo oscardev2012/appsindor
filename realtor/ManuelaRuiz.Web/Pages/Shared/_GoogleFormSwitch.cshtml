@@ -1,0 +1,24 @@
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(Context);
+    var buyUrl = Questionnaire.Url(false, en);
+    var sellUrl = Questionnaire.Url(true, en);
+    var buyEmbed = Questionnaire.Embed(false, en);
+    var sellEmbed = Questionnaire.Embed(true, en);
+}
+<div class="intake googleIntake" data-form-switch data-buy-url="@buyUrl" data-sell-url="@sellUrl" data-buy-embed="@buyEmbed" data-sell-embed="@sellEmbed">
+    <fieldset>
+        <legend>@(en ? "What do you want to do?" : "¿Qué quieres hacer?")</legend>
+        <div class="segmented">
+            <label><input type="radio" name="goal" checked value="buy" /><span>@(en ? "Buy" : "Comprar")</span></label>
+            <label><input type="radio" name="goal" value="sell" /><span>@(en ? "Sell" : "Vender")</span></label>
+            <label><input type="radio" name="goal" value="invest" /><span>@(en ? "Invest" : "Invertir")</span></label>
+        </div>
+    </fieldset>
+    <p class="googleFormLabel" data-form-title>@(en ? "Buyer questionnaire" : "Cuestionario de comprador")</p>
+    <a class="btn primary" data-form-open href="@buyUrl" target="_blank" rel="noopener noreferrer">@(en ? "Open the questionnaire" : "Completar el cuestionario")</a>
+    <p class="googleFormHint">@(en
+        ? "Buy and invest open the buyer questionnaire. Sell opens the seller questionnaire. Answers go to Manuela."
+        : "Comprar e invertir abren el cuestionario de comprador. Vender abre el de vendedor. Las respuestas llegan a Manuela.")</p>
+    <iframe class="googleFormFrame" data-form-frame title="@(en ? "Questionnaire" : "Cuestionario")" src="@buyEmbed" loading="lazy"></iframe>
+</div>

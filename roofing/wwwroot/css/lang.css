@@ -1,0 +1,110 @@
+html.i18n-boot body {
+  visibility: hidden;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  background: linear-gradient(180deg, #ffffff, #f7fafc);
+  border: 1px solid var(--line, #17324d29);
+  border-radius: 999px;
+  padding: 0.18rem 0.18rem 0.18rem 0.42rem;
+  box-shadow: 0 8px 22px #17324d14;
+}
+
+.lang-globe {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--blue, #b4232f);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.lang-globe svg {
+  width: 0.92rem;
+  height: 0.92rem;
+  display: block;
+}
+
+.lang-track {
+  display: inline-flex;
+  gap: 0.12rem;
+  background: #17324d0d;
+  border-radius: 999px;
+  padding: 0.12rem;
+}
+
+.lang-option {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft, #244763);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  min-height: 1.85rem;
+  padding: 0 0.72rem;
+  border-radius: 999px;
+  font-family: var(--sans, Arial, Helvetica, sans-serif);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+
+.lang-option:hover:not(.active) {
+  background: #fff;
+  color: var(--blue, #b4232f);
+}
+
+.lang-option.active {
+  color: #fff;
+  background: linear-gradient(180deg, #d32630, var(--gold, #c7353f));
+  box-shadow: 0 8px 16px #c7353f3d;
+}
+
+.lang-option:focus-visible {
+  outline: 2px solid var(--blue, #b4232f);
+  outline-offset: 2px;
+}
+
+.lang-code {
+  font-size: 0.62rem;
+}
+
+.lang-name {
+  font-size: 0.62rem;
+}
+
+.site-header .lang-switcher,
+.claim-header .lang-switcher,
+.header-actions .lang-switcher {
+  flex: none;
+}
+
+.language-toggle:not(.lang-option) {
+  display: none !important;
+}
+
+@media (width <= 760px) {
+  .lang-name {
+    display: none;
+  }
+
+  .lang-option {
+    padding: 0 0.62rem;
+  }
+
+  .lang-globe {
+    display: none;
+  }
+
+  .lang-switcher {
+    padding: 0.12rem;
+  }
+}

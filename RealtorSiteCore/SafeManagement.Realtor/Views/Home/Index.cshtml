@@ -1,0 +1,195 @@
+@{
+    ViewData["Title"] = "SAFE Realtor — Property Repair Intelligence";
+    ViewData["Description"] = "Repair pricing, inspection analysis, estimates and homeowner follow-up for Realtors.";
+}
+<div class="app">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="global-back" id="globalBack" aria-label="Go back">←</button>
+      <button class="brand" data-route="home" aria-label="SAFE Realtor home">
+        <span class="brand-mark">S+</span>
+        <span><strong>SAFE REALTOR</strong><small data-i18n="brandSub">Property Repair Intelligence</small></span>
+      </button>
+      <div class="top-search" id="globalSearchWrap">
+        <span>⌕</span>
+        <input id="globalSearch" data-placeholder-en="Search a client, address, inspection item or next step…" data-placeholder-es="Busca cliente, dirección, hallazgo o próximo paso…">
+        <kbd>⌘ K</kbd>
+        <div class="global-results" id="globalResults"></div>
+      </div>
+      <div class="top-actions">
+        <button class="top-btn member-only" id="estimateTray"><span>Estimate</span><b id="estimateCount">0</b></button>
+        <button class="top-btn language" id="languageBtn">ES</button>
+        <button class="sign-in-top guest-only" id="signInTop" data-i18n="signIn">Sign in</button>
+        <button class="profile member-only" id="profileBtn" aria-label="Open profile" aria-expanded="false"><span id="profileInitial">RP</span><i></i></button>
+      </div>
+    </header>
+
+    <aside class="public-menu guest-only" id="publicMenu" aria-hidden="true">
+      <div class="menu-drawer-head"><div><span class="brand-mark">S+</span><strong>SAFE REALTOR</strong></div><button class="close" id="closePublicMenu" aria-label="Close menu">×</button></div>
+      <div class="menu-intro"><span class="eyebrow" data-i18n="realtorTools">REALTOR TOOLS</span><h2 data-i18n="menuQuestion">What do you need for this property?</h2><p data-i18n="menuIntro">Start with the question your buyer or seller is asking.</p></div>
+      <nav class="public-menu-nav">
+        <span class="nav-section" data-i18n="beforeLogin">BEFORE SIGN IN</span>
+        <button data-route="welcome"><span class="nav-icon">⌂</span><span><strong data-i18n="navHome">Home</strong><small data-i18n="homeHelp">See what SAFE can help with</small></span><b>→</b></button>
+        <button data-route="search"><span class="nav-icon">$</span><span><strong data-i18n="navSearch">Repair Price Guide</strong><small data-i18n="searchHelp">Answer “What could this cost?”</small></span><b>→</b></button>
+        <button data-route="report"><span class="nav-icon">PDF</span><span><strong data-i18n="navReport">Review Inspection Report</strong><small data-i18n="reportHelp">Organize findings before due diligence ends</small></span><b>→</b></button>
+        <span class="nav-section" data-i18n="partnerWorkspace">REALTOR WORKSPACE</span>
+        <button data-route="estimates" class="locked-menu"><span class="nav-icon">▤</span><span><strong data-i18n="navEstimates">Repair Options</strong><small data-i18n="estimateHelp">Compare repair, credit or review</small></span><b>○</b></button>
+        <button data-route="repairplan" class="locked-menu new-menu"><span class="nav-icon">＋</span><span><strong data-i18n="navRepairPlan">Build My Repair Plan</strong><small data-i18n="repairPlanHelp">From findings to the scheduled job</small></span><b>○</b></button>
+        <button data-route="followups" class="locked-menu"><span class="nav-icon">✓</span><span><strong data-i18n="navFollowups">Next Follow-ups</strong><small data-i18n="followupHelp">Know who needs an answer today</small></span><b>○</b></button>
+        <button data-action="login" class="menu-login"><span class="nav-icon">↗</span><span><strong data-i18n="signInWorkspace">Sign in to workspace</strong><small data-i18n="loginMenuHelp">Open clients, messages and closing tools</small></span><b>→</b></button>
+      </nav>
+    </aside>
+
+    <div class="profile-menu" id="profileMenu" aria-hidden="true">
+      <div class="profile-menu-head"><span class="avatar coral" id="menuInitial">RP</span><div><strong id="menuName"></strong><small id="menuFirm"></small></div></div>
+      <button data-route="profile">◎ <span data-i18n="myProfile">My profile</span></button>
+      <button id="signOutBtn">⇥ <span data-i18n="signOut">Sign out</span></button>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="partner-card">
+          <div class="partner-logo" id="partnerInitial">RF</div>
+          <div><span data-i18n="partnerWorkspace">Partner workspace</span><strong id="partnerName"></strong><small id="partnerFirm"></small></div>
+        </div>
+        <nav class="nav" id="nav">
+          <span class="nav-section" data-i18n="overview">OVERVIEW</span>
+          <button data-route="home" class="active"><span class="nav-icon">⌂</span><span data-i18n="navHome">Home</span></button>
+          <span class="nav-section" data-i18n="propertyDecisions">PROPERTY DECISIONS</span>
+          <button data-route="search"><span class="nav-icon">⌕</span><span data-i18n="navSearch">Repair Search</span><em id="repairCountBadge">264</em></button>
+          <button data-route="report"><span class="nav-icon">⇧</span><span data-i18n="navReport">Inspection Report</span></button>
+          <button data-route="estimates"><span class="nav-icon">▤</span><span data-i18n="navEstimates">Estimates</span><em id="sideEstimateCount">0</em></button>
+          <button data-route="repairplan" class="new-nav"><span class="nav-icon">＋</span><span data-i18n="navRepairPlan">Build My Repair Plan</span><em>NEW</em></button>
+          <span class="nav-section" data-i18n="clientRelationship">CLIENT RELATIONSHIP</span>
+          <button data-route="clients"><span class="nav-icon">◎</span><span data-i18n="navClients">Clients</span></button>
+          <button data-route="messages"><span class="nav-icon">◌</span><span data-i18n="navMessages">Messages</span><em>3</em></button>
+          <button data-route="followups"><span class="nav-icon">✓</span><span data-i18n="navFollowups">Follow-ups</span><em>5</em></button>
+          <button data-route="campaigns"><span class="nav-icon">✦</span><span data-i18n="navCampaigns">Monthly Messages</span></button>
+          <button data-route="schedule"><span class="nav-icon">□</span><span data-i18n="navSchedule">Schedule</span></button>
+          <span class="nav-section" data-i18n="closingReferrals">CLOSING & REFERRALS</span>
+          <button data-route="gifts"><span class="nav-icon">◇</span><span data-i18n="navGifts">Gift Cards</span></button>
+          <button data-route="earnings"><span class="nav-icon">$</span><span data-i18n="navEarnings">Referral Earnings</span></button>
+          <span class="nav-section" data-i18n="account">ACCOUNT</span>
+          <button data-route="profile"><span class="nav-icon">◎</span><span data-i18n="myProfile">My profile</span></button>
+        </nav>
+        <div class="support-card">
+          <span class="support-icon">?</span>
+          <strong data-i18n="needHelp">Need help with a property?</strong>
+          <p data-i18n="supportCopy">Send the question to SAFE Management.</p>
+          <button class="text-button" data-action="support" data-i18n="askSafe">Ask SAFE →</button>
+        </div>
+      </aside>
+
+      <main class="main" id="main" tabindex="-1"></main>
+    </div>
+
+    <nav class="mobile-bottom member-only" id="mobileBottom" aria-label="Main navigation">
+      <button data-route="home"><span>⌂</span><small data-i18n="navHome">Home</small></button>
+      <button data-route="search"><span>⌕</span><small data-i18n="prices">Prices</small></button>
+      <button data-route="report"><span>⇧</span><small data-i18n="reportShort">Report</small></button>
+      <button data-route="clients"><span>◎</span><small data-i18n="navClients">Clients</small></button>
+      <button id="mobileMore"><span>•••</span><small data-i18n="more">More</small></button>
+    </nav>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="estimateDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div><span class="eyebrow" data-i18n="draftEstimate">Draft estimate</span><h2 data-i18n="selectedRepairs">Selected repairs</h2></div>
+      <button class="close" data-close="drawer" aria-label="Close">×</button>
+    </div>
+    <div class="drawer-body" id="estimateItems"></div>
+    <div class="drawer-foot">
+      <div class="estimate-total"><span data-i18n="planningRange">Planning range</span><strong id="estimateTotal">$0</strong></div>
+      <button class="button primary wide" id="buildEstimate" data-i18n="buildEstimate">Build client estimate</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="giftModal" role="dialog" aria-modal="true" aria-labelledby="giftTitle">
+    <div class="modal-card gift-modal-card">
+      <div class="modal-head">
+        <div><span class="eyebrow" data-i18n="giftBuilder">Gift card builder</span><h2 id="giftTitle" data-i18n="createClosingGift">Create a closing gift</h2></div>
+        <button class="close" data-close="modal" aria-label="Close">×</button>
+      </div>
+      <div class="gift-editor">
+        <div class="gift-form">
+          <label><span data-i18n="clientName">Client name</span><input id="giftName" placeholder="New homeowner"></label>
+          <label><span data-i18n="propertyAddress">Property address</span><input id="giftAddress" placeholder="Street, city, state"></label>
+          <label><span data-i18n="realtyFirm">Realty firm</span><input id="giftFirm" value="Your Realty Firm"></label>
+          <label><span data-i18n="giftValue">Gift value</span><select id="giftValue"><option value="50" data-i18n="gift50">$50 — SAFE covers 100%</option><option value="100">$100 — Realtor $50 + SAFE $50</option><option value="250">$250 — Realtor $125 + SAFE $125</option><option value="300">$300 — Realtor $150 + SAFE $150</option></select></label>
+          <label><span data-i18n="firmLogo">Realty firm logo</span><span class="file-control"><input type="file" id="giftLogo" accept="image/png,image/jpeg,image/webp,image/svg+xml"><b data-i18n="uploadLogo">Upload required logo</b><small id="giftLogoName"></small></span></label>
+        </div>
+        <div class="gift-card" id="giftCard">
+          <div class="gift-top"><span>SAFE PROJECT SOLUTION</span><span class="gift-brand"><span class="gift-logo" id="giftCardLogo" hidden></span><b id="giftCardFirm">YOUR REALTY FIRM</b></span></div>
+          <div class="gift-amount" id="giftCardAmount">$50</div>
+          <div class="gift-purpose" data-i18n="towardRepairs">TOWARD FUTURE HOME REPAIRS</div>
+          <div class="gift-client"><small data-i18n="issuedTo">ISSUED TO</small><strong id="giftCardName">New homeowner</strong><span id="giftCardAddress">Property address</span></div>
+          <div class="gift-code"><small data-i18n="couponCode">COUPON CODE</small><strong id="giftCode">SAFE-50-HOME</strong><span data-i18n="valid12">Valid for 12 months</span></div>
+        </div>
+      </div>
+      <div class="modal-actions"><button class="button secondary" data-close="modal" data-i18n="cancel">Cancel</button><button class="button primary" id="generateGift" data-i18n="generateGift">Generate digital card</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="requestTitle">
+    <div class="modal-card">
+      <div class="modal-head"><div><span class="eyebrow" data-i18n="safeRequest">SAFE work request</span><h2 id="requestTitle" data-i18n="sendManagement">Send to Management</h2></div><button class="close" data-close="modal" aria-label="Close">×</button></div>
+      <div class="form-grid">
+        <label class="full"><span data-i18n="sendTo">Send to</span><input id="requestEmail" type="email" placeholder="name@@email.com" autocomplete="email"><small data-i18n="sendToHelp">Email of the person who should receive this.</small></label>
+        <label><span data-i18n="propertyAddress">Property address</span><input id="requestAddress" placeholder="Property address"></label>
+        <label><span data-i18n="clientName">Client name</span><input id="requestClient" placeholder="Client name"></label>
+        <label class="full"><span data-i18n="requestNotes">What needs to happen?</span><textarea id="requestNotes" rows="4" placeholder="Describe the repair, timing and anything SAFE should know."></textarea></label>
+      </div>
+      <div class="connection-note"><span>↗</span><p><strong data-i18n="privateHandoff">Private handoff</strong><br><span data-i18n="handoffCopy">Management receives the property, selected repairs and your notes. Internal prices and crew data remain private.</span></p></div>
+      <div class="modal-actions"><button class="button secondary" data-close="modal" data-i18n="cancel">Cancel</button><button class="button primary" id="sendRequest" data-i18n="sendRequest">Send request</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+    <div class="modal-card">
+      <div class="modal-head"><div><span class="eyebrow" data-i18n="quoteEyebrow">CLIENT QUOTE</span><h2 id="quoteTitle" data-i18n="generateSend">Generate and send</h2></div><button class="close" data-close="modal" aria-label="Close">×</button></div>
+      <div class="form-grid">
+        <label><span data-i18n="clientName">Client name</span><input id="quoteClient" placeholder="Buyer or seller"></label>
+        <label><span data-i18n="clientEmail">Client email</span><input id="quoteEmail" type="email" placeholder="name@@email.com"></label>
+        <label class="full"><span data-i18n="propertyAddress">Property address</span><input id="quoteAddress" placeholder="Street, city, state"></label>
+        <label class="full"><span data-i18n="quoteOptionLabel">Option to send</span><select id="quoteOption"><option value="" data-i18n="chooseOption">Choose an option</option><option value="minimum" data-i18n="optMinimum">Minimum repairs</option><option value="recommended" data-i18n="optRecommended">Recommended plan</option><option value="complete" data-i18n="optComplete">Complete improvement</option></select></label>
+      </div>
+      <pre class="quote-preview" id="quotePreview"></pre>
+      <div class="modal-actions"><button class="button secondary" type="button" id="copyQuote" data-i18n="copyQuote">Copy quote</button><button class="button primary" type="button" id="sendQuote" data-i18n="sendQuote">Send to client</button></div>
+    </div>
+  </div>
+
+  <div class="modal login-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="modal-card login-card">
+      <button class="close login-close" data-close="modal" aria-label="Close">×</button>
+      <div class="login-brand"><span class="brand-mark">S+</span><div><strong>SAFE REALTOR</strong><small>Partner workspace</small></div></div>
+      <span class="eyebrow" data-i18n="realtorAccess">REALTOR ACCESS</span>
+      <h2 id="loginTitle" data-i18n="gateTitle">SAFE Realtor</h2>
+      <div id="realtorChoices">
+        <p data-i18n="gateIntro">Create a profile, or sign in if you already have one.</p>
+        <div class="login-choices">
+          <button class="button primary wide" type="button" id="showRealtorCreate" data-i18n="createProfile">Create profile</button>
+          <button class="button secondary wide" type="button" id="showRealtorSignIn" data-i18n="signInExisting">I already have an account</button>
+        </div>
+      </div>
+      <form id="loginForm" class="login-form">
+        <div id="realtorCreate" hidden>
+          <label><span data-i18n="fullName">Full name</span><input id="createName" autocomplete="name" required></label>
+          <label><span>Email</span><input id="createEmail" type="email" placeholder="name@@firm.com" autocomplete="email" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
+          <label><span data-i18n="password">Password</span><input id="createPassword" type="password" autocomplete="new-password" minlength="6" required></label>
+          <label><span data-i18n="realtyFirm">Realty firm</span><span class="firm-field" id="createFirmField"></span></label>
+          <button class="button primary wide" type="submit" data-i18n="createProfile">Create profile</button>
+          <button class="text-button" type="button" id="createToSignIn" data-i18n="haveAccount">Already have an account? Sign in</button>
+        </div>
+        <div id="realtorSignIn" hidden>
+          <label><span>Email</span><input id="signInEmail" type="email" placeholder="name@@firm.com" autocomplete="username" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
+          <label><span data-i18n="password">Password</span><input id="signInPassword" type="password" autocomplete="current-password" required></label>
+          <button class="button primary wide" type="submit" data-i18n="signInExisting">Sign in</button>
+          <button class="text-button" type="button" id="signInToCreate" data-i18n="needAccount">No account yet? Create a profile</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>

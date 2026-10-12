@@ -1,0 +1,21 @@
+using CarolinasCoverage.Site;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace CarolinasCoverage.Pages;
+
+public class FaqsModel : PageModel
+{
+    public FaqsModel(SeoService seo)
+    {
+        Seo = seo;
+    }
+
+    public SeoService Seo { get; }
+    public bool En { get; private set; }
+
+    public void OnGet()
+    {
+        En = Lang.IsEnglish(Request);
+        Seo.Apply(ViewData, Seo.Faqs(En));
+    }
+}

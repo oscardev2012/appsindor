@@ -1,0 +1,77 @@
+@model CheckoutViewModel
+
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Checkout</p>
+        <h1>Datos de entrega</h1>
+        <p class="lead">Esta demo no cobra. Confirmamos el pedido con un folio para que veas el flujo completo.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container checkout-layout">
+        <form asp-action="Checkout" method="post" class="panel form-stack">
+            @Html.AntiForgeryToken()
+            <div>
+                <label asp-for="Nombre"></label>
+                <input class="form-control" asp-for="Nombre" />
+                <span class="field-error" asp-validation-for="Nombre"></span>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Correo"></label>
+                    <input class="form-control" asp-for="Correo" />
+                    <span class="field-error" asp-validation-for="Correo"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Telefono"></label>
+                    <input class="form-control" asp-for="Telefono" />
+                    <span class="field-error" asp-validation-for="Telefono"></span>
+                </div>
+            </div>
+            <div>
+                <label asp-for="Direccion"></label>
+                <input class="form-control" asp-for="Direccion" />
+                <span class="field-error" asp-validation-for="Direccion"></span>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-8">
+                    <label asp-for="Ciudad"></label>
+                    <input class="form-control" asp-for="Ciudad" />
+                    <span class="field-error" asp-validation-for="Ciudad"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="CodigoPostal"></label>
+                    <input class="form-control" asp-for="CodigoPostal" />
+                </div>
+            </div>
+            <div>
+                <label asp-for="Notas"></label>
+                <textarea class="form-control" asp-for="Notas" rows="3"></textarea>
+            </div>
+            <label class="d-flex gap-2 align-items-start">
+                <input asp-for="IncluirInstalacion" />
+                <span>Incluir instalación profesional (@CarritoService.CostoInstalacion.ToString("C0")). Disponible en CDMX y zona metropolitana.</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Confirmar pedido</button>
+        </form>
+        <aside class="summary">
+            <h2>Tu pedido</h2>
+            @foreach (var item in Model.Items)
+            {
+                <div class="summary-row">
+                    <span>@item.Nombre × @item.Cantidad</span>
+                    <span>@item.Subtotal.ToString("C0")</span>
+                </div>
+            }
+            <div class="summary-row"><span>Subtotal</span><span>@Model.Subtotal.ToString("C0")</span></div>
+            <div class="summary-row"><span>Envío</span><span>@(Model.Envio == 0 ? "Gratis" : Model.Envio.ToString("C0"))</span></div>
+            <p class="muted" style="color:#d8cfc2">La instalación se suma al confirmar si la marcas.</p>
+            <div class="summary-row total"><span>Total estimado</span><span>@Model.Total.ToString("C0")</span></div>
+        </aside>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

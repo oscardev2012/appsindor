@@ -1,0 +1,137 @@
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    var es = CalentonesAgua.Data.SiteLanguage.IsSpanish(Context);
+    var origin = $"{Context.Request.Scheme}://{Context.Request.Host}";
+    var pageUrl = origin + "/reviews/";
+    var productionPage = "https://www.safewaterheaterclt.com/reviews/";
+    var configured = Configuration["Seo:GoogleReviewUrl"];
+    var hasDirectLink = !string.IsNullOrWhiteSpace(configured);
+    var googleHref = hasDirectLink
+        ? configured!.Trim()
+        : "https://www.google.com/search?q=HOME+INDOR+TECHNOLOGY+INC+Charlotte+NC+water+heater";
+    var smsEn =
+        $"Hi, this is SAFE Water Heater. Thanks for having us replace your water heater. If you have a minute, an honest Google review helps other Charlotte homeowners find us: {productionPage}";
+    var smsEs =
+        $"Hola, aquí SAFE Water Heater. Gracias por dejarnos instalar su calentador. Si tiene un minuto, una reseña honesta en Google ayuda a otros en Charlotte: {productionPage}";
+    var googleCta = hasDirectLink
+        ? (es ? "Escribir una reseña en Google" : "Write a Google review")
+        : (es ? "Buscar HOME INDOR TECHNOLOGY INC en Google" : "Find HOME INDOR TECHNOLOGY INC on Google");
+}
+
+<section class="page-hero">
+    <div class="container seo-hero">
+        <span class="eyebrow">GOOGLE REVIEWS · HOME INDOR TECHNOLOGY INC</span>
+        <h1>@(es ? "Deje una reseña en Google después de su instalación." : "Leave a Google review after your water heater install.")</h1>
+        <p class="seo-answer">@(es
+            ? "Las reseñas viven en Google, no como estrellas inventadas en este sitio. Eso ayuda a que SAFE aparezca en reemplazo de calentadores en Charlotte. Lo pedimos en cada trabajo terminado. No pagamos reseñas ni las escribimos por usted."
+            : "Reviews on Google—not fake stars on this website—are what help SAFE show up for water heater replacement in Charlotte. We ask every completed job. We do not pay for reviews or write them for you.")</p>
+        <div class="hero-actions">
+            <a class="button button-red button-large" href="@googleHref" rel="noopener" target="_blank">@googleCta</a>
+            <a class="button button-outline button-large" href="@SiteContact.CallHref">@(es ? $"¿Ayuda? Llame al {SiteContact.CallDisplay}" : $"Need help? Call {SiteContact.CallDisplay}")</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container review-grid">
+        <article class="review-card">
+            <span class="eyebrow">@(es ? "PARA EL CLIENTE" : "FOR HOMEOWNERS")</span>
+            <h2>@(es ? "Cómo dejar la reseña" : "How to leave the review")</h2>
+            @if (es)
+            {
+                <ol>
+                    <li>Abra Google en el teléfono (la app o google.com).</li>
+                    <li>Busque <strong>HOME INDOR TECHNOLOGY INC</strong> — ese es el nombre legal. SAFE Water Heater es la marca del calentador.</li>
+                    <li>Toque la ficha y luego <strong>Escribir una reseña</strong>.</li>
+                    <li>Cuente lo que pasó. Tres a cinco frases honestas valen más que un “¡excelente servicio!!!” copiado.</li>
+                </ol>
+            }
+            else
+            {
+                <ol>
+                    <li>Open Google on your phone (the app or google.com).</li>
+                    <li>Search <strong>HOME INDOR TECHNOLOGY INC</strong> — that is the legal name. SAFE Water Heater is the water-heater brand.</li>
+                    <li>Tap the listing, then <strong>Write a review</strong>.</li>
+                    <li>Write what actually happened. Honest 3–5 sentences beat a copied “great service!!!”</li>
+                </ol>
+            }
+            @if (!hasDirectLink)
+            {
+                <p class="seo-fine">@(es
+                    ? $"El botón abre una búsqueda de Google hasta que guardemos el enlace de la ficha. Si salen dos negocios, elija el del teléfono {SiteContact.CallDisplay}."
+                    : $"The blue button opens a Google search until the Business Profile share link is saved in site settings. If two listings appear, pick the one with phone {SiteContact.CallDisplay}.")</p>
+            }
+            <h3>@(es ? "Qué ayuda a otros (opcional)" : "What helps other homeowners (optional)")</h3>
+            <p>@(es ? "Si es verdad en su trabajo, ayuda mencionar:" : "If it is true for your job, it helps to mention:")</p>
+            <ul>
+                <li>@(es ? "Reemplazo o instalación de calentador de agua (no solo “HVAC”)" : "Water heater replacement or installation (not just “HVAC”)")</li>
+                <li>@(es ? "Su ciudad: Charlotte, Shelby, China Grove, Mint Hill, etc." : "Your city: Charlotte, Shelby, China Grove, Mint Hill, etc.")</li>
+                <li>@(es ? "Eléctrico o gas, y 40 o 50 galones si lo recuerda" : "Electric or gas, and 40- or 50-gallon if you remember")</li>
+                <li>@(es ? "Cotización por fotos, el mismo día si lo tuvo, y el precio publicado si quiere" : "Photo quote, same-day if that is what you got, and the published price if you want")</li>
+            </ul>
+            <p>@(es ? "No copie un texto. Google quita reseñas que parecen pagadas o escritas por el negocio." : "Do not copy a script. Google removes reviews that look paid or written by the business.")</p>
+        </article>
+    </div>
+</section>
+
+<section class="section review-crew">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow blue">@(es ? "PARA LA CUADRILLA" : "FOR THE CREW")</span>
+            <h2>@(es ? "Envíe este texto el mismo día que queda el tanque." : "Text this the same day the tank is in.")</h2>
+            <p>@(es
+                ? "Máldelo en cada instalación terminada, no solo a los contentos. Google prohíbe filtrar. No ofrezca dinero, descuento ni tarjeta de regalo a cambio de la reseña."
+                : "Send it to every completed install—not only the happy ones. Google forbids filtering. Do not offer cash, discounts or a gift card in exchange for a review.")</p>
+        </div>
+        <div class="review-grid">
+            <article class="review-card">
+                <h3>English SMS</h3>
+                <textarea id="sms-en" class="review-sms" readonly rows="6">@smsEn</textarea>
+                <button type="button" class="button button-red" data-copy="sms-en">@(es ? "Copiar texto en inglés" : "Copy English text")</button>
+            </article>
+            <article class="review-card">
+                <h3>@(es ? "Texto en español" : "Spanish SMS")</h3>
+                <textarea id="sms-es" class="review-sms" readonly rows="6">@smsEs</textarea>
+                <button type="button" class="button button-red" data-copy="sms-es">@(es ? "Copiar texto en español" : "Copy Spanish text")</button>
+            </article>
+        </div>
+        <div class="review-print">
+            <p>@(es ? "Enlace corto para el mensaje o la factura:" : "Short link to text or print on the invoice:")</p>
+            <p class="review-url"><a href="@pageUrl">safewaterheaterclt.com/reviews/</a></p>
+            <ol>
+                <li>@(es ? "Termine la instalación y explique las válvulas." : "Finish the install and walk through the valves.")</li>
+                <li>@(es ? "Registre la garantía (o recuérdeselo)." : "Register the warranty (or remind them to).")</li>
+                <li>@(es ? "Envíe el enlace antes de salir." : "Text the link before you leave the driveway.")</li>
+                <li>@(es ? "Si prefiere, abra Google en su teléfono y quédese mientras escribe — no escriba la reseña usted." : "If they prefer, open Google on their phone and stay while they type—do not type the review yourself.")</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container prose" style="max-width:820px">
+        <h2>@(es ? "Lo que no vamos a hacer" : "What we will not do")</h2>
+        <ul>
+            <li>@(es ? "Inventar reseñas de Google o estrellas en el código del sitio." : "Invent Google reviews or star ratings in our website code.")</li>
+            <li>@(es ? "Comprar reseñas, intercambiarlas o publicar con cuentas falsas." : "Buy reviews, swap reviews, or post from fake accounts.")</li>
+            <li>@(es ? "Pedir reseña en Google solo a los de 5 estrellas y esconder al resto." : "Ask only 5-star customers to review Google and hide everyone else.")</li>
+        </ul>
+        <p>@(es
+            ? "Esos atajos suspenden el perfil de Google. Las reseñas reales de instalaciones reales son lo que mueve “water heater replacement Charlotte NC”."
+            : "Those shortcuts get Business Profiles suspended. Real reviews from real installs are what move “water heater replacement Charlotte NC.”")</p>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll("[data-copy]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var el = document.getElementById(btn.getAttribute("data-copy"));
+            if (!el) return;
+            var original = btn.textContent;
+            navigator.clipboard.writeText(el.value).then(function () {
+                btn.textContent = document.documentElement.lang === "es" ? "Copiado" : "Copied";
+                setTimeout(function () { btn.textContent = original; }, 1600);
+            });
+        });
+    });
+</script>

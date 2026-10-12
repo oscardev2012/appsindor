@@ -1,0 +1,20 @@
+@page
+@model MajesticRoofing.Pages.ErrorModel
+@{
+    ViewData["Title"] = Model.IsNotFound ? "Page not found | Majestic Roofing" : "Error | Majestic Roofing";
+    ViewData["Description"] = "The requested Majestic Roofing page could not be shown.";
+}
+<main class="section">
+    <div class="site-shell">
+        <p class="eyebrow">Majestic Roofing</p>
+        <h2>@(Model.IsNotFound ? "This page is not available." : "Something went wrong.")</h2>
+        <p>Return to the homepage to plan a roof project, request an inspection or call Majestic.</p>
+        <p>
+            <a class="button button-outline" href="/">Home</a>
+            <a class="button button-outline" href="/faqs">FAQs</a>
+            <a class="button button-outline" href="/roof-repair-charlotte-nc">Roof repair</a>
+            <a class="button button-outline" href="/free-roof-inspection-charlotte-nc">Free inspection</a>
+            <a class="button button-gold" href="tel:+19808005991">(980) 800-5991</a>
+        </p>
+    </div>
+</main>

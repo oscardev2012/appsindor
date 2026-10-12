@@ -1,0 +1,19 @@
+@model ErrorViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error</title>
+</head>
+<body style="font-family:Segoe UI,sans-serif;margin:40px;color:#142333">
+  <h1>Something went wrong</h1>
+  @if (Model.ShowRequestId)
+  {
+    <p>Request ID: <code>@Model.RequestId</code></p>
+  }
+</body>
+</html>

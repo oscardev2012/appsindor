@@ -1,0 +1,40 @@
+@model RealtorDirectoryViewModel
+@{
+    ViewData["Title"] = "Charlotte Realtors directory";
+    ViewData["Description"] = "Meet Charlotte-area Realtors who publish in their own name. Read their stories, follow their work, and ask a local question.";
+    ViewData["Crumbs"] = new List<SeoCrumb> { new("Home", "/"), new("Our Realtors", "/realtors") };
+}
+}
+@await Html.PartialAsync("_DbBanner", Model.DbError)
+
+<section class="section">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">OUR REALTORS</p>
+            <h2>Local voices, public work.</h2>
+        </div>
+        <a asp-controller="Account" asp-action="Register">Become a contributor →</a>
+    </div>
+    @if (Model.Realtors.Count == 0)
+    {
+        <div class="empty-panel">
+            <p>No Realtor profiles yet. The directory fills as professionals register.</p>
+            <a class="button gold" asp-controller="Account" asp-action="Register">Register as a Realtor</a>
+        </div>
+    }
+    else
+    {
+        <div class="card-grid">
+            @foreach (var realtor in Model.Realtors)
+            {
+                <article class="guide-card">
+                    <span class="avatar large">@realtor.Initials</span>
+                    <h3><a asp-action="Profile" asp-route-slug="@realtor.Slug">@realtor.FullName</a></h3>
+                    <p>@(realtor.Headline ?? realtor.Brokerage ?? realtor.LocationLabel)</p>
+                    <p>@realtor.PostCount stories · @realtor.FollowerCount followers</p>
+                    <a asp-action="Profile" asp-route-slug="@realtor.Slug">View profile →</a>
+                </article>
+            }
+        </div>
+    }
+</section>

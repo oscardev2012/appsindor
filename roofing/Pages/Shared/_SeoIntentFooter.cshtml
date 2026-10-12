@@ -1,0 +1,35 @@
+@{
+    var lang = ViewData["Lang"] as string ?? "en";
+    var isEs = lang == "es";
+    var home = isEs ? "/es" : "/";
+}
+<section class="resource-cta section" id="contact">
+    <div class="site-shell">
+        <p class="eyebrow">@(isEs ? "Siguiente paso" : "Next step")</p>
+        <h2>@(isEs ? "Cuéntenos qué está pasando en el techo." : "Tell us what is happening on the roof.")</h2>
+        <p style="max-width:52ch;margin:0 auto 1.5rem;color:var(--muted)">@(isEs ? "Inspección gratuita por dirección. Respuesta el mismo día hábil. No es una cotización final ni una promesa de reclamo." : "Free inspection by address. Same-business-day response. Not a final quote and not a claim promise.")</p>
+        <p><a class="button button-gold" href="tel:+19808005991">(980) 800-5991</a> <a class="button button-outline" href="mailto:ericb.majestic@@gmail.com">ericb.majestic@@gmail.com</a></p>
+        <form class="contact-form" style="max-width:640px;margin:2rem auto 0;text-align:left">
+            <label><span>@(isEs ? "Nombre" : "Name")</span><input required name="name" /></label>
+            <div class="form-two">
+                <label><span>@(isEs ? "Teléfono" : "Phone")</span><input required type="tel" name="phone" /></label>
+                <label><span>Email</span><input type="email" name="email" /></label>
+            </div>
+            <label><span>@(isEs ? "Dirección de la propiedad" : "Property address")</span><input required name="address" placeholder="Street, city, ZIP" /></label>
+            <label><span>@(isEs ? "Detalles" : "Project details")</span><textarea name="details" rows="3"></textarea></label>
+            <button class="button button-gold full-button" type="submit">@(isEs ? "Enviar por email" : "Email my request") <span aria-hidden="true">→</span></button>
+            <p class="form-note">@(isEs ? "Al enviar se abre su correo dirigido a Majestic Roofing." : "Submitting opens your email app addressed to Majestic Roofing.")</p>
+        </form>
+    </div>
+</section>
+<footer class="claim-footer"><div class="site-shell"><a href="@home" class="brand brand-footer"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><strong>MAJESTIC</strong><small>ROOFING, INC.</small></span></a>
+<p>5122 Belstone Lane, Charlotte, NC 28215 · @(isEs ? "Charlotte, NC y Rock Hill, SC · Raleigh queda fuera del área" : "Charlotte, NC and Rock Hill, SC · Raleigh is outside the service area")</p>
+<p>
+    <a class="official-link" href="@(isEs ? "/es/preguntas-frecuentes" : "/faqs")">@(isEs ? "FAQ" : "FAQs")</a>
+    · <a class="official-link" href="@(isEs ? "/es/reparacion-de-techo-charlotte-nc" : "/roof-repair-charlotte-nc")">@(isEs ? "Reparación" : "Repair")</a>
+    · <a class="official-link" href="@(isEs ? "/es/reemplazo-techo-charlotte-nc" : "/roof-replacement-charlotte-nc")">@(isEs ? "Reemplazo" : "Replacement")</a>
+    · <a class="official-link" href="@(isEs ? "/es/reparar-o-reemplazar-techo" : "/repair-or-replace-roof")">@(isEs ? "¿Reparar o reemplazar?" : "Repair or replace")</a>
+    · <a class="official-link" href="@(isEs ? "/es/inspeccion-gratis-de-techo-charlotte-nc" : "/free-roof-inspection-charlotte-nc")">@(isEs ? "Inspección gratis" : "Free inspection")</a>
+    · <a class="official-link" href="@(isEs ? "/es/reclamos-de-seguro-de-techo-charlotte-nc" : "/roof-insurance-claim-charlotte-nc")">@(isEs ? "Claims" : "Claims")</a>
+</p>
+<a href="tel:+19808005991">(980) 800-5991</a></div></footer>

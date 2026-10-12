@@ -1,0 +1,36 @@
+<button class="ask-safe-launcher" type="button" id="askSafeOpen" aria-expanded="false" aria-controls="ask-safe-panel">
+    <span>?</span>
+    <b>Ask SAFE</b>
+    <small>Water heater help</small>
+</button>
+<div class="ask-safe-panel" id="ask-safe-panel" hidden>
+    <header class="ask-safe-header">
+        <div class="ask-safe-title">
+            <span class="ask-safe-mark">S</span>
+            <span>
+                <strong>Ask SAFE</strong>
+                <small>Water heater help</small>
+            </span>
+        </div>
+        <button class="ask-safe-close" type="button" id="askSafeClose" aria-label="Close">×</button>
+    </header>
+    <div class="ask-safe-toolbar">
+        <button type="button" id="askSafeBack">← Back</button>
+        <span id="askSafeStep">Menu</span>
+        <button type="button" id="askSafeReset">Reset</button>
+    </div>
+    <div class="ask-safe-body" id="askSafeBody"></div>
+    <div class="chat-input">
+        <label for="askSafeInput">Type a question</label>
+        <div>
+            <input id="askSafeInput" type="text" placeholder="Example: tank is leaking" />
+            <button type="button" id="askSafeSend">Send</button>
+        </div>
+    </div>
+    <div class="ask-safe-contact">
+        <a href="@SiteContact.TextHref">Text @SiteContact.TextDisplay</a>
+        <a href="@SiteContact.CallHref">Call @SiteContact.CallDisplay</a>
+        <a href="mailto:safeprojectsolution@gmail.com">Email SAFE</a>
+    </div>
+    <p class="chat-disclaimer">Ask SAFE is a starting guide, not a diagnosis. Gas odor, CO alarm, fire or water on electrical parts: leave and call 911 or the utility.</p>
+</div>

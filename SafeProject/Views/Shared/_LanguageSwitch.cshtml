@@ -1,0 +1,11 @@
+@{
+    var lang = CalentonesAgua.Data.SiteLanguage.Resolve(Context);
+    var returnUrl = Context.Request.Path.Value + Context.Request.QueryString.Value;
+    if (string.IsNullOrWhiteSpace(returnUrl) || returnUrl.StartsWith("/lang", StringComparison.OrdinalIgnoreCase)) returnUrl = "/";
+    var goEn = "/lang?code=en&returnUrl=" + Uri.EscapeDataString(returnUrl);
+    var goEs = "/lang?code=es&returnUrl=" + Uri.EscapeDataString(returnUrl);
+}
+<nav class="lang-switch" aria-label="Language">
+    <a class="@(lang == "en" ? "is-active" : null)" href="@goEn" hreflang="en" lang="en" title="English">EN</a>
+    <a class="@(lang == "es" ? "is-active" : null)" href="@goEs" hreflang="es" lang="es" title="Español">ES</a>
+</nav>

@@ -1,0 +1,176 @@
+@model PostDetailViewModel
+@{
+    var post = Model.Post;
+    var returnUrl = Context.Request.Path;
+    ViewData["Title"] = post.Title;
+    ViewData["Description"] = NewsFormatter.Teaser(post.Summary, post.Body, 158);
+    ViewData["OgType"] = "article";
+    ViewData["OgImage"] = post.CoverImageUrl;
+    ViewData["ArticleSection"] = post.Category;
+    ViewData["PublishedTime"] = post.PublishedUtc ?? post.CreatedUtc;
+    ViewData["ModifiedTime"] = post.UpdatedUtc == default ? post.PublishedUtc ?? post.CreatedUtc : post.UpdatedUtc;
+    ViewData["Robots"] = post.IsPublished && post.Id != Guid.Empty ? "index, follow, max-image-preview:large" : "noindex, nofollow";
+    ViewData["Crumbs"] = new List<SeoCrumb>
+    {
+        new("Home", "/"),
+        new("Magazine & News", "/news"),
+        new(post.Title, Context.Request.Path)
+    };
+    if (post.Id != Guid.Empty)
+    {
+        ViewData["Schema"] = Seo.Node("NewsArticle", new()
+        {
+            ["headline"] = post.Title,
+            ["description"] = ViewData["Description"],
+            ["image"] = Seo.Image(Context.Request, post.CoverImageUrl),
+            ["datePublished"] = (post.PublishedUtc ?? post.CreatedUtc).UtcDateTime.ToString("yyyy-MM-ddTHH:mm:ssZ"),
+            ["dateModified"] = (post.UpdatedUtc == default ? post.PublishedUtc ?? post.CreatedUtc : post.UpdatedUtc).UtcDateTime.ToString("yyyy-MM-ddTHH:mm:ssZ"),
+            ["articleSection"] = post.Category,
+            ["inLanguage"] = "en-US",
+            ["author"] = Seo.Type("Person", new()
+            {
+                ["name"] = post.RealtorName,
+                ["url"] = Seo.Absolute(Context.Request, $"/realtors/{post.RealtorSlug}")
+            }),
+            ["publisher"] = Seo.Type("Organization", new()
+            {
+                ["name"] = Seo.Brand,
+                ["logo"] = Seo.Image(Context.Request, Seo.DefaultImagePath)
+            }),
+            ["mainEntityOfPage"] = Seo.Absolute(Context.Request, $"/news/{post.Slug}")
+        });
+    }
+}
+@if (post.Id == Guid.Empty)
+{
+    <div class="db-banner publish-ok">
+        <strong>Ejemplo de formato</strong>
+        <span>Así se lee una noticia publicada: título, bajada, foto, secciones, recomendación y lista.</span>
+    </div>
+}
+@if (TempData["Saved"] is string saved)
+{
+    <div class="db-banner publish-ok">
+        <strong>Publicada</strong>
+        <span>@saved</span>
+    </div>
+}
+<article class="story-page">
+    <header class="article-hero">
+        <a class="back-link" asp-controller="News" asp-action="Index">← Noticias</a>
+        <div class="meta"><span>@post.Category</span><span>@EasternTime.LongDate(post.PublishedUtc ?? post.CreatedUtc)</span><span>@(post.City ?? "Charlotte")</span></div>
+        <h1>@post.Title</h1>
+        @if (!string.IsNullOrWhiteSpace(post.Summary))
+        {
+            <p class="article-deck">@post.Summary</p>
+        }
+        <div class="article-byline">
+            <span class="avatar large">@post.RealtorInitials</span>
+            <div>
+                <strong>
+                    @if (post.Id == Guid.Empty)
+                    {
+                        @post.RealtorName
+                    }
+                    else
+                    {
+                        <a asp-controller="Realtors" asp-action="Profile" asp-route-slug="@post.RealtorSlug">@post.RealtorName</a>
+                    }
+                </strong>
+                <span>@(post.RealtorHeadline ?? post.RealtorBrokerage ?? "Charlotte Realtor")</span>
+            </div>
+        </div>
+    </header>
+
+    @if (!string.IsNullOrWhiteSpace(post.CoverImageUrl))
+    {
+        <figure class="article-figure">
+            <img src="@post.CoverImageUrl" alt="@post.Title in @(post.City ?? "Charlotte")" />
+        </figure>
+    }
+
+    <div class="article-layout">
+        <aside class="article-aside">
+            @if (post.Id == Guid.Empty)
+            {
+                <strong>Ejemplo de formato</strong>
+                <span>Así se verá tu noticia cuando la publiques desde el panel.</span>
+                <a asp-controller="Studio" asp-action="Compose">Escribir mi noticia</a>
+            }
+            else
+            {
+                <strong>@post.LikeCount helpful</strong>
+                <span>@post.CommentCount comments</span>
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <form asp-controller="Feed" asp-action="Like" asp-route-id="@post.Id" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="returnUrl" value="@returnUrl" />
+                        <button type="submit">@(post.LikedByMe ? "Helpful ✓" : "Mark helpful")</button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="@returnUrl">Sign in to mark helpful</a>
+                }
+                <a asp-controller="Realtors" asp-action="Profile" asp-route-slug="@post.RealtorSlug">View @post.RealtorName.Split(' ').FirstOrDefault()’s profile</a>
+            }
+        </aside>
+        <div class="article-content">
+            @NewsFormatter.ToHtml(post.Body)
+            @if (post.Id != Guid.Empty)
+            {
+                <section class="article-comments">
+                    <div class="comments-heading">
+                        <h2>Conversation</h2>
+                        <span>Realtors only — keep it useful.</span>
+                    </div>
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="comment">
+                            <span class="avatar small">@comment.Initials</span>
+                            <div>
+                                <strong><a asp-controller="Realtors" asp-action="Profile" asp-route-slug="@comment.RealtorSlug">@comment.RealtorName</a></strong>
+                                <p>@comment.Body</p>
+                            </div>
+                        </div>
+                    }
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <form class="comment-form" asp-controller="Feed" asp-action="Comment" asp-route-id="@post.Id" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="returnUrl" value="@returnUrl" />
+                            <input name="body" required maxlength="2000" placeholder="Join the conversation…" />
+                            <button type="submit">Comment</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <p><a asp-controller="Account" asp-action="Login" asp-route-returnUrl="@returnUrl">Sign in as a Realtor</a> to comment.</p>
+                    }
+                </section>
+            }
+        </div>
+    </div>
+</article>
+
+@if (Model.More.Count > 0)
+{
+    <section class="more-stories">
+        <h2>More from the network</h2>
+        <div class="magazine-story-grid">
+            @foreach (var story in Model.More)
+            {
+                <article class="magazine-story">
+                    @if (!string.IsNullOrWhiteSpace(story.CoverImageUrl))
+                    {
+                        <img class="story-thumb" src="@story.CoverImageUrl" alt="@story.Title" />
+                    }
+                    <span class="story-section">@story.Category.ToUpperInvariant()</span>
+                    <h3><a asp-action="Details" asp-route-slug="@story.Slug">@story.Title</a></h3>
+                    <p>@story.Teaser</p>
+                </article>
+            }
+        </div>
+    </section>
+}

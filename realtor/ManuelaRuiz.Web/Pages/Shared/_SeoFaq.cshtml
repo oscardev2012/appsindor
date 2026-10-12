@@ -1,0 +1,25 @@
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(Context);
+    var faqs = SeoGuide.Faqs(SiteLocale.CatalogKey(Context), en);
+}
+@if (faqs.Count > 0)
+{
+<section class="detailFaq" id="faq">
+    <p class="eyebrow">FAQ</p>
+    <h2>@(en ? "Open, direct answers." : "Respuestas abiertas y directas.")</h2>
+    <p class="guideNote">@(en
+        ? "Educational information. Confirm programs, contracts and requirements with the lender, attorney or brokerage before you rely on them."
+        : "Información educativa. Confirme programas, contratos y requisitos con el prestamista, abogado o brokerage antes de usarlos.")</p>
+    <div class="faqOpen">
+        @foreach (var faq in faqs)
+        {
+            <article>
+                <h3>@faq.Question</h3>
+                <p>@faq.Answer</p>
+            </article>
+        }
+    </div>
+    <p><a class="faqMore" href="@SiteLocale.Localize(Context, "/faq")">@(en ? "See every question on the FAQ hub →" : "Ver todas las preguntas en el hub →")</a></p>
+</section>
+}

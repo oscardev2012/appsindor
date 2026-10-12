@@ -1,0 +1,21 @@
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(Context);
+}
+<section class="cityLinks" id="city-pages">
+    <p class="eyebrow">@(en ? "Local pages" : "Páginas locales")</p>
+    <h2>@(en ? "Start with a specific city." : "Empieza por una ciudad concreta.")</h2>
+    <p>@(en
+        ? "Each city page has its own copy. We do not clone the same text across 400 towns. Ask Manuela to confirm inventory and commute for the ZIP you actually need."
+        : "Cada página de ciudad tiene texto propio. No duplicamos el mismo texto en 400 pueblos. Pide a Manuela que confirme inventario y commute para el ZIP que realmente necesitas.")</p>
+    <div class="cityGrid">
+        @foreach (var city in SeoGuide.Cities)
+        {
+            <a href="@SiteLocale.Localize(Context, "/areas/" + city.Slug)">
+                <strong>@city.Name, NC</strong>
+                <span>@city.County</span>
+            </a>
+        }
+    </div>
+    <p><a class="textLink" href="@SiteLocale.Localize(Context, "/service-area")">@(en ? "See the full service-area radius →" : "Ver el radio de área de servicio →")</a></p>
+</section>

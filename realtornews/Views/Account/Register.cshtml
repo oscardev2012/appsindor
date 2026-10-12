@@ -1,0 +1,31 @@
+@model RegisterViewModel
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Registro Realtor";
+}
+
+<div class="login-form-card register-card">
+    <p class="eyebrow">RED DE REALTORS</p>
+    <h2>Crear cuenta de Realtor</h2>
+    <p>Regístrate para entrar a tu panel, publicar noticias y que se vean en el menú principal.</p>
+    <form method="post">
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="All" class="form-errors"></div>
+        <label>Nombre completo <input asp-for="FullName" required /></label>
+        <label>Email de trabajo <input asp-for="Email" type="email" required /></label>
+        <label>Contraseña <input asp-for="Password" type="password" required minlength="8" /></label>
+        <div class="form-row">
+            <label>Brokerage <input asp-for="Brokerage" /></label>
+            <label>Licencia # <input asp-for="LicenseNumber" /></label>
+        </div>
+        <div class="form-row">
+            <label>Ciudad <input asp-for="City" /></label>
+            <label>Estado <input asp-for="State" /></label>
+        </div>
+        <label>Titular <input asp-for="Headline" placeholder="Ayuda a compradores que se mudan a Charlotte" /></label>
+        <label>Idiomas <input asp-for="Languages" /></label>
+        <label>Bio corta <textarea asp-for="Bio" rows="4"></textarea></label>
+        <button class="button gold wide" type="submit">Crear mi cuenta de Realtor</button>
+        <small>¿Ya tienes cuenta? <a asp-action="Login">Iniciar sesión</a></small>
+    </form>
+</div>

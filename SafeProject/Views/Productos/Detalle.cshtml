@@ -1,0 +1,88 @@
+@model Producto
+@{
+    var relacionados = ViewBag.Relacionados as IReadOnlyList<Producto> ?? Array.Empty<Producto>();
+}
+
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">@Model.TipoEtiqueta · @Model.Marca</p>
+        <h1>@Model.Nombre</h1>
+        <p class="lead">@Model.Resumen</p>
+    </div>
+</section>
+
+<section>
+    <div class="container detail-grid">
+        <div class="detail-media">
+            @if (Model.EnOferta)
+            {
+                <span class="badge-sale">Oferta</span>
+            }
+            <partial name="_IlustracionCalenton" model="Model" />
+        </div>
+        <div>
+            <div class="price mb-3">
+                @if (Model.TieneDescuento)
+                {
+                    <span class="price-old">@Model.PrecioAnterior!.Value.ToString("C0")</span>
+                }
+                <strong style="font-size: 2rem;">@Model.Precio.ToString("C0")</strong>
+            </div>
+            <p>@Model.Descripcion</p>
+            <div class="specs">
+                <div class="spec">
+                    <span>Capacidad</span>
+                    <strong>@(Model.CapacidadLitros == 0 ? "Instantáneo" : Model.CapacidadLitros < 20 ? $"{Model.CapacidadLitros} L/min" : $"{Model.CapacidadLitros} L")</strong>
+                </div>
+                <div class="spec">
+                    <span>Combustible</span>
+                    <strong>@Model.Combustible</strong>
+                </div>
+                <div class="spec">
+                    <span>Personas</span>
+                    <strong>Hasta @Model.PersonasRecomendadas</strong>
+                </div>
+                <div class="spec">
+                    <span>Garantía</span>
+                    <strong>@Model.GarantiaAnios años</strong>
+                </div>
+            </div>
+            <h3>Incluye</h3>
+            <ul class="feature-list">
+                @foreach (var item in Model.Caracteristicas)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+            <form asp-controller="Carrito" asp-action="Agregar" method="post" class="qty-row">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="productoId" value="@Model.Id" />
+                <label class="visually-hidden" for="cantidad">Cantidad</label>
+                <input class="form-control" id="cantidad" name="cantidad" type="number" min="1" max="10" value="1" />
+                <button class="btn btn-primary" type="submit">Agregar al carrito</button>
+                <a class="btn btn-ghost" asp-controller="Contacto" asp-action="Index">Pedir cotización</a>
+            </form>
+            <p class="muted mt-3 mb-0">Envío gratis desde @CarritoService.EnvioGratisDesde.ToString("C0"). Instalación profesional opcional en el checkout.</p>
+        </div>
+    </div>
+</section>
+
+@if (relacionados.Count > 0)
+{
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Sigue viendo</p>
+                    <h2>Otros de la misma línea</h2>
+                </div>
+            </div>
+            <div class="product-grid">
+                @foreach (var producto in relacionados)
+                {
+                    <partial name="_ProductoCard" model="producto" />
+                }
+            </div>
+        </div>
+    </section>
+}

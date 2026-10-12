@@ -1,0 +1,29 @@
+@model Producto
+@{
+    var color = Model.AcentoColor;
+}
+<svg class="heater-art" viewBox="0 0 220 280" role="img" aria-label="@Model.Nombre">
+    <defs>
+        <linearGradient id="tank-@Model.Id" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#f7f2ea" />
+            <stop offset="55%" stop-color="#e8dfd2" />
+            <stop offset="100%" stop-color="#d4c6b4" />
+        </linearGradient>
+        <linearGradient id="glow-@Model.Id" x1="0" x2="0" y1="1" y2="0">
+            <stop offset="0%" stop-color="@color" stop-opacity="0.85" />
+            <stop offset="100%" stop-color="@color" stop-opacity="0.15" />
+        </linearGradient>
+    </defs>
+    <ellipse cx="110" cy="248" rx="62" ry="10" fill="#141c27" opacity="0.08" />
+    <rect x="62" y="48" width="96" height="168" rx="22" fill="url(#tank-@Model.Id)" stroke="#cbb9a3" stroke-width="2" />
+    <rect x="74" y="68" width="72" height="118" rx="14" fill="url(#glow-@Model.Id)" opacity="0.35" />
+    <rect x="88" y="28" width="44" height="28" rx="8" fill="@color" />
+    <rect x="98" y="16" width="24" height="18" rx="4" fill="#2a3545" />
+    <circle cx="110" cy="126" r="22" fill="#fffdf9" stroke="@color" stroke-width="4" />
+    <circle cx="110" cy="126" r="6" fill="@color" />
+    <path d="M110 126 L110 112" stroke="#2a3545" stroke-width="3" stroke-linecap="round" />
+    <rect x="54" y="168" width="14" height="28" rx="4" fill="#8a8175" />
+    <rect x="152" y="168" width="14" height="28" rx="4" fill="@color" />
+    <path d="M70 210 v18 M150 210 v18" stroke="#2a3545" stroke-width="4" stroke-linecap="round" />
+    <rect x="78" y="218" width="64" height="8" rx="4" fill="#2a3545" opacity="0.7" />
+</svg>

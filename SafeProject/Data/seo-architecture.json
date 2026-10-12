@@ -1,0 +1,4607 @@
+[
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/water-heater-replacement-charlotte-nc/",
+    "h1": "Water Heater Replacement & Installation in Charlotte, NC",
+    "cluster": "Reemplazo local",
+    "intent": "Cotización e instalación",
+    "minContent": "Precio, tipos, proceso, áreas, licencia, garantía, FAQs",
+    "cta": "Cotizar por fotos",
+    "queries": [
+      {
+        "en": "Water heater replacement Charlotte NC",
+        "es": "Reemplazo de calentador de agua en Charlotte, NC",
+        "scenario": "Charlotte",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater installation Charlotte NC",
+        "es": "Instalación de calentador de agua en Charlotte, NC",
+        "scenario": "Instalación Charlotte",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Affordable water heater installation",
+        "es": "Instalación de calentador de agua a precio publicado",
+        "scenario": "Instalación asequible",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": "Usar precios publicados, no barato genérico."
+      },
+      {
+        "en": "Licensed water heater installer Charlotte NC",
+        "es": "Instalador de calentadores con empresa licenciada en Charlotte",
+        "scenario": "Instalador contratista",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": "No inventar número de licencia."
+      },
+      {
+        "en": "Hot water heater replacement Charlotte NC",
+        "es": "Reemplazo de calentón de agua en Charlotte, NC",
+        "scenario": "Sinónimo hot water heater",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater company Charlotte NC",
+        "es": "Compañía de calentadores en Charlotte, NC",
+        "scenario": "Compañía local",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater repair Charlotte NC",
+        "es": "Reparación de calentador de agua en Charlotte, NC",
+        "scenario": "Reparación Charlotte",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": "La mayoría termina en reemplazo si el tanque gotea."
+      },
+      {
+        "en": "Free water heater replacement estimate",
+        "es": "Cotización gratis de reemplazo de calentador",
+        "scenario": "Estimado gratis",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Subir fotos",
+        "note": "Estimado por fotos, no visita en blanco."
+      },
+      {
+        "en": "Licensed plumber for water heater",
+        "es": "Plomero licenciado para calentador de agua",
+        "scenario": "Plomero de calentadores",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": "No inventar número de licencia."
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/water-heater-cost-charlotte-nc/",
+    "h1": "Water Heater Replacement Cost in Charlotte, NC",
+    "cluster": "Precio y cotización",
+    "intent": "Comparación comercial",
+    "minContent": "Precio base, inclusiones, extras, ejemplos, FAQ",
+    "cta": "Ver precio / cotizar",
+    "queries": [
+      {
+        "en": "Water heater replacement cost",
+        "es": "Costo de reemplazo de calentador de agua",
+        "scenario": "Costo reemplazo exacto",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Water heater installation cost",
+        "es": "Costo de instalación de calentador de agua",
+        "scenario": "Costo instalación exacto",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much does water heater replacement cost?",
+        "es": "¿Cuánto cuesta reemplazar un calentador de agua?",
+        "scenario": "Costo de reemplazo general",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much is a new water heater installed?",
+        "es": "¿Cuánto cuesta un calentador nuevo ya instalado?",
+        "scenario": "Costo instalado general",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much does a water heater cost in Charlotte NC?",
+        "es": "¿Cuánto cuesta un calentador de agua en Charlotte, NC?",
+        "scenario": "Costo local Charlotte",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Water heater replacement cost Charlotte NC",
+        "es": "Costo de reemplazo de calentador en Charlotte, NC",
+        "scenario": "Costo reemplazo Charlotte",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much is labor to install a water heater?",
+        "es": "¿Cuánto cuesta solo la mano de obra para instalar un calentador?",
+        "scenario": "Costo solo mano de obra",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Does water heater installation include old unit removal?",
+        "es": "¿La instalación incluye retirar el calentador viejo?",
+        "scenario": "Costo con retiro del viejo",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Is the water heater permit included in the installation price?",
+        "es": "¿El permiso está incluido en el precio de instalación?",
+        "scenario": "Costo de permiso",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "What extra charges can change a water heater installation quote?",
+        "es": "¿Qué cargos adicionales pueden cambiar la cotización?",
+        "scenario": "Pregunta por cargos ocultos",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Is it cheaper to buy a water heater from Lowe's or a plumber?",
+        "es": "¿Es más barato comprar el calentador en Lowe's o con un plomero?",
+        "scenario": "Precio tienda vs plomero",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Should I use Home Depot or a local plumber for water heater installation?",
+        "es": "¿Debo usar Home Depot o un plomero local para la instalación?",
+        "scenario": "Precio Home Depot vs contratista",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Is my water heater replacement quote too high?",
+        "es": "¿Está demasiado alta mi cotización de reemplazo?",
+        "scenario": "Cotización parece alta",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Is there a cash price for water heater installation?",
+        "es": "¿Hay precio de contado para instalar un calentador?",
+        "scenario": "Precio efectivo",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/40-gallon-electric-water-heater-installation/",
+    "h1": "40-Gallon Electric Water Heater Installed",
+    "cluster": "Producto estrella",
+    "intent": "Compra",
+    "minContent": "Paquete, para quién sirve, inclusiones, extras, garantía",
+    "cta": "Comprar / programar",
+    "queries": [
+      {
+        "en": "40 gallon electric water heater installed",
+        "es": "Calentador eléctrico de 40 galones instalado",
+        "scenario": "Paquete 40 gal instalado",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "40 gallon electric water heater installation cost",
+        "es": "Costo de instalación de calentador eléctrico de 40 galones",
+        "scenario": "Costo 40 gal eléctrico",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "40 gallon electric water heater for sale",
+        "es": "Calentador eléctrico de 40 galones en venta con instalación",
+        "scenario": "Venta 40 gal",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": "Venta es paquete instalado, no caja de ferretería."
+      },
+      {
+        "en": "How much is a 40-gallon electric water heater installed?",
+        "es": "¿Cuánto cuesta instalado un calentador eléctrico de 40 galones?",
+        "scenario": "Costo eléctrico 40 gal",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/50-gallon-water-heater-installation/",
+    "h1": "50-Gallon Water Heater Installation",
+    "cluster": "Tamaño 50 galones",
+    "intent": "Compra",
+    "minContent": "Capacidad, opciones eléctricas/gas, precio, acceso",
+    "cta": "Cotizar",
+    "queries": [
+      {
+        "en": "50 gallon water heater installed",
+        "es": "Calentador de 50 galones instalado",
+        "scenario": "50 gal instalado",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "50 gallon water heater installation cost",
+        "es": "Costo de instalación de calentador de 50 galones",
+        "scenario": "Costo 50 gal",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much is a 50-gallon electric water heater installed?",
+        "es": "¿Cuánto cuesta instalado un calentador eléctrico de 50 galones?",
+        "scenario": "Costo eléctrico 50 gal",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/same-day-water-heater-replacement/",
+    "h1": "Same-Day Water Heater Replacement",
+    "cluster": "Urgencia",
+    "intent": "Transaccional urgente",
+    "minContent": "Disponibilidad real, pasos, fotos requeridas, límites",
+    "cta": "Programar hoy",
+    "queries": [
+      {
+        "en": "Same day water heater replacement",
+        "es": "Reemplazo de calentador el mismo día",
+        "scenario": "Mismo día exacto",
+        "cluster": "Urgencia",
+        "priority": "P0",
+        "cta": "Programar hoy",
+        "note": "Sin prometer 24/7."
+      },
+      {
+        "en": "Can someone fix or replace my water heater today?",
+        "es": "¿Alguien puede reparar o reemplazar mi calentador hoy?",
+        "scenario": "Necesita servicio el mismo día",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Programar hoy",
+        "note": ""
+      },
+      {
+        "en": "Who can replace a leaking water heater today?",
+        "es": "¿Quién puede reemplazar hoy un calentador con fuga?",
+        "scenario": "Busca servicio hoy",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Does same-day water heater replacement cost more?",
+        "es": "¿Cuesta más el reemplazo de calentador el mismo día?",
+        "scenario": "Costo servicio mismo día",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much is weekend water heater replacement?",
+        "es": "¿Cuánto cuesta reemplazar un calentador en fin de semana?",
+        "scenario": "Costo fin de semana",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/water-heater-emergency/",
+    "h1": "Water Heater Emergency: What to Do Now",
+    "cluster": "Seguridad",
+    "intent": "Urgente",
+    "minContent": "Fuga, gas, CO, electricidad, cierre seguro, cuándo evacuar",
+    "cta": "Llamar ahora",
+    "queries": [
+      {
+        "en": "Why are the wires on my water heater getting hot?",
+        "es": "¿Por qué se calientan los cables de mi calentador?",
+        "scenario": "Cableado recalentado",
+        "cluster": "Seguridad eléctrica",
+        "priority": "P0",
+        "cta": "Apagar breaker y llamar",
+        "note": "Riesgo eléctrico; no dar pasos DIY invasivos."
+      },
+      {
+        "en": "Why is my water heater flame yellow instead of blue?",
+        "es": "¿Por qué la llama de mi calentador es amarilla y no azul?",
+        "scenario": "Llama amarilla",
+        "cluster": "Seguridad de gas",
+        "priority": "P0",
+        "cta": "Apagar gas y llamar",
+        "note": ""
+      },
+      {
+        "en": "Why is there soot around my gas water heater?",
+        "es": "¿Por qué hay hollín alrededor de mi calentador de gas?",
+        "scenario": "Hollín alrededor del equipo",
+        "cluster": "Seguridad de gas",
+        "priority": "P0",
+        "cta": "Apagar y llamar",
+        "note": ""
+      },
+      {
+        "en": "Why do I smell gas near my water heater?",
+        "es": "¿Por qué huele a gas cerca de mi calentador?",
+        "scenario": "Olor a gas",
+        "cluster": "Seguridad de gas",
+        "priority": "P0",
+        "cta": "Salir, llamar al proveedor de gas y al 911 si corresponde",
+        "note": "No accionar interruptores ni encender llama."
+      },
+      {
+        "en": "What should I do if the carbon monoxide alarm goes off near my water heater?",
+        "es": "¿Qué hago si suena la alarma de monóxido cerca del calentador?",
+        "scenario": "Alarma de monóxido cerca del equipo",
+        "cluster": "Seguridad de gas",
+        "priority": "P0",
+        "cta": "Evacuar y llamar al 911/proveedor de gas",
+        "note": ""
+      },
+      {
+        "en": "What do I do if my water heater is flooding the house?",
+        "es": "¿Qué hago si el calentador está inundando la casa?",
+        "scenario": "Fuga fuerte e inundación",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Is a bulging water heater dangerous?",
+        "es": "¿Es peligroso un calentador abultado?",
+        "scenario": "Tanque abultado",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Why is steam coming from my water heater?",
+        "es": "¿Por qué sale vapor de mi calentador?",
+        "scenario": "Vapor saliendo",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "What should I do if my water heater is boiling?",
+        "es": "¿Qué hago si mi calentador está hirviendo?",
+        "scenario": "Agua parece hervir",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "What should I do if the pressure relief valve is releasing a lot of water?",
+        "es": "¿Qué hago si la válvula de alivio descarga mucha agua?",
+        "scenario": "Válvula libera mucha agua",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater smell like it is burning?",
+        "es": "¿Por qué mi calentador huele a quemado?",
+        "scenario": "Olor a quemado",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "What should I do if my electric water heater is sparking?",
+        "es": "¿Qué hago si mi calentador eléctrico produce chispas?",
+        "scenario": "Chispas",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Is a hot water heater breaker or disconnect dangerous?",
+        "es": "¿Es peligroso que el breaker o desconectador esté caliente?",
+        "scenario": "Panel o breaker caliente",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "What should I do about burned wires on a water heater?",
+        "es": "¿Qué hago si hay cables quemados en el calentador?",
+        "scenario": "Cable quemado",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "What should I do if I smell gas at the water heater?",
+        "es": "¿Qué hago si huelo gas junto al calentador?",
+        "scenario": "Olor a gas",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "What should I do if my carbon monoxide alarm goes off?",
+        "es": "¿Qué hago si suena la alarma de monóxido de carbono?",
+        "scenario": "Alarma CO",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Is soot or a yellow flame on a water heater dangerous?",
+        "es": "¿Es peligroso el hollín o una llama amarilla en el calentador?",
+        "scenario": "Hollín o llama anormal",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Where is the water heater shutoff valve?",
+        "es": "¿Dónde está la válvula para cerrar el agua del calentador?",
+        "scenario": "Quiere cerrar suministro de agua",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "How do I turn off power to an electric water heater?",
+        "es": "¿Cómo corto la electricidad de un calentador eléctrico?",
+        "scenario": "Quiere cortar electricidad",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "How do I shut off gas to a water heater in an emergency?",
+        "es": "¿Cómo cierro el gas del calentador en una emergencia?",
+        "scenario": "Quiere cerrar gas",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Is it safe to leave a leaking water heater on overnight?",
+        "es": "¿Es seguro dejar encendido un calentador con fuga durante la noche?",
+        "scenario": "Pregunta si es seguro dejarlo encendido",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Is there a 24-hour emergency water heater service near me?",
+        "es": "¿Hay servicio de emergencia de calentadores 24 horas cerca de mí?",
+        "scenario": "Busca servicio 24 horas",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Can I get emergency same-day water heater replacement?",
+        "es": "¿Puedo obtener reemplazo de emergencia el mismo día?",
+        "scenario": "Busca reemplazo el mismo día",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      },
+      {
+        "en": "Who can stop an attic water heater leak right now?",
+        "es": "¿Quién puede detener ahora una fuga del calentador en el ático?",
+        "scenario": "Fuga en ático amenaza techo",
+        "cluster": "Seguridad y emergencia",
+        "priority": "P0",
+        "cta": "Instrucciones seguras + llamada inmediata",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/water-heater-leaking/",
+    "h1": "Water Heater Leaking: Bottom, Top, T&P or Drain",
+    "cluster": "Fuga",
+    "intent": "Problema urgente",
+    "minContent": "Ubicación de fuga, gravedad, reparar vs reemplazar",
+    "cta": "Subir fotos",
+    "queries": [
+      {
+        "en": "Water heater leaking",
+        "es": "Water heater goteando",
+        "scenario": "Fuga exacta",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Who to call for leaking water heater",
+        "es": "A quién llamar si el calentador gotea",
+        "scenario": "A quién llamar fuga",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater leaking from the bottom?",
+        "es": "¿Por qué mi calentador pierde agua por abajo?",
+        "scenario": "Fuga desde abajo",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater leaking from the top?",
+        "es": "¿Por qué mi calentador pierde agua por arriba?",
+        "scenario": "Fuga desde arriba",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater leaking from the side?",
+        "es": "¿Por qué mi calentador pierde agua por un lado?",
+        "scenario": "Fuga por un costado",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater leaking at a pipe connection?",
+        "es": "¿Por qué hay fuga en una conexión del calentador?",
+        "scenario": "Fuga en conexión de tubería",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater drain valve leaking?",
+        "es": "¿Por qué gotea la válvula de drenaje?",
+        "scenario": "Fuga en válvula de drenaje",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater pressure relief valve leaking?",
+        "es": "¿Por qué gotea la válvula de alivio de presión?",
+        "scenario": "Fuga en válvula T&amp;P",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is water coming out of the water heater relief pipe?",
+        "es": "¿Por qué sale agua por el tubo de descarga del calentador?",
+        "scenario": "Agua sale por tubo de descarga",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater leaking around the top nipple?",
+        "es": "¿Por qué gotea alrededor de la conexión superior?",
+        "scenario": "Fuga en nipple superior",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Can a water heater tank seam leak be repaired?",
+        "es": "¿Se puede reparar una fuga en la costura del tanque?",
+        "scenario": "Fuga en la costura del tanque",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there a small puddle around my water heater?",
+        "es": "¿Por qué hay un charco pequeño alrededor del calentador?",
+        "scenario": "Charco pequeño alrededor",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater leak only sometimes?",
+        "es": "¿Por qué mi calentador gotea solo a veces?",
+        "scenario": "Gotea solo de vez en cuando",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater leak only when heating?",
+        "es": "¿Por qué mi calentador gotea solo cuando está calentando?",
+        "scenario": "Gotea solo mientras calienta",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Is my water heater leaking or just condensing?",
+        "es": "¿Mi calentador tiene una fuga o solo condensación?",
+        "scenario": "Duda condensación vs fuga",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater drain pan full of water?",
+        "es": "¿Por qué está llena de agua la bandeja del calentador?",
+        "scenario": "Bandeja de drenaje llena",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "What should I do if my attic water heater is leaking?",
+        "es": "¿Qué hago si el calentador del ático tiene una fuga?",
+        "scenario": "Fuga en ático",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "What should I do if my garage water heater is leaking?",
+        "es": "¿Qué hago si el calentador del garaje tiene una fuga?",
+        "scenario": "Fuga en garaje",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "How do I safely shut off a leaking water heater?",
+        "es": "¿Cómo apago de forma segura un calentador con fuga?",
+        "scenario": "Quiere apagarlo",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Can a leaking water heater wait until tomorrow?",
+        "es": "¿Puede esperar hasta mañana un calentador que está goteando?",
+        "scenario": "Pregunta si puede esperar",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Can a leaking water heater burst or explode?",
+        "es": "¿Puede reventar o explotar un calentador con fuga?",
+        "scenario": "Pregunta si explotará",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Can a leaking water heater tank be repaired?",
+        "es": "¿Se puede reparar el tanque de un calentador que gotea?",
+        "scenario": "Busca reparación del tanque",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Do I need to replace a water heater leaking from the tank?",
+        "es": "¿Necesito reemplazar un calentador que pierde agua por el tanque?",
+        "scenario": "Busca reemplazo inmediato",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/no-hot-water/",
+    "h1": "No Hot Water? Water Heater Not Working",
+    "cluster": "Sin agua caliente",
+    "intent": "Problema urgente",
+    "minContent": "Árbol eléctrico/gas/tankless y punto de decisión",
+    "cta": "Diagnóstico hoy",
+    "queries": [
+      {
+        "en": "No hot water",
+        "es": "No hay agua caliente",
+        "scenario": "Sin agua caliente exacta",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Water heater not working",
+        "es": "El water heater no calienta",
+        "scenario": "Calentador no funciona",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water in my house?",
+        "es": "¿Por qué no hay agua caliente en mi casa?",
+        "scenario": "Toda la casa se quedó sin agua caliente",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "I woke up with no hot water—what happened?",
+        "es": "Amanecí sin agua caliente, ¿qué pasó?",
+        "scenario": "El usuario despertó sin agua caliente",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why did my water heater suddenly stop working?",
+        "es": "¿Por qué mi calentador de agua dejó de funcionar de repente?",
+        "scenario": "El calentador dejó de funcionar de repente",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater on but there is no hot water?",
+        "es": "¿Por qué mi calentador está encendido pero no sale agua caliente?",
+        "scenario": "El equipo parece encendido pero no calienta",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my shower only running cold water?",
+        "es": "¿Por qué en mi ducha solo sale agua fría?",
+        "scenario": "Solo sale agua fría en la ducha",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why do none of my faucets have hot water?",
+        "es": "¿Por qué ningún grifo tiene agua caliente?",
+        "scenario": "Ningún grifo tiene agua caliente",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water at only one faucet?",
+        "es": "¿Por qué solo un grifo no tiene agua caliente?",
+        "scenario": "Solo un grifo no tiene agua caliente",
+        "cluster": "Sin agua caliente",
+        "priority": "P1",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": "Puede ser problema del grifo, no del calentador."
+      },
+      {
+        "en": "Why does my hot water work only sometimes?",
+        "es": "¿Por qué el agua caliente funciona solo a veces?",
+        "scenario": "El agua caliente funciona de forma intermitente",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why did my hot water stop working overnight?",
+        "es": "¿Por qué dejó de funcionar el agua caliente durante la noche?",
+        "scenario": "El agua caliente desapareció durante la noche",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water after a power outage?",
+        "es": "¿Por qué no hay agua caliente después de un apagón?",
+        "scenario": "No hay agua caliente después de un apagón",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water after vacation?",
+        "es": "¿Por qué no hay agua caliente después de regresar de vacaciones?",
+        "scenario": "No hay agua caliente después de vacaciones",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water upstairs?",
+        "es": "¿Por qué no hay agua caliente en el segundo piso?",
+        "scenario": "No hay agua caliente en el piso de arriba",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is there hot water downstairs but not upstairs?",
+        "es": "¿Por qué hay agua caliente abajo pero no arriba?",
+        "scenario": "Hay agua caliente abajo pero no arriba",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "Why is my hot water only lukewarm?",
+        "es": "¿Por qué el agua caliente solo sale tibia?",
+        "scenario": "El agua solo sale tibia",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      },
+      {
+        "en": "My water heater is not working—what should I check first?",
+        "es": "Mi calentador de agua no funciona, ¿qué debo revisar primero?",
+        "scenario": "El usuario no sabe qué revisar",
+        "cluster": "Sin agua caliente",
+        "priority": "P0",
+        "cta": "Diagnóstico / reemplazo hoy",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/repair-or-replace-water-heater/",
+    "h1": "Water Heater Repair Charlotte NC: Repair or Replace?",
+    "cluster": "Reparar o reemplazar",
+    "intent": "Decisión",
+    "minContent": "Edad, fuga, costo, recurrencia, tabla de decisión",
+    "cta": "Evaluación",
+    "queries": [
+      {
+        "en": "Water heater repair Charlotte NC",
+        "es": "Reparación de calentador de agua en Charlotte, NC",
+        "scenario": "Reparación Charlotte exacta",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I repair or replace my water heater",
+        "es": "¿Debo reparar o reemplazar mi calentador de agua?",
+        "scenario": "Decisión reparar vs reemplazar",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I repair or replace my gas water heater?",
+        "es": "¿Debo reparar o reemplazar mi calentador de gas?",
+        "scenario": "Busca reemplazo de gas",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "How long do water heaters last?",
+        "es": "¿Cuánto dura un calentador de agua?",
+        "scenario": "Quiere conocer vida útil",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "How long does an electric water heater last?",
+        "es": "¿Cuánto dura un calentador eléctrico?",
+        "scenario": "Quiere conocer vida de eléctrico",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "How long does a gas water heater last?",
+        "es": "¿Cuánto dura un calentador de gas?",
+        "scenario": "Quiere conocer vida de gas",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "How long does a tankless water heater last?",
+        "es": "¿Cuánto dura un calentador sin tanque?",
+        "scenario": "Quiere conocer vida de tankless",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "How can I tell how old my water heater is?",
+        "es": "¿Cómo puedo saber cuántos años tiene mi calentador?",
+        "scenario": "Quiere calcular edad",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "How do I read a water heater serial number to find the age?",
+        "es": "¿Cómo leo el número de serie para saber la edad del calentador?",
+        "scenario": "Busca edad por serial",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "What are the signs a water heater is going bad?",
+        "es": "¿Cuáles son las señales de que un calentador está fallando?",
+        "scenario": "Pregunta señales de falla",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I repair or replace my water heater?",
+        "es": "¿Debo reparar o reemplazar mi calentador?",
+        "scenario": "Decide reparación o reemplazo",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I replace an 8-year-old water heater?",
+        "es": "¿Debo reemplazar un calentador de 8 años?",
+        "scenario": "Equipo de 8 años",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I replace a 10-year-old water heater?",
+        "es": "¿Debo reemplazar un calentador de 10 años?",
+        "scenario": "Equipo de 10 años",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Is a 12-year-old water heater worth repairing?",
+        "es": "¿Vale la pena reparar un calentador de 12 años?",
+        "scenario": "Equipo de 12 años",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I replace a 15-year-old water heater that still works?",
+        "es": "¿Debo reemplazar un calentador de 15 años que todavía funciona?",
+        "scenario": "Equipo de 15 años aún funciona",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Is a leaking old water heater repairable?",
+        "es": "¿Se puede reparar un calentador viejo que tiene fuga?",
+        "scenario": "Tanque viejo con fuga",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "When do repeated water heater repairs stop being worth it?",
+        "es": "¿Cuándo dejan de valer la pena las reparaciones repetidas?",
+        "scenario": "Reparaciones frecuentes",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Can an old water heater raise my energy bill?",
+        "es": "¿Un calentador viejo puede aumentar mi factura de energía?",
+        "scenario": "Factura subió",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I replace my water heater before it fails?",
+        "es": "¿Debo reemplazar mi calentador antes de que falle?",
+        "scenario": "Reemplazo preventivo",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Should I replace an old water heater before selling my house?",
+        "es": "¿Debo reemplazar el calentador viejo antes de vender mi casa?",
+        "scenario": "Antes de vender casa",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "What should I do if the home inspector flags the water heater?",
+        "es": "¿Qué hago si el inspector de la casa señala el calentador?",
+        "scenario": "Reporte de inspección lo señala",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Is it cheaper to repair or replace a water heater?",
+        "es": "¿Es más barato reparar o reemplazar un calentador?",
+        "scenario": "Compara costo de reparar con nuevo",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      },
+      {
+        "en": "Can a water heater fail suddenly without warning?",
+        "es": "¿Puede fallar un calentador de repente sin aviso?",
+        "scenario": "Falla repentina sin señales",
+        "cluster": "Reparar o reemplazar",
+        "priority": "P0",
+        "cta": "Evaluación con precio de ambas opciones",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "EN",
+    "slug": "/water-heater-service-near-me/",
+    "h1": "Water Heater Replacement Near Me in Charlotte, NC",
+    "cluster": "Cercanía",
+    "intent": "Local transaccional",
+    "minContent": "Áreas, horarios, servicio, señales de confianza",
+    "cta": "Llamar / texto",
+    "queries": [
+      {
+        "en": "Water heater replacement near me",
+        "es": "Reemplazo de calentador cerca de mí",
+        "scenario": "Reemplazo cercano",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater installation near me",
+        "es": "Instalación de calentador cerca de mí",
+        "scenario": "Instalación cercana",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater repair near me",
+        "es": "Reparación de calentador cerca de mí",
+        "scenario": "Reparación cercana",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater service near me",
+        "es": "Servicio de calentador cerca de mí",
+        "scenario": "Servicio cercano",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater company near me",
+        "es": "Compañía de calentadores cerca de mí",
+        "scenario": "Compañía cercana",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Hot water heater repair near me",
+        "es": "Reparación de calentón cerca de mí",
+        "scenario": "Sinónimo hot water heater",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Plumber for water heater near me",
+        "es": "Plomero para calentador cerca de mí",
+        "scenario": "Plomero de calentadores",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": "No competir como plomero general 24/7."
+      },
+      {
+        "en": "Spanish speaking plumber near me water heater",
+        "es": "Plomero que habla español cerca de mí",
+        "scenario": "Español local",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater installer near me",
+        "es": "Instalador de calentadores cerca de mí",
+        "scenario": "Instalador cercano",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater replacement near me",
+        "es": "Reemplazo de calentador cerca de mí",
+        "scenario": "Reemplazo cercano",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Hot water heater installation near me",
+        "es": "Instalación de calentador de agua cerca de mí",
+        "scenario": "Instalación cercana",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater service open now",
+        "es": "Servicio de calentadores abierto ahora",
+        "scenario": "Servicio abierto ahora",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Same-day water heater replacement near me",
+        "es": "Reemplazo de calentador el mismo día cerca de mí",
+        "scenario": "Servicio mismo día",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Emergency water heater repair near me",
+        "es": "Reparación de emergencia de calentador cerca de mí",
+        "scenario": "Emergencia cercana",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Best water heater company near me",
+        "es": "Mejor compañía de calentadores cerca de mí",
+        "scenario": "Mejor compañía local",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Affordable water heater installation near me",
+        "es": "Instalación económica de calentador cerca de mí",
+        "scenario": "Instalador económico",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Spanish-speaking water heater installer near me",
+        "es": "Instalador de calentadores que habla español cerca de mí",
+        "scenario": "Plomero que habla español",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Bilingual water heater company Charlotte NC",
+        "es": "Compañía bilingüe de calentadores en Charlotte, NC",
+        "scenario": "Compañía bilingüe",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Licensed water heater installer Charlotte NC",
+        "es": "Instalador de calentadores con licencia en Charlotte, NC",
+        "scenario": "Instalador con licencia",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater installation reviews Charlotte NC",
+        "es": "Reseñas de instalación de calentadores en Charlotte, NC",
+        "scenario": "Busca reseñas",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P1",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Upfront-price water heater installation Charlotte NC",
+        "es": "Instalación de calentador con precio por adelantado en Charlotte, NC",
+        "scenario": "Busca precio por adelantado",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Free water heater replacement estimate near me",
+        "es": "Estimado gratis de reemplazo de calentador cerca de mí",
+        "scenario": "Busca estimado gratuito",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "ES",
+    "slug": "/es/calentadores-de-agua-charlotte-nc/",
+    "h1": "Calentadores de Agua en Charlotte, NC",
+    "cluster": "Español local",
+    "intent": "Local transaccional",
+    "minContent": "Servicios, lenguaje natural, precios, garantía, áreas",
+    "cta": "Llamar en español",
+    "queries": [
+      {
+        "en": "Calentador de agua cerca de mí",
+        "es": "Calentador de agua cerca de mí en Charlotte",
+        "scenario": "Cercanía español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Reemplazo de calentador de agua Charlotte",
+        "es": "Reemplazo de calentador de agua en Charlotte",
+        "scenario": "Reemplazo español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Plomero que habla español cerca de mí",
+        "es": "Plomero que habla español cerca de mí para water heater",
+        "scenario": "Plomero español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Precio de water heater instalado",
+        "es": "Precio de water heater instalado en Charlotte",
+        "scenario": "Precio español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Boiler de agua no prende",
+        "es": "Boiler de agua no prende, ¿quién lo repara?",
+        "scenario": "Usa 'boiler'",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Calentón de agua no funciona",
+        "es": "Mi calentón de agua no funciona, ¿qué hago?",
+        "scenario": "Usa 'calentón'",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Heater de agua no calienta",
+        "es": "Mi heater de agua no calienta",
+        "scenario": "Usa 'heater de agua'",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Tanque de agua caliente con fuga",
+        "es": "Mi tanque de agua caliente está goteando",
+        "scenario": "Usa 'tanque de agua caliente'",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Spanish water heater installation Charlotte",
+        "es": "Instalación de boiler de agua en Charlotte",
+        "scenario": "Busca instalación en español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Latino water heater installer near me",
+        "es": "Plomero latino para calentador cerca de mí",
+        "scenario": "Busca técnico latino",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Spanish water heater financing Charlotte",
+        "es": "Financiamiento para calentador de agua en Charlotte",
+        "scenario": "Busca financiamiento",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "40 gallon water heater Spanish installation",
+        "es": "Calentador eléctrico de 40 galones instalado",
+        "scenario": "Pregunta por 40 galones",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Water heater warranty Spanish",
+        "es": "¿Qué garantía tiene el boiler de agua?",
+        "scenario": "Pregunta por garantía",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Water heater leak help Spanish",
+        "es": "Mi boiler está tirando agua, ¿a quién llamo?",
+        "scenario": "Pregunta por fuga",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Gas water heater pilot Spanish",
+        "es": "El piloto del calentador de gas no prende",
+        "scenario": "Pregunta por piloto",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Electric water heater breaker Spanish",
+        "es": "El breaker del calentador eléctrico se sigue botando",
+        "scenario": "Pregunta por breaker",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Bilingual plumber for water heater near me",
+        "es": "Compañía bilingüe para cambiar calentadores cerca de mí",
+        "scenario": "Busca compañía bilingüe",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P0",
+    "language": "ES",
+    "slug": "/es/reemplazo-calentador-agua-charlotte-nc/",
+    "h1": "Reemplazo e Instalación de Water Heater en Charlotte",
+    "cluster": "Reemplazo español",
+    "intent": "Compra",
+    "minContent": "Proceso, precio, tamaños, extras y garantías",
+    "cta": "Cotizar",
+    "queries": [
+      {
+        "en": "Instalación de water heater en Charlotte",
+        "es": "Instalación de water heater en Charlotte",
+        "scenario": "Instalación español Charlotte",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Reemplazo de calentador de agua",
+        "es": "Reemplazo de calentador de agua en Charlotte",
+        "scenario": "Reemplazo español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Replace hot water heater Spanish Charlotte",
+        "es": "Reemplazo de calentador de agua en Charlotte",
+        "scenario": "Busca reemplazo en español",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Water heater installed price Spanish",
+        "es": "¿Cuánto cuesta un calentador de agua instalado?",
+        "scenario": "Busca precio instalado",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      },
+      {
+        "en": "Spanish same day water heater replacement",
+        "es": "¿Quién cambia hoy un calentón de agua?",
+        "scenario": "Busca servicio hoy",
+        "cluster": "Lenguaje latino local",
+        "priority": "P0",
+        "cta": "Llamar o enviar texto en español",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/electric-water-heater-not-working/",
+    "h1": "Electric Water Heater Not Working",
+    "cluster": "Eléctrico",
+    "intent": "Diagnóstico",
+    "minContent": "Breaker, reset, elementos, termostatos, seguridad",
+    "cta": "Diagnóstico",
+    "queries": [
+      {
+        "en": "Electric water heater not working",
+        "es": "Calentador eléctrico no funciona",
+        "scenario": "Eléctrico no funciona exacto",
+        "cluster": "Calentador eléctrico",
+        "priority": "P0",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Electric water heater repair near me",
+        "es": "Reparación de calentador eléctrico cerca de mí",
+        "scenario": "Reparación eléctrico cerca",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Electric water heater replacement near me",
+        "es": "Reemplazo de calentador eléctrico cerca de mí",
+        "scenario": "Reemplazo eléctrico cerca",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why does my electric water heater have power but no hot water?",
+        "es": "¿Por qué mi calentador eléctrico tiene corriente pero no calienta?",
+        "scenario": "Tiene electricidad pero no calienta",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why did my water heater breaker trip?",
+        "es": "¿Por qué se botó el breaker del calentador de agua?",
+        "scenario": "Breaker disparado",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater keep tripping the breaker?",
+        "es": "¿Por qué mi calentador sigue botando el breaker?",
+        "scenario": "Breaker se dispara repetidamente",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why did the reset button trip on my water heater?",
+        "es": "¿Por qué se disparó el botón de reinicio de mi calentador?",
+        "scenario": "Botón de reset disparado",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why won't my water heater reset button work?",
+        "es": "¿Por qué no funciona el botón de reset de mi calentador?",
+        "scenario": "Botón de reset no funciona",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "How do I safely reset an electric water heater?",
+        "es": "¿Cómo reinicio de forma segura un calentador eléctrico?",
+        "scenario": "Quiere reiniciar el equipo",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "How do I know if the upper heating element is bad?",
+        "es": "¿Cómo sé si el elemento calefactor superior está dañado?",
+        "scenario": "Elemento superior dañado",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "How do I know if the lower heating element is bad?",
+        "es": "¿Cómo sé si el elemento calefactor inferior está dañado?",
+        "scenario": "Elemento inferior dañado",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "What are the signs of a burned-out water heater element?",
+        "es": "¿Cuáles son las señales de un elemento quemado?",
+        "scenario": "Quiere saber si un elemento está quemado",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "How do I know if my electric water heater thermostat is bad?",
+        "es": "¿Cómo sé si el termostato de mi calentador eléctrico está dañado?",
+        "scenario": "Termostato eléctrico posiblemente dañado",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Can one bad heating element cause only a little hot water?",
+        "es": "¿Un elemento dañado puede causar que haya muy poca agua caliente?",
+        "scenario": "Solo calienta poca cantidad",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why is my electric water heater humming but not heating?",
+        "es": "¿Por qué mi calentador eléctrico zumba pero no calienta?",
+        "scenario": "El equipo zumba pero no calienta",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Does my electric water heater have a fuse or disconnect?",
+        "es": "¿Mi calentador eléctrico tiene fusible o desconectador?",
+        "scenario": "Fusible o desconectador sospechoso",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water after resetting the breaker?",
+        "es": "¿Por qué sigue sin haber agua caliente después de reiniciar el breaker?",
+        "scenario": "Sin agua caliente después de cambiar breaker",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why is there no hot water after draining the tank?",
+        "es": "¿Por qué no hay agua caliente después de drenar el tanque?",
+        "scenario": "Sin agua caliente después de drenar",
+        "cluster": "Calentador eléctrico",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/gas-water-heater-not-working/",
+    "h1": "Gas Water Heater Not Working",
+    "cluster": "Gas",
+    "intent": "Diagnóstico",
+    "minContent": "Piloto, ignición, llama, gas, ventilación, seguridad",
+    "cta": "Servicio de gas",
+    "queries": [
+      {
+        "en": "Gas water heater not working",
+        "es": "Calentador de gas no funciona",
+        "scenario": "Gas no funciona exacto",
+        "cluster": "Calentador de gas",
+        "priority": "P0",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Gas water heater repair near me",
+        "es": "Reparación de calentador de gas cerca de mí",
+        "scenario": "Reparación gas cerca",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Gas water heater replacement near me",
+        "es": "Reemplazo de calentador de gas cerca de mí",
+        "scenario": "Reemplazo gas cerca",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater pilot light out?",
+        "es": "¿Por qué está apagado el piloto de mi calentador?",
+        "scenario": "Piloto apagado",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why won't my water heater pilot light?",
+        "es": "¿Por qué no enciende el piloto de mi calentador?",
+        "scenario": "Piloto no enciende",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater pilot light keep going out?",
+        "es": "¿Por qué el piloto de mi calentador se sigue apagando?",
+        "scenario": "Piloto se apaga repetidamente",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "How do I relight a gas water heater pilot safely?",
+        "es": "¿Cómo vuelvo a encender de forma segura el piloto del calentador?",
+        "scenario": "Quiere encender el piloto",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why won't my gas water heater burner ignite?",
+        "es": "¿Por qué no enciende el quemador de mi calentador de gas?",
+        "scenario": "Quemador no enciende",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why is the burner on but I still have no hot water?",
+        "es": "¿Por qué el quemador está encendido pero no tengo agua caliente?",
+        "scenario": "Quemador encendido pero sin agua caliente",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater igniter clicking but not lighting?",
+        "es": "¿Por qué el encendedor hace clic pero no prende?",
+        "scenario": "Encendedor hace clic pero no prende",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "How do I know if my water heater thermocouple is bad?",
+        "es": "¿Cómo sé si el termopar del calentador está dañado?",
+        "scenario": "Termopar sospechoso",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "How do I know if the water heater gas control valve is bad?",
+        "es": "¿Cómo sé si la válvula de control de gas está dañada?",
+        "scenario": "Válvula de gas sospechosa",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "What does the blinking status light on my gas water heater mean?",
+        "es": "¿Qué significa la luz de estado parpadeando en mi calentador?",
+        "scenario": "Luz de estado parpadea",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "How do I know if my gas water heater is venting correctly?",
+        "es": "¿Cómo sé si mi calentador de gas ventila correctamente?",
+        "scenario": "Ventilación deficiente",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why does my gas water heater keep shutting off?",
+        "es": "¿Por qué mi calentador de gas se sigue apagando?",
+        "scenario": "Se apaga solo",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater not working after a gas outage?",
+        "es": "¿Por qué no funciona mi calentador después de un corte de gas?",
+        "scenario": "No funciona después de corte de gas",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      },
+      {
+        "en": "Is condensation on a gas water heater normal?",
+        "es": "¿Es normal la condensación en un calentador de gas?",
+        "scenario": "Condensación en calentador de gas",
+        "cluster": "Calentador de gas",
+        "priority": "P1",
+        "cta": "Diagnóstico de gas",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/not-enough-hot-water/",
+    "h1": "Why Do I Run Out of Hot Water?",
+    "cluster": "Poca agua",
+    "intent": "Diagnóstico/compra",
+    "minContent": "Capacidad, sedimento, elementos, demanda",
+    "cta": "Calcular tamaño",
+    "queries": [
+      {
+        "en": "Why does my hot water run out so fast?",
+        "es": "¿Por qué se acaba tan rápido el agua caliente?",
+        "scenario": "Se acaba muy rápido",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater only provide one shower?",
+        "es": "¿Por qué mi calentador solo alcanza para una ducha?",
+        "scenario": "Solo alcanza para una ducha",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why am I getting less hot water than before?",
+        "es": "¿Por qué tengo menos agua caliente que antes?",
+        "scenario": "Produce menos que antes",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater taking so long to recover?",
+        "es": "¿Por qué tarda tanto mi calentador en recuperar agua caliente?",
+        "scenario": "Tarda mucho en recuperar",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "How long should a water heater take to heat up?",
+        "es": "¿Cuánto tiempo debe tardar un calentador en calentar?",
+        "scenario": "Quiere saber tiempo de calentamiento",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater making water too hot?",
+        "es": "¿Por qué mi calentador produce agua demasiado caliente?",
+        "scenario": "Agua demasiado caliente",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why is my tap water suddenly scalding hot?",
+        "es": "¿Por qué el agua del grifo sale de repente demasiado caliente?",
+        "scenario": "Riesgo de quemadura",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why does my hot water temperature fluctuate?",
+        "es": "¿Por qué fluctúa la temperatura del agua caliente?",
+        "scenario": "Temperatura sube y baja",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why does my shower go hot then cold?",
+        "es": "¿Por qué la ducha pasa de caliente a fría?",
+        "scenario": "Sale caliente y luego fría",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why is my water only lukewarm even at the highest setting?",
+        "es": "¿Por qué el agua solo sale tibia aunque esté al máximo?",
+        "scenario": "Solo tibia aun al máximo",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why do I run out of hot water faster in winter?",
+        "es": "¿Por qué se acaba más rápido el agua caliente en invierno?",
+        "scenario": "Peor rendimiento en invierno",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why do we lose hot water when appliances run together?",
+        "es": "¿Por qué se acaba el agua caliente cuando usamos varios aparatos?",
+        "scenario": "Falla en horas pico",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Is my water heater too small for my family?",
+        "es": "¿Mi calentador es demasiado pequeño para mi familia?",
+        "scenario": "Familia creció",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "What temperature should my water heater be set to?",
+        "es": "¿A qué temperatura debo ajustar mi calentador?",
+        "scenario": "Busca ajuste recomendado",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Can I get more hot water without replacing the tank?",
+        "es": "¿Puedo obtener más agua caliente sin reemplazar el tanque?",
+        "scenario": "Quiere más capacidad sin reemplazar",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Should I add a water heater booster or buy a larger tank?",
+        "es": "¿Debo instalar un booster o comprar un tanque más grande?",
+        "scenario": "Compara booster vs tanque mayor",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Will a 50-gallon water heater give me more hot water than a 40-gallon?",
+        "es": "¿Un calentador de 50 galones me dará más agua caliente que uno de 40?",
+        "scenario": "Duda 40 vs 50 galones",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      },
+      {
+        "en": "Why do I have less hot water after flushing the tank?",
+        "es": "¿Por qué tengo menos agua caliente después de drenar el tanque?",
+        "scenario": "Poca agua después de mantenimiento",
+        "cluster": "Poca agua / temperatura",
+        "priority": "P1",
+        "cta": "Calcular capacidad o diagnóstico",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-making-noise/",
+    "h1": "Water Heater Noises Explained",
+    "cluster": "Ruidos",
+    "intent": "Diagnóstico",
+    "minContent": "Un bloque por ruido + nivel de urgencia",
+    "cta": "Enviar video",
+    "queries": [
+      {
+        "en": "Why is my water heater making popping noises?",
+        "es": "¿Por qué mi calentador hace ruidos como estallidos?",
+        "scenario": "Ruido de explosiones pequeñas",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater rumbling?",
+        "es": "¿Por qué retumba mi calentador?",
+        "scenario": "Ruido de retumbo",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater banging?",
+        "es": "¿Por qué golpea mi calentador?",
+        "scenario": "Golpes fuertes",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater knocking?",
+        "es": "¿Por qué hace golpeteos mi calentador?",
+        "scenario": "Golpeteo",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater whistling?",
+        "es": "¿Por qué silba mi calentador?",
+        "scenario": "Silbido",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater screeching?",
+        "es": "¿Por qué hace un chillido agudo mi calentador?",
+        "scenario": "Chillido agudo",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater hissing?",
+        "es": "¿Por qué sisea mi calentador?",
+        "scenario": "Siseo",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater sizzling?",
+        "es": "¿Por qué suena como si friera mi calentador?",
+        "scenario": "Sonido de fritura",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater clicking?",
+        "es": "¿Por qué hace clic repetidamente mi calentador?",
+        "scenario": "Clics repetidos",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater tick while heating?",
+        "es": "¿Por qué hace tictac al calentarse?",
+        "scenario": "Tictac al calentarse",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater gurgling?",
+        "es": "¿Por qué hace gorgoteos mi calentador?",
+        "scenario": "Gorgoteo",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater humming?",
+        "es": "¿Por qué zumba mi calentador?",
+        "scenario": "Zumbido",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater vibrating?",
+        "es": "¿Por qué vibra mi calentador?",
+        "scenario": "Vibración",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater sound like it is boiling?",
+        "es": "¿Por qué suena mi calentador como si hirviera?",
+        "scenario": "Parece hervir",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Is the banging noise water hammer or the water heater?",
+        "es": "¿El golpe es martillo de agua o viene del calentador?",
+        "scenario": "Water hammer",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why is my water heater noisy after flushing?",
+        "es": "¿Por qué hace ruido mi calentador después del flush?",
+        "scenario": "Ruido después del flush",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Why does my water heater make noise only when heating?",
+        "es": "¿Por qué hace ruido solo cuando calienta?",
+        "scenario": "Ruido solo al calentar",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      },
+      {
+        "en": "Should I turn off my water heater if it is making loud noises?",
+        "es": "¿Debo apagar el calentador si hace ruidos fuertes?",
+        "scenario": "Pregunta si debe apagar",
+        "cluster": "Ruidos",
+        "priority": "P0",
+        "cta": "Apagar si hay siseo, vapor, olor o sobrecalentamiento y llamar",
+        "note": ""
+      },
+      {
+        "en": "Does a noisy water heater need to be replaced?",
+        "es": "¿Un calentador ruidoso necesita reemplazo?",
+        "scenario": "Pregunta si el ruido significa reemplazo",
+        "cluster": "Ruidos",
+        "priority": "P1",
+        "cta": "Escuchar / diagnosticar ruido",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/smelly-discolored-hot-water/",
+    "h1": "Smelly, Rusty or Discolored Hot Water",
+    "cluster": "Calidad del agua",
+    "intent": "Diagnóstico",
+    "minContent": "Olor, color, ánodo, corrosión, seguridad",
+    "cta": "Inspección",
+    "queries": [
+      {
+        "en": "Why does my hot water smell like rotten eggs?",
+        "es": "¿Por qué el agua caliente huele a huevo podrido?",
+        "scenario": "Olor a huevo podrido",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why does only my hot water smell like sulfur?",
+        "es": "¿Por qué solo el agua caliente huele a azufre?",
+        "scenario": "Olor a azufre",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why does my hot water smell or taste metallic?",
+        "es": "¿Por qué el agua caliente huele o sabe a metal?",
+        "scenario": "Olor metálico",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why is my hot water rusty?",
+        "es": "¿Por qué el agua caliente sale oxidada?",
+        "scenario": "Agua oxidada",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why is brown water coming from my hot faucets?",
+        "es": "¿Por qué sale agua marrón de los grifos calientes?",
+        "scenario": "Agua marrón",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why are black specks coming from my hot water?",
+        "es": "¿Por qué salen partículas negras con el agua caliente?",
+        "scenario": "Partículas negras",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why are white particles coming from my hot water?",
+        "es": "¿Por qué salen partículas blancas con el agua caliente?",
+        "scenario": "Partículas blancas",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why is my hot water cloudy?",
+        "es": "¿Por qué el agua caliente sale turbia?",
+        "scenario": "Agua turbia",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why does my hot water look milky?",
+        "es": "¿Por qué el agua caliente se ve lechosa?",
+        "scenario": "Agua lechosa",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why is my hot water blue or green?",
+        "es": "¿Por qué el agua caliente sale azul o verde?",
+        "scenario": "Agua azul o verde",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why is sediment coming out of my hot water heater?",
+        "es": "¿Por qué sale sedimento de mi calentador?",
+        "scenario": "Sedimento visible",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Can the anode rod make hot water smell bad?",
+        "es": "¿La varilla de ánodo puede causar mal olor?",
+        "scenario": "Ánodo causa olor",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Why does my hot water smell after vacation?",
+        "es": "¿Por qué huele mal el agua caliente después de vacaciones?",
+        "scenario": "Olor después de vacaciones",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Is it safe to shower in smelly or rusty hot water?",
+        "es": "¿Es seguro bañarse con agua caliente olorosa u oxidada?",
+        "scenario": "Pregunta si es seguro bañarse",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Is discolored hot water safe to drink?",
+        "es": "¿Es seguro beber agua caliente descolorida?",
+        "scenario": "Pregunta si es seguro beber",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "How do I get rid of rotten egg smell in a water heater?",
+        "es": "¿Cómo elimino el olor a huevo podrido del calentador?",
+        "scenario": "Quiere eliminar olor",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Will flushing the water heater fix smelly water?",
+        "es": "¿Un flush del calentador quitará el mal olor?",
+        "scenario": "Pregunta si necesita flush",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Does rusty hot water mean my tank is failing?",
+        "es": "¿El agua oxidada significa que el tanque está fallando?",
+        "scenario": "Pregunta si significa corrosión",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      },
+      {
+        "en": "Should I replace the anode rod or the whole water heater?",
+        "es": "¿Debo reemplazar la varilla de ánodo o todo el calentador?",
+        "scenario": "Pregunta si debe reemplazar ánodo o tanque",
+        "cluster": "Olor, color y sedimento",
+        "priority": "P1",
+        "cta": "Inspección de tanque / ánodo",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/low-hot-water-pressure/",
+    "h1": "Low Hot Water Pressure",
+    "cluster": "Presión",
+    "intent": "Diagnóstico",
+    "minContent": "Aislar casa vs equipo, válvulas, PRV, expansión",
+    "cta": "Diagnóstico",
+    "queries": [
+      {
+        "en": "Why is my hot water pressure low?",
+        "es": "¿Por qué está baja la presión del agua caliente?",
+        "scenario": "Presión caliente baja",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Why is cold water pressure normal but hot water pressure is low?",
+        "es": "¿Por qué la presión fría es normal pero la caliente es baja?",
+        "scenario": "Fría normal y caliente débil",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Why is there no flow from the hot water taps?",
+        "es": "¿Por qué no sale agua por los grifos de agua caliente?",
+        "scenario": "No hay flujo caliente",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Why is hot water pressure low upstairs?",
+        "es": "¿Por qué está baja la presión caliente en el segundo piso?",
+        "scenario": "Problema solo arriba",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Why does my hot water flow keep changing?",
+        "es": "¿Por qué cambia constantemente el flujo de agua caliente?",
+        "scenario": "Flujo fluctúa",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Could a shutoff valve cause low hot water pressure?",
+        "es": "¿Una válvula cerrada puede causar baja presión caliente?",
+        "scenario": "Válvula parcialmente cerrada",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Can a clogged heat trap reduce hot water pressure?",
+        "es": "¿Una trampa térmica obstruida puede reducir la presión?",
+        "scenario": "Trampa térmica obstruida",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Can a broken dip tube cause hot water problems?",
+        "es": "¿Un tubo de inmersión roto puede causar problemas de agua caliente?",
+        "scenario": "Tubo de inmersión dañado",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Can high house water pressure damage a water heater?",
+        "es": "¿La presión alta de la casa puede dañar el calentador?",
+        "scenario": "Presión de casa demasiado alta",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Do I need a pressure reducing valve for my water heater?",
+        "es": "¿Necesito una válvula reductora de presión para el calentador?",
+        "scenario": "Necesita PRV",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Do I need an expansion tank with my water heater?",
+        "es": "¿Necesito un tanque de expansión con mi calentador?",
+        "scenario": "Necesita tanque de expansión",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "Why does the T&amp;P valve discharge when the water heater runs?",
+        "es": "¿Por qué descarga la válvula T&amp;P cuando funciona el calentador?",
+        "scenario": "T&amp;P descarga por presión",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/what-size-water-heater-do-i-need/",
+    "h1": "What Size Water Heater Do I Need?",
+    "cluster": "Tamaño",
+    "intent": "Investigación comercial",
+    "minContent": "Personas, baños, First Hour Rating, calculadora",
+    "cta": "Calcular",
+    "queries": [
+      {
+        "en": "What size water heater do I need?",
+        "es": "¿Qué tamaño de calentador necesito?",
+        "scenario": "Pregunta tamaño general",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What size water heater do I need for my family size?",
+        "es": "¿Qué tamaño necesito según el número de personas?",
+        "scenario": "Tamaño por personas",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What size water heater do I need for a 3-bedroom house?",
+        "es": "¿Qué tamaño necesito para una casa de 3 habitaciones?",
+        "scenario": "Tamaño por habitaciones",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What size water heater do I need for two bathrooms?",
+        "es": "¿Qué tamaño necesito para dos baños?",
+        "scenario": "Tamaño por baños",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Is a 40-gallon water heater enough for two people?",
+        "es": "¿Un calentador de 40 galones alcanza para dos personas?",
+        "scenario": "40 gal para 2 personas",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Is a 40-gallon water heater enough for three people?",
+        "es": "¿Un calentador de 40 galones alcanza para tres personas?",
+        "scenario": "40 gal para 3 personas",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Is a 40-gallon water heater enough for four people?",
+        "es": "¿Un calentador de 40 galones alcanza para cuatro personas?",
+        "scenario": "40 gal para 4 personas",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Is a 50-gallon water heater enough for a family of four?",
+        "es": "¿Un calentador de 50 galones alcanza para una familia de cuatro?",
+        "scenario": "50 gal para familia",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "When do I need a 60-gallon water heater?",
+        "es": "¿Cuándo necesito un calentador de 60 galones?",
+        "scenario": "Necesita 60 gal",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Who needs a 75- or 80-gallon water heater?",
+        "es": "¿Quién necesita un calentador de 75 u 80 galones?",
+        "scenario": "Necesita 75 u 80 gal",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Should I buy a 40- or 50-gallon water heater?",
+        "es": "¿Debo comprar uno de 40 o 50 galones?",
+        "scenario": "Compara 40 vs 50",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Should I buy a 50- or 80-gallon water heater?",
+        "es": "¿Debo comprar uno de 50 u 80 galones?",
+        "scenario": "Compara 50 vs 80",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Should I replace my water heater with the same size?",
+        "es": "¿Debo reemplazar mi calentador por uno del mismo tamaño?",
+        "scenario": "Mismo tamaño que actual",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Can I upgrade from a 40- to a 50-gallon water heater?",
+        "es": "¿Puedo cambiar de 40 a 50 galones?",
+        "scenario": "Quiere aumentar tamaño",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What first-hour rating do I need in a water heater?",
+        "es": "¿Qué First Hour Rating necesito?",
+        "scenario": "First Hour Rating",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What size water heater can handle two showers and a washer?",
+        "es": "¿Qué tamaño soporta dos duchas y una lavadora?",
+        "scenario": "Capacidad para uso simultáneo",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Do I need a tall, short, or lowboy water heater?",
+        "es": "¿Necesito un calentador alto, corto o lowboy?",
+        "scenario": "Tall vs short",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What are the dimensions of a 40-gallon water heater?",
+        "es": "¿Cuáles son las medidas de un calentador de 40 galones?",
+        "scenario": "Medidas físicas",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Will a 50-gallon water heater fit in my closet?",
+        "es": "¿Cabrá un calentador de 50 galones en mi closet?",
+        "scenario": "Cabrá en closet",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "Where do I find the gallon size on my water heater label?",
+        "es": "¿Dónde encuentro los galones en la etiqueta del calentador?",
+        "scenario": "Lee capacidad en etiqueta",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "How do I calculate tankless water heater GPM?",
+        "es": "¿Cómo calculo los GPM de un calentador sin tanque?",
+        "scenario": "Calcula GPM tankless",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      },
+      {
+        "en": "What size water heater do I need for a large soaking tub?",
+        "es": "¿Qué tamaño necesito para una bañera grande?",
+        "scenario": "Capacidad para bañera grande",
+        "cluster": "Tamaño y capacidad",
+        "priority": "P1",
+        "cta": "Calcular tamaño",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-buying-guide/",
+    "h1": "Water Heater Buying Guide",
+    "cluster": "Comparación",
+    "intent": "Investigación comercial",
+    "minContent": "Tipos, combustible, eficiencia, marcas, costo total",
+    "cta": "Elegir equipo",
+    "queries": [
+      {
+        "en": "Tank vs tankless water heater—which is better?",
+        "es": "¿Qué es mejor, calentador con tanque o sin tanque?",
+        "scenario": "Tanque vs tankless",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Electric vs gas water heater—which is cheaper?",
+        "es": "¿Qué es más barato, calentador eléctrico o de gas?",
+        "scenario": "Eléctrico vs gas",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Heat pump vs standard electric water heater—which should I buy?",
+        "es": "¿Debo comprar bomba de calor o eléctrico estándar?",
+        "scenario": "Bomba de calor vs eléctrico estándar",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Hybrid vs tankless water heater—which saves more?",
+        "es": "¿Qué ahorra más, híbrido o sin tanque?",
+        "scenario": "Híbrido vs tankless",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Natural gas vs propane water heater—which is better?",
+        "es": "¿Qué es mejor, gas natural o propano?",
+        "scenario": "Gas natural vs propano",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Direct vent vs power vent water heater—what is the difference?",
+        "es": "¿Cuál es la diferencia entre direct vent y power vent?",
+        "scenario": "Direct vent vs power vent",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Is a smart water heater worth it?",
+        "es": "¿Vale la pena un calentador inteligente?",
+        "scenario": "Estándar vs inteligente",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Tall vs short water heater—does performance differ?",
+        "es": "¿Rinde diferente un calentador alto frente a uno corto?",
+        "scenario": "Tall vs short",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Is a 6-, 9-, or 12-year water heater warranty worth it?",
+        "es": "¿Vale la pena una garantía de 6, 9 o 12 años?",
+        "scenario": "Garantía 6 vs 9 vs 12 años",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Rheem vs A. O. Smith water heater—which is better?",
+        "es": "¿Qué es mejor, Rheem o A. O. Smith?",
+        "scenario": "Rheem vs A.O. Smith",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Rheem vs Bradford White water heater—which is better?",
+        "es": "¿Qué es mejor, Rheem o Bradford White?",
+        "scenario": "Rheem vs Bradford White",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Are plumbing supply water heaters better than big-box models?",
+        "es": "¿Son mejores los calentadores de distribuidor que los de tienda grande?",
+        "scenario": "Big box vs supply house",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "What is the most reliable water heater brand?",
+        "es": "¿Cuál es la marca de calentador más confiable?",
+        "scenario": "Marca más confiable",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "What is the best affordable water heater?",
+        "es": "¿Cuál es el mejor calentador económico?",
+        "scenario": "Mejor equipo económico",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "What is the most energy-efficient water heater?",
+        "es": "¿Cuál es el calentador más eficiente?",
+        "scenario": "Más eficiente",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Which water heater has the lowest operating cost?",
+        "es": "¿Qué calentador tiene el costo de operación más bajo?",
+        "scenario": "Menor costo operativo",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "What does UEF mean on a water heater?",
+        "es": "¿Qué significa UEF en un calentador?",
+        "scenario": "Entender UEF",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "How do I read the EnergyGuide label on a water heater?",
+        "es": "¿Cómo leo la etiqueta EnergyGuide?",
+        "scenario": "Entender EnergyGuide",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "What does recovery rate mean on a water heater?",
+        "es": "¿Qué significa recovery rate en un calentador?",
+        "scenario": "Recovery rate",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "What type of anode rod is best for my water heater?",
+        "es": "¿Qué tipo de varilla de ánodo es mejor?",
+        "scenario": "Ánodo y tanque",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Do I need a mobile-home-approved water heater?",
+        "es": "¿Necesito un calentador aprobado para casa móvil?",
+        "scenario": "Aprobado para mobile home",
+        "cluster": "Comparación de producto",
+        "priority": "P2",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Should I add a point-of-use water heater?",
+        "es": "¿Debo agregar un calentador de punto de uso?",
+        "scenario": "Punto de uso",
+        "cluster": "Comparación de producto",
+        "priority": "P2",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Should I switch from gas to an electric water heater?",
+        "es": "¿Debo cambiar de gas a eléctrico?",
+        "scenario": "Conversión gas a eléctrico",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      },
+      {
+        "en": "Should I switch from electric to gas water heating?",
+        "es": "¿Debo cambiar de eléctrico a gas?",
+        "scenario": "Conversión eléctrico a gas",
+        "cluster": "Comparación de producto",
+        "priority": "P1",
+        "cta": "Elegir equipo",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/gas-water-heater-installation/",
+    "h1": "Gas Water Heater Installation",
+    "cluster": "Gas compra",
+    "intent": "Transaccional",
+    "minContent": "Ventilación, gas, tamaños, precio, seguridad",
+    "cta": "Cotizar",
+    "queries": [
+      {
+        "en": "How much is a 40-gallon gas water heater installed?",
+        "es": "¿Cuánto cuesta instalado un calentador de gas de 40 galones?",
+        "scenario": "Costo gas 40 gal",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "How much is a 50-gallon gas water heater installed?",
+        "es": "¿Cuánto cuesta instalado un calentador de gas de 50 galones?",
+        "scenario": "Costo gas 50 gal",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Will my gas water heater need new venting?",
+        "es": "¿Mi calentador de gas necesitará ventilación nueva?",
+        "scenario": "Ventilación gas",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/tankless-water-heater-installation/",
+    "h1": "Tankless Water Heater Installation",
+    "cluster": "Tankless compra",
+    "intent": "Transaccional",
+    "minContent": "GPM, infraestructura, costo, mantenimiento",
+    "cta": "Cotizar",
+    "queries": [
+      {
+        "en": "Who installs tankless water heaters near me?",
+        "es": "¿Quién instala calentadores sin tanque cerca de mí?",
+        "scenario": "Busca instalación tankless local",
+        "cluster": "Tankless",
+        "priority": "P1",
+        "cta": "Cotizar instalación",
+        "note": ""
+      },
+      {
+        "en": "How much does tankless water heater installation cost?",
+        "es": "¿Cuánto cuesta instalar un calentador sin tanque?",
+        "scenario": "Costo tankless",
+        "cluster": "Precio y cotización",
+        "priority": "P1",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-financing/",
+    "h1": "Water Heater Financing Charlotte NC",
+    "cluster": "Financiamiento",
+    "intent": "Transaccional",
+    "minContent": "Planes reales, elegibilidad, pagos, disclosures",
+    "cta": "Aplicar",
+    "queries": [
+      {
+        "en": "Water heater financing Charlotte NC",
+        "es": "Financiamiento de calentador de agua en Charlotte, NC",
+        "scenario": "Financiamiento Charlotte primero",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      },
+      {
+        "en": "Water heater financing near me",
+        "es": "Financiamiento de calentador cerca de mí",
+        "scenario": "Financiamiento cerca",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Water heater monthly payments",
+        "es": "Pagos mensuales de calentador de agua",
+        "scenario": "Pagos mensuales",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": "Solo si hay aprobación real."
+      },
+      {
+        "en": "Can I finance a water heater replacement monthly?",
+        "es": "¿Puedo financiar mensualmente el reemplazo?",
+        "scenario": "Financiamiento mensual",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Can I finance a water heater without a traditional credit check?",
+        "es": "¿Puedo financiar un calentador sin revisión tradicional de crédito?",
+        "scenario": "Sin crédito tradicional",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": "Afirmar solo las condiciones reales del plan SAFE."
+      },
+      {
+        "en": "Water heater financing Charlotte NC",
+        "es": "Financiamiento de calentador de agua en Charlotte, NC",
+        "scenario": "Busca financiamiento local",
+        "cluster": "Búsqueda local y confianza",
+        "priority": "P0",
+        "cta": "Llamar, texto o cotización",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-code-upgrades/",
+    "h1": "Water Heater Code Upgrades and Extra Costs",
+    "cluster": "Código/extras",
+    "intent": "Comercial",
+    "minContent": "PRV, expansión, pan, T&P, venting, ejemplos",
+    "cta": "Evaluar fotos",
+    "queries": [
+      {
+        "en": "How much does a pressure reducing valve cost with water heater installation?",
+        "es": "¿Cuánto cuesta agregar una válvula reductora con la instalación?",
+        "scenario": "Busca costo de PRV",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "How much does an expansion tank cost to install?",
+        "es": "¿Cuánto cuesta instalar un tanque de expansión?",
+        "scenario": "Busca costo de expansión",
+        "cluster": "Presión y flujo",
+        "priority": "P1",
+        "cta": "Diagnóstico de presión",
+        "note": ""
+      },
+      {
+        "en": "How much do water heater code upgrades add to the price?",
+        "es": "¿Cuánto agregan al precio las correcciones de código?",
+        "scenario": "Costo de actualizaciones a código",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "What code upgrades may be required with a new water heater?",
+        "es": "¿Qué actualizaciones de código pueden requerirse?",
+        "scenario": "Actualización a código",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Is an expansion tank required when replacing a water heater?",
+        "es": "¿Se requiere tanque de expansión al reemplazarlo?",
+        "scenario": "Tanque de expansión requerido",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "When is a pressure reducing valve required for a water heater?",
+        "es": "¿Cuándo se requiere una válvula reductora de presión?",
+        "scenario": "PRV requerido",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Is a drain pan required under a water heater?",
+        "es": "¿Se requiere bandeja debajo del calentador?",
+        "scenario": "Bandeja requerida",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Where should the water heater T&amp;P discharge pipe terminate?",
+        "es": "¿Dónde debe terminar el tubo de descarga T&amp;P?",
+        "scenario": "Tubo T&amp;P correcto",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Does a garage water heater need a bollard or raised platform?",
+        "es": "¿Un calentador de garaje necesita bolardo o plataforma?",
+        "scenario": "Protección en garaje",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-permit-charlotte-nc/",
+    "h1": "Water Heater Permits in Charlotte, NC",
+    "cluster": "Permiso",
+    "intent": "Informacional local",
+    "minContent": "Regla vigente, contratista, inspección, fuentes oficiales",
+    "cta": "Cotizar instalación",
+    "queries": [
+      {
+        "en": "Do I need a permit to replace a water heater in Charlotte NC?",
+        "es": "¿Necesito permiso para reemplazar un calentador en Charlotte, NC?",
+        "scenario": "Permiso en Charlotte",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Does a water heater replacement need an inspection?",
+        "es": "¿El reemplazo necesita una inspección?",
+        "scenario": "Inspección posterior",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/attic-water-heater-installation/",
+    "h1": "Attic Water Heater Replacement",
+    "cluster": "Acceso difícil",
+    "intent": "Transaccional",
+    "minContent": "Riesgo, pan, drenaje, acceso, costo variable",
+    "cta": "Evaluación",
+    "queries": [
+      {
+        "en": "How much extra is attic water heater installation?",
+        "es": "¿Cuánto cuesta extra instalar un calentador en el ático?",
+        "scenario": "Costo en ático",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Can a water heater be installed in an attic?",
+        "es": "¿Se puede instalar un calentador en el ático?",
+        "scenario": "Instalación en ático",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "What is the safest water heater setup for an attic?",
+        "es": "¿Cuál es la instalación más segura para un calentador en ático?",
+        "scenario": "Ático",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P1",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/difficult-access-water-heater-installation/",
+    "h1": "Water Heater Installation in Tight or Difficult Spaces",
+    "cluster": "Acceso difícil",
+    "intent": "Transaccional",
+    "minContent": "Crawlspace, closet, escaleras, reubicación",
+    "cta": "Subir fotos",
+    "queries": [
+      {
+        "en": "How much extra is crawlspace water heater installation?",
+        "es": "¿Cuánto cuesta extra instalar un calentador en el crawlspace?",
+        "scenario": "Costo en crawlspace",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Can a water heater be installed in a crawlspace?",
+        "es": "¿Se puede instalar un calentador en el crawlspace?",
+        "scenario": "Instalación en crawlspace",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "How much does it cost to relocate a water heater?",
+        "es": "¿Cuánto cuesta reubicar un calentador?",
+        "scenario": "Reubicar equipo",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Does difficult access increase water heater installation cost?",
+        "es": "¿El acceso difícil aumenta el costo de instalación?",
+        "scenario": "Acceso por escaleras",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-installation-process/",
+    "h1": "What to Expect During Water Heater Installation",
+    "cluster": "Proceso",
+    "intent": "Informacional comercial",
+    "minContent": "Antes, durante, después, tiempo, retiro, inspección",
+    "cta": "Programar",
+    "queries": [
+      {
+        "en": "How long does water heater installation take?",
+        "es": "¿Cuánto tarda la instalación de un calentador?",
+        "scenario": "Duración de instalación",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Can a water heater be installed the same day?",
+        "es": "¿Se puede instalar un calentador el mismo día?",
+        "scenario": "Disponibilidad mismo día",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "How should I prepare for water heater installation?",
+        "es": "¿Cómo preparo el área para la instalación?",
+        "scenario": "Preparar el área",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "How long will my home be without hot water during replacement?",
+        "es": "¿Cuánto tiempo estará la casa sin agua caliente?",
+        "scenario": "Tiempo sin agua caliente",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Will the installer haul away my old water heater?",
+        "es": "¿El instalador se llevará el calentador viejo?",
+        "scenario": "Retiro del equipo viejo",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Do I need a licensed plumber to install a water heater?",
+        "es": "¿Necesito un plomero con licencia para instalarlo?",
+        "scenario": "Necesidad de plomero licenciado",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Can I install my own water heater?",
+        "es": "¿Puedo instalar mi propio calentador?",
+        "scenario": "Instalación DIY",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": "Contenido de seguridad; dirigir a instalación profesional."
+      },
+      {
+        "en": "Can I buy the water heater and hire someone to install it?",
+        "es": "¿Puedo comprar el calentador y contratar solo la instalación?",
+        "scenario": "Compra equipo e instala SAFE",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "What breaker size does an electric water heater need?",
+        "es": "¿Qué tamaño de breaker necesita un calentador eléctrico?",
+        "scenario": "Circuito eléctrico",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "Can a water heater be installed in a closet?",
+        "es": "¿Se puede instalar un calentador en un closet?",
+        "scenario": "Instalación en closet",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "What should I ask before hiring a water heater installer?",
+        "es": "¿Qué debo preguntar antes de contratar a un instalador?",
+        "scenario": "Preguntas al instalador",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      },
+      {
+        "en": "What should a water heater installation quote include?",
+        "es": "¿Qué debe incluir una cotización de instalación?",
+        "scenario": "Comparar cotización completa",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-insurance-warranty/",
+    "h1": "Water Heater Warranty and Insurance Guide",
+    "cluster": "Garantía/seguro",
+    "intent": "Protección",
+    "minContent": "Fabricante vs labor, transferibilidad, leak damage",
+    "cta": "Verificar",
+    "queries": [
+      {
+        "en": "Does homeowners insurance cover water heater leak damage?",
+        "es": "¿El seguro de la casa cubre daños por fuga del calentador?",
+        "scenario": "Pregunta por seguro",
+        "cluster": "Seguro y garantía",
+        "priority": "P1",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      },
+      {
+        "en": "Is my water heater still under manufacturer warranty?",
+        "es": "¿Mi calentador todavía tiene garantía del fabricante?",
+        "scenario": "Verifica garantía fabricante",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "How do I check water heater warranty by serial number?",
+        "es": "¿Cómo verifico la garantía con el número de serie?",
+        "scenario": "Busca garantía por serial",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Do I need to register my new water heater warranty?",
+        "es": "¿Necesito registrar la garantía de mi calentador nuevo?",
+        "scenario": "Registra garantía",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Does a water heater warranty cover parts and labor?",
+        "es": "¿La garantía cubre piezas y mano de obra?",
+        "scenario": "Garantía de piezas vs labor",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "What happens if my water heater tank fails under warranty?",
+        "es": "¿Qué pasa si el tanque falla dentro de la garantía?",
+        "scenario": "Tanque falla bajo garantía",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Why do I still pay labor for a warranty water heater?",
+        "es": "¿Por qué debo pagar mano de obra si el equipo está en garantía?",
+        "scenario": "Labor de reemplazo bajo garantía",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Does the water heater warranty transfer to a new homeowner?",
+        "es": "¿La garantía se transfiere al nuevo dueño?",
+        "scenario": "Garantía transferible",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Is a water heater labor warranty tied to the home address?",
+        "es": "¿La garantía de mano de obra está ligada a la dirección?",
+        "scenario": "Garantía ligada a dirección",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Does a home warranty cover water heater replacement?",
+        "es": "¿Una home warranty cubre el reemplazo del calentador?",
+        "scenario": "Home warranty",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Does homeowners insurance cover damage from a failed water heater?",
+        "es": "¿El seguro cubre daños por falla del calentador?",
+        "scenario": "Seguro daño por fuga",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Does homeowners insurance pay for the broken water heater itself?",
+        "es": "¿El seguro paga el calentador averiado?",
+        "scenario": "Seguro paga equipo",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Is the landlord responsible for replacing a broken water heater?",
+        "es": "¿El propietario debe reemplazar un calentador averiado?",
+        "scenario": "Responsabilidad del landlord",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "How long can a tenant be left without hot water?",
+        "es": "¿Cuánto tiempo puede estar un inquilino sin agua caliente?",
+        "scenario": "Inquilino sin agua caliente",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": "Tema legal variable; citar reglas vigentes antes de publicar."
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/new-water-heater-not-working/",
+    "h1": "New Water Heater Not Working",
+    "cluster": "Post-instalación",
+    "intent": "Soporte",
+    "minContent": "Checklist no invasivo, garantía, llamada",
+    "cta": "Solicitar soporte",
+    "queries": [
+      {
+        "en": "Why is my new electric water heater not heating?",
+        "es": "¿Por qué mi calentador eléctrico nuevo no calienta?",
+        "scenario": "Calentador nuevo no calienta",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Enviar foto del panel y etiqueta",
+        "note": ""
+      },
+      {
+        "en": "Why is my brand-new water heater not heating?",
+        "es": "¿Por qué mi calentador nuevo no calienta?",
+        "scenario": "Nuevo equipo no calienta",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "How long should a new water heater take to heat up?",
+        "es": "¿Cuánto debe tardar en calentar un equipo nuevo?",
+        "scenario": "Nuevo equipo tarda en calentar",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why is my new water heater leaking?",
+        "es": "¿Por qué gotea mi calentador nuevo?",
+        "scenario": "Nuevo equipo gotea",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why is my new water heater making noise?",
+        "es": "¿Por qué hace ruido mi calentador nuevo?",
+        "scenario": "Nuevo equipo hace ruido",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why does hot water smell after installing a new water heater?",
+        "es": "¿Por qué huele el agua después de instalar un calentador nuevo?",
+        "scenario": "Nuevo equipo huele",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why does the breaker trip after a new water heater installation?",
+        "es": "¿Por qué se bota el breaker después de instalar el calentador?",
+        "scenario": "Breaker se dispara después de instalar",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why does the pilot go out on a new gas water heater?",
+        "es": "¿Por qué se apaga el piloto de un calentador nuevo?",
+        "scenario": "Piloto se apaga en equipo nuevo",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why is my new water heater set too hot?",
+        "es": "¿Por qué el calentador nuevo está demasiado caliente?",
+        "scenario": "Temperatura demasiado alta",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why is hot water pressure lower after replacement?",
+        "es": "¿Por qué bajó la presión caliente después del reemplazo?",
+        "scenario": "Presión caliente bajó",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why is water cloudy after a new water heater installation?",
+        "es": "¿Por qué sale turbia el agua después de instalarlo?",
+        "scenario": "Agua turbia después de instalar",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Why do faucets sputter after water heater replacement?",
+        "es": "¿Por qué escupen aire los grifos después del reemplazo?",
+        "scenario": "Aire en tuberías",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Is condensation normal on a new gas water heater?",
+        "es": "¿Es normal la condensación en un calentador de gas nuevo?",
+        "scenario": "Condensación de gas nuevo",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "What happens if a water heater installation fails inspection?",
+        "es": "¿Qué pasa si la instalación no pasa la inspección?",
+        "scenario": "Instalación no pasa inspección",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "Who is responsible for code issues after water heater installation?",
+        "es": "¿Quién responde por problemas de código después de instalarlo?",
+        "scenario": "Falta corrección de código",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "How do I request warranty service for a new water heater?",
+        "es": "¿Cómo solicito servicio de garantía para un calentador nuevo?",
+        "scenario": "Solicita servicio de garantía",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      },
+      {
+        "en": "How can I tell if my water heater was installed correctly?",
+        "es": "¿Cómo sé si mi calentador fue instalado correctamente?",
+        "scenario": "Quiere comprobar instalación",
+        "cluster": "Problemas después de instalación",
+        "priority": "P1",
+        "cta": "Solicitar garantía de instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/water-heater-replacement-quote/",
+    "h1": "Water Heater Quote From Photos",
+    "cluster": "Cotización remota",
+    "intent": "Transaccional",
+    "minContent": "Formulario de 8 fotos y campos obligatorios",
+    "cta": "Subir fotos",
+    "queries": [
+      {
+        "en": "Water heater replacement quote",
+        "es": "Cotización de reemplazo de calentador",
+        "scenario": "Cotización exacta",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Subir fotos",
+        "note": ""
+      },
+      {
+        "en": "Water heater quote from pictures",
+        "es": "Cotización de calentador con fotos",
+        "scenario": "Cotización por fotos",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Subir fotos",
+        "note": ""
+      },
+      {
+        "en": "Can I get a water heater replacement quote from photos?",
+        "es": "¿Puedo recibir una cotización de reemplazo enviando fotos?",
+        "scenario": "Busca envío de fotos para cotizar",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Subir fotos",
+        "note": ""
+      },
+      {
+        "en": "Can you quote water heater replacement from pictures?",
+        "es": "¿Pueden cotizar el reemplazo con fotografías?",
+        "scenario": "Precio con fotos",
+        "cluster": "Precio y cotización",
+        "priority": "P0",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/realtor-water-heater-services/",
+    "h1": "Water Heater Services for Realtors",
+    "cluster": "Realtor B2B",
+    "intent": "B2B",
+    "minContent": "Inspección, closing, carta, pago al cierre si aplica",
+    "cta": "Cuenta realtor",
+    "queries": [
+      {
+        "en": "Can water heater replacement be paid at closing?",
+        "es": "¿Se puede pagar el reemplazo al cierre de la casa?",
+        "scenario": "Pago al cerrar casa",
+        "cluster": "Precio y cotización",
+        "priority": "P1",
+        "cta": "Precio transparente + cotización por fotos",
+        "note": ""
+      },
+      {
+        "en": "Water heater replacement for real estate closing",
+        "es": "Reemplazo de calentador para cierre de bienes raíces",
+        "scenario": "Realtor necesita reparación",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Should a home buyer ask the age of the water heater?",
+        "es": "¿Un comprador debe preguntar la edad del calentador?",
+        "scenario": "Comprador pregunta edad",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P2",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Should a seller replace the water heater or give a credit?",
+        "es": "¿El vendedor debe reemplazar el calentador o dar crédito?",
+        "scenario": "Vendedor ofrece crédito",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P2",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Can you correct water heater items from a home inspection report?",
+        "es": "¿Pueden corregir problemas del calentador señalados por el inspector?",
+        "scenario": "Inspector pide corrección",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P1",
+    "language": "EN",
+    "slug": "/property-manager-water-heater-program/",
+    "h1": "Water Heater Replacement for Property Managers",
+    "cluster": "Property manager",
+    "intent": "B2B",
+    "minContent": "Volumen, SLA, documentación, garantías por dirección",
+    "cta": "Abrir cuenta",
+    "queries": [
+      {
+        "en": "Water heater replacement service for property managers",
+        "es": "Servicio de reemplazo de calentadores para administradores de propiedades",
+        "scenario": "Property manager busca volumen",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Abrir cuenta B2B",
+        "note": ""
+      },
+      {
+        "en": "Fast water heater replacement for rental property",
+        "es": "Reemplazo rápido de calentador para propiedad de renta",
+        "scenario": "Inversionista necesita turnaround",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      },
+      {
+        "en": "Bulk water heater replacement for apartments",
+        "es": "Reemplazo de calentadores por volumen para apartamentos",
+        "scenario": "Multifamily necesita reemplazos",
+        "cluster": "Garantía, seguro y propiedad",
+        "priority": "P1",
+        "cta": "Verificar garantía / cotizar",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P2",
+    "language": "EN",
+    "slug": "/tankless-water-heater-problems/",
+    "h1": "Tankless Water Heater Problems",
+    "cluster": "Tankless diagnóstico",
+    "intent": "Informacional",
+    "minContent": "Errores, flow, escala, ignición, recirculación",
+    "cta": "Diagnóstico",
+    "queries": [
+      {
+        "en": "Why is my tankless water heater not making hot water?",
+        "es": "¿Por qué mi calentador sin tanque no produce agua caliente?",
+        "scenario": "Tankless no produce agua caliente",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why does my tankless water heater go hot then cold?",
+        "es": "¿Por qué mi calentador sin tanque pasa de caliente a fría?",
+        "scenario": "Agua pasa de caliente a fría",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "What causes a cold water sandwich in a tankless water heater?",
+        "es": "¿Qué causa un tramo de agua fría en un calentador sin tanque?",
+        "scenario": "Cold water sandwich",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why won't my tankless water heater turn on at low flow?",
+        "es": "¿Por qué mi calentador sin tanque no activa con poco flujo?",
+        "scenario": "No activa con poco flujo",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "What does my tankless water heater error code mean?",
+        "es": "¿Qué significa el código de error de mi calentador sin tanque?",
+        "scenario": "Código de error",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why does my tankless water heater show ignition failure?",
+        "es": "¿Por qué mi calentador sin tanque muestra falla de ignición?",
+        "scenario": "Falla de ignición",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "How do I know if my tankless water heater has scale buildup?",
+        "es": "¿Cómo sé si mi calentador sin tanque tiene acumulación de sarro?",
+        "scenario": "Acumulación de sarro",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "How often should a tankless water heater be descaled?",
+        "es": "¿Cada cuánto se debe descalcificar un calentador sin tanque?",
+        "scenario": "Necesita descalcificación",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "How often should I flush a tankless water heater?",
+        "es": "¿Cada cuánto debo hacerle flush a un calentador sin tanque?",
+        "scenario": "Quiere hacer flush",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why can't my tankless water heater run two showers?",
+        "es": "¿Por qué mi calentador sin tanque no abastece dos duchas?",
+        "scenario": "No abastece dos duchas",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "What GPM tankless water heater do I need?",
+        "es": "¿Cuántos GPM necesito en un calentador sin tanque?",
+        "scenario": "Quiere calcular GPM",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why does hot water take so long with a tankless heater?",
+        "es": "¿Por qué tarda tanto en llegar el agua caliente con un calentador sin tanque?",
+        "scenario": "Agua tarda en llegar",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Do I need a recirculation pump with a tankless water heater?",
+        "es": "¿Necesito una bomba de recirculación con un calentador sin tanque?",
+        "scenario": "Considera recirculación",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Can a tankless water heater freeze?",
+        "es": "¿Se puede congelar un calentador sin tanque?",
+        "scenario": "Equipo se congeló",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why is my tankless water heater making noise?",
+        "es": "¿Por qué hace ruido mi calentador sin tanque?",
+        "scenario": "Hace ruido",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Why is hot water pressure low with my tankless heater?",
+        "es": "¿Por qué baja la presión con mi calentador sin tanque?",
+        "scenario": "Pierde presión",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      },
+      {
+        "en": "Should I repair or replace my tankless water heater?",
+        "es": "¿Debo reparar o reemplazar mi calentador sin tanque?",
+        "scenario": "Compara reparación o reemplazo",
+        "cluster": "Tankless",
+        "priority": "P2",
+        "cta": "Solicitar diagnóstico tankless",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P2",
+    "language": "EN",
+    "slug": "/water-heater-maintenance/",
+    "h1": "Water Heater Maintenance Guide",
+    "cluster": "Mantenimiento",
+    "intent": "Informacional",
+    "minContent": "Flush, ánodo, T&P, presión, fugas, calendario",
+    "cta": "Programar",
+    "queries": [
+      {
+        "en": "How often should I flush my water heater?",
+        "es": "¿Cada cuánto debo hacer flush al calentador?",
+        "scenario": "Frecuencia de flush",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How do I drain and flush a water heater?",
+        "es": "¿Cómo dreno y limpio un calentador?",
+        "scenario": "Quiere drenar",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Why won't my water heater drain?",
+        "es": "¿Por qué no drena mi calentador?",
+        "scenario": "Tanque no drena",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How do I remove sediment from a water heater?",
+        "es": "¿Cómo elimino sedimento del calentador?",
+        "scenario": "Sedimento bloquea drenaje",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How often should I flush a water heater with hard water?",
+        "es": "¿Cada cuánto debo hacer flush si hay agua dura?",
+        "scenario": "Agua dura",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How often should the water heater anode rod be checked?",
+        "es": "¿Cada cuánto se revisa la varilla de ánodo?",
+        "scenario": "Revisar ánodo",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "When should I replace the water heater anode rod?",
+        "es": "¿Cuándo debo reemplazar la varilla de ánodo?",
+        "scenario": "Cambiar ánodo",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How often should I test the water heater T&amp;P valve?",
+        "es": "¿Cada cuánto debo probar la válvula T&amp;P?",
+        "scenario": "Probar válvula T&amp;P",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How do I know if my expansion tank is bad?",
+        "es": "¿Cómo sé si el tanque de expansión está dañado?",
+        "scenario": "Revisar expansión",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "What is the best water heater temperature setting?",
+        "es": "¿Cuál es la mejor temperatura para el calentador?",
+        "scenario": "Ajuste de temperatura",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Should I use vacation mode on my water heater?",
+        "es": "¿Debo usar el modo vacaciones?",
+        "scenario": "Modo vacaciones",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Should I turn off my water heater when I travel?",
+        "es": "¿Debo apagar el calentador cuando viajo?",
+        "scenario": "Apagar durante vacaciones",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How do I winterize a water heater?",
+        "es": "¿Cómo preparo un calentador para el invierno?",
+        "scenario": "Preparar para invierno",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Should I insulate my water heater?",
+        "es": "¿Debo aislar mi calentador?",
+        "scenario": "Aislar tanque",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Should I insulate hot water pipes?",
+        "es": "¿Debo aislar las tuberías de agua caliente?",
+        "scenario": "Aislar tuberías",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Does a water heater need annual service?",
+        "es": "¿Un calentador necesita servicio anual?",
+        "scenario": "Servicio anual",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How much does water heater maintenance cost?",
+        "es": "¿Cuánto cuesta el mantenimiento de un calentador?",
+        "scenario": "Costo mantenimiento",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Should I install a water heater leak detector?",
+        "es": "¿Debo instalar un detector de fugas?",
+        "scenario": "Detector de fuga",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Is an automatic water shutoff worth it for a water heater?",
+        "es": "¿Vale la pena un cierre automático de agua?",
+        "scenario": "Cierre automático",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Can a water softener shorten water heater life?",
+        "es": "¿Un suavizador puede acortar la vida del calentador?",
+        "scenario": "Efecto del suavizador",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Does high water pressure shorten water heater life?",
+        "es": "¿La presión alta acorta la vida del calentador?",
+        "scenario": "Efecto de alta presión",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "How can I lower my water heating bill?",
+        "es": "¿Cómo puedo reducir la factura de calentar agua?",
+        "scenario": "Reducir factura",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "What is included in a water heater maintenance checklist?",
+        "es": "¿Qué incluye una lista de mantenimiento del calentador?",
+        "scenario": "Lista de mantenimiento",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      },
+      {
+        "en": "Is a water heater maintenance plan worth it?",
+        "es": "¿Vale la pena un plan de mantenimiento?",
+        "scenario": "Plan de mantenimiento",
+        "cluster": "Mantenimiento y prevención",
+        "priority": "P2",
+        "cta": "Programar mantenimiento",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P2",
+    "language": "EN",
+    "slug": "/heat-pump-water-heater-installation/",
+    "h1": "Heat Pump Water Heater Installation",
+    "cluster": "Heat pump",
+    "intent": "Investigación comercial",
+    "minContent": "Espacio, ruido, condensado, circuito, eficiencia",
+    "cta": "Evaluar",
+    "queries": [
+      {
+        "en": "What electrical upgrades are needed for a heat pump water heater?",
+        "es": "¿Qué mejoras eléctricas necesita un calentador con bomba de calor?",
+        "scenario": "Conversión eléctrica",
+        "cluster": "Instalación y código",
+        "priority": "P1",
+        "cta": "Programar instalación",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "priority": "P2",
+    "language": "EN",
+    "slug": "/water-heater-special-installations/",
+    "h1": "Water Heaters for Special Home Conditions",
+    "cluster": "Casos especiales",
+    "intent": "Investigación",
+    "minContent": "Mobile/manufactured, well, hard water, condo",
+    "cta": "Evaluación",
+    "queries": [
+      {
+        "en": "What water heater do I need for a mobile home?",
+        "es": "¿Qué calentador necesito para una casa móvil?",
+        "scenario": "Casa móvil",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Can a standard water heater be installed in a manufactured home?",
+        "es": "¿Se puede instalar un calentador estándar en una manufactured home?",
+        "scenario": "Manufactured home",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Who replaces a water heater in a condo?",
+        "es": "¿Quién reemplaza el calentador en un condominio?",
+        "scenario": "Condominio",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "What size water heater is best for a townhome?",
+        "es": "¿Qué tamaño es mejor para un townhome?",
+        "scenario": "Townhome",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Water heater replacement for apartment unit",
+        "es": "Reemplazo de calentador para apartamento",
+        "scenario": "Apartamento",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "What water heater works best in a cold garage?",
+        "es": "¿Qué calentador funciona mejor en un garaje frío?",
+        "scenario": "Garaje frío",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Can I install a water heater in a basement?",
+        "es": "¿Puedo instalar un calentador en el sótano?",
+        "scenario": "Sótano",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "What water heater is best for well water?",
+        "es": "¿Qué calentador es mejor para agua de pozo?",
+        "scenario": "Agua de pozo",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "What water heater is best for hard water?",
+        "es": "¿Qué calentador es mejor para agua dura?",
+        "scenario": "Agua dura",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Best water heater for a large family",
+        "es": "Mejor calentador para una familia grande",
+        "scenario": "Familia grande",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Commercial water heater for a small business",
+        "es": "Calentador comercial para un negocio pequeño",
+        "scenario": "Negocio pequeño",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": "Confirmar si SAFE ofrece comercial antes de crear la página."
+      },
+      {
+        "en": "What size water heater does a salon need?",
+        "es": "¿Qué tamaño necesita un salón de belleza?",
+        "scenario": "Salón o barbería",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Restaurant water heater replacement near me",
+        "es": "Reemplazo de calentador para restaurante cerca de mí",
+        "scenario": "Restaurante",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Is my combi boiler also my water heater?",
+        "es": "¿Mi boiler combinado también calienta el agua?",
+        "scenario": "Boiler combinado",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "Is a solar water heater worth it in North Carolina?",
+        "es": "¿Vale la pena un calentador solar en Carolina del Norte?",
+        "scenario": "Calentador solar",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": ""
+      },
+      {
+        "en": "RV water heater repair near me",
+        "es": "Reparación de calentador de RV cerca de mí",
+        "scenario": "RV o camper",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": "Excluir de Google Ads si SAFE no ofrece RV."
+      },
+      {
+        "en": "Pool water heater repair near me",
+        "es": "Reparación de calentador de piscina cerca de mí",
+        "scenario": "Piscina",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": "Excluir de Google Ads si SAFE no ofrece piscinas."
+      },
+      {
+        "en": "Portable water heater for camping",
+        "es": "Calentador portátil para camping",
+        "scenario": "Calentador portátil",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": "No corresponde al servicio residencial."
+      },
+      {
+        "en": "Water heater rental near me",
+        "es": "Renta de calentador de agua cerca de mí",
+        "scenario": "Alquiler de calentador",
+        "cluster": "Propiedades y casos especiales",
+        "priority": "P2",
+        "cta": "Evaluación por fotos",
+        "note": "Excluir si SAFE no renta equipos."
+      }
+    ]
+  },
+  {
+    "priority": "P2",
+    "language": "EN",
+    "slug": "/water-heater-leak-damage/",
+    "h1": "Water Heater Leak Damage: Next Steps",
+    "cluster": "Daño por fuga",
+    "intent": "Informacional",
+    "minContent": "Detener, documentar, mitigar, coordinar",
+    "cta": "Solicitar ayuda",
+    "queries": [
+      {
+        "en": "Who repairs water damage from a leaking water heater?",
+        "es": "¿Quién repara los daños causados por una fuga del calentador?",
+        "scenario": "Daño a piso o pared",
+        "cluster": "Fuga de agua",
+        "priority": "P0",
+        "cta": "Cerrar agua y solicitar servicio hoy",
+        "note": ""
+      }
+    ]
+  }
+]

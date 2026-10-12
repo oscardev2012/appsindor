@@ -1,0 +1,58 @@
+@page "/faqs"
+@model CarolinasCoverage.Pages.FaqsModel
+@{
+    var en = Model.En;
+}
+<main class="guidePage hubPage" id="contenido">
+    <div class="guideTop">
+        <a href="@Lang.Home(en)">← Carolinas Coverage</a>
+        @{ ViewData["LangSwitchTheme"] = "dark"; }
+        <partial name="_LanguageSwitch" />
+    </div>
+    <partial name="_HubMini" />
+    <nav class="crumbs" aria-label="@(en ? "Breadcrumb" : "Miga de pan")">
+        <ol>
+            <li><a href="@Lang.Home(en)">@(en ? "Home" : "Inicio")</a></li>
+            <li><span aria-current="page">@(en ? "FAQs" : "Preguntas frecuentes")</span></li>
+        </ol>
+    </nav>
+    <section class="guideHero">
+        <p>@(en ? "Questions people type" : "Preguntas que la gente escribe")</p>
+        <span>?</span>
+        <h1>@(en ? "Insurance FAQs for North Carolina and South Carolina" : "Preguntas frecuentes de seguros en Carolina del Norte y Carolina del Sur")</h1>
+        <div>
+            <p>@(en ? "Carolinas Coverage Insurance Agency is a Charlotte office that helps with auto, home, renters, pet, business and life insurance. Health, Medicare and disability are not offered. There are no public prices. Confirm hours when you call 704-595-3429." : "Carolinas Coverage Insurance Agency es una oficina en Charlotte que ayuda con auto, casa, inquilinos, mascotas, negocio y vida. No se ofrece salud, Medicare ni disability. No hay precios públicos. Confirme el horario al llamar al 704-595-3429.")</p>
+            <a href="@Lang.Quote(en)">@(en ? "Request a quote" : "Solicitar cotización") →</a>
+        </div>
+    </section>
+    <section class="hubSection">
+        <h2>@(en ? "How to use these answers" : "Cómo usar estas respuestas")</h2>
+        <p>@(en ? "Each answer starts with a fact, then a short why, then a link to the page that explains it. The same questions appear in FAQPage schema and in /llms.txt so assistants can cite this site instead of guessing. This does not replace a Google Business Profile, reviews, or other websites linking here." : "Cada respuesta empieza con un hecho, luego un breve porqué y un enlace a la página que lo explica. Las mismas preguntas están en el esquema FAQPage y en /llms.txt para que los asistentes citen este sitio en lugar de adivinar. Esto no reemplaza un perfil de Google Business, reseñas ni otros sitios que enlacen aquí.")</p>
+    </section>
+    <nav class="faqHub-toc" aria-label="@(en ? "Question groups" : "Grupos de preguntas")">
+        @foreach (var group in FaqHubCatalog.Groups)
+        {
+            <a href="#faq-@group.Id">@(en ? group.En : group.Es)</a>
+        }
+    </nav>
+    @foreach (var group in FaqHubCatalog.Groups)
+    {
+        <section class="faqHub-group" id="faq-@group.Id">
+            <h2>@(en ? group.En : group.Es)</h2>
+            @foreach (var item in FaqHubCatalog.All.Where(q => q.Group == group.Id))
+            {
+                <article class="faqHub-item">
+                    <h3>@(en ? item.QEn : item.QEs)</h3>
+                    <p class="faqHub-fact">@(en ? item.FactEn : item.FactEs)</p>
+                    <p>@(en ? item.WhyEn : item.WhyEs)</p>
+                    <p><a href="@FaqHubCatalog.RelatedPath(item.RelatedId, en)">@(en ? "Guide:" : "Guía:") @FaqHubCatalog.RelatedLabel(item.RelatedId, en) →</a></p>
+                </article>
+            }
+        </section>
+    }
+    <section class="hubSection">
+        <h2>@(en ? "Still need a person" : "Si aún necesita una persona")</h2>
+        <p>@(en ? "Call 704-595-3429 or use the contact page. This website does not issue a binding quote. Coverage, availability, price and eligibility depend on the final policy, state and insurer approval." : "Llame al 704-595-3429 o use la página de contacto. Este sitio no emite una cotización vinculante. La cobertura, disponibilidad, precio y elegibilidad dependen de la póliza final, el estado y la aprobación de la aseguradora.")</p>
+        <p><a href="@Lang.Contact(en)">@(en ? "Contact Carolinas Coverage" : "Contactar Carolinas Coverage") →</a></p>
+    </section>
+</main>

@@ -1,0 +1,37 @@
+@model Producto
+<article class="product-card">
+    <a class="product-card-media" asp-controller="Productos" asp-action="Detalle" asp-route-id="@Model.Slug">
+        @if (Model.EnOferta)
+        {
+            <span class="badge-sale">Oferta</span>
+        }
+        <partial name="_IlustracionCalenton" model="Model" />
+    </a>
+    <div class="product-card-body">
+        <p class="eyebrow">@Model.TipoEtiqueta</p>
+        <h3><a asp-controller="Productos" asp-action="Detalle" asp-route-id="@Model.Slug">@Model.Nombre</a></h3>
+        <p class="muted">@Model.Resumen</p>
+        <div class="product-card-meta">
+            @if (Model.CapacidadLitros > 0)
+            {
+                <span>@(Model.CapacidadLitros < 20 ? $"{Model.CapacidadLitros} L/min" : $"{Model.CapacidadLitros} L")</span>
+            }
+            <span>Hasta @Model.PersonasRecomendadas pers.</span>
+        </div>
+        <div class="product-card-footer">
+            <div class="price">
+                @if (Model.TieneDescuento)
+                {
+                    <span class="price-old">@Model.PrecioAnterior!.Value.ToString("C0")</span>
+                }
+                <strong>@Model.Precio.ToString("C0")</strong>
+            </div>
+            <form asp-controller="Carrito" asp-action="Agregar" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="productoId" value="@Model.Id" />
+                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                <button type="submit" class="btn btn-sm btn-primary">Agregar</button>
+            </form>
+        </div>
+    </div>
+</article>

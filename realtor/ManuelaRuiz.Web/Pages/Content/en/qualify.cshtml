@@ -1,0 +1,74 @@
+<section class="toolPageIntro">
+    <p class="eyebrow">Financial preparation &#xB7; No credit pull</p>
+    <h1>Calculate a starting point before asking for pre-approval.</h1>
+    <p>A clear tool to organize questions about income, debts, funds, ITIN or Social Security. Only an authorized lender can verify documents and approve a loan.</p>
+</section>
+<section class="qualifyTool fullTool" data-qualify-calc id="buying-power">
+    <div class="qualifyInputs">
+        <p class="eyebrow">Educational buying-power estimator</p>
+        <h2>What home range could you discuss with a lender?</h2>
+        <p>Adjust the numbers. The calc combines income, debts, available funds, assumed rate and a total-debt scenario. It does not pull credit or approve loans.</p>
+        <div class="inputDeck">
+            <div class="formGrid">
+                <label>Gross monthly household income
+                    <div class="moneyInput"><span>$</span><input type="number" min="0" step="100" value="7000" /></div>
+                </label>
+                <label>Monthly debts
+                    <div class="moneyInput"><span>$</span><input type="number" min="0" step="25" value="650" /></div>
+                </label>
+            </div>
+            <div class="formGrid">
+                <label>Funds available to buy
+                    <div class="moneyInput"><span>$</span><input type="number" min="0" step="500" value="25000" /></div>
+                </label>
+                <label>Assumed down payment
+                    <select><option value="3">3%</option><option value="3.5">3.5%</option><option value="5" selected>5%</option><option value="10">10%</option><option value="20">20%</option></select>
+                </label>
+            </div>
+            <div class="formGrid">
+                <label>Assumed rate
+                    <div class="suffixInput"><input type="number" min="1" max="15" step=".05" value="6.5" /><span>%</span></div>
+                </label>
+                <label>Total debt scenario
+                    <select>
+                        <option value="36" selected>36% — conservative</option>
+                        <option value="43">43% — to discuss</option>
+                        <option value="45">45% — extra review</option>
+                    </select>
+                </label>
+            </div>
+            <div class="formGrid">
+                <label>Current job/business history
+                    <select><option selected>2+ years</option><option>1–2 years</option><option>New job / Nuevo empleo</option><option>Self-employed / Negocio propio</option></select>
+                </label>
+                <label>Document to explore
+                    <select><option selected>Social Security</option><option>ITIN</option><option>Not sure</option></select>
+                </label>
+            </div>
+            <label>HOA / month
+                <div class="moneyInput"><span>$</span><input type="number" min="0" step="10" value="0" /></div>
+            </label>
+        </div>
+    </div>
+    <div class="qualifyResult" aria-live="polite">
+        <p class="eyebrow">Estimated starting range</p>
+        <strong>$204,595 – $240,700</strong>
+        <span>Illustrative home price</span>
+        <div class="resultFacts">
+            <p><b>$1,870</b>Max monthly housing within scenario</p>
+            <p><b>$12,035</b>Approximate down payment at the max</p>
+            <p><b>$7,221</b>Illustrative closing reserve (3%)</p>
+        </div>
+        <div class="limitNote income">
+            <b>Today the income/debt ratio limits more.</b>
+            <p>That shows which question to take to the lender first. Programs, credit, reserves, taxes, insurance, HOA and documents can change the result.</p>
+        </div>
+        <details>
+            <summary>How is it calculated?</summary>
+            <p>Uses a 36% total DTI scenario, subtracts debts and HOA, estimates principal/interest over 30 years, 1.0% taxes, 0.45% insurance, possible PMI and a 3% closing reserve. Editable assumptions &#x2014; not lender terms.</p>
+        </details>
+        <p class="privacyNote">Privacy: your income, debts and funds are calculated only in your browser and are not sent or stored.</p>
+    @{ ViewData["FormKind"] = "buy"; ViewData["FormCompact"] = true; }
+    <partial name="_GoogleForm" />
+    </div>
+</section>

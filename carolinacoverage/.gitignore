@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+bin/
+obj/
+.vs/
+*.user
+*.suo
+src/CarolinasCoverage/wwwroot/lib/
+.seo-docs/
+

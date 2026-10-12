@@ -1,0 +1,24 @@
+@{
+    var crumbs = ViewData["Crumbs"] as IReadOnlyList<SeoCrumb>;
+}
+@if (crumbs is { Count: > 1 })
+{
+    <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+            @for (var i = 0; i < crumbs.Count; i++)
+            {
+                var crumb = crumbs[i];
+                <li>
+                    @if (i == crumbs.Count - 1)
+                    {
+                        <span aria-current="page">@crumb.Name</span>
+                    }
+                    else
+                    {
+                        <a href="@crumb.Path">@crumb.Name</a>
+                    }
+                </li>
+            }
+        </ol>
+    </nav>
+}

@@ -1,0 +1,9 @@
+@model string?
+@if (!string.IsNullOrWhiteSpace(Model))
+{
+    <div class="db-banner">
+        <strong>Database</strong>
+        <span>@Model</span>
+        <small>Run <code>Data/realtor-news.sql</code> on IndorDB. Existing tables are not changed.</small>
+    </div>
+}

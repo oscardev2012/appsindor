@@ -1,0 +1,14 @@
+@using CarolinasCoverage.Site
+@{
+    var en = Lang.IsEnglish(ViewContext.HttpContext.Request);
+}
+<nav class="hubMini" aria-label="@(en ? "Main pages" : "Páginas principales")">
+    <a href="@Lang.Home(en)">@(en ? "Home" : "Inicio")</a>
+    <a href="@(en ? "/auto-insurance" : "/es/seguro-auto")">@(en ? "Auto" : "Auto")</a>
+    <a href="@(en ? "/home-insurance" : "/es/seguro-casa")">@(en ? "Home" : "Casa")</a>
+    <a href="@(en ? "/business-insurance" : "/es/seguro-comercial")">@(en ? "Business" : "Negocio")</a>
+    <a href="@(en ? "/life-insurance" : "/es/seguro-vida")">@(en ? "Life" : "Vida")</a>
+    <a href="@(en ? "/about" : "/es/nosotros")">@(en ? "About" : "Nosotros")</a>
+    <a href="@FaqHubCatalog.Path(en)">FAQ</a>
+    <a href="@Lang.Contact(en)">@(en ? "Contact" : "Contacto")</a>
+</nav>

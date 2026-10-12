@@ -1,0 +1,196 @@
+﻿@{
+    var origin = CalentonesAgua.Data.SeoPublicOrigin.Resolve(Configuration, Context.Request);
+    var canonicalPath = ViewData["CanonicalPath"] as string ?? Context.Request.Path.Value;
+    var uiEs = CalentonesAgua.Data.SiteLanguage.IsSpanish(Context);
+    var htmlLang = ViewData["HtmlLang"] as string ?? (uiEs ? "es" : "en");
+    var title = ViewData["Title"] as string ?? "SAFE Water Heater";
+    var description = ViewData["Description"] as string ?? (uiEs
+        ? "Una especialidad: calentadores de agua. Precios claros, instalación profesional y registro de garantía."
+        : "One specialty: water heaters. Clear pricing, professional installation and protected warranty registration.");
+    var ogType = ViewData["OgType"] as string ?? "website";
+    var ogImage = origin + Url.Content("~/safe-electric-water-heater-hero.png");
+    var noIndex = string.Equals(ViewData["Robots"] as string, "noindex", StringComparison.OrdinalIgnoreCase);
+}
+<!DOCTYPE html>
+<html lang="@htmlLang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@title</title>
+    <meta name="description" content="@description" />
+    @if (noIndex)
+    {
+        <meta name="robots" content="noindex, follow" />
+    }
+    else if (!string.IsNullOrEmpty(canonicalPath))
+    {
+        <link rel="canonical" href="@(origin + canonicalPath)" />
+    }
+    <meta property="og:type" content="@ogType" />
+    <meta property="og:site_name" content="SAFE Water Heater" />
+    <meta property="og:title" content="@title" />
+    <meta property="og:description" content="@description" />
+    <meta property="og:image" content="@ogImage" />
+    <meta property="og:locale" content="@(htmlLang == "es" ? "es_US" : "en_US")" />
+    @if (!string.IsNullOrEmpty(canonicalPath) && !noIndex)
+    {
+        <meta property="og:url" content="@(origin + canonicalPath)" />
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@title" />
+    <meta name="twitter:description" content="@description" />
+    <meta name="twitter:image" content="@ogImage" />
+    <meta name="geo.region" content="US-NC" />
+    <meta name="geo.placename" content="Charlotte" />
+    <meta name="ICBM" content="35.2271, -80.8431" />
+    @if (Configuration["Seo:GoogleSiteVerification"] is string gver && !string.IsNullOrWhiteSpace(gver))
+    {
+        <meta name="google-site-verification" content="@gver" />
+    }
+    @if (Configuration["Seo:BingSiteVerification"] is string bver && !string.IsNullOrWhiteSpace(bver))
+    {
+        <meta name="msvalidate.01" content="@bver" />
+    }
+    @if (ViewData["HreflangAlt"] is string hrefLangAlt && ViewData["HreflangAltLang"] is string hrefLangAltLang)
+    {
+        <link rel="alternate" hreflang="@htmlLang" href="@(origin + canonicalPath)" />
+        <link rel="alternate" hreflang="@hrefLangAltLang" href="@(origin + hrefLangAlt)" />
+        <link rel="alternate" hreflang="x-default" href="@(origin + "/")" />
+    }
+    <link rel="describedby" href="@(origin)/llms.txt" />
+    <link rel="alternate" type="text/markdown" href="@(origin + (canonicalPath ?? Context.Request.Path.Value ?? "/"))" />
+    <script type="application/ld+json">@Html.Raw(CalentonesAgua.Data.SeoSchema.OrganizationCard(origin))</script>
+    @if (string.Equals(canonicalPath, "/", StringComparison.Ordinal))
+    {
+        <link rel="preload" as="image" href="@ogImage" />
+    }
+    <link rel="shortcut icon" href="~/safe-shield.svg" />
+    <link rel="apple-touch-icon" href="~/safe-shield.svg" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/seo.css" asp-append-version="true" />
+    @if (ViewData["JsonLd"] is string jsonLd)
+    {
+        <script type="application/ld+json">@Html.Raw(jsonLd)</script>
+    }
+</head>
+<body data-lang="@htmlLang">
+    <div class="announcement">
+        <div class="container announcement-inner">
+            <span>@(uiEs
+                ? Html.Raw("<strong>Con base en Charlotte.</strong> Especialistas en calentadores de agua en Shelby y China Grove.")
+                : Html.Raw("<strong>Charlotte-based.</strong> Water heater specialists serving Shelby + China Grove."))</span>
+            <span class="announcement-contact">
+                <partial name="_LanguageSwitch" />
+                <a href="@SiteContact.TextHref">@(uiEs ? $"Texto {SiteContact.TextPretty}" : $"Text {SiteContact.TextPretty}")</a>
+                <i>•</i>
+                <a href="@SiteContact.CallHref">@(uiEs ? $"Llamar {SiteContact.CallDisplay}" : $"Call {SiteContact.CallDisplay}")</a>
+            </span>
+        </div>
+        @if (!Equals(ViewData["QuoteLanding"], true))
+        {
+            <div class="container">
+                <partial name="_SmsProgramNotice" />
+            </div>
+        }
+    </div>
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="/" class="brand" aria-label="SAFE Water Heater home">
+                <img src="~/safe-shield.svg" alt="SAFE shield" width="50" height="56" />
+                <span>
+                    <strong>SAFE WATER HEATER</strong>
+                    <small>by HOME INDOR TECHNOLOGY INC</small>
+                </span>
+            </a>
+            <nav aria-label="@(uiEs ? "Navegación principal" : "Main navigation")">
+                <a href="/water-heater-replacement-charlotte-nc/">@(uiEs ? "Reemplazo" : "Replacement")</a>
+                <a href="/water-heater-cost-charlotte-nc/">@(uiEs ? "Precios" : "Pricing")</a>
+                <a href="/water-heater-replacement-quote/">@(uiEs ? "Cotizar" : "Quote")</a>
+                <a href="/faqs/">FAQs</a>
+                <a href="/water-heater-financing/">@(uiEs ? "Financiamiento" : "Financing")</a>
+                <a href="/water-heater-insurance-warranty/">@(uiEs ? "Garantía" : "Warranty")</a>
+            </nav>
+            <div class="nav-contact">
+                <a class="button button-red nav-cta" href="@SiteContact.TextHref">@(uiEs ? "Escríbanos" : "Text us now")</a>
+                <a class="nav-call" href="@SiteContact.CallHref">@(uiEs ? "¿Prefiere llamar?" : "Prefer to call?") <strong>@(uiEs ? "Llámenos" : "Call us now")</strong></a>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-contact-bar">
+        <a class="primary" href="@SiteContact.TextHref">@(uiEs ? "Texto SAFE" : "Text SAFE")</a>
+        <a href="@SiteContact.CallHref">@(uiEs ? "Llámenos" : "Call us now")</a>
+    </div>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="/" class="brand" aria-label="SAFE Water Heater home">
+                    <img src="~/safe-shield.svg" alt="SAFE shield" width="50" height="56" />
+                    <span>
+                        <strong>SAFE WATER HEATER</strong>
+                        <small>by HOME INDOR TECHNOLOGY INC</small>
+                    </span>
+                </a>
+                <p>@(uiEs
+                    ? "Especialistas en reemplazo de calentadores de agua. Servicio desde Charlotte, con rutas a Shelby y China Grove, Carolina del Norte."
+                    : "Water heater replacement specialists. Charlotte-based service focused on Shelby and China Grove, North Carolina.")</p>
+            </div>
+            <div>
+                <h3>@(uiEs ? "Ayuda con el calentador" : "Water heater help")</h3>
+                <a href="/water-heater-replacement-quote/">@(uiEs ? "Cotización por fotos" : "Photo quote")</a>
+                <a href="/40-gallon-electric-water-heater-installation/">@(uiEs ? "Eléctrico 40 gal $1,199" : "40-gal electric $1,199")</a>
+                <a href="/repair-or-replace-water-heater/">@(uiEs ? "¿Reparar o reemplazar?" : "Repair or replace")</a>
+                <a href="/es/calentadores-de-agua-charlotte-nc/">Español</a>
+                <a href="/water-heater-cost-charlotte-nc/">@(uiEs ? "Precios instalados" : "Installed pricing")</a>
+                <a href="/water-heater-emergency/">@(uiEs ? "Pasos de emergencia" : "Emergency steps")</a>
+                <a href="/water-heater-leaking/">@(uiEs ? "Tanque con fuga" : "Leaking tank")</a>
+                <a href="/no-hot-water/">@(uiEs ? "Sin agua caliente" : "No hot water")</a>
+                <a href="/water-heater-service-near-me/">@(uiEs ? "Servicio cerca de mí" : "Service near me")</a>
+                <a href="/what-size-water-heater-do-i-need/">@(uiEs ? "¿Qué tamaño necesito?" : "What size do I need?")</a>
+                <a href="/water-heater-buying-guide/">@(uiEs ? "Guía de compra" : "Buying guide")</a>
+                <a href="/same-day-water-heater-replacement/">@(uiEs ? "Reemplazo el mismo día" : "Same-day replacement")</a>
+                <a href="/water-heater-maintenance/">@(uiEs ? "Mantenimiento" : "Maintenance")</a>
+                <a href="/shelby">@(uiEs ? "Servicio en Shelby" : "Shelby service")</a>
+                <a href="/china-grove">@(uiEs ? "Servicio en China Grove" : "China Grove service")</a>
+            </div>
+            <div>
+                <h3>@(uiEs ? "Garantía y financiamiento" : "Warranty + financing")</h3>
+                <a href="/water-heater-insurance-warranty/">@(uiEs ? "Guía de garantía y seguro" : "Warranty + insurance guide")</a>
+                <a href="/warranty">@(uiEs ? "Detalles de cobertura" : "Coverage details")</a>
+                <a href="/warranty/register">@(uiEs ? "Registrar un equipo" : "Register a unit")</a>
+                <a href="/water-heater-financing/">@(uiEs ? "Opciones de financiamiento" : "Financing options")</a>
+                <a href="/financing/safe-plan">@(uiEs ? "Elegibilidad SAFE" : "Check SAFE eligibility")</a>
+            </div>
+            <div>
+                <h3>@(uiEs ? "Contactar a SAFE" : "Contact SAFE")</h3>
+                <a href="@SiteContact.TextHref">@(uiEs ? $"Texto: {SiteContact.TextPretty}" : $"Text: {SiteContact.TextPretty}")</a>
+                <a href="@SiteContact.CallHref">@(uiEs ? $"Llamar: {SiteContact.CallDisplay}" : $"Call: {SiteContact.CallDisplay}")</a>
+                <a href="mailto:safeprojectsolution@gmail.com">safeprojectsolution@gmail.com</a>
+                <a href="/reviews/">@(uiEs ? "Dejar una reseña en Google" : "Leave a Google review")</a>
+                <a href="/about/">@(uiEs ? "Acerca de SAFE" : "About SAFE")</a>
+                <a href="/privacy/">Privacy Policy</a>
+                <a href="/terms/">SMS Terms</a>
+                <a href="/site-map/">@(uiEs ? "Todos los temas" : "All water heater topics")</a>
+                <small>Charlotte, NC · Text @SiteContact.TextPretty · Call @SiteContact.CallDisplay</small>
+                <small>@(uiEs
+                    ? "SMS de atención al cliente: frecuencia variable. Pueden aplicar cargos de mensaje y datos. Responda STOP para cancelar, HELP para ayuda. No vendemos ni compartimos números de celular."
+                    : "Customer-care SMS: frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. We do not sell or share mobile numbers.")</small>
+                <small>HOME INDOR TECHNOLOGY INC</small>
+            </div>
+        </div>
+        <div class="container footer-legal">
+            @(uiEs
+                ? "Las ofertas promocionales están sujetas a disponibilidad, impuesto, condiciones del inmueble y términos por escrito. El financiamiento Synchrony lo otorga Synchrony, con aprobación y términos propios. La garantía del fabricante la controla el folleto del modelo exacto."
+                : "Promotional offers are subject to availability, applicable tax, site conditions and written terms. Synchrony financing is provided by Synchrony and is subject to approval and Synchrony terms. Manufacturer warranty coverage is controlled by the written warranty for the exact unit and model.")
+        </div>
+    </footer>
+
+    <partial name="_AskSafe" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

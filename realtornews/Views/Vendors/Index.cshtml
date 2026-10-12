@@ -1,0 +1,125 @@
+@model VendorRequestViewModel
+<section class="page-hero vendor-hero">
+    <div>
+        <p class="eyebrow">REALTOR-REFERRED LOCAL SERVICES</p>
+        <h1>Preferred Vendors of Charlotte</h1>
+        <p>Home services, straightforward offers, and local professionals your Realtor can help you contact.</p>
+        <div class="hero-actions">
+            <a class="button gold" href="#offers">View current offers</a>
+            <a class="button outline" href="#request">Request a service</a>
+        </div>
+    </div>
+    <aside class="vendor-code-card">
+        <span>REALTOR BENEFIT</span>
+        <h2>Have a preferred-vendor code?</h2>
+        <p>Enter it when requesting service. The applicable Realtor discount is confirmed before scheduling.</p>
+        <a class="button gold" href="#request">Apply code</a>
+        <small>Offers and availability vary by service area and project conditions.</small>
+    </aside>
+</section>
+
+<section class="trust-strip vendor-strip">
+    <div><strong>Clear scope</strong><span>Know what is included before work begins.</span></div>
+    <div><strong>Local service</strong><span>Charlotte-area professionals.</span></div>
+    <div><strong>Realtor connected</strong><span>Your Realtor stays part of the process.</span></div>
+</section>
+
+<section class="section" id="safe-services">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">SERVICES FOR REALTORS &amp; HOMEOWNERS</p>
+            <h2>From inspection questions to completed projects.</h2>
+        </div>
+    </div>
+    <div class="card-grid vendor-grid">
+        @foreach (var service in LocalCatalog.VendorWork)
+        {
+            <article class="guide-card">
+                <h3>@service.Title</h3>
+                <p>@service.Body</p>
+            </article>
+        }
+    </div>
+    <p class="muted vendor-note">Every project starts with a property-specific review. Pricing, licensing, engineering, permits, materials, access, and partner responsibilities are confirmed in the written scope.</p>
+</section>
+
+<section class="section cream-band" id="vendor-education">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">ACTIVE PREFERRED VENDORS</p>
+            <h2>Companies that teach before they sell.</h2>
+        </div>
+    </div>
+    <div class="magazine-story-grid">
+        @foreach (var lesson in LocalCatalog.VendorLessons)
+        {
+            <article class="magazine-story">
+                <span class="story-section">@lesson.Author.ToUpperInvariant()</span>
+                <h3>@lesson.Title</h3>
+                <p>@lesson.Body</p>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="section" id="offers">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">CURRENT PROMOTIONS</p>
+            <h2>Home-service offers</h2>
+        </div>
+    </div>
+    <div class="card-grid">
+        @foreach (var offer in LocalCatalog.VendorOffers)
+        {
+            <article class="offer-card">
+                <h3>@offer.Title</h3>
+                <p>@offer.Body</p>
+                <ul>
+                    @foreach (var item in offer.Includes)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+                <a class="button outline" href="#request">Request this offer</a>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="section" id="request">
+    <div class="ask vendor-ask">
+        <div>
+            <p class="eyebrow">REQUEST A CONNECTION</p>
+            <h2>Tell us what the property needs.</h2>
+            <p>This form starts the connection with a preferred vendor. It does not commit you to a purchase.</p>
+        </div>
+        <form class="ask-form" method="post">
+            @Html.AntiForgeryToken()
+            @if (TempData["Saved"] is string saved)
+            {
+                <div class="notification-strip"><span class="live-dot"></span><div><strong>Sent</strong><p>@saved</p></div></div>
+            }
+            <div asp-validation-summary="All" class="form-errors"></div>
+            <label>Service needed
+                <select asp-for="Service">
+                    @foreach (var item in LocalCatalog.VendorServices)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </label>
+            <div class="form-row">
+                <label>First name <input asp-for="FirstName" required /></label>
+                <label>ZIP code <input asp-for="Zip" required maxlength="12" /></label>
+            </div>
+            <label>Phone or email <input asp-for="Contact" required /></label>
+            <label>Realtor preferred-vendor code (optional) <input asp-for="RealtorCode" placeholder="Code from your Realtor" /></label>
+            <label>Brief description
+                <textarea asp-for="Description" rows="4" placeholder="What is happening at the property?"></textarea>
+            </label>
+            <button class="button primary" type="submit">Request vendor connection</button>
+            <p class="muted">Prices shown apply only to the stated standard scope. Site conditions, code, access, materials, permits, and extra repairs can change the final written price.</p>
+        </form>
+    </div>
+</section>

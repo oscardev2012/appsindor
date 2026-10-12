@@ -1,0 +1,26 @@
+@model RegisterViewModel
+@{
+    Layout = "_StudioLayout";
+    ViewData["Title"] = "Edit profile";
+}
+<div class="desk-heading">
+    <div>
+        <p class="eyebrow">PROFILE</p>
+        <h2>How the public sees you</h2>
+    </div>
+</div>
+<form method="post" class="post-composer" style="max-width:720px">
+    @Html.AntiForgeryToken()
+    <label>Full name <input asp-for="FullName" required /></label>
+    <label>Headline <input asp-for="Headline" /></label>
+    <label>Brokerage <input asp-for="Brokerage" /></label>
+    <label>License # <input asp-for="LicenseNumber" /></label>
+    <div class="form-row">
+        <label>City <input asp-for="City" /></label>
+        <label>State <input asp-for="State" /></label>
+    </div>
+    <label>Phone <input asp-for="Phone" /></label>
+    <label>Languages <input asp-for="Languages" /></label>
+    <label>Bio <textarea asp-for="Bio" rows="6"></textarea></label>
+    <button class="button gold" type="submit">Save profile</button>
+</form>

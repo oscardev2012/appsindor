@@ -1,0 +1,85 @@
+@model FeedPageViewModel
+@{
+    ViewData["Title"] = "Charlotte real estate social feed";
+    ViewData["Description"] = "Questions and news published by Charlotte-area Realtors. Follow local professionals and read dated answers about buying, selling, and home care.";
+    ViewData["Crumbs"] = new List<SeoCrumb> { new("Home", "/"), new("Social Feed", "/feed") };
+    var cats = (string[])(ViewBag.Categories ?? PostCatalog.Categories);
+}
+@await Html.PartialAsync("_DbBanner", Model.DbError)
+
+<div class="community-main">
+    <div class="community-intro">
+        <div>
+            <p class="eyebrow">CHARLOTTE COMMUNITY</p>
+            <h1>Ask. Learn. Move with confidence.</h1>
+        </div>
+        <p>Questions and news published directly by Realtors who work here. Follow the people you trust; the feed is the public record of their work.</p>
+    </div>
+    <div class="community-layout">
+        <aside class="feed-sidebar">
+            <strong>Topics</strong>
+            <a class="@(Model.Category == "all" ? "active" : null)" asp-action="Index" asp-route-category="all" asp-route-scope="@Model.Scope">For you</a>
+            @foreach (var cat in cats)
+            {
+                <a class="@(string.Equals(Model.Category, cat, StringComparison.OrdinalIgnoreCase) ? "active" : null)" asp-action="Index" asp-route-category="@cat" asp-route-scope="@Model.Scope">@cat</a>
+            }
+            <div class="daily-goal">
+                <span>FOLLOWING</span>
+                <strong>Your network</strong>
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <a asp-action="Index" asp-route-scope="following" asp-route-category="@Model.Category">Open following feed</a>
+                }
+                else
+                {
+                    <small>Sign in as a Realtor to follow colleagues.</small>
+                }
+            </div>
+        </aside>
+        <div class="feed">
+            <div class="quick-ask-card">
+                <span class="avatar guest">?</span>
+                <a asp-controller="Questions" asp-action="Index">What would you like to ask a Charlotte Realtor?</a>
+                <a class="quick-send" asp-controller="Questions" asp-action="Index">→</a>
+            </div>
+            @if (Model.Posts.Count == 0)
+            {
+                <div class="empty-panel">
+                    <p>The feed is waiting for the first Realtor story. Register, write one post, and it appears here.</p>
+                    <a class="button gold" asp-controller="Account" asp-action="Register">Register as a Realtor</a>
+                </div>
+            }
+            else
+            {
+                foreach (var post in Model.Posts)
+                {
+                    @await Html.PartialAsync("_PostCard", post)
+                }
+            }
+        </div>
+        <aside class="community-right">
+            <div class="expert-card">
+                <span class="eyebrow">ACTIVE EXPERTS</span>
+                @foreach (var expert in Model.Experts)
+                {
+                    <div class="expert-mini">
+                        <span class="avatar">@expert.Initials</span>
+                        <div>
+                            <h3>@expert.FullName</h3>
+                            <p>@(expert.Headline ?? expert.Brokerage ?? expert.LocationLabel)</p>
+                            <a asp-controller="Realtors" asp-action="Profile" asp-route-slug="@expert.Slug">View profile →</a>
+                        </div>
+                    </div>
+                }
+                @if (Model.Experts.Count == 0)
+                {
+                    <p>No Realtors yet. Be the first to register.</p>
+                }
+            </div>
+            <div class="rules-card">
+                <strong>House rules</strong>
+                <p>Helpful answers first. No pressure, no public sales pitch, and no personal financial details in comments.</p>
+            </div>
+        </aside>
+    </div>
+</div>

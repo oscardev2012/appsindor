@@ -1,0 +1,15 @@
+@{
+    var uiEs = CalentonesAgua.Data.SiteLanguage.IsSpanish(Context);
+}
+<p class="sms-program-notice">
+    HOME INDOR TECHNOLOGY INC d/b/a SAFE Water Heater (Safe Project Solution).
+    Text <a href="@SiteContact.TextHref">@SiteContact.TextPretty</a> for water heater service in Charlotte.
+    Message frequency varies. Msg &amp; data rates may apply.
+    Reply STOP to unsubscribe, HELP for help.
+    Privacy: <a href="/privacy/">/privacy/</a>
+    Terms: <a href="/terms/">/terms/</a>
+    @if (uiEs)
+    {
+        <span class="sms-program-notice-es"> SMS de atención al cliente. Frecuencia variable. Pueden aplicar cargos. STOP para cancelar, HELP para ayuda.</span>
+    }
+</p>

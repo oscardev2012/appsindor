@@ -1,0 +1,66 @@
+@page "/itin-home-buyers"
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(ViewContext.HttpContext);
+}
+<div class="detailPage">
+<section class="detailHero">
+    <p class="eyebrow">ITIN · Charlotte NC</p>
+    <h1>@(en ? "Buying a Home With an ITIN" : "Comprar casa con ITIN")</h1>
+    <p>@(en
+        ? "Owning property is different from getting a mortgage. Some lenders offer ITIN or alternative-documentation loans, but down payment, income, reserves, pricing and documents vary. Manuela organizes the real-estate conversation. She does not pull credit or approve loans."
+        : "Ser dueño de una propiedad es distinto de obtener una hipoteca. Algunos prestamistas ofrecen préstamos con ITIN o documentación alternativa, pero enganche, ingresos, reservas, precio y documentos varían. Manuela organiza la conversación inmobiliaria. No revisa crédito ni aprueba préstamos.")</p>
+    <div class="actions">
+        <a class="btn primary" href="#consult">@(en ? "Prepare my consultation" : "Preparar mi consulta")</a>
+        <a class="btn ghost" href="@SiteLocale.Localize(ViewContext.HttpContext, "/first-time-buyers")">@(en ? "First-time buyer guide" : "Guía de primera vivienda")</a>
+    </div>
+</section>
+<section class="detailContext">
+    <div>
+        <p class="eyebrow">@(en ? "How Manuela helps you" : "Cómo te ayuda Manuela")</p>
+        <h2>@(en ? "Questions first. Promises never." : "Primero preguntas. Nunca promesas.")</h2>
+        <p>@(en
+            ? "An ITIN conversation starts with documents, funds, timeline and the property — not with a guaranteed rate. A licensed lender must evaluate your specific case. Terms are not automatically the same as a conventional loan."
+            : "Una conversación ITIN empieza con documentos, fondos, plazo y la propiedad, no con una tasa garantizada. Un prestamista con licencia debe evaluar su caso. Los términos no son automáticamente los de un préstamo convencional.")</p>
+    </div>
+    <ul>
+        <li><span>✓</span>@(en ? "Separate ownership from mortgage approval" : "Separar ser dueño de la aprobación hipotecaria")</li>
+        <li><span>✓</span>@(en ? "Compare written lender offers: rate, APR, reserves, cash to close" : "Comparar ofertas escritas: tasa, APR, reservas, efectivo para cerrar")</li>
+        <li><span>✓</span>@(en ? "Bilingual search, offer, inspection and closing calendar" : "Búsqueda, oferta, inspección y cierre en español o inglés")</li>
+        <li><span>✓</span>@(en ? "No credit pull and no loan application on this site" : "Sin credit pull y sin solicitud de préstamo en este sitio")</li>
+    </ul>
+</section>
+<section class="detailSteps">
+    <p class="eyebrow">@(en ? "Step-by-step process" : "Proceso paso a paso")</p>
+    <h2>@(en ? "What we do and why it matters." : "Qué hacemos y por qué importa.")</h2>
+    <div>
+        <article><span>01</span><h3>@(en ? "Map your documents" : "Ordenar documentos")</h3><p>@(en ? "ITIN, income, funds, occupancy and timeline — without assuming approval." : "ITIN, ingresos, fondos, ocupación y plazo, sin asumir aprobación.")</p></article>
+        <article><span>02</span><h3>@(en ? "Talk with licensed lenders" : "Hablar con prestamistas")</h3><p>@(en ? "Only a lender confirms product, down payment, reserves and total cost." : "Solo un prestamista confirma producto, enganche, reservas y costo total.")</p></article>
+        <article><span>03</span><h3>@(en ? "Search with a real number" : "Buscar con un número real")</h3><p>@(en ? "Price range comes after cash to close, not from an online payment toy." : "El rango de precio sale del efectivo para cerrar, no de una calculadora genérica.")</p></article>
+        <article><span>04</span><h3>@(en ? "Offer with a written plan" : "Ofertar con un plan escrito")</h3><p>@(en ? "Dates, due diligence, inspection and financing conditions stay visible." : "Fechas, due diligence, inspección y condiciones de financiamiento quedan visibles.")</p></article>
+        <article><span>05</span><h3>@(en ? "Inspect before you commit" : "Inspeccionar antes de comprometerse")</h3><p>@(en ? "An inspection is not a warranty. Findings can change the decision." : "La inspección no es garantía. Los hallazgos pueden cambiar la decisión.")</p></article>
+        <article><span>06</span><h3>@(en ? "Close with verified instructions" : "Cerrar con instrucciones verificadas")</h3><p>@(en ? "Call the closing attorney on a known number. Do not trust emailed wire changes." : "Llame al abogado de cierre a un número conocido. No confíe en cambios de transferencia por correo.")</p></article>
+    </div>
+</section>
+<section class="detailLinks">
+    <p class="eyebrow">@(en ? "Next steps" : "Próximos pasos")</p>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/first-time-buyers")">@(en ? "First-time home buyer guide →" : "Guía de primera vivienda →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/programs")">@(en ? "Down payment assistance in NC →" : "Ayuda para el enganche en NC →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/qualify")">@(en ? "Estimate buying power →" : "Estimar poder de compra →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/faq")">@(en ? "More real-estate questions →" : "Más preguntas de bienes raíces →")</a>
+</section>
+<partial name="_SeoFaq" />
+<section class="detailConsult" id="consult">
+    <div>
+        <p class="eyebrow">@(en ? "Bilingual consultation" : "Consulta bilingüe")</p>
+        <h2>@(en ? "Tell Manuela where the documents stand today." : "Cuéntale a Manuela cómo están los documentos hoy.")</h2>
+        <p>@(en ? "This is not a loan application and it does not pull credit." : "Esto no es una solicitud de préstamo y no revisa crédito.")</p>
+    </div>
+    @{
+        ViewData["LeadSource"] = "itin";
+        ViewData["LeadExtraName"] = en ? "Document type" : "Tipo de documento";
+        ViewData["LeadExtraPlaceholder"] = "ITIN / SSN / not sure";
+    }
+    <partial name="_IntakeForm" />
+</section>
+</div>

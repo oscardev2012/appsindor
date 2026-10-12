@@ -1,0 +1,34 @@
+<section class="page-hero">
+    <div>
+        <p class="eyebrow">FALL 2026 · CHARLOTTE, NC</p>
+        <h1>Prepare the home before the weather changes.</h1>
+        <p>Timely recommendations from local Realtors and home-service professionals—organized by season, dated, and easy to revisit.</p>
+    </div>
+    <aside class="season-index">
+        <strong>Fall checks to start now</strong>
+        <ol>
+            <li>Heating system</li>
+            <li>Roof and gutters</li>
+            <li>Crawl space and drainage</li>
+            <li>Water heater</li>
+            <li>Exterior openings</li>
+        </ol>
+        <a asp-controller="Vendors" asp-action="Index">Open preferred vendors →</a>
+    </aside>
+</section>
+
+<section class="section">
+    <div class="season-list">
+        @foreach (var item in LocalCatalog.Seasonal)
+        {
+            <article class="season-card">
+                <span class="story-section">@item.Season.ToUpperInvariant() · @item.Tag.ToUpperInvariant()</span>
+                <h2>@item.Title</h2>
+                <p>@item.Body</p>
+                <div class="post-advice"><strong>@item.Author recommends:</strong> @item.Advice</div>
+                <small>@item.Role · @EasternTime.LongDate(DateTimeOffset.UtcNow)</small>
+            </article>
+        }
+    </div>
+    <p class="muted">Ask a Realtor or home-service professional. Your question may become the next educational post. <a asp-controller="Questions" asp-action="Index">Ask here →</a></p>
+</section>

@@ -1,0 +1,7 @@
+@using ManuelaRuiz.Web.Services
+@{
+    var source = ViewData["LeadSource"] as string ?? "guide";
+    ViewData["FormKind"] = Questionnaire.IsSeller(source) ? "sell" : "buy";
+    ViewData["FormCompact"] = false;
+}
+<partial name="_GoogleForm" />

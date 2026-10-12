@@ -1,0 +1,41 @@
+@model AskViewModel
+@{
+    ViewData["Title"] = "Ask a Charlotte Realtor";
+    ViewData["Description"] = "Ask a free question about buying, selling, relocation, or homeownership in the Charlotte region. You do not need to be ready to transact.";
+    ViewData["Crumbs"] = new List<SeoCrumb> { new("Home", "/"), new("Ask a Question", "/ask") };
+}
+<section class="question-page">
+    <div class="question-flow">
+        <div class="question-step">
+            <p class="eyebrow">ASK FREELY</p>
+            <h1>What would you like to know?</h1>
+            <p>Your question comes first. You do not need to be ready to buy or sell.</p>
+            @if (TempData["Saved"] is string saved)
+            {
+                <div class="notification-strip"><span class="live-dot"></span><div><strong>Sent</strong><p>@saved</p></div></div>
+            }
+            <form method="post">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="All" class="form-errors"></div>
+                <label class="question-box">
+                    <textarea asp-for="Body" rows="6" required maxlength="500" placeholder="Example: What should I check before buying a home with a crawlspace?"></textarea>
+                </label>
+                <fieldset class="topic-pills">
+                    <legend>Topic</legend>
+                    @foreach (var topic in LocalCatalog.AskTopics)
+                    {
+                        <label>
+                            <input type="radio" name="Topic" value="@topic" checked="@(Model.Topic == topic)" />
+                            @topic
+                        </label>
+                    }
+                </fieldset>
+                <div class="form-row">
+                    <label>First name <input asp-for="FirstName" required /></label>
+                    <label>Where should we send the answer? <input asp-for="Email" type="email" required /></label>
+                </div>
+                <button class="button primary wide" type="submit">Send my question</button>
+            </form>
+        </div>
+    </div>
+</section>

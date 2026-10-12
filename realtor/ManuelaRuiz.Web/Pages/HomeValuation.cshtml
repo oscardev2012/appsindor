@@ -1,0 +1,65 @@
+@page "/home-valuation"
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(ViewContext.HttpContext);
+}
+<div class="detailPage">
+<section class="detailHero">
+    <p class="eyebrow">@(en ? "Home value · Charlotte area" : "Valor de casa · área de Charlotte")</p>
+    <h1>@(en ? "What Is My Charlotte-Area Home Worth?" : "¿Cuánto vale mi casa en el área de Charlotte?")</h1>
+    <p>@(en
+        ? "A comparative market analysis reviews recent comparable sales, active competition, condition, location and timing. It is a pricing opinion, not an appraisal and not a guarantee of the final sale price."
+        : "Un análisis comparativo revisa ventas similares recientes, competencia activa, condición, ubicación y momento del mercado. Es una opinión de precio, no un appraisal ni una garantía del precio final.")</p>
+    <div class="actions">
+        <a class="btn primary" href="#consult">@(en ? "Request a market analysis" : "Pedir un análisis de mercado")</a>
+        <a class="btn ghost" href="@SiteLocale.Localize(ViewContext.HttpContext, "/sellers")">@(en ? "Selling guide" : "Guía para vender")</a>
+    </div>
+</section>
+<section class="detailContext">
+    <div>
+        <p class="eyebrow">@(en ? "How Manuela helps you" : "Cómo te ayuda Manuela")</p>
+        <h2>@(en ? "More than an online estimate" : "Más que un estimado en internet")</h2>
+        <p>@(en
+            ? "Automated estimates can miss renovations, lot differences, condition and very recent local activity. Manuela prepares a local analysis and a seller net-sheet estimate so you can see costs after payoff, compensation, taxes and closing charges."
+            : "Los estimados automáticos pueden omitir mejoras, terreno, condición y actividad local reciente. Manuela prepara un análisis local y un estimado de dinero neto para ver costos después del pago de hipoteca, compensación, impuestos y cierre.")</p>
+    </div>
+    <ul>
+        <li><span>✓</span>@(en ? "Recent comps, not a national average" : "Comps recientes, no un promedio nacional")</li>
+        <li><span>✓</span>@(en ? "Condition, access and active competition" : "Condición, acceso y competencia activa")</li>
+        <li><span>✓</span>@(en ? "Seller net-sheet estimate for each scenario" : "Estimado de dinero neto para cada escenario")</li>
+        <li><span>✓</span>@(en ? "Bilingual review before you list" : "Revisión bilingüe antes de listar")</li>
+    </ul>
+</section>
+<section class="detailCheck">
+    <div>
+        <p class="eyebrow">@(en ? "Get ready" : "Prepárate")</p>
+        <h2>@(en ? "Bring these details to the conversation." : "Trae estos datos a la conversación.")</h2>
+    </div>
+    <ul>
+        <li>✓ @(en ? "Address, beds, baths and known upgrades" : "Dirección, habitaciones, baños y mejoras conocidas")</li>
+        <li>✓ @(en ? "Mortgage payoff range, if you have it" : "Rango de pago de hipoteca, si lo tienes")</li>
+        <li>✓ @(en ? "Timeline: list now, wait, or explore only" : "Plazo: listar ahora, esperar o solo explorar")</li>
+        <li>✓ @(en ? "Photos or a video walkthrough if you are remote" : "Fotos o un recorrido en video si estás a distancia")</li>
+    </ul>
+</section>
+<section class="detailLinks">
+    <p class="eyebrow">@(en ? "Next steps" : "Próximos pasos")</p>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/sellers")">@(en ? "Sell your home with a local listing agent →" : "Venda su casa con una agente local →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/sold")">@(en ? "See documented work →" : "Ver trabajo documentado →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/faq")">@(en ? "Seller questions →" : "Preguntas de vendedores →")</a>
+</section>
+<partial name="_SeoFaq" />
+<section class="detailConsult" id="consult">
+    <div>
+        <p class="eyebrow">@(en ? "Bilingual consultation" : "Consulta bilingüe")</p>
+        <h2>@(en ? "Request a Charlotte-area pricing conversation." : "Pide una conversación de precio en el área de Charlotte.")</h2>
+        <p>@(en ? "The analysis is an opinion of price. An appraisal, if required, is a separate professional opinion." : "El análisis es una opinión de precio. Un appraisal, si se requiere, es una opinión profesional aparte.")</p>
+    </div>
+    @{
+        ViewData["LeadSource"] = "valuation";
+        ViewData["LeadExtraName"] = en ? "Property address" : "Dirección de la propiedad";
+        ViewData["LeadExtraPlaceholder"] = en ? "Street, city, ZIP" : "Calle, ciudad, ZIP";
+    }
+    <partial name="_IntakeForm" />
+</section>
+</div>

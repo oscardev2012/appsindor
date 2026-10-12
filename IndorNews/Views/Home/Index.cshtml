@@ -1,0 +1,144 @@
+﻿@using IndorNews.Data
+@model IndorNews.Models.PublishPageViewModel
+@{
+    ViewData["Title"] = "Publicar noticias";
+    var titleLen = Model.Title?.Length ?? 0;
+    var bodyLen = Model.Body?.Length ?? 0;
+}
+<div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+    <div>
+        <p class="eyebrow mb-1">INTERNO</p>
+        <h1 class="h3">Publicar noticia</h1>
+        <p class="text-secondary mb-0">Puede ser corta o larga. Solo hay un máximo. En el home se ve como artículo, no como un recorte de tres líneas.</p>
+    </div>
+    <form method="post" asp-action="Logout">
+        @Html.AntiForgeryToken()
+        <button class="btn btn-outline-light" type="submit">Salir</button>
+    </form>
+</div>
+
+@if (ViewBag.DbError is string dbError)
+{
+    <div class="alert alert-danger">No se pudo leer IndorDB. Crea la tabla <code>dbo.SitePosts</code> y revisa el firewall. @dbError</div>
+}
+@if (TempData["Error"] is string error)
+{
+    <div class="alert alert-danger">@error</div>
+}
+@if (TempData["Saved"] is string saved)
+{
+    <div class="alert alert-success">@saved</div>
+}
+
+<div class="card-panel mb-4">
+    <h2 class="h5 mb-3">Nueva publicación</h2>
+    <form method="post" asp-action="Create" id="publish-form">
+        @Html.AntiForgeryToken()
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="site">Sitio web</label>
+                <select class="form-select" id="site" name="site" required>
+                    <option value="">Elegir…</option>
+                    @foreach (var site in SitePostCatalog.Sites)
+                    {
+                        if (string.Equals(Model.Site, site.Key, StringComparison.OrdinalIgnoreCase))
+                        {
+                            <option value="@site.Key" selected>@site.Label</option>
+                        }
+                        else
+                        {
+                            <option value="@site.Key">@site.Label</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="imageUrl">URL de imagen (opcional)</label>
+                <input class="form-control" id="imageUrl" name="imageUrl" type="url" placeholder="https://…" value="@Model.ImageUrl" />
+                <small class="hint">Se muestra al lado del texto, recortada.</small>
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="title">Título</label>
+                <input class="form-control" id="title" name="title" required maxlength="@PostCopyLimits.TitleMax" value="@Model.Title" data-max="@PostCopyLimits.TitleMax" />
+                <div class="counter-row">
+                    <small>Máximo @PostCopyLimits.TitleMax caracteres. Sin mínimo.</small>
+                    <strong id="title-count" class="counter">@titleLen / @PostCopyLimits.TitleMax</strong>
+                </div>
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="body">Texto de la noticia</label>
+                <textarea class="form-control" id="body" name="body" rows="10" maxlength="@PostCopyLimits.BodyMax" data-max="@PostCopyLimits.BodyMax" placeholder="Escribe la noticia completa. Puede ser un párrafo o varios.">@Model.Body</textarea>
+                <div class="counter-row">
+                    <small>Máximo @PostCopyLimits.BodyMax caracteres. El home la muestra entera, con buen ancho de lectura.</small>
+                    <strong id="body-count" class="counter">@bodyLen / @PostCopyLimits.BodyMax</strong>
+                </div>
+            </div>
+            <div class="col-12">
+                <p class="eyebrow mb-2">ASÍ SE VE EN EL HOME</p>
+                <section class="hub-news preview-banner" aria-label="Vista previa">
+                    <div class="hub-news-inner">
+                        <div class="hub-news-card@(string.IsNullOrWhiteSpace(Model.ImageUrl) ? "" : " has-image")" id="preview-card">
+                            <div class="hub-news-head">
+                                <span class="hub-news-badge">NOTICIA</span>
+                                <time>@DateTime.Now.ToString("d 'de' MMMM, yyyy", System.Globalization.CultureInfo.GetCultureInfo("es-ES"))</time>
+                            </div>
+                            <div class="hub-news-body">
+                                <div class="hub-news-figure" id="preview-figure" @Html.Raw(string.IsNullOrWhiteSpace(Model.ImageUrl) ? "hidden" : "")>
+                                    <img id="preview-image" src="@(Model.ImageUrl ?? "")" alt="" />
+                                </div>
+                                <div class="hub-news-copy">
+                                    <h2 class="hub-news-title" id="preview-title">@(string.IsNullOrWhiteSpace(Model.Title) ? "El título aparece aquí" : Model.Title)</h2>
+                                    <p class="hub-news-text" id="preview-body">@(string.IsNullOrWhiteSpace(Model.Body) ? "El texto de la noticia se muestra completo al abrir “Leer la noticia completa”." : Model.Body)</p>
+                                    <details class="hub-news-more" id="preview-more">
+                                        <summary>
+                                            <span class="hub-news-more-open">Leer la noticia completa</span>
+                                            <span class="hub-news-more-close">Mostrar menos</span>
+                                        </summary>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-publish" id="publish-btn" type="submit">Publicar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="table-responsive card-panel p-0">
+    <table class="table table-dark table-striped mb-0">
+        <thead>
+            <tr>
+                <th>UTC</th>
+                <th>Sitio</th>
+                <th>Título</th>
+                <th>¿Viva?</th>
+            </tr>
+        </thead>
+        <tbody>
+        @if (Model.Posts.Count == 0)
+        {
+            <tr><td colspan="4" class="text-center text-secondary py-5">Todavía no hay noticias.</td></tr>
+        }
+        else
+        {
+            var latestIds = Model.Posts
+                .GroupBy(p => p.Site)
+                .Select(g => g.OrderByDescending(p => p.CreatedUtc).First().Id)
+                .ToHashSet();
+            foreach (var post in Model.Posts)
+            {
+                <tr>
+                    <td>@post.CreatedUtc.UtcDateTime.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@SitePostCatalog.Label(post.Site)</td>
+                    <td>@post.Title</td>
+                    <td>@(latestIds.Contains(post.Id) ? "Sí — en el home" : "")</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>

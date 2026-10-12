@@ -1,0 +1,83 @@
+@model RealtorProfileViewModel
+@{
+    var r = Model.Realtor;
+    var returnUrl = Context.Request.Path;
+    ViewData["Title"] = $"{r.FullName}, Charlotte Realtor";
+    ViewData["Description"] = Seo.Description(r.Bio ?? r.Headline ?? $"{r.FullName} is a {r.LocationLabel} Realtor publishing local guidance for buyers, sellers, and relocating families.");
+    ViewData["OgImage"] = r.PhotoUrl;
+    ViewData["Crumbs"] = new List<SeoCrumb>
+    {
+        new("Home", "/"),
+        new("Our Realtors", "/realtors"),
+        new(r.FullName, $"/realtors/{r.Slug}")
+    };
+    ViewData["Schema"] = Seo.Node("RealEstateAgent", new()
+    {
+        ["name"] = r.FullName,
+        ["url"] = Seo.Absolute(Context.Request, $"/realtors/{r.Slug}"),
+        ["description"] = ViewData["Description"],
+        ["image"] = string.IsNullOrWhiteSpace(r.PhotoUrl) ? null : Seo.Image(Context.Request, r.PhotoUrl),
+        ["address"] = Seo.Type("PostalAddress", new()
+        {
+            ["addressLocality"] = string.IsNullOrWhiteSpace(r.City) ? "Charlotte" : r.City,
+            ["addressRegion"] = string.IsNullOrWhiteSpace(r.State) ? "NC" : r.State,
+            ["addressCountry"] = "US"
+        }),
+        ["knowsLanguage"] = r.Languages,
+        ["worksFor"] = string.IsNullOrWhiteSpace(r.Brokerage) ? null : Seo.Type("Organization", new() { ["name"] = r.Brokerage })
+    });
+}
+<section class="profile-hero">
+    <div class="profile-image"><span>@r.Initials</span></div>
+    <div class="profile-copy">
+        <p class="eyebrow">CHARLOTTE REALTOR</p>
+        <h1>@r.FullName</h1>
+        <p class="profile-role">@(r.Headline ?? r.Brokerage ?? "Charlotte-area Realtor")</p>
+        <p>@(r.Bio ?? "Publishes local guidance for buyers, sellers, and families relocating to North and South Carolina.")</p>
+        <div class="profile-meta">
+            <span>@r.LocationLabel</span>
+            @if (!string.IsNullOrWhiteSpace(r.Languages)) { <span>@r.Languages</span> }
+            @if (!string.IsNullOrWhiteSpace(r.LicenseNumber)) { <span>License @r.LicenseNumber</span> }
+            <span>@r.PostCount published</span>
+            <span>@r.FollowerCount followers</span>
+        </div>
+        <div class="profile-actions">
+            @if (User.RealtorId() == r.Id)
+            {
+                <a class="button primary" asp-controller="Studio" asp-action="Index">Open Realtor Desk</a>
+            }
+            else if (User.Identity?.IsAuthenticated == true)
+            {
+                <form asp-action="Follow" asp-route-slug="@r.Slug" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="returnUrl" value="@returnUrl" />
+                    <button class="button @(r.FollowedByMe ? "gold" : "primary")" type="submit">@(r.FollowedByMe ? "Following" : "+ Follow")</button>
+                </form>
+            }
+            else
+            {
+                <a class="button primary" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@returnUrl">+ Follow</a>
+            }
+            <a class="button outline" asp-controller="Questions" asp-action="Index">Ask a question</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <h2>Published by @r.FullName.Split(' ').FirstOrDefault()</h2>
+    </div>
+    @if (Model.Posts.Count == 0)
+    {
+        <div class="empty-panel"><p>No public stories yet.</p></div>
+    }
+    else
+    {
+        <div class="feed">
+            @foreach (var post in Model.Posts)
+            {
+                @await Html.PartialAsync("_PostCard", post)
+            }
+        </div>
+    }
+</section>

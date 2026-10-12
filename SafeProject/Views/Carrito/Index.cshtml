@@ -1,0 +1,76 @@
+@model IReadOnlyList<CarritoItem>
+@{
+    var subtotal = (decimal)ViewBag.Subtotal;
+    var envio = (decimal)ViewBag.Envio;
+    var envioGratisDesde = (decimal)ViewBag.EnvioGratisDesde;
+    var total = subtotal + envio;
+}
+
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Pedido</p>
+        <h1>Tu carrito</h1>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        @if (Model.Count == 0)
+        {
+            <div class="empty-state">
+                <h2>Aún no hay calentones aquí</h2>
+                <p class="muted">Elige un equipo del catálogo. Puedes agregar instalación al finalizar.</p>
+                <a class="btn btn-primary" asp-controller="Productos" asp-action="Index">Ir al catálogo</a>
+            </div>
+        }
+        else
+        {
+            <div class="cart-layout">
+                <div>
+                    @foreach (var item in Model)
+                    {
+                        <article class="cart-item">
+                            <div class="mini-art" style="--c:@item.AcentoColor">
+                                <svg viewBox="0 0 80 90" aria-hidden="true">
+                                    <rect x="24" y="12" width="32" height="58" rx="8" fill="#efe7d8" stroke="#cbb9a3" />
+                                    <rect x="32" y="4" width="16" height="12" rx="3" fill="@item.AcentoColor" />
+                                    <circle cx="40" cy="40" r="7" fill="white" stroke="@item.AcentoColor" stroke-width="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="eyebrow">@item.TipoEtiqueta</p>
+                                <h3 class="h5 mb-1">@item.Nombre</h3>
+                                <p class="muted mb-0">@item.Precio.ToString("C0") c/u</p>
+                            </div>
+                            <form asp-action="Actualizar" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="productoId" value="@item.ProductoId" />
+                                <input class="form-control" type="number" min="1" max="10" name="cantidad" value="@item.Cantidad" onchange="this.form.submit()" aria-label="Cantidad de @item.Nombre" />
+                            </form>
+                            <div class="text-end">
+                                <strong>@item.Subtotal.ToString("C0")</strong>
+                                <form asp-action="Quitar" method="post" class="mt-2">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="productoId" value="@item.ProductoId" />
+                                    <button class="btn btn-sm btn-ghost" type="submit">Quitar</button>
+                                </form>
+                            </div>
+                        </article>
+                    }
+                </div>
+                <aside class="summary">
+                    <h2>Resumen</h2>
+                    <div class="summary-row"><span>Subtotal</span><span>@subtotal.ToString("C0")</span></div>
+                    <div class="summary-row"><span>Envío</span><span>@(envio == 0 ? "Gratis" : envio.ToString("C0"))</span></div>
+                    @if (envio > 0)
+                    {
+                        <p class="muted" style="color:#d8cfc2">Te faltan @((envioGratisDesde - subtotal).ToString("C0")) para envío gratis.</p>
+                    }
+                    <div class="summary-row total"><span>Total</span><span>@total.ToString("C0")</span></div>
+                    <a class="btn btn-primary w-100 mt-3" asp-action="Checkout">Finalizar pedido</a>
+                    <a class="btn btn-ghost w-100 mt-2" asp-controller="Productos" asp-action="Index" style="border-color:#d8cfc2;color:#f4efe6">Seguir comprando</a>
+                </aside>
+            </div>
+        }
+    </div>
+</section>

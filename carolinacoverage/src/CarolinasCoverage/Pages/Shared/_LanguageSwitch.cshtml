@@ -1,0 +1,18 @@
+@using CarolinasCoverage.Site
+@{
+    var request = ViewContext.HttpContext.Request;
+    var en = Lang.IsEnglish(request);
+    var theme = (string?)ViewData["LangSwitchTheme"] ?? "light";
+    var esUrl = Lang.ToSpanish(request);
+    var enUrl = Lang.ToEnglish(request);
+}
+<nav class="langSwitch langSwitch--@theme" aria-label="Language / Idioma">
+    <a class="langSwitch-opt @(en ? null : "is-on")" href="@esUrl" hreflang="es" lang="es" data-lang-choice="es" aria-current="@(en ? null : "page")">
+        <span class="langSwitch-code">ES</span>
+        <span class="langSwitch-name">Español</span>
+    </a>
+    <a class="langSwitch-opt @(en ? "is-on" : null)" href="@enUrl" hreflang="en" lang="en" data-lang-choice="en" aria-current="@(en ? "page" : null)">
+        <span class="langSwitch-code">EN</span>
+        <span class="langSwitch-name">English</span>
+    </a>
+</nav>

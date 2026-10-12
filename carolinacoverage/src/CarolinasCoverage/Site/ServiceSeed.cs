@@ -1,0 +1,87 @@
+namespace CarolinasCoverage.Site;
+
+internal static class ServiceSeed
+{
+    public static readonly Dictionary<string, ServiceFlow> All = new()
+    {
+        ["change"] = new(
+            new("📝", "Cambio de póliza",
+                "Actualiza una póliza existente con un recorrido pensado para que el equipo sepa exactamente qué necesitas.",
+                "Un cambio no queda activo hasta que la aseguradora o un agente autorizado lo confirme.",
+                ["Tu póliza", "Tipo de cambio", "Detalles", "Revisión"],
+                ["Agregar o quitar vehículo", "Agregar o quitar conductor", "Cambio de dirección o propiedad", "Modificar cobertura o deducible", "Otro cambio de póliza"],
+                ["Número de póliza", "Aseguradora actual", "Tipo de póliza", "Fecha en que debe aplicar", "Describe el cambio y los datos relacionados", "Teléfono y email para confirmación"],
+                "Revisarás la solicitud antes de enviarla al flujo seguro.",
+                "Simulación completada: la solicitud aparecerá en el panel del agente con el tipo de cambio y la información de póliza.",
+                "Enviar solicitud de cambio (demo)"),
+            new("📝", "Policy change",
+                "Update an existing policy through a path designed to show the team exactly what you need.",
+                "A change is not active until the insurer or an authorized agent confirms it.",
+                ["Your policy", "Change type", "Details", "Review"],
+                ["Add or remove a vehicle", "Add or remove a driver", "Address or property change", "Update coverage or deductible", "Other policy change"],
+                ["Policy number", "Current insurer", "Policy type", "Requested effective date", "Describe the change and related details", "Phone and email for confirmation"],
+                "You will review the request before it goes to the secure workflow.",
+                "Simulation complete: the request will appear in the agent dashboard with the change type and policy details.",
+                "Send change request (demo)")),
+
+        ["evidence"] = new(
+            new("📄", "Certificado o evidencia de seguro",
+                "Solicita una tarjeta, evidencia o certificado con los datos de entrega correctos desde el inicio.",
+                "El documento final solo se emite después de verificar la póliza, los requisitos y la autorización correspondiente.",
+                ["Tu póliza", "Documento", "Destinatario", "Revisión"],
+                ["Tarjeta de identificación", "Evidencia de seguro", "Certificado de seguro (COI)", "Página de declaraciones", "Otro documento"],
+                ["Número de póliza", "Aseguradora y tipo de póliza", "Nombre del asegurado", "Nombre de la persona u organización que lo solicita", "Email de entrega y fecha límite", "Requisitos del certificado, titular o comentario"],
+                "El agente verá qué documento necesita, para quién y cuándo debe entregarse.",
+                "Simulación completada: la solicitud se clasifica como certificado/evidencia y queda lista para validar antes de enviarse.",
+                "Solicitar documento (demo)"),
+            new("📄", "Certificate or proof of insurance",
+                "Request an ID card, proof, or certificate with the correct delivery details from the start.",
+                "The final document is issued only after the policy, requirements, and authorization are verified.",
+                ["Your policy", "Document", "Recipient", "Review"],
+                ["ID card", "Proof of insurance", "Certificate of insurance (COI)", "Declarations page", "Other document"],
+                ["Policy number", "Insurer and policy type", "Named insured", "Requesting person or organization", "Delivery email and deadline", "Certificate holder, requirements, or note"],
+                "The agent will see which document is needed, for whom, and when it is due.",
+                "Simulation complete: the request is categorized as certificate/proof and ready for validation before delivery.",
+                "Request document (demo)")),
+
+        ["renewal"] = new(
+            new("🔄", "Renovación o cancelación",
+                "Elige si deseas revisar una renovación, mantenerla, solicitar una cancelación o conversar sobre otras opciones.",
+                "Una cancelación o renovación no se procesa hasta que se confirme la póliza, fecha efectiva y requisitos de la aseguradora.",
+                ["Tu póliza", "Gestión", "Motivo", "Revisión"],
+                ["Revisar renovación y opciones", "Mantener o renovar póliza", "Solicitar cancelación", "Actualizar método de pago", "Hablar con un agente"],
+                ["Número de póliza", "Aseguradora y tipo de póliza", "Fecha de renovación o fecha efectiva deseada", "Motivo de la solicitud", "¿Deseas comparar cambios de cobertura?", "Teléfono y email para confirmación"],
+                "El equipo recibirá la gestión elegida, fechas y la razón para priorizar la revisión correcta.",
+                "Simulación completada: la solicitud queda marcada como renovación/cancelación para confirmar antes de realizar un cambio.",
+                "Enviar solicitud de renovación/cancelación (demo)"),
+            new("🔄", "Renewal or cancellation",
+                "Choose whether to review a renewal, keep it, request cancellation, or discuss other options.",
+                "A cancellation or renewal is not processed until the policy, effective date, and insurer requirements are confirmed.",
+                ["Your policy", "Request", "Reason", "Review"],
+                ["Review renewal and options", "Keep or renew policy", "Request cancellation", "Update payment method", "Speak with an agent"],
+                ["Policy number", "Insurer and policy type", "Renewal or requested effective date", "Reason for the request", "Would you like to compare coverage changes?", "Phone and email for confirmation"],
+                "The team receives the selected request, dates, and reason to prioritize the correct review.",
+                "Simulation complete: the request is marked renewal/cancellation for confirmation before any change is made.",
+                "Send renewal/cancellation request (demo)")),
+
+        ["claim"] = new(
+            new("⚠️", "Reclamo no urgente",
+                "Registra los detalles básicos de un incidente para que el equipo pueda orientarte en el siguiente día hábil.",
+                "Si hay peligro inmediato, lesiones o una emergencia, llama al 911. Para reportar un reclamo formal, la aseguradora puede requerir su propio proceso.",
+                ["Seguridad", "Incidente", "Documentos", "Revisión"],
+                ["Accidente de auto", "Daño a propiedad", "Lesión o responsabilidad", "Incidente comercial", "Otro incidente no urgente"],
+                ["¿Están todas las personas seguras?", "Número de póliza y aseguradora", "Fecha, hora y ubicación del incidente", "Tipo de incidente y descripción objetiva", "Número de reclamo existente, si ya existe", "Teléfono y email para seguimiento"],
+                "Esta solicitud ayuda a organizar el siguiente paso; no determina cobertura ni sustituye el reporte oficial del reclamo.",
+                "Simulación completada: el caso queda identificado como reclamo no urgente y el equipo verá la información de seguimiento.",
+                "Enviar solicitud de orientación (demo)"),
+            new("⚠️", "Non-emergency claim",
+                "Record the basic incident details so the team can guide you on the next business day.",
+                "If there is immediate danger, injury, or an emergency, call 911. A formal claim may require the insurer’s own reporting process.",
+                ["Safety", "Incident", "Documents", "Review"],
+                ["Auto accident", "Property damage", "Injury or liability", "Business incident", "Other non-emergency incident"],
+                ["Is everyone safe?", "Policy number and insurer", "Incident date, time, and location", "Incident type and objective description", "Existing claim number, if any", "Phone and email for follow-up"],
+                "This request helps organize the next step; it does not determine coverage or replace the official claim report.",
+                "Simulation complete: the case is identified as a non-emergency claim and the team will see the follow-up information.",
+                "Send guidance request (demo)"))
+    };
+}

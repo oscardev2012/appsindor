@@ -1,0 +1,23 @@
+@page "/faqs"
+@{
+    ViewData["Lang"] = "en";
+    ViewData["SeoEn"] = "/faqs";
+    ViewData["SeoEs"] = "/es/preguntas-frecuentes";
+    ViewData["SeoAlert"] = "Need a straight answer before you call?";
+}
+<main class="resource-site" lang="en">
+    @await Html.PartialAsync("_SeoIntentHeader")
+    <section class="resource-hero systems-hero">
+        <div class="site-shell">
+            <p class="eyebrow eyebrow-light">Roofing FAQ Charlotte NC</p>
+            <h1>Roofing FAQs for Charlotte, NC and Rock Hill, SC</h1>
+            <p>How much, how to, repair vs replace, near me, leaks, storms and insurance claims—answered the way a homeowner or an AI assistant would ask. First sentence is the fact. Then why. Then the page that goes deeper. No claim-approval promises.</p>
+            <div class="hero-actions">
+                <a class="button button-gold" href="#cost">Cost questions</a>
+                <a class="button button-ghost" href="/free-roof-inspection-charlotte-nc">Free inspection</a>
+            </div>
+        </div>
+    </section>
+    @await Html.PartialAsync("_FaqHubBody")
+    @await Html.PartialAsync("_SeoIntentFooter")
+</main>

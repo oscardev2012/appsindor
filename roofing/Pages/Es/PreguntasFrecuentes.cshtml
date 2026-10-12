@@ -1,0 +1,23 @@
+@page "/es/preguntas-frecuentes"
+@{
+    ViewData["Lang"] = "es";
+    ViewData["SeoEn"] = "/faqs";
+    ViewData["SeoEs"] = "/es/preguntas-frecuentes";
+    ViewData["SeoAlert"] = "¿Quiere una respuesta clara antes de llamar?";
+}
+<main class="resource-site" lang="es">
+    @await Html.PartialAsync("_SeoIntentHeader")
+    <section class="resource-hero systems-hero">
+        <div class="site-shell">
+            <p class="eyebrow eyebrow-light">FAQ de techo Charlotte NC</p>
+            <h1>Preguntas frecuentes de techo en Charlotte, NC y Rock Hill, SC</h1>
+            <p>Cuánto cuesta, qué hacer, reparar o reemplazar, cerca de mí, liqueos, tormentas y claims—como las preguntaría un dueño o una IA. Primero el hecho. Luego el porqué. Luego la guía. Sin promesas de que aprueben el reclamo.</p>
+            <div class="hero-actions">
+                <a class="button button-gold" href="#costo">Preguntas de costo</a>
+                <a class="button button-ghost" href="/es/inspeccion-gratis-de-techo-charlotte-nc">Inspección gratis</a>
+            </div>
+        </div>
+    </section>
+    @await Html.PartialAsync("_FaqHubBody")
+    @await Html.PartialAsync("_SeoIntentFooter")
+</main>

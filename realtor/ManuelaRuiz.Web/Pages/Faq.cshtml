@@ -1,0 +1,73 @@
+@page "/faq"
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(ViewContext.HttpContext);
+    var groups = SeoGuide.HubFaqs
+        .GroupBy(f => SeoGuide.HubBucket(f.Category))
+        .OrderBy(g =>
+        {
+            var i = Array.IndexOf(SeoGuide.HubBucketOrder, g.Key);
+            return i < 0 ? 99 : i;
+        })
+        .ToList();
+}
+<div class="detailPage">
+<section class="detailHero">
+    <p class="eyebrow">FAQ · Charlotte NC</p>
+    <h1>@(en ? "Real estate questions, answered first." : "Preguntas de bienes raíces, primero la respuesta.")</h1>
+    <p>@(en
+        ? "Short bilingual answers for how much, how to, near Charlotte, ITIN, inspections and contracts. Educational information — not legal, tax, credit or insurance advice. Confirm details with the lender, attorney or brokerage before you sign."
+        : "Respuestas bilingües breves sobre cuánto cuesta, cómo comprar o vender, cerca de Charlotte, ITIN, inspecciones y contratos. Información educativa, no asesoría legal, fiscal, crediticia ni de seguros. Confirme con el prestamista, abogado o brokerage antes de firmar.")</p>
+    <div class="actions">
+        <a class="btn primary" href="#consult">@(en ? "Prepare my consultation" : "Preparar mi consulta")</a>
+        <a class="btn ghost" href="tel:+17048308486">704-830-8486</a>
+    </div>
+</section>
+<section class="detailLinks">
+    <p class="eyebrow">@(en ? "Related guides" : "Guías relacionadas")</p>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/buyers")">@(en ? "Buy a home →" : "Comprar casa →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/sellers")">@(en ? "Sell your home →" : "Vender casa →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/first-time-buyers")">@(en ? "First-time buyers →" : "Primera vivienda →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/itin-home-buyers")">@(en ? "Buying with an ITIN →" : "Comprar con ITIN →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/programs")">@(en ? "Down-payment programs →" : "Programas de enganche →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/service-area")">@(en ? "Service area →" : "Área de servicio →")</a>
+</section>
+<nav class="faqToc" aria-label="@(en ? "Question topics" : "Temas de preguntas")">
+    @foreach (var group in groups)
+    {
+        var label = SeoGuide.HubCategoryLabel(group.Key, en);
+        <a href="#faq-@group.Key.ToLowerInvariant()">@label</a>
+    }
+</nav>
+@foreach (var group in groups)
+{
+    var label = SeoGuide.HubCategoryLabel(group.Key, en);
+<section class="detailFaq" id="faq-@group.Key.ToLowerInvariant()">
+    <p class="eyebrow">@label</p>
+    <h2>@label</h2>
+    <div class="faqOpen">
+        @foreach (var faq in group)
+        {
+            var cta = SeoGuide.GuideCta(faq.Path, en);
+            <article>
+                <h3>@(en ? faq.QEn : faq.QEs)</h3>
+                <p>@(en ? faq.AEn : faq.AEs)</p>
+                @if (!string.IsNullOrEmpty(cta))
+                {
+                    <a class="faqMore" href="@SiteLocale.Localize(ViewContext.HttpContext, faq.Path)">@cta</a>
+                }
+            </article>
+        }
+    </div>
+</section>
+}
+<section class="detailConsult" id="consult">
+    <div>
+        <p class="eyebrow">@(en ? "Bilingual consultation" : "Consulta bilingüe")</p>
+        <h2>@(en ? "Bring the question you still need answered." : "Trae la pregunta que todavía necesitas resolver.")</h2>
+        <p>@(en ? "The form is a real-estate consultation, not a credit application." : "El formulario es una consulta inmobiliaria, no una solicitud de crédito.")</p>
+    </div>
+    @{ ViewData["LeadSource"] = "faq"; }
+    <partial name="_IntakeForm" />
+</section>
+</div>

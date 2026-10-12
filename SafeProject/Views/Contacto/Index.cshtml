@@ -1,0 +1,54 @@
+@model ContactoViewModel
+
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Asesoría</p>
+        <h1>Cuéntanos qué necesitas</h1>
+        <p class="lead">Si no estás seguro de los litros o del combustible, escríbenos. Respondemos de lunes a sábado.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container about-grid" style="padding-bottom: 3rem;">
+        <form asp-action="Index" method="post" class="panel form-stack">
+            @Html.AntiForgeryToken()
+            <div>
+                <label asp-for="Nombre"></label>
+                <input class="form-control" asp-for="Nombre" />
+                <span class="field-error" asp-validation-for="Nombre"></span>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Correo"></label>
+                    <input class="form-control" asp-for="Correo" />
+                    <span class="field-error" asp-validation-for="Correo"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Telefono"></label>
+                    <input class="form-control" asp-for="Telefono" />
+                    <span class="field-error" asp-validation-for="Telefono"></span>
+                </div>
+            </div>
+            <div>
+                <label asp-for="Mensaje"></label>
+                <textarea class="form-control" asp-for="Mensaje" rows="6" placeholder="Ejemplo: casa de 2 baños, 4 personas, tenemos gas LP."></textarea>
+                <span class="field-error" asp-validation-for="Mensaje"></span>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+        </form>
+        <div>
+            <article class="panel mb-3">
+                <h3>Tienda y taller</h3>
+                <p class="muted mb-0">Av. Insurgentes Sur 1234<br />Col. Del Valle, CDMX<br />55 1234 5678<br />hola@calorhogar.mx</p>
+            </article>
+            <article class="panel">
+                <h3>Instalación</h3>
+                <p class="muted mb-0">CDMX y zona metropolitana. En el resto del país enviamos el equipo con guía de instalación y videollamada de arranque.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

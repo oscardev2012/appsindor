@@ -1,0 +1,37 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @{ ViewData["Robots"] = "noindex, nofollow"; }
+    @await Html.PartialAsync("_SeoHead")
+    <link rel="icon" type="image/svg+xml" href="~/favicon.svg" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="login-shell">
+        <section class="login-brand-panel">
+            <a class="brand" asp-controller="Home" asp-action="Index">
+                <span class="brand-mark">CR</span>
+                <span><strong>Charlotte Realtor</strong><small>Recommendations</small></span>
+            </a>
+            <div>
+                <p class="eyebrow">PRIVATE CONTRIBUTOR APP</p>
+                <h1>Your knowledge. Your name. Your posts.</h1>
+                <p>Every Realtor receives a workspace to publish useful guidance. What you publish is what the public reads.</p>
+            </div>
+            <blockquote>“Twenty useful minutes a day can build a trusted local voice.”</blockquote>
+        </section>
+        <section class="login-form-panel">
+            @RenderBody()
+            <a class="login-back" asp-controller="Feed" asp-action="Index">← Return to the public Social Feed</a>
+        </section>
+    </div>
+</body>
+</html>

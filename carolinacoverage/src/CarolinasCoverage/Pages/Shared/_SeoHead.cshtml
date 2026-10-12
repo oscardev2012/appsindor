@@ -1,0 +1,38 @@
+@inject SeoService Seo
+@{
+    var seo = ViewData["Seo"] as SeoPage;
+}
+@if (seo is not null)
+{
+    <title>@seo.Title</title>
+    <meta name="description" content="@seo.Description">
+    <meta name="robots" content="@seo.Robots">
+    <meta name="author" content="Carolinas Coverage Insurance Agency">
+    <meta name="geo.region" content="US-NC">
+    <meta name="geo.placename" content="Charlotte">
+    <meta name="theme-color" content="#092b48">
+    <link rel="canonical" href="@seo.Canonical">
+    <link rel="alternate" hreflang="es" href="@seo.AlternateEs">
+    <link rel="alternate" hreflang="en" href="@seo.AlternateEn">
+    <link rel="alternate" hreflang="x-default" href="@seo.AlternateEn">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+    <meta property="og:type" content="@seo.OgType">
+    <meta property="og:site_name" content="Carolinas Coverage Insurance Agency">
+    <meta property="og:locale" content="@seo.Locale">
+    <meta property="og:locale:alternate" content="@seo.LocaleAlternate">
+    <meta property="og:title" content="@seo.Title">
+    <meta property="og:description" content="@seo.Description">
+    <meta property="og:url" content="@seo.Canonical">
+    <meta property="og:image" content="@seo.OgImage">
+    <meta property="og:image:alt" content="@seo.OgImageAlt">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@seo.Title">
+    <meta name="twitter:description" content="@seo.Description">
+    <meta name="twitter:image" content="@seo.OgImage">
+    @Html.Raw(Seo.JsonLdHtml(seo))
+}
+else
+{
+    <title>@(ViewData["Title"] ?? "Carolinas Coverage Insurance Agency")</title>
+    <meta name="description" content="@ViewData["Description"]">
+}

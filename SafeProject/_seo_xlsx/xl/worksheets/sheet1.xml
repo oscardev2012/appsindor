@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?><x:worksheet xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><x:sheetViews><x:sheetView showGridLines="0" workbookViewId="0" /></x:sheetViews><x:sheetFormatPr defaultRowHeight="15" /><x:cols><x:col min="1" max="1" width="30" hidden="0" customWidth="1" /><x:col min="2" max="2" width="52" hidden="0" customWidth="1" /><x:col min="3" max="3" width="42" hidden="0" customWidth="1" /><x:col min="4" max="4" width="42" hidden="0" customWidth="1" /><x:col min="5" max="5" width="30" hidden="0" customWidth="1" /><x:col min="6" max="6" width="42" hidden="0" customWidth="1" /><x:col min="7" max="7" width="28" hidden="0" customWidth="1" /><x:col min="8" max="8" width="42" hidden="0" customWidth="1" /></x:cols><x:sheetData><x:row r="1" ht="54" customHeight="1"><x:c r="A1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="B1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="C1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="D1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="E1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="F1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="G1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c><x:c r="H1" s="30" t="str"><x:v>SAFE Water Heater — Mapa completo de intención de búsqueda
+Mercado inicial: Charlotte y ciudades objetivo. Actualizado: 2026-08-29. Inventario de cobertura, no estimación de volumen.</x:v></x:c></x:row><x:row r="2"><x:c r="A2" s="24" /><x:c r="B2" s="24" /><x:c r="C2" s="24" /><x:c r="D2" s="24" /><x:c r="E2" s="24" /><x:c r="F2" s="24" /><x:c r="G2" s="24" /><x:c r="H2" s="24" /></x:row><x:row r="3" ht="30" customHeight="1"><x:c r="A3" s="124" t="str"><x:v>Indicador</x:v></x:c><x:c r="B3" s="125" t="str"><x:v>Valor</x:v></x:c><x:c r="C3" s="24" /><x:c r="D3" s="126" t="str"><x:v>Prioridad</x:v></x:c><x:c r="E3" s="127" t="str"><x:v>Qué significa</x:v></x:c><x:c r="F3" s="127" t="str"><x:v>Qué publicar primero</x:v></x:c><x:c r="G3" s="127" t="str"><x:v>Objetivo</x:v></x:c><x:c r="H3" s="128" t="str"><x:v>Advertencia</x:v></x:c></x:row><x:row r="4"><x:c r="A4" s="95" t="str"><x:v>Escenarios documentados</x:v></x:c><x:c r="B4" s="96" t="n"><x:v>427</x:v></x:c><x:c r="C4" s="24" /><x:c r="D4" s="97" t="str"><x:v>P0</x:v></x:c><x:c r="E4" s="29" t="str"><x:v>Problema o compra con alta urgencia</x:v></x:c><x:c r="F4" s="29" t="str"><x:v>Fuga, sin agua caliente, reemplazo, precio, mismo día, local</x:v></x:c><x:c r="G4" s="29" t="str"><x:v>Llamada/cotización inmediata</x:v></x:c><x:c r="H4" s="29" t="str"><x:v>No prometer 24/7 o same-day sin capacidad real</x:v></x:c></x:row><x:row r="5"><x:c r="A5" s="95" t="str"><x:v>Consultas bilingües equivalentes</x:v></x:c><x:c r="B5" s="96" t="n"><x:f>B4*2</x:f><x:v>854</x:v></x:c><x:c r="C5" s="24" /><x:c r="D5" s="97" t="str"><x:v>P1</x:v></x:c><x:c r="E5" s="29" t="str"><x:v>Comparación o diagnóstico cercano a compra</x:v></x:c><x:c r="F5" s="29" t="str"><x:v>Eléctrico, gas, tamaño, ruidos, código, garantía</x:v></x:c><x:c r="G5" s="29" t="str"><x:v>Evaluación o cálculo</x:v></x:c><x:c r="H5" s="29" t="str"><x:v>Responder de verdad; no esconder todo detrás de formulario</x:v></x:c></x:row><x:row r="6"><x:c r="A6" s="95" t="str"><x:v>Páginas P0</x:v></x:c><x:c r="B6" s="96" t="n"><x:f>COUNTIF('Arquitectura Web'!$A$4:$A$41,"P0")</x:f><x:v>12</x:v></x:c><x:c r="C6" s="24" /><x:c r="D6" s="97" t="str"><x:v>P2</x:v></x:c><x:c r="E6" s="29" t="str"><x:v>Educación, mantenimiento o tecnología secundaria</x:v></x:c><x:c r="F6" s="29" t="str"><x:v>Mantenimiento, tankless, heat pump, casos especiales</x:v></x:c><x:c r="G6" s="29" t="str"><x:v>Confianza y enlaces internos</x:v></x:c><x:c r="H6" s="29" t="str"><x:v>Publicar después de cubrir P0/P1</x:v></x:c></x:row><x:row r="7"><x:c r="A7" s="95" t="str"><x:v>Páginas P1</x:v></x:c><x:c r="B7" s="96" t="n"><x:f>COUNTIF('Arquitectura Web'!$A$4:$A$41,"P1")</x:f><x:v>21</x:v></x:c><x:c r="C7" s="24" /><x:c r="D7" s="97" t="str"><x:v>Negativo</x:v></x:c><x:c r="E7" s="29" t="str"><x:v>Búsqueda fuera del servicio</x:v></x:c><x:c r="F7" s="29" t="str"><x:v>RV, piscina, camping, renta si no se ofrecen</x:v></x:c><x:c r="G7" s="29" t="str"><x:v>Excluir en Ads</x:v></x:c><x:c r="H7" s="29" t="str"><x:v>No crear contenido solo por tráfico</x:v></x:c></x:row><x:row r="8"><x:c r="A8" s="95" t="str"><x:v>Páginas P2</x:v></x:c><x:c r="B8" s="96" t="n"><x:f>COUNTIF('Arquitectura Web'!$A$4:$A$41,"P2")</x:f><x:v>5</x:v></x:c><x:c r="C8" s="24" /><x:c r="D8" s="24" /><x:c r="E8" s="24" /><x:c r="F8" s="24" /><x:c r="G8" s="24" /><x:c r="H8" s="24" /></x:row><x:row r="9"><x:c r="A9" s="98" t="str"><x:v>Consultas con ajuste Alto</x:v></x:c><x:c r="B9" s="99" t="n"><x:f>COUNTIF('Consultas SEO'!$G$4:$G$430,"Alto")</x:f><x:v>404</x:v></x:c><x:c r="C9" s="24" /><x:c r="D9" s="24" /><x:c r="E9" s="24" /><x:c r="F9" s="24" /><x:c r="G9" s="24" /><x:c r="H9" s="24" /></x:row><x:row r="10"><x:c r="A10" s="24" /><x:c r="B10" s="24" /><x:c r="C10" s="24" /><x:c r="D10" s="24" /><x:c r="E10" s="24" /><x:c r="F10" s="24" /><x:c r="G10" s="24" /><x:c r="H10" s="24" /></x:row><x:row r="11"><x:c r="A11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="B11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="C11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="D11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="E11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="F11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="G11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c><x:c r="H11" s="129" t="str"><x:v>Las 12 familias de intención que deben estar frente al cliente</x:v></x:c></x:row><x:row r="12"><x:c r="A12" s="24" /><x:c r="B12" s="24" /><x:c r="C12" s="24" /><x:c r="D12" s="24" /><x:c r="E12" s="24" /><x:c r="F12" s="24" /><x:c r="G12" s="24" /><x:c r="H12" s="24" /></x:row><x:row r="13" ht="15" hidden="0" customHeight="1"><x:c r="A13" s="101" t="str"><x:v>1</x:v></x:c><x:c r="B13" s="102" t="str"><x:v>Emergencia</x:v></x:c><x:c r="C13" s="103" t="str"><x:v>Fuga fuerte, gas, CO, vapor, electricidad</x:v></x:c><x:c r="D13" s="104" t="str"><x:v>/water-heater-emergency/</x:v></x:c><x:c r="E13" s="24" /><x:c r="F13" s="130" t="str"><x:v>Regla de construcción</x:v></x:c><x:c r="G13" s="130" t="str"><x:v>Regla de construcción</x:v></x:c><x:c r="H13" s="130" t="str"><x:v>Regla de construcción</x:v></x:c></x:row><x:row r="14" ht="15" hidden="0" customHeight="1"><x:c r="A14" s="106" t="str"><x:v>2</x:v></x:c><x:c r="B14" s="107" t="str"><x:v>Sin agua caliente</x:v></x:c><x:c r="C14" s="108" t="str"><x:v>Falla súbita, solo fría, intermitente</x:v></x:c><x:c r="D14" s="109" t="str"><x:v>/no-hot-water/</x:v></x:c><x:c r="E14" s="24" /><x:c r="F14" s="110" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G14" s="111" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H14" s="112" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="15" ht="15" hidden="0" customHeight="1"><x:c r="A15" s="106" t="str"><x:v>3</x:v></x:c><x:c r="B15" s="107" t="str"><x:v>Fuga</x:v></x:c><x:c r="C15" s="108" t="str"><x:v>Abajo, arriba, válvula, conexión, ático</x:v></x:c><x:c r="D15" s="109" t="str"><x:v>/water-heater-leaking/</x:v></x:c><x:c r="E15" s="24" /><x:c r="F15" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G15" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H15" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="16" ht="15" hidden="0" customHeight="1"><x:c r="A16" s="106" t="str"><x:v>4</x:v></x:c><x:c r="B16" s="107" t="str"><x:v>Diagnóstico por tipo</x:v></x:c><x:c r="C16" s="108" t="str"><x:v>Eléctrico, gas, tankless</x:v></x:c><x:c r="D16" s="109" t="str"><x:v>Páginas específicas</x:v></x:c><x:c r="E16" s="24" /><x:c r="F16" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G16" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H16" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="17" ht="15" hidden="0" customHeight="1"><x:c r="A17" s="106" t="str"><x:v>5</x:v></x:c><x:c r="B17" s="107" t="str"><x:v>Rendimiento</x:v></x:c><x:c r="C17" s="108" t="str"><x:v>Poca agua, tibia, tarda, fluctúa</x:v></x:c><x:c r="D17" s="109" t="str"><x:v>/not-enough-hot-water/</x:v></x:c><x:c r="E17" s="24" /><x:c r="F17" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G17" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H17" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="18" ht="15" hidden="0" customHeight="1"><x:c r="A18" s="106" t="str"><x:v>6</x:v></x:c><x:c r="B18" s="107" t="str"><x:v>Señales sensoriales</x:v></x:c><x:c r="C18" s="108" t="str"><x:v>Ruido, olor, color, sedimento</x:v></x:c><x:c r="D18" s="109" t="str"><x:v>Páginas de problema</x:v></x:c><x:c r="E18" s="24" /><x:c r="F18" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G18" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H18" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="19" ht="15" hidden="0" customHeight="1"><x:c r="A19" s="106" t="str"><x:v>7</x:v></x:c><x:c r="B19" s="107" t="str"><x:v>Reparar o reemplazar</x:v></x:c><x:c r="C19" s="108" t="str"><x:v>Edad, frecuencia, fuga, costo</x:v></x:c><x:c r="D19" s="109" t="str"><x:v>/repair-or-replace-water-heater/</x:v></x:c><x:c r="E19" s="24" /><x:c r="F19" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G19" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H19" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="20" ht="15" hidden="0" customHeight="1"><x:c r="A20" s="106" t="str"><x:v>8</x:v></x:c><x:c r="B20" s="107" t="str"><x:v>Precio y financiamiento</x:v></x:c><x:c r="C20" s="108" t="str"><x:v>Instalado, extras, cash, mensual</x:v></x:c><x:c r="D20" s="109" t="str"><x:v>/water-heater-cost-charlotte-nc/</x:v></x:c><x:c r="E20" s="24" /><x:c r="F20" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G20" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H20" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="21" ht="15" hidden="0" customHeight="1"><x:c r="A21" s="106" t="str"><x:v>9</x:v></x:c><x:c r="B21" s="107" t="str"><x:v>Producto y tamaño</x:v></x:c><x:c r="C21" s="108" t="str"><x:v>40/50 gal, gas/electric, tank/tankless</x:v></x:c><x:c r="D21" s="109" t="str"><x:v>Guías + landings</x:v></x:c><x:c r="E21" s="24" /><x:c r="F21" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G21" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H21" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="22" ht="15" hidden="0" customHeight="1"><x:c r="A22" s="106" t="str"><x:v>10</x:v></x:c><x:c r="B22" s="107" t="str"><x:v>Instalación y código</x:v></x:c><x:c r="C22" s="108" t="str"><x:v>Permiso, PRV, expansión, pan, acceso</x:v></x:c><x:c r="D22" s="109" t="str"><x:v>Páginas de proceso</x:v></x:c><x:c r="E22" s="24" /><x:c r="F22" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G22" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H22" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="23" ht="15" hidden="0" customHeight="1"><x:c r="A23" s="106" t="str"><x:v>11</x:v></x:c><x:c r="B23" s="107" t="str"><x:v>Local y confianza</x:v></x:c><x:c r="C23" s="108" t="str"><x:v>Near me, ciudad, licencia, español</x:v></x:c><x:c r="D23" s="109" t="str"><x:v>Páginas locales reales</x:v></x:c><x:c r="E23" s="24" /><x:c r="F23" s="113" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G23" s="114" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H23" s="115" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="24" ht="15" hidden="0" customHeight="1"><x:c r="A24" s="116" t="str"><x:v>12</x:v></x:c><x:c r="B24" s="117" t="str"><x:v>Postventa/B2B</x:v></x:c><x:c r="C24" s="118" t="str"><x:v>Garantía, realtor, property manager</x:v></x:c><x:c r="D24" s="119" t="str"><x:v>Páginas de confianza/B2B</x:v></x:c><x:c r="E24" s="24" /><x:c r="F24" s="120" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="G24" s="121" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c><x:c r="H24" s="122" t="str"><x:v>1. Una intención = una página fuerte.
+2. Cada página responde primero, vende después.
+3. Mostrar precio base e inclusiones cuando sea real.
+4. Añadir fotos propias, licencia, garantía, autor técnico y fecha de revisión.
+5. English y español deben tener contenido equivalente, no traducción parcial.
+6. Crear páginas de ciudad solo con cobertura, prueba y contenido local único.
+7. Medir consultas reales en Search Console y ajustar cada mes.</x:v></x:c></x:row><x:row r="25"><x:c r="A25" s="24" /><x:c r="B25" s="24" /><x:c r="C25" s="24" /><x:c r="D25" s="24" /><x:c r="E25" s="24" /><x:c r="F25" s="24" /><x:c r="G25" s="24" /><x:c r="H25" s="24" /></x:row><x:row r="26"><x:c r="A26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="B26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="C26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="D26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="E26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="F26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="G26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c><x:c r="H26" s="131" t="str"><x:v>Ruta inicial recomendada (primeras 12 páginas)</x:v></x:c></x:row><x:row r="27"><x:c r="A27" s="24" /><x:c r="B27" s="24" /><x:c r="C27" s="24" /><x:c r="D27" s="24" /><x:c r="E27" s="24" /><x:c r="F27" s="24" /><x:c r="G27" s="24" /><x:c r="H27" s="24" /></x:row><x:row r="28" ht="15" hidden="0" customHeight="1"><x:c r="A28" s="101" t="str"><x:v>1</x:v></x:c><x:c r="B28" s="102" t="str"><x:v>/water-heater-replacement-charlotte-nc/</x:v></x:c><x:c r="C28" s="104" t="str"><x:v>Venta local</x:v></x:c><x:c r="D28" s="24" /><x:c r="E28" s="24" /><x:c r="F28" s="24" /><x:c r="G28" s="24" /><x:c r="H28" s="24" /></x:row><x:row r="29" ht="15" hidden="0" customHeight="1"><x:c r="A29" s="106" t="str"><x:v>2</x:v></x:c><x:c r="B29" s="107" t="str"><x:v>/water-heater-cost-charlotte-nc/</x:v></x:c><x:c r="C29" s="109" t="str"><x:v>Precio</x:v></x:c><x:c r="D29" s="24" /><x:c r="E29" s="24" /><x:c r="F29" s="24" /><x:c r="G29" s="24" /><x:c r="H29" s="24" /></x:row><x:row r="30" ht="15" hidden="0" customHeight="1"><x:c r="A30" s="106" t="str"><x:v>3</x:v></x:c><x:c r="B30" s="107" t="str"><x:v>/40-gallon-electric-water-heater-installation/</x:v></x:c><x:c r="C30" s="109" t="str"><x:v>Producto estrella</x:v></x:c><x:c r="D30" s="24" /><x:c r="E30" s="24" /><x:c r="F30" s="24" /><x:c r="G30" s="24" /><x:c r="H30" s="24" /></x:row><x:row r="31" ht="15" hidden="0" customHeight="1"><x:c r="A31" s="106" t="str"><x:v>4</x:v></x:c><x:c r="B31" s="107" t="str"><x:v>/same-day-water-heater-replacement/</x:v></x:c><x:c r="C31" s="109" t="str"><x:v>Urgencia</x:v></x:c><x:c r="D31" s="24" /><x:c r="E31" s="24" /><x:c r="F31" s="24" /><x:c r="G31" s="24" /><x:c r="H31" s="24" /></x:row><x:row r="32" ht="15" hidden="0" customHeight="1"><x:c r="A32" s="106" t="str"><x:v>5</x:v></x:c><x:c r="B32" s="107" t="str"><x:v>/water-heater-leaking/</x:v></x:c><x:c r="C32" s="109" t="str"><x:v>Problema urgente</x:v></x:c><x:c r="D32" s="24" /><x:c r="E32" s="24" /><x:c r="F32" s="24" /><x:c r="G32" s="24" /><x:c r="H32" s="24" /></x:row><x:row r="33" ht="15" hidden="0" customHeight="1"><x:c r="A33" s="106" t="str"><x:v>6</x:v></x:c><x:c r="B33" s="107" t="str"><x:v>/no-hot-water/</x:v></x:c><x:c r="C33" s="109" t="str"><x:v>Problema urgente</x:v></x:c><x:c r="D33" s="24" /><x:c r="E33" s="24" /><x:c r="F33" s="24" /><x:c r="G33" s="24" /><x:c r="H33" s="24" /></x:row><x:row r="34" ht="15" hidden="0" customHeight="1"><x:c r="A34" s="106" t="str"><x:v>7</x:v></x:c><x:c r="B34" s="107" t="str"><x:v>/repair-or-replace-water-heater/</x:v></x:c><x:c r="C34" s="109" t="str"><x:v>Decisión</x:v></x:c><x:c r="D34" s="24" /><x:c r="E34" s="24" /><x:c r="F34" s="24" /><x:c r="G34" s="24" /><x:c r="H34" s="24" /></x:row><x:row r="35" ht="15" hidden="0" customHeight="1"><x:c r="A35" s="106" t="str"><x:v>8</x:v></x:c><x:c r="B35" s="107" t="str"><x:v>/electric-water-heater-not-working/</x:v></x:c><x:c r="C35" s="109" t="str"><x:v>Diagnóstico</x:v></x:c><x:c r="D35" s="24" /><x:c r="E35" s="24" /><x:c r="F35" s="24" /><x:c r="G35" s="24" /><x:c r="H35" s="24" /></x:row><x:row r="36" ht="15" hidden="0" customHeight="1"><x:c r="A36" s="106" t="str"><x:v>9</x:v></x:c><x:c r="B36" s="107" t="str"><x:v>/what-size-water-heater-do-i-need/</x:v></x:c><x:c r="C36" s="109" t="str"><x:v>Selección</x:v></x:c><x:c r="D36" s="24" /><x:c r="E36" s="24" /><x:c r="F36" s="24" /><x:c r="G36" s="24" /><x:c r="H36" s="24" /></x:row><x:row r="37" ht="15" hidden="0" customHeight="1"><x:c r="A37" s="106" t="str"><x:v>10</x:v></x:c><x:c r="B37" s="107" t="str"><x:v>/water-heater-code-upgrades/</x:v></x:c><x:c r="C37" s="109" t="str"><x:v>Objeciones de precio</x:v></x:c><x:c r="D37" s="24" /><x:c r="E37" s="24" /><x:c r="F37" s="24" /><x:c r="G37" s="24" /><x:c r="H37" s="24" /></x:row><x:row r="38" ht="15" hidden="0" customHeight="1"><x:c r="A38" s="106" t="str"><x:v>11</x:v></x:c><x:c r="B38" s="107" t="str"><x:v>/water-heater-financing/</x:v></x:c><x:c r="C38" s="109" t="str"><x:v>Conversión</x:v></x:c><x:c r="D38" s="24" /><x:c r="E38" s="24" /><x:c r="F38" s="24" /><x:c r="G38" s="24" /><x:c r="H38" s="24" /></x:row><x:row r="39" ht="15" hidden="0" customHeight="1"><x:c r="A39" s="116" t="str"><x:v>12</x:v></x:c><x:c r="B39" s="117" t="str"><x:v>/es/reemplazo-calentador-agua-charlotte-nc/</x:v></x:c><x:c r="C39" s="119" t="str"><x:v>Mercado hispano</x:v></x:c><x:c r="D39" s="24" /><x:c r="E39" s="24" /><x:c r="F39" s="24" /><x:c r="G39" s="24" /><x:c r="H39" s="24" /></x:row><x:row r="40"><x:c r="A40" s="24" /><x:c r="B40" s="24" /><x:c r="C40" s="24" /><x:c r="D40" s="24" /><x:c r="E40" s="24" /><x:c r="F40" s="24" /><x:c r="G40" s="24" /><x:c r="H40" s="24" /></x:row><x:row r="41"><x:c r="A41" s="24" /><x:c r="B41" s="24" /><x:c r="C41" s="24" /><x:c r="D41" s="24" /><x:c r="E41" s="24" /><x:c r="F41" s="24" /><x:c r="G41" s="24" /><x:c r="H41" s="24" /></x:row><x:row r="42"><x:c r="A42" s="24" /><x:c r="B42" s="24" /><x:c r="C42" s="24" /><x:c r="D42" s="24" /><x:c r="E42" s="24" /><x:c r="F42" s="24" /><x:c r="G42" s="24" /><x:c r="H42" s="24" /></x:row><x:row r="43"><x:c r="A43" s="24" /><x:c r="B43" s="24" /><x:c r="C43" s="24" /><x:c r="D43" s="24" /><x:c r="E43" s="24" /><x:c r="F43" s="24" /><x:c r="G43" s="24" /><x:c r="H43" s="24" /></x:row><x:row r="44"><x:c r="A44" s="24" /><x:c r="B44" s="24" /><x:c r="C44" s="24" /><x:c r="D44" s="24" /><x:c r="E44" s="24" /><x:c r="F44" s="24" /><x:c r="G44" s="24" /><x:c r="H44" s="24" /></x:row><x:row r="45"><x:c r="A45" s="24" /><x:c r="B45" s="24" /><x:c r="C45" s="24" /><x:c r="D45" s="24" /><x:c r="E45" s="24" /><x:c r="F45" s="24" /><x:c r="G45" s="24" /><x:c r="H45" s="24" /></x:row></x:sheetData><x:mergeCells><x:mergeCell ref="A1:H1" /><x:mergeCell ref="A11:H11" /><x:mergeCell ref="F13:H13" /><x:mergeCell ref="F14:H24" /><x:mergeCell ref="A26:H26" /></x:mergeCells><x:pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3" /><x:legacyDrawing r:id="Rdac2979b519e4248" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" /></x:worksheet>

@@ -1,0 +1,340 @@
+﻿@page
+@model IndexModel
+@{
+    var en = Model.En;
+    var products = Model.Catalog.Products;
+}
+<main id="contenido">
+    <div class="topbar">@(en ? "English and Spanish service" : "Atención en español e inglés") <span>•</span> <a href="tel:+17045953429">704-595-3429</a></div>
+    @await Component.InvokeAsync("HubLatestPost")
+    <nav class="nav">
+        <a class="brand" href="#inicio"><span class="brand-mark">C</span><span>CAROLINAS<br><b>COVERAGE</b></span></a>
+        <div class="navlinks">
+            <a href="#products">@(en ? "Coverage" : "Coberturas")</a>
+            <a href="#quote">@(en ? "Quote" : "Cotizar")</a>
+            <a href="@(en ? "/about" : "/es/nosotros")">@(en ? "About" : "Nosotros")</a>
+            <a href="@(en ? "/north-carolina" : "/es/carolina-del-norte")">NC</a>
+            <a href="@(en ? "/south-carolina" : "/es/carolina-del-sur")">SC</a>
+            <a href="@FaqHubCatalog.Path(en)">FAQ</a>
+            <a href="@Lang.Contact(en)">@(en ? "Contact" : "Contacto")</a>
+        </div>
+        <div class="navright">
+            <partial name="_LanguageSwitch" />
+            <a class="navcta" href="#quote">@(en ? "Request a bilingual quote" : "Solicitar cotización bilingüe") →</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="heroimage">
+            <img src="~/images/carolinas-hero-family.png" decoding="async" fetchpriority="high" alt="@(en ? "Family in front of their home and car" : "Familia frente a su hogar y auto")">
+        </div>
+        <div class="heroCopy">
+            <p class="eyebrow light">@(en ? "NORTH CAROLINA + SOUTH CAROLINA" : "CAROLINA DEL NORTE + CAROLINA DEL SUR")</p>
+            <h1>@(en ? "Insurance Agency Serving North Carolina & South Carolina" : "Agencia de Seguros para Carolina del Norte y Carolina del Sur")</h1>
+            <p class="lead">@(en ? "Carolinas Coverage helps with auto, home, renters, pet, business and life insurance. Health, Medicare and disability are not offered. A licensed agent reviews available options — never a guaranteed lowest price." : "Carolinas Coverage ayuda con seguro de auto, casa, inquilinos, mascotas, negocio y vida. No se ofrece salud, Medicare ni disability. Un agente autorizado revisa opciones disponibles — nunca un precio más bajo garantizado.")</p>
+            <div class="actions">
+                <a class="button" href="#quote">@(en ? "Request a bilingual quote" : "Solicitar cotización bilingüe") →</a>
+                <a class="textbutton" href="@(en ? "/spanish-speaking-insurance-agent" : "/es/agente-seguros")">@(en ? "Spanish-speaking agent" : "Agente que habla español") ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hubSection identityBand" id="about-band">
+        <h2>@(en ? "Carolinas Coverage Insurance Agency — not another similarly named firm" : "Carolinas Coverage Insurance Agency — no es otra firma con nombre parecido")</h2>
+        <p>@(en ? "This office is at 410 Westinghouse Blvd, Suite B, Charlotte, NC 28273. We help with auto, home, renters, pet, business and life insurance in North Carolina and South Carolina. We are not Carolina Coverage Group and not Carolina Coverage Solutions. We do not offer health insurance, Medicare or disability insurance." : "Esta oficina está en 410 Westinghouse Blvd, Suite B, Charlotte, NC 28273. Ayudamos con auto, casa, inquilinos, mascotas, negocio y vida en Carolina del Norte y Carolina del Sur. No somos Carolina Coverage Group ni Carolina Coverage Solutions. No ofrecemos salud, Medicare ni disability.")</p>
+        <p><a class="textCta" href="@(en ? "/about" : "/es/nosotros")">@(en ? "About this agency →" : "Acerca de esta agencia →")</a></p>
+    </section>
+
+    <section class="carriers">
+        <p>@(en ? "Available carrier options (appointments confirmed per product and state)" : "Opciones de compañías disponibles (nombramientos confirmados por producto y estado)")</p>
+        <div>
+            @foreach (var carrier in Model.Catalog.Carriers)
+            {
+                <span>@carrier</span>
+            }
+        </div>
+    </section>
+
+    <section id="products" class="section products">
+        <div class="heading">
+            <div>
+                <p class="eyebrow">@(en ? "CHOOSE YOUR PATH" : "ELIGE TU CAMINO")</p>
+                <h2>@(en ? "Every insurance type needs different information." : "Cada seguro pide información distinta.")</h2>
+            </div>
+            <p>@(en ? "The flow changes by product so the agent gets what is needed from the start." : "El flujo cambia según el producto para que el agente reciba lo que necesita desde el principio.")</p>
+        </div>
+        <div class="cards">
+            @foreach (var product in products)
+            {
+                <article>
+                    <i>@product.Icon</i>
+                    <h3>@(en ? product.En : product.Es)</h3>
+                    <p>@(en ? product.DescEn : product.DescEs)</p>
+                    <a class="cardlink" href="@Lang.Coverage(en, product.Id)">@(en ? "Understand coverage" : "Entender cobertura") →</a>
+                    <button class="cardAction" type="button" data-quote-product="@product.Id">@(en ? "Fill request" : "Llenar solicitud") →</button>
+                </article>
+            }
+        </div>
+    </section>
+
+    <section id="quote" class="quote quoteFlow">
+        <div>
+            <p class="eyebrow">@(en ? "COMPLETE REQUEST" : "SOLICITUD COMPLETA")</p>
+            <h2>@(en ? "Your information, in the right order." : "Tu información, en el orden correcto.")</h2>
+            <p>@(en ? "1. Choose insurance. 2. Complete the specific worksheet. 3. The agent validates eligibility and sends options and secure payment." : "1. Elige seguro. 2. Completa la hoja específica. 3. El agente valida elegibilidad y te envía opciones y pago seguro.")</p>
+            <aside>✓ @(en ? "Do not enter Social Security, banking information, or passwords. Payment instructions are provided only through the insurer’s official secure channel." : "No ingreses Seguro Social, información bancaria ni contraseñas. La forma de pago se entrega únicamente por el canal oficial y seguro de la aseguradora.")</aside>
+        </div>
+        <div class="formcard" id="quote-root" data-lang="@(en ? "en" : "es")"></div>
+    </section>
+
+    <section id="claims" class="claims">
+        <div class="claimsCopy">
+            <p class="eyebrow">@(en ? "CLAIM HELP" : "AYUDA CON RECLAMOS")</p>
+            <h2>@(en ? "If something happens, start safely." : "Si algo sucede, empieza seguro.")</h2>
+            <p>@(en ? "For an emergency or injury, call 911. For claim-process guidance, have your insurer, policy number, incident date, and photos or report when available." : "Para una emergencia o lesión llama al 911. Para orientación sobre un reclamo, ten a mano tu aseguradora, número de póliza, fecha del incidente y fotos o reporte cuando existan.")</p>
+            <a class="button" href="tel:+17045953429">@(en ? "Call for help" : "Llamar para ayuda") →</a>
+        </div>
+        <div class="claimsteps">
+            <article>
+                <span>01</span>
+                <h3>@(en ? "Safety" : "Seguridad")</h3>
+                <p>@(en ? "Protect people and prevent further damage if safe." : "Protege a las personas y evita daños mayores si es seguro hacerlo.")</p>
+            </article>
+            <article>
+                <span>02</span>
+                <h3>@(en ? "Document" : "Documenta")</h3>
+                <p>@(en ? "Keep photos, dates, location, and relevant details." : "Guarda fotos, fechas, lugar y datos relevantes.")</p>
+            </article>
+            <article>
+                <span>03</span>
+                <h3>@(en ? "Report" : "Reporta")</h3>
+                <p>@(en ? "Follow the process for your policy insurer." : "Sigue el proceso de la aseguradora de tu póliza.")</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="serviceHub">
+        <div>
+            <p class="eyebrow">@(en ? "SERVICE CENTER" : "CENTRO DE SERVICIO")</p>
+            <h2>@(en ? "Your policy can be serviced here, too." : "Tu póliza también se atiende aquí.")</h2>
+            <p>@(en ? "Each request has its own form, questions, and follow-up path." : "Cada solicitud tiene su propio formulario, sus preguntas y su recorrido de seguimiento.")</p>
+        </div>
+        <div class="serviceGrid">
+            <a href="@Lang.Service(en, "change")" rel="nofollow">
+                <span>📝</span>
+                <b>@(en ? "Policy change" : "Cambio de póliza")</b>
+                <small>@(en ? "Vehicle, driver, property, or coverage." : "Vehículo, conductor, propiedad o cobertura.")</small>
+                <em>@(en ? "Open form →" : "Abrir formulario →")</em>
+            </a>
+            <a href="@Lang.Service(en, "evidence")" rel="nofollow">
+                <span>📄</span>
+                <b>@(en ? "Proof of insurance" : "Certificado o evidencia")</b>
+                <small>@(en ? "ID card, certificate, or document." : "ID card, certificado o documento.")</small>
+                <em>@(en ? "Open form →" : "Abrir formulario →")</em>
+            </a>
+            <a href="@Lang.Service(en, "renewal")" rel="nofollow">
+                <span>🔄</span>
+                <b>@(en ? "Renewal or cancellation" : "Renovación o cancelación")</b>
+                <small>@(en ? "Review, renew, or cancel." : "Revisar, renovar o cancelar.")</small>
+                <em>@(en ? "Open form →" : "Abrir formulario →")</em>
+            </a>
+            <a href="@Lang.Service(en, "claim")" rel="nofollow">
+                <span>⚠️</span>
+                <b>@(en ? "Non-emergency claim" : "Reclamo no urgente")</b>
+                <small>@(en ? "Report an incident for follow-up." : "Reportar un incidente para seguimiento.")</small>
+                <em>@(en ? "Open form →" : "Abrir formulario →")</em>
+            </a>
+            <a href="@Lang.Portal(en)" rel="nofollow">
+                <span>◫</span>
+                <b>@(en ? "View customer portal" : "Ver panel del cliente")</b>
+                <small>@(en ? "Follow requests, documents, and next steps." : "Sigue solicitudes, documentos y próximos pasos.")</small>
+                <em>@(en ? "View demonstration →" : "Ver demostración →")</em>
+            </a>
+        </div>
+        <p class="integrationNote">@(en ? "Preview: requests will connect to EzLynx or the authorized secure channel. For an emergency, call 911." : "Vista previa: las solicitudes se conectarán a EzLynx o al canal seguro autorizado. Para una emergencia, llama al 911.")</p>
+    </section>
+
+    <section class="instant">
+        <div>
+            <p class="eyebrow">@(en ? "DIGITAL PATH" : "CAMINO DIGITAL")</p>
+            <h2>@(en ? "Built to move quickly, with a person when it matters." : "Diseñado para avanzar rápido, con una persona cuando importa.")</h2>
+        </div>
+        <ol>
+            <li>
+                <b>01</b>
+                <strong>@(en ? "Choose and complete" : "Elige y completa")</strong>
+                <span>@(en ? "Select insurance and complete the right form." : "Selecciona el seguro y llena su formulario correcto.")</span>
+            </li>
+            <li>
+                <b>02</b>
+                <strong>@(en ? "Receive options" : "Recibe opciones")</strong>
+                <span>@(en ? "An agent confirms eligibility, coverage, and available price." : "El agente confirma elegibilidad, cobertura y precio disponible.")</span>
+            </li>
+            <li>
+                <b>03</b>
+                <strong>@(en ? "Buy when eligible" : "Compra cuando sea elegible")</strong>
+                <span>@(en ? "Instant purchase activates by product when connected and authorized." : "La compra instantánea se activa por producto cuando esté conectada y autorizada.")</span>
+            </li>
+        </ol>
+    </section>
+
+    <section class="partners" id="partners">
+        <div class="heading">
+            <div>
+                <p class="eyebrow">@(en ? "RECOMMENDED RESOURCES" : "RECURSOS RECOMENDADOS")</p>
+                <h2>@(en ? "Help for your home, project, or next purchase." : "Ayuda para tu hogar, proyecto o próxima compra.")</h2>
+            </div>
+            <p>@(en ? "These resources are informational. Each provider handles its own services, contracts, and work directly." : "Estos recursos son informativos. Los servicios, contratos y trabajos de cada proveedor se coordinan directamente con ese proveedor.")</p>
+        </div>
+        <div>
+            <article>
+                <span>ROOFING &amp; CONSTRUCTION</span>
+                <h3>Majestic Roofing Inc</h3>
+                <p>@(en ? "Recommended by Carolinas Coverage for information on roofing, repairs, and residential or commercial projects in Charlotte, Rock Hill, and surrounding areas." : "Recomendado por Carolinas Coverage para información sobre techos, reparaciones y proyectos residenciales o comerciales en Charlotte, Rock Hill y alrededores.")</p>
+                <a class="partnerLink" href="https://majesticroofing.co/" target="_blank" rel="noopener">@(en ? "Visit Majestic Roofing →" : "Visitar Majestic Roofing →")</a>
+            </article>
+            <article>
+                <span>REMODELING</span>
+                <h3>Safe Project Solution</h3>
+                <p>@(en ? "by Safe HVAC Solution. A resource for remodeling projects, kitchens, bathrooms, and interiors in Charlotte and surrounding areas." : "by Safe HVAC Solution. Recurso para proyectos de remodelación, cocinas, baños e interiores en Charlotte y alrededores.")</p>
+                <a class="partnerLink" href="https://www.safeprojectsolution.com/" target="_blank" rel="noopener">@(en ? "Visit Safe Project Solution →" : "Visitar Safe Project Solution →")</a>
+            </article>
+            <article>
+                <span>REAL ESTATE</span>
+                <h3>Manuela Ruiz, Realtor®</h3>
+                <p>@(en ? "A recommended resource for buyers, sellers, new construction, and investment properties in Charlotte and surrounding areas." : "Recurso recomendado para compradores, vendedores, construcción nueva y propiedades de inversión en Charlotte y sus alrededores.")</p>
+                <a class="partnerLink" href="https://guerra-realty.com/agent/manuela-ruiz" target="_blank" rel="noopener">@(en ? "Meet Manuela Ruiz →" : "Conocer a Manuela Ruiz →")</a>
+            </article>
+        </div>
+        <small>@(en ? "These are community resources, not a guarantee, part of a policy, or a condition of coverage." : "Son recursos de la comunidad, no una garantía, parte de la póliza ni una condición de cobertura.")</small>
+    </section>
+
+    <section id="resources" class="section resources">
+        <div>
+            <p class="eyebrow">@(en ? "COVERAGE GUIDES" : "GUÍAS DE COBERTURA")</p>
+            <h2>@(en ? "Read before deciding." : "Lee antes de decidir.")</h2>
+            <p>@(en ? "Clear explanations for people, search, and AI agents: common coverage, claims, and what an agent must confirm." : "Explicaciones claras para personas, buscadores y agentes de IA: qué se suele cubrir, cómo funciona un reclamo y qué debe confirmar un agente.")</p>
+        </div>
+        <div class="resourcescards">
+            <a href="@(en ? "/auto-insurance" : "/es/seguro-auto")">
+                <span>🚗</span>
+                <h3>@(en ? "Auto hub" : "Hub de auto")</h3>
+                <p>@(en ? "Liability vs full coverage, DL-123, non-owner, SR-22 and new drivers." : "Responsabilidad vs cobertura completa, DL-123, no propietario, SR-22 y conductores nuevos.")</p>
+                <b>@(en ? "Explore" : "Explorar") →</b>
+            </a>
+            <a href="@(en ? "/life-insurance" : "/es/seguro-vida")">
+                <span>🤍</span>
+                <h3>@(en ? "Life hub" : "Hub de vida")</h3>
+                <p>@(en ? "Term, whole life and final expense. No health, Medicare or disability." : "Término, vida entera y gastos finales. Sin salud, Medicare ni disability.")</p>
+                <b>@(en ? "Explore" : "Explorar") →</b>
+            </a>
+            <a href="@Lang.Coverage(en, "pet")">
+                <span>🐾</span>
+                <h3>@(en ? "Pet guide" : "Guía de mascotas")</h3>
+                <p>@(en ? "Accident, illness, wellness distinction, reimbursement, deductible, and waiting periods." : "Accidentes, enfermedad, diferencia con bienestar, reembolso, deducible y períodos de espera.")</p>
+                <b>@(en ? "Explore" : "Explorar") →</b>
+            </a>
+            <a href="@Lang.Coverage(en, "business")">
+                <span>🏢</span>
+                <h3>@(en ? "Business guide" : "Guía de negocio")</h3>
+                <p>@(en ? "Liability, workers, vehicles, and contractor risks." : "Responsabilidad, trabajadores, vehículos y riesgos de contratista.")</p>
+                <b>@(en ? "Explore" : "Explorar") →</b>
+            </a>
+        </div>
+    </section>
+
+    <section class="local" id="local">
+        <div class="localMap" aria-hidden="true">
+            <span class="nc">NORTH CAROLINA</span>
+            <span class="sc">SOUTH CAROLINA</span>
+            <i class="charlotte">●<b>Charlotte</b></i>
+            <i class="rockhill">●<b>Rock Hill</b></i>
+            <em>I-77</em>
+        </div>
+        <div class="localCopy">
+            <p class="eyebrow">@(en ? "CHARLOTTE OFFICE • NC AND SC RULES KEPT SEPARATE" : "OFICINA EN CHARLOTTE • REGLAS DE NC Y SC POR SEPARADO")</p>
+            <h2>@(en ? "A Charlotte agency for North Carolina and South Carolina." : "Una agencia en Charlotte para Carolina del Norte y Carolina del Sur.")</h2>
+            <p>@(en ? "The office is at 410 Westinghouse Blvd, Suite B, Charlotte, NC 28273. Auto minimums, road-test proof and workers’ compensation thresholds are not the same in both states." : "La oficina está en 410 Westinghouse Blvd, Suite B, Charlotte, NC 28273. Los mínimos de auto, el comprobante para examen de manejo y los umbrales de compensación laboral no son iguales en ambos estados.")</p>
+            <div class="localPoints">
+                <span>Charlotte, NC 28273</span>
+                <span>@(en ? "North Carolina auto 50/100/50*" : "Auto NC 50/100/50*")</span>
+                <span>@(en ? "South Carolina auto 25/50/25" : "Auto SC 25/50/25")</span>
+                <span>@(en ? "Spanish & English" : "Español e inglés")</span>
+                <span>410 Westinghouse Blvd, Suite B</span>
+            </div>
+            <div class="localStory">
+                <p>@(en ? "*North Carolina 50/100/50 applies to new or renewed policies on or after July 1, 2025, per NCDOI; verify the current rule. South Carolina lists 25/50/25 liability and uninsured motorist; underinsured motorist must be offered but is not required. Workers’ compensation is generally required at 3+ employees in NC and 4+ in SC, with exceptions." : "*El 50/100/50 de Carolina del Norte aplica a pólizas nuevas o renovadas desde el 1 de julio de 2025, según NCDOI; verifique la regla actual. Carolina del Sur lista 25/50/25 de responsabilidad y conductor sin seguro; el conductor con seguro insuficiente debe ofrecerse, pero no es obligatorio. Compensación laboral generalmente se exige con 3+ empleados en NC y 4+ en SC, con excepciones.")</p>
+            </div>
+            <a class="textCta" href="@(en ? "/nc/charlotte-nc" : "/es/nc/charlotte-nc")">@(en ? "Charlotte office page →" : "Página de la oficina en Charlotte →")</a>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div>
+            <p class="eyebrow">@(en ? "FREQUENT QUESTIONS" : "PREGUNTAS FRECUENTES")</p>
+            <h2>@(en ? "Answers before you call or quote." : "Respuestas antes de llamar o cotizar.")</h2>
+            <p>@(en ? "Clear information for people searching insurance in Charlotte and the Carolinas, in Spanish and English." : "Información clara para quienes buscan seguro en Charlotte y las Carolinas, en español e inglés.")</p>
+            <p><a class="textCta" href="@FaqHubCatalog.Path(en)">@(en ? "See all FAQs →" : "Ver todas las preguntas →")</a></p>
+        </div>
+        <div class="faqList">
+            @foreach (var item in Model.Faqs)
+            {
+                <details>
+                    <summary>@item.Question <span>+</span></summary>
+                    <p>@item.Answer</p>
+                </details>
+            }
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div>
+            <p class="eyebrow">@(en ? "CHARLOTTE, ROCK HILL, AND BOTH CAROLINAS" : "CHARLOTTE, ROCK HILL Y LAS DOS CAROLINAS")</p>
+            <h2>@(en ? "We are ready to help." : "Estamos listos para ayudarte.")</h2>
+        </div>
+        <div>
+            <a href="tel:+17045953429">704-595-3429</a>
+            <p>410 Westinghouse Blvd, Suite B<br>Charlotte, NC 28273</p>
+        </div>
+        <a class="button white" href="#quote">@(en ? "Start" : "Comenzar") →</a>
+    </section>
+
+    <footer>
+        <div>
+            <a class="brand" href="#inicio"><span class="brand-mark">C</span><span>CAROLINAS<br><b>COVERAGE</b></span></a>
+            <p>@(en ? "Clear insurance. Personal service." : "Seguro claro. Atención personal.")</p>
+        </div>
+        <div>
+            <h3>@(en ? "Coverage" : "Coberturas")</h3>
+            @foreach (var product in products)
+            {
+                <a href="@Lang.Coverage(en, product.Id)">@(en ? product.En : product.Es)</a>
+            }
+            <a href="@(en ? "/flood-insurance" : "/es/seguro-inundacion")">@(en ? "Flood insurance" : "Seguro contra inundación")</a>
+        </div>
+        <div>
+            <h3>@(en ? "Contact" : "Contacto")</h3>
+            <a href="tel:+17045953429">704-595-3429</a>
+            <a href="@(en ? "/about" : "/es/nosotros")">@(en ? "About" : "Nosotros")</a>
+            <a href="@(en ? "/nc/charlotte-nc" : "/es/nc/charlotte-nc")">Charlotte</a>
+            <a href="@(en ? "/north-carolina" : "/es/carolina-del-norte")">North Carolina</a>
+            <a href="@(en ? "/south-carolina" : "/es/carolina-del-sur")">South Carolina</a>
+            <a href="@Lang.Contact(en)">@(en ? "Contact page" : "Página de contacto")</a>
+            <a href="@(en ? "/spanish-speaking-insurance-agent" : "/es/agente-seguros")">@(en ? "Spanish-speaking agent" : "Agente en español")</a>
+            <a href="#claims">@(en ? "Claims" : "Reclamos")</a>
+            <a href="@FaqHubCatalog.Path(en)">FAQ</a>
+            <a href="#local">@(en ? "Service area" : "Zona de servicio")</a>
+            <a href="/sitemap.xml">Sitemap</a>
+            <a href="/llms.txt">llms.txt</a>
+        </div>
+        <div>
+            <p>Carolinas Coverage Insurance Agency</p>
+            <address>
+                410 Westinghouse Blvd, Suite B<br>
+                Charlotte, NC 28273
+            </address>
+            <p>@(en ? "Coverage, availability, price, and eligibility depend on the final policy, state, and insurer approval. This site does not issue a binding quote. Health insurance, Medicare and disability insurance are not offered." : "La cobertura, disponibilidad, precio y elegibilidad dependen de la póliza final, el estado y la aprobación de la aseguradora. Este sitio no emite una cotización vinculante. No se ofrece seguro de salud, Medicare ni disability.")</p>
+            <p>© 2026 Carolinas Coverage Insurance Agency</p>
+        </div>
+    </footer>
+</main>

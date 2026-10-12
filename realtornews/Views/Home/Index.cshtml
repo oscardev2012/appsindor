@@ -1,0 +1,264 @@
+﻿@model HomePageViewModel
+@{
+    ViewData["Title"] = "Charlotte Realtor Recommendations | Buyer, Seller & Home Guides";
+    ViewData["Description"] = "Charlotte real estate education for buyers, sellers, homeowners, and people relocating. Realtor news, city guides, seasonal checklists, and preferred vendors.";
+    ViewData["Crumbs"] = new List<SeoCrumb> { new("Home", "/") };
+    ViewData["Schema"] = Seo.Faq(
+        ("How do I find a Charlotte Realtor I can trust?", "Read the public feed and magazine. Every story is published under a Realtor’s real name, with a date and a local market."),
+        ("Should I start with buying or selling guides?", "Start where you are. Use Buying if you are searching, Selling if you may list, or Homeownership if you already live here. You can ask a question without being ready to transact."),
+        ("What are Preferred Vendors?", "They are local home-service companies Realtors can help you contact for inspections, HVAC, roofs, crawl spaces, and related work. A request is not a purchase."),
+        ("Does this site cover cities outside Charlotte?", "Yes. The city directory includes Mecklenburg, Gaston, Cabarrus, Union, Iredell, Lincoln, and South Carolina communities such as Fort Mill and Rock Hill.")
+    );
+    var lead = Model.Latest.FirstOrDefault();
+    var rest = Model.Latest.Skip(1).Take(2).ToList();
+    var featured = Model.Realtors.FirstOrDefault();
+}
+@await Html.PartialAsync("_DbBanner", Model.DbError)
+
+<section class="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">YOUR CHARLOTTE HOME &amp; CITY GUIDE</p>
+        <h1>New to Charlotte? Start with people who know home.</h1>
+        <p class="hero-lede">Learn the city, understand real estate, care for your home, and find local professionals—without guessing what questions to ask or paying for work you do not understand.</p>
+        <div class="hero-actions">
+            <a class="button primary" asp-controller="Feed" asp-action="Index">I’m moving, buying, or a homeowner</a>
+            <a class="button text-link" asp-controller="Home" asp-action="ForRealtors">I’m a Realtor <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+    <div class="hero-image" role="img" aria-label="Charlotte neighborhood homes with the city skyline in the distance">
+        <div class="today-card">
+            <span>Today’s Charlotte briefing</span>
+            <strong>@EasternTime.LongDate(DateTimeOffset.UtcNow)</strong>
+            <p>@(lead?.Title ?? "New guidance for buyers, homeowners, and Realtors")</p>
+        </div>
+    </div>
+</section>
+
+<section class="trust-strip">
+    <div><strong>@(Model.RealtorCount == 0 ? "—" : Model.RealtorCount.ToString())</strong><span>Realtors publishing in their own name</span></div>
+    <div><strong>@(Model.PostCount == 0 ? "—" : Model.PostCount.ToString())</strong><span>Live news and community answers</span></div>
+    <div><strong>2</strong><span>Ways to learn: public guides and Realtor desk</span></div>
+    <div><strong>NC / SC</strong><span>Charlotte region, in English and Spanish</span></div>
+</section>
+
+<section class="audience-gateway" id="choose-your-path">
+    <div class="audience-intro">
+        <p class="eyebrow">CHOOSE YOUR PATH</p>
+        <h2>One local education network. Two ways to learn.</h2>
+        <p>Every story is dated, connected to a local author, and written to help you make a clearer decision.</p>
+    </div>
+    <a class="audience-card public-path" asp-controller="Guides" asp-action="Index">
+        <span>01 · FOR THE PUBLIC</span>
+        <h3>Moving, buying, selling, or caring for a home</h3>
+        <p>Explore Charlotte-area cities, buyer and seller guides, seasonal checklists, community answers, and preferred vendors.</p>
+        <b>Start with the public guides →</b>
+    </a>
+    <a class="audience-card pro-path" asp-controller="Home" asp-action="ForRealtors">
+        <span>02 · FOR REAL ESTATE PROFESSIONALS</span>
+        <h3>Realtor Learning Center</h3>
+        <p>Register, follow colleagues, and publish the news that appears on this site.</p>
+        <b>Open Realtor education →</b>
+    </a>
+</section>
+
+<section class="why-exists">
+    <div>
+        <p class="eyebrow">WHY THIS EXISTS</p>
+        <h2>Moving to a new city should not mean figuring everything out alone.</h2>
+        <p>People arrive in Charlotte without a trusted Realtor, contractor, HVAC company, roofer, or a clear picture of the surrounding cities. This site puts local education in one place: what to ask, what a normal process looks like, and where to find help when you are ready.</p>
+    </div>
+</section>
+
+<section class="section" id="cities">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">EXPLORE THE CHARLOTTE REGION</p>
+            <h2>Want to get to know a city?</h2>
+        </div>
+        <a asp-controller="Guides" asp-action="Cities">Explore the full directory →</a>
+    </div>
+    <div class="home-city-grid">
+        <a class="home-city" asp-controller="Guides" asp-action="Cities" asp-fragment="charlotte"><strong>Charlotte</strong><span>Mecklenburg · NC</span></a>
+        <a class="home-city" asp-controller="Guides" asp-action="Cities" asp-fragment="gastonia"><strong>Gastonia</strong><span>Gaston · NC</span></a>
+        <a class="home-city" asp-controller="Guides" asp-action="Cities" asp-fragment="concord"><strong>Concord</strong><span>Cabarrus · NC</span></a>
+        <a class="home-city" asp-controller="Guides" asp-action="Cities"><strong>Lake Norman &amp; North</strong><span>Huntersville to Statesville</span></a>
+        <a class="home-city" asp-controller="Guides" asp-action="Cities"><strong>Union County &amp; South</strong><span>Matthews to Waxhaw</span></a>
+        <a class="home-city" asp-controller="Guides" asp-action="Cities"><strong>South Carolina</strong><span>Fort Mill, Rock Hill, Lake Wylie &amp; more</span></a>
+    </div>
+</section>
+
+<section class="season-banner">
+    <div>
+        <p class="eyebrow">FALL 2026 HOME GUIDE</p>
+        <h2>Heating, roof, gutters, crawl space, drainage, and winter preparation.</h2>
+        <p>From Charlotte Realtors and Preferred Vendors—dated, local, and easy to revisit.</p>
+        <a class="button gold" asp-controller="Guides" asp-action="Seasonal">Open seasonal guide</a>
+    </div>
+</section>
+
+<section class="section" id="guides">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">START WHERE YOU ARE</p>
+            <h2>Guides for every stage</h2>
+        </div>
+        <a asp-controller="Guides" asp-action="Index">All guides →</a>
+    </div>
+    <div class="guide-filters">
+        <a asp-controller="Guides" asp-action="Index">All guides</a>
+        <a asp-controller="Guides" asp-action="Index" asp-route-category="Buying">Buying</a>
+        <a asp-controller="Guides" asp-action="Index" asp-route-category="Selling">Selling</a>
+        <a asp-controller="Guides" asp-action="Index" asp-route-category="Investing">Investing</a>
+        <a asp-controller="Guides" asp-action="Index" asp-route-category="Homeownership">Homeownership</a>
+    </div>
+    <div class="card-grid">
+        @foreach (var guide in LocalCatalog.StageGuides.Take(6))
+        {
+            <article class="guide-card">
+                <span class="story-section">@guide.Category.ToUpperInvariant()</span>
+                <h3>@guide.Title</h3>
+                <p>@guide.Summary</p>
+                <a asp-controller="Guides" asp-action="Index" asp-route-category="@guide.Category">Read guide →</a>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="vendor-home">
+    <div>
+        <p class="eyebrow">PREFERRED VENDORS OF CHARLOTTE</p>
+        <h2>SAFE support from inspection questions to completed projects.</h2>
+        <p>Explore the service ecosystem, current equipment promotions, and Charlotte-area partners your Realtor can help you contact.</p>
+        <div class="hero-actions">
+            <a class="button gold" asp-controller="Vendors" asp-action="Index">See all Realtor services</a>
+            <a class="button outline" asp-controller="Vendors" asp-action="Index" asp-fragment="vendor-education">See vendor education →</a>
+        </div>
+    </div>
+    <div class="magazine-story-grid">
+        @foreach (var lesson in LocalCatalog.VendorLessons)
+        {
+            <article class="magazine-story">
+                <span class="story-section">@lesson.Author.ToUpperInvariant()</span>
+                <h3>@lesson.Title</h3>
+                <p>@lesson.Body</p>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">CHARLOTTE BUYER &amp; HOME GUIDE</p>
+            <h2>Daily news from Realtors</h2>
+        </div>
+        <a asp-controller="News" asp-action="Index">Open today’s magazine →</a>
+    </div>
+    @if (lead is null)
+    {
+        <div class="empty-panel">
+            <p>No stories yet. When a Realtor publishes from the desk, the home page, social feed, and magazine update together.</p>
+            <a class="button gold" asp-controller="Account" asp-action="Register">Become a contributor</a>
+        </div>
+    }
+    else
+    {
+        <div class="featured-grid">
+            <article class="lead-story">
+                <div class="story-art" style="@(string.IsNullOrWhiteSpace(lead.CoverImageUrl) ? null : $"background-image:linear-gradient(145deg,rgba(10,35,66,.25),rgba(10,35,66,.05)),url('{lead.CoverImageUrl}')")"><span>@lead.Category.ToUpperInvariant()</span></div>
+                <div class="story-body">
+                    <div class="meta"><span>@lead.Category</span><span>@EasternTime.LongDate(lead.PublishedUtc ?? lead.CreatedUtc)</span></div>
+                    <h3><a asp-controller="News" asp-action="Details" asp-route-slug="@lead.Slug">@lead.Title</a></h3>
+                    <p>@lead.Teaser</p>
+                    <div class="author-row">
+                        <span class="avatar">@lead.RealtorInitials</span>
+                        <div>
+                            <strong>@lead.RealtorName</strong>
+                            <span>@(lead.RealtorBrokerage ?? "Charlotte Realtor")</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="side-stories">
+                @foreach (var story in rest)
+                {
+                    <article class="compact-story">
+                        <div class="meta"><span>@story.Category</span></div>
+                        <h3><a asp-controller="News" asp-action="Details" asp-route-slug="@story.Slug">@story.Title</a></h3>
+                        <p>@story.Teaser</p>
+                        <a asp-controller="News" asp-action="Details" asp-route-slug="@story.Slug">Read the full recommendation →</a>
+                    </article>
+                }
+                <article class="compact-story dark-card">
+                    <span class="mini-kicker">REALTOR NETWORK</span>
+                    <h3>Publish in your own voice.</h3>
+                    <p>Register as a Realtor, write a market note or a client answer, and it appears here the same day.</p>
+                    <a asp-controller="Account" asp-action="Register">Become a contributor →</a>
+                </article>
+            </div>
+        </div>
+    }
+</section>
+
+<section class="realtor-learning-preview">
+    <div class="learning-date">
+        <span>PROFESSIONAL EDITION</span>
+        <strong>@EasternTime.ToEastern(DateTimeOffset.UtcNow).ToString("MMM").ToUpperInvariant()<br>@EasternTime.ToEastern(DateTimeOffset.UtcNow).Day</strong>
+        <small>@DateTime.UtcNow.Year</small>
+    </div>
+    <div>
+        <p class="eyebrow">REALTOR LEARNING CENTER</p>
+        <h2>Education for the people who educate the client.</h2>
+        <p>Realtors can register, follow each other, answer public questions, and publish the news that readers see on this site.</p>
+        <div class="learning-topics">
+            <span>Practice updates</span><span>Client education</span><span>Local knowledge</span><span>Social feed</span>
+        </div>
+    </div>
+    <div class="learning-brief">
+        <span>TODAY’S 20-MINUTE TRACK</span>
+        <ol>
+            <li>Register or sign in to Realtor Desk</li>
+            <li>Answer one public question or write a market note</li>
+            <li>Review every word under your name</li>
+            <li>Publish — it appears on Home, Feed, and Magazine</li>
+        </ol>
+        <a class="button gold" asp-controller="Account" asp-action="Register">Become a contributor</a>
+    </div>
+</section>
+
+@if (featured is not null)
+{
+    <section class="section author-feature">
+        <div class="author-portrait"><span>@featured.Initials</span></div>
+        <div class="author-content">
+            <p class="eyebrow">FEATURED LOCAL VOICE</p>
+            <h2>Meet @featured.FullName</h2>
+            <p>@(featured.Bio ?? featured.Headline ?? "A Charlotte-area Realtor publishing local guidance for buyers, sellers, and families relocating to the region.")</p>
+            <div class="author-stats">
+                <div><strong>@featured.PostCount</strong><span>Published stories</span></div>
+                <div><strong>@featured.FollowerCount</strong><span>Followers</span></div>
+                <div><strong>@featured.LocationLabel</strong><span>Market</span></div>
+            </div>
+            <a class="button primary" asp-controller="Realtors" asp-action="Profile" asp-route-slug="@featured.Slug">View profile</a>
+        </div>
+    </section>
+}
+
+<section class="ask">
+    <div>
+        <p class="eyebrow">REAL QUESTION. LOCAL ANSWER.</p>
+        <h2>Ask a Charlotte Realtor</h2>
+        <p>Submit a question about buying, selling, financing, new construction, or relocating. Selected questions may become the next educational article.</p>
+    </div>
+    <form class="ask-form" asp-controller="Questions" asp-action="Index" method="post">
+        @Html.AntiForgeryToken()
+        <label>What do you want to know?
+            <textarea name="Body" rows="4" required placeholder="Example: Can I buy a home in Charlotte with an ITIN?"></textarea>
+        </label>
+        <div class="form-row">
+            <label>First name <input name="FirstName" required /></label>
+            <label>Email <input name="Email" type="email" required /></label>
+        </div>
+        <button class="button primary" type="submit">Send my question</button>
+    </form>
+</section>

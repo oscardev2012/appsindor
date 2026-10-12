@@ -1,0 +1,37 @@
+@inject FaqHub FaqHub
+@{
+    var isEs = (ViewData["Lang"] as string) == "es";
+}
+<section class="resource-body section" id="process">
+    <div class="site-shell" style="max-width:72ch">
+        <p>@(isEs
+            ? "Respuestas cortas y factuales. La primera frase es el hecho; después el porqué. Cada pregunta enlaza a la guía completa. Majestic Roofing, Inc. atiende Charlotte, NC y Rock Hill, SC. Raleigh queda fuera del área."
+            : "Short, factual answers. The first sentence is the fact, then the why. Each question links to the full guide. Majestic Roofing, Inc. serves Charlotte, NC and Rock Hill, SC. Raleigh is outside the service area.")</p>
+    </div>
+</section>
+@foreach (var group in FaqHub.Groups(isEs))
+{
+        var slug = System.Text.RegularExpressions.Regex.Replace(
+            group.Key.ToLowerInvariant()
+                .Replace("á", "a").Replace("é", "e").Replace("í", "i").Replace("ó", "o").Replace("ú", "u"),
+            @"[^a-z0-9]+", "-").Trim('-');
+    <section class="faq-section section" id="@slug">
+        <div class="site-shell faq-layout">
+            <div><p class="eyebrow">@(isEs ? "Preguntas" : "Questions")</p><h2>@group.Key</h2></div>
+            <div class="faq-list">
+                @foreach (var item in group)
+                {
+                    var q = isEs ? item.EsQ : item.EnQ;
+                    var a = isEs ? item.EsA : item.EnA;
+                    var href = isEs ? item.EsHref : item.EnHref;
+                    var label = isEs ? "Abrir la guía completa" : item.EnLink;
+                    <details>
+                        <summary>@q<span>+</span></summary>
+                        <p>@a</p>
+                        <p><a class="official-link" href="@href">@label →</a></p>
+                    </details>
+                }
+            </div>
+        </div>
+    </section>
+}

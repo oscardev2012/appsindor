@@ -1,0 +1,158 @@
+@model ComposeViewModel
+@{
+    Layout = "_StudioLayout";
+    ViewData["Title"] = Model.Id is null ? "Crear noticia" : "Editar noticia";
+    var previewHtml = NewsFormatter.ToHtml(Model.Body);
+}
+<div class="desk-heading">
+    <div>
+        <p class="eyebrow">CREAR NOTICIA</p>
+        <h2>@(Model.Id is null ? "Escribe una noticia con formato" : "Edita tu noticia")</h2>
+        <p>Usa el formato editorial: párrafos, sección, recomendación y listas. La vista previa es lo que verá el público.</p>
+    </div>
+</div>
+<div asp-validation-summary="All" class="form-errors"></div>
+<form method="post" asp-action="Compose" class="composer-layout" id="compose-form">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <div class="post-composer">
+        <div class="compose-meta">
+            <label>Tipo
+                <select asp-for="PostType">
+                    <option value="article">Noticia / artículo</option>
+                    <option value="feed">Post corto del feed</option>
+                </select>
+            </label>
+            <label>Categoría
+                <select asp-for="Category">
+                    @foreach (var cat in PostCatalog.Categories)
+                    {
+                        <option value="@cat">@cat</option>
+                    }
+                </select>
+            </label>
+            <label>Ciudad
+                <select asp-for="City">
+                    @foreach (var city in PostCatalog.Cities)
+                    {
+                        <option value="@city">@city</option>
+                    }
+                </select>
+            </label>
+        </div>
+        <label>Título
+            <input asp-for="Title" required maxlength="180" data-preview="title" placeholder="Ej. Qué hacer antes de cambiar el presupuesto por las tasas" />
+        </label>
+        <label>Resumen (aparece grande bajo el título)
+            <input asp-for="Summary" maxlength="500" data-preview="summary" placeholder="Una o dos frases claras para el lector." />
+        </label>
+        <div class="fmt-bar" role="toolbar" aria-label="Formato">
+            <button type="button" data-fmt="h2">Sección</button>
+            <button type="button" data-fmt="bold">Negrita</button>
+            <button type="button" data-fmt="callout">Recomendación</button>
+            <button type="button" data-fmt="list">Lista</button>
+            <button type="button" data-fmt="p">Párrafo</button>
+            <button type="button" data-fmt="sample">Insertar ejemplo</button>
+        </div>
+        <label>Texto de la noticia
+            <textarea asp-for="Body" id="Body" rows="14" required data-preview="body" placeholder="Primer párrafo con el contexto.&#10;&#10;## Qué significa esto&#10;Explica el punto en tu propia voz.&#10;&#10;&gt; Mi recomendación: verifica este dato con un profesional antes de firmar.&#10;&#10;- Primer paso&#10;- Segundo paso"></textarea>
+        </label>
+        <p class="fmt-hint">Separa bloques con una línea en blanco. <code>##</code> sección · <code>&gt;</code> recomendación · <code>-</code> lista · <code>**texto**</code> negrita. <a asp-controller="News" asp-action="Preview">Ver ejemplo publicado</a></p>
+        <label>URL de imagen de portada
+            <input asp-for="CoverImageUrl" type="url" data-preview="image" placeholder="https://…" />
+        </label>
+        <label class="consent"><input asp-for="Publish" /> Publicar ahora (se ve en el menú Noticias)</label>
+        <div class="composer-actions">
+            <button class="button gold" type="submit">Publicar noticia</button>
+            <a class="button outline" asp-action="Index">Cancelar</a>
+        </div>
+    </div>
+    <aside class="post-preview article-preview">
+        <span class="eyebrow">VISTA PÚBLICA</span>
+        <article class="preview-story">
+            <span class="story-section" data-preview-category>@Model.Category.ToUpperInvariant()</span>
+            <h3 data-preview-title>@(string.IsNullOrWhiteSpace(Model.Title) ? "El título aparece aquí" : Model.Title)</h3>
+            <p class="preview-deck" data-preview-summary>@(string.IsNullOrWhiteSpace(Model.Summary) ? "El resumen se lee como bajada de revista." : Model.Summary)</p>
+            <img class="post-cover" data-preview-image alt="" @(string.IsNullOrWhiteSpace(Model.CoverImageUrl) ? "hidden" : null) src="@Model.CoverImageUrl" />
+            <div class="article-content" data-preview-body>@previewHtml</div>
+        </article>
+    </aside>
+</form>
+@section Scripts {
+<script>
+(() => {
+  const body = document.getElementById("Body");
+  const insert = (before, after = "") => {
+    const start = body.selectionStart;
+    const end = body.selectionEnd;
+    const selected = body.value.slice(start, end) || (after ? "texto" : "");
+    body.setRangeText(before + selected + after, start, end, "end");
+    body.focus();
+    body.dispatchEvent(new Event("input"));
+  };
+  document.querySelectorAll("[data-fmt]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const kind = btn.getAttribute("data-fmt");
+      if (kind === "h2") insert("\n\n## ", "\n");
+      if (kind === "bold") insert("**", "**");
+      if (kind === "callout") insert("\n\n> ", "\n\n");
+      if (kind === "list") insert("\n\n- ", "\n- ");
+      if (kind === "p") insert("\n\n", "\n\n");
+      if (kind === "sample") {
+        body.value = "Charlotte está cambiando más rápido de lo que muchos compradores esperan. Antes de ajustar el presupuesto, conviene mirar tasas, inventario y el vecindario juntos.\n\n## Qué significa esto ahora\nUna tasa más alta no cierra la puerta. Cambia cuánto puedes pagar cada mes y qué tipo de casa encaja sin presión.\n\n> Mi recomendación: pide a tu prestamista un escenario a 30 días y otro a 90 días antes de firmar.\n\n- Revisa tu pago máximo, no solo el precio\n- Compara dos vecindarios, no diez\n- Confirma impuestos y HOA antes de la oferta";
+        body.dispatchEvent(new Event("input"));
+      }
+    });
+  });
+
+  const inline = (text) => {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>");
+  };
+  const toHtml = (value) => {
+    const blocks = value.replace(/\r\n/g, "\n").split(/\n\s*\n/);
+    return blocks.map((raw) => {
+      const block = raw.trim();
+      if (!block) return "";
+      const lines = block.split("\n");
+      if (lines[0].startsWith("## ")) {
+        const rest = lines.slice(1).join(" ").trim();
+        return `<h2>${inline(lines[0].slice(3))}</h2>` + (rest ? `<p>${inline(rest)}</p>` : "");
+      }
+      if (lines.every((l) => l.trimStart().startsWith(">"))) {
+        const text = lines.map((l) => l.trimStart().replace(/^>\s?/, "")).join(" ");
+        return `<blockquote class="callout"><span>Recomendación</span><p>${inline(text)}</p></blockquote>`;
+      }
+      if (lines.filter((l) => /^[-*]\s/.test(l.trimStart())).length >= 1 && lines.every((l) => /^[-*]\s/.test(l.trimStart()) || !l.trim())) {
+        return "<ul>" + lines.map((l) => `<li>${inline(l.trimStart().replace(/^[-*]\s+/, ""))}</li>`).join("") + "</ul>";
+      }
+      return `<p>${inline(block.replace(/\n/g, " "))}</p>`;
+    }).join("");
+  };
+
+  const titleIn = document.querySelector("[data-preview='title']");
+  const summaryIn = document.querySelector("[data-preview='summary']");
+  const imageIn = document.querySelector("[data-preview='image']");
+  const catIn = document.querySelector("#Category");
+  const paint = () => {
+    document.querySelector("[data-preview-title]").textContent = titleIn.value || "El título aparece aquí";
+    document.querySelector("[data-preview-summary]").textContent = summaryIn.value || "El resumen se lee como bajada de revista.";
+    document.querySelector("[data-preview-body]").innerHTML = toHtml(body.value);
+    const img = document.querySelector("[data-preview-image]");
+    if (imageIn.value) { img.src = imageIn.value; img.hidden = false; }
+    else { img.removeAttribute("src"); img.hidden = true; }
+    if (catIn) document.querySelector("[data-preview-category]").textContent = catIn.value.toUpperCase();
+  };
+  ["input", "change"].forEach((ev) => {
+    titleIn.addEventListener(ev, paint);
+    summaryIn.addEventListener(ev, paint);
+    body.addEventListener(ev, paint);
+    imageIn.addEventListener(ev, paint);
+    catIn?.addEventListener(ev, paint);
+  });
+})();
+</script>
+}

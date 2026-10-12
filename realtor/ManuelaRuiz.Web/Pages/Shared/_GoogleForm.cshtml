@@ -1,0 +1,26 @@
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(Context);
+    var kind = ViewData["FormKind"] as string ?? "buy";
+    var seller = Questionnaire.IsSeller(kind);
+    var url = Questionnaire.Url(seller, en);
+    var embed = Questionnaire.Embed(seller, en);
+    var compact = ViewData["FormCompact"] as bool? == true;
+    var title = seller
+        ? (en ? "Seller questionnaire" : "Cuestionario de vendedor")
+        : (en ? "Buyer questionnaire" : "Cuestionario de comprador");
+    var cta = seller
+        ? (en ? "Open seller questionnaire" : "Completar cuestionario de vendedor")
+        : (en ? "Open buyer questionnaire" : "Completar cuestionario de comprador");
+}
+<div class="googleFormPanel">
+    <p class="googleFormLabel">@title</p>
+    <a class="btn primary" href="@url" target="_blank" rel="noopener noreferrer">@cta</a>
+    <p class="googleFormHint">@(en
+        ? "Answers go to Manuela. It is a real-estate questionnaire, not a loan application."
+        : "Las respuestas llegan a Manuela. Es un cuestionario inmobiliario, no una solicitud de préstamo.")</p>
+    @if (!compact)
+    {
+        <iframe class="googleFormFrame" title="@title" src="@embed" loading="lazy"></iframe>
+    }
+</div>

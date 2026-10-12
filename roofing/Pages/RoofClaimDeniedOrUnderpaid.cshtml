@@ -1,0 +1,47 @@
+@page "/roof-claim-denied-or-underpaid"
+@{
+    ViewData["Lang"] = "en";
+    ViewData["SeoEn"] = "/roof-claim-denied-or-underpaid";
+    ViewData["SeoEs"] = "/es/reclamo-de-techo-denegado-o-pago-bajo";
+}
+<main class="resource-site" lang="en">
+    @await Html.PartialAsync("_SeoIntentHeader")
+    <section class="resource-hero warranty-hero">
+        <div class="site-shell">
+            <p class="eyebrow eyebrow-light">Denied or underpaid roof claim</p>
+            <h1>Denied or Underpaid Roof Claim: Next Steps</h1>
+            <p>A denial or a low estimate is a carrier decision. Majestic can re-inspect, photograph missed items and discuss whether a supplement or a second look is construction-justified. We do not guarantee a reversal. You remain the claimant.</p>
+            <div class="hero-actions">
+                <a class="button button-gold" href="/roof-claim-process">Claim process</a>
+                <a class="button button-ghost" href="/roof-insurance-supplements-charlotte-nc">Supplements</a>
+            </div>
+        </div>
+    </section>
+    <section class="resource-body section" id="process">
+        <div class="site-shell resource-sections">
+            <article><span>01</span><div>
+                <h2>Read the denial or estimate carefully</h2>
+                <p>Ask the carrier for the written reason: wear and tear, matching, date of loss, policy exclusion, or insufficient documentation. Photos, dates and the original claim number matter. NCDOI publishes consumer guidance; use official sources, not social-media claim scripts.</p>
+            </div></article>
+            <article><span>02</span><div>
+                <h2>When a contractor re-inspection helps</h2>
+                <p>If the roof still has storm-related openings, missed flashing or code items, a documented construction list can support a conversation with the adjuster. If the roof is simply old, a repair or replacement may still be needed—and still unpaid by insurance. Those are different problems.</p>
+            </div></article>
+            <article><span>03</span><div>
+                <h2>What Majestic will not say</h2>
+                <p>We will not promise the carrier will pay, waive your deductible or “get the claim approved.” We will explain the roof, write a scope and build what you authorize.</p>
+            </div></article>
+        </div>
+    </section>
+    <section class="faq-section section" id="faq">
+        <div class="site-shell faq-layout">
+            <div><p class="eyebrow">FAQ</p><h2>Denied claim questions</h2></div>
+            <div class="faq-list">
+                <details><summary>My roof claim was denied. What now?<span>+</span></summary><p>Get the denial in writing. Confirm deadlines to appeal or reopen. Share the letter and photos with a contractor if you want a construction review. Consider NCDOI consumer resources.</p></details>
+                <details><summary>The insurance estimate is too low. Can you supplement?<span>+</span></summary><p>If line items are missing relative to the actual roof system, a supplement may be appropriate. It is still the carrier’s decision. See the supplements page.</p></details>
+                <details><summary>Should I hire a lawyer or public adjuster?<span>+</span></summary><p>That is your decision. Majestic is the roofing contractor, not legal counsel and not a public adjuster.</p></details>
+            </div>
+        </div>
+    </section>
+    @await Html.PartialAsync("_SeoIntentFooter")
+</main>

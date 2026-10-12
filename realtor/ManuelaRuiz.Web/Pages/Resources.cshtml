@@ -1,0 +1,9 @@
+@page "/resources"
+@using System.Globalization
+@{
+    var en = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.Equals("en", StringComparison.OrdinalIgnoreCase);
+    ViewData["Title"] = en ? "Bilingual real estate knowledge center | Manuela Ruiz" : "Centro bilingüe de conocimiento inmobiliario | Manuela Ruiz";
+    ViewData["Description"] = en ? "Bilingual Realtor in Charlotte, NC for buyers, ITIN families, sellers, relocation, new construction and investment. Search homes and estimate your buying range." : "Realtor bilingüe en Charlotte, NC para compradores, familias con ITIN, vendedores, relocation, nueva construcción e inversión. Busca propiedades y estima tu rango de compra.";
+    var lang = en ? "en" : "es";
+}
+@await Html.PartialAsync("~/Pages/Content/" + lang + "/resources.cshtml")

@@ -1,0 +1,352 @@
+﻿page_count 38
+total_queries 415
+copy_slugs 38
+arch_not_in_copy []
+copy_not_in_arch []
+SLUG|P0|EN|/water-heater-replacement-charlotte-nc/|qc=1|secs=5|body=1042|depth=strong|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"near_me":1}
+  SECTIONS|Installed pricing we publish || Electric, gas and other types || Replacement process || Service area, license and warranty || What standard installation includes ÔÇö and what is extra
+  SCENARIOS|1|Charlotte
+SLUG|P0|EN|/water-heater-cost-charlotte-nc/|qc=12|secs=5|body=1347|depth=strong|faq_risk=high|fallback10=0|dup=1.00|missing=permit,lowe_hd|buckets={"price":10}
+  SECTIONS|Base installed prices || What the installed price includes || Common extras in Charlotte homes || Labor-only vs installed package || How to get an exact quote
+  SCENARIOS|12|Costo de reemplazo general || Costo instalado general || Costo local Charlotte || Costo reemplazo Charlotte || Costo solo mano de obra || Costo con retiro del viejo || Costo de permiso || Pregunta por cargos ocultos || Precio tienda vs plomero || Precio Home Depot vs contratista || Cotizaci├│n parece alta || Precio efectivo
+SLUG|P0|EN|/40-gallon-electric-water-heater-installation/|qc=1|secs=4|body=1061|depth=good|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"price":1}
+  SECTIONS|Who a 40-gallon electric unit serves || What the $1,199 package includes || What is not included || Electric requirements
+  SCENARIOS|1|Costo el├®ctrico 40 gal
+SLUG|P0|EN|/50-gallon-water-heater-installation/|qc=1|secs=3|body=785|depth=moderate|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"price":1}
+  SECTIONS|Capacity and First Hour Rating || Electric vs gas 50-gallon || Access and footprint
+  SCENARIOS|1|Costo el├®ctrico 50 gal
+SLUG|P0|EN|/same-day-water-heater-replacement/|qc=4|secs=4|body=897|depth=good|faq_risk=high|fallback10=0|dup=0.50|missing=price|buckets={"same_day":1,"leak":1,"price":2}
+  SECTIONS|What ÔÇ£same dayÔÇØ means at SAFE || Photos we need before rolling a truck || Limits that block same-day installs || Does same-day cost more?
+  SCENARIOS|4|Necesita servicio el mismo d├¡a || Busca servicio hoy || Costo servicio mismo d├¡a || Costo fin de semana
+SLUG|P0|EN|/water-heater-emergency/|qc=24|secs=6|body=1490|depth=strong|faq_risk=medium|fallback10=1|dup=0.40|missing=insurance|buckets={"safety_electric":1,"safety_gas":4,"safety_flood":4,"fallback":1}
+  SECTIONS|Flooding or a fast leak || Gas odor, yellow flame, soot or CO alarm || Electric sparks, hot wires, burning smell || Bulging tank, steam or a ÔÇ£boilingÔÇØ heater || Where the shutoffs usually are || After the hazard is controlled
+  SCENARIOS|23|Cableado recalentado || Llama amarilla || Holl├¡n alrededor del equipo || Olor a gas || Alarma de mon├│xido cerca del equipo || Fuga fuerte e inundaci├│n || Tanque abultado || Vapor saliendo || Agua parece hervir || V├ílvula libera mucha agua || Olor a quemado || Chispas || Panel o breaker caliente || Cable quemado || Alarma CO || Holl├¡n o llama anormal || Quiere cerrar suministro de agua || Quiere cortar electricidad || Quiere cerrar gas || Pregunta si es seguro dejarlo encendido || Busca servicio 24 horas || Busca reemplazo el mismo d├¡a || Fuga en ├ítico amenaza techo
+  NOTE|Why are the wires on my water heater getting hot?|Riesgo el├®ctrico; no dar pasos DIY invasivos.
+  NOTE|Why do I smell gas near my water heater?|No accionar interruptores ni encender llama.
+SLUG|P0|EN|/water-heater-leaking/|qc=21|secs=3|body=924|depth=moderate|faq_risk=high|fallback10=0|dup=1.00|missing=price|buckets={"leak":10}
+  SECTIONS|Locate the water, then judge severity || Repair vs replace || What to do in the next 10 minutes
+  SCENARIOS|21|Fuga desde abajo || Fuga desde arriba || Fuga por un costado || Fuga en conexi├│n de tuber├¡a || Fuga en v├ílvula de drenaje || Fuga en v├ílvula T&amp;P || Agua sale por tubo de descarga || Fuga en nipple superior || Fuga en la costura del tanque || Charco peque├▒o alrededor || Gotea solo de vez en cuando || Gotea solo mientras calienta || Duda condensaci├│n vs fuga || Bandeja de drenaje llena || Fuga en ├ítico || Fuga en garaje || Quiere apagarlo || Pregunta si puede esperar || Pregunta si explotar├í || Busca reparaci├│n del tanque || Busca reemplazo inmediato
+SLUG|P0|EN|/no-hot-water/|qc=15|secs=4|body=979|depth=good|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"no_hot":10}
+  SECTIONS|Electric tank decision tree || Gas tank decision tree || Tankless units || When SAFE recommends replacement
+  SCENARIOS|15|Toda la casa se qued├│ sin agua caliente || El usuario despert├│ sin agua caliente || El calentador dej├│ de funcionar de repente || El equipo parece encendido pero no calienta || Solo sale agua fr├¡a en la ducha || Ning├║n grifo tiene agua caliente || Solo un grifo no tiene agua caliente || El agua caliente funciona de forma intermitente || El agua caliente desapareci├│ durante la noche || No hay agua caliente despu├®s de un apag├│n || No hay agua caliente despu├®s de vacaciones || No hay agua caliente en el piso de arriba || Hay agua caliente abajo pero no arriba || El agua solo sale tibia || El usuario no sabe qu├® revisar
+  NOTE|Why is there no hot water at only one faucet?|Puede ser problema del grifo, no del calentador.
+SLUG|P0|EN|/repair-or-replace-water-heater/|qc=21|secs=3|body=573|depth=moderate|faq_risk=high|fallback10=0|dup=0.50|missing=price,tankless|buckets={"repair_replace":5,"price":5}
+  SECTIONS|Decision table we actually use || Charlotte water and tank life || How SAFE evaluates from photos
+  SCENARIOS|21|Busca reemplazo de gas || Quiere conocer vida ├║til || Quiere conocer vida de el├®ctrico || Quiere conocer vida de gas || Quiere conocer vida de tankless || Quiere calcular edad || Busca edad por serial || Pregunta se├▒ales de falla || Decide reparaci├│n o reemplazo || Equipo de 8 a├▒os || Equipo de 10 a├▒os || Equipo de 12 a├▒os || Equipo de 15 a├▒os a├║n funciona || Tanque viejo con fuga || Reparaciones frecuentes || Factura subi├│ || Reemplazo preventivo || Antes de vender casa || Reporte de inspecci├│n lo se├▒ala || Compara costo de reparar con nuevo || Falla repentina sin se├▒ales
+SLUG|P0|EN|/water-heater-service-near-me/|qc=15|secs=3|body=477|depth=moderate|faq_risk=high|fallback10=1|dup=0.70|missing=same_day|buckets={"no_hot":1,"near_me":7,"fallback":1,"same_day":1}
+  SECTIONS|Where we actually work || Hours and how to reach us || Trust signals that matter for a local search
+  SCENARIOS|15|Busca saber a qui├®n llamar || Instalador cercano || Reemplazo cercano || Instalaci├│n cercana || Servicio abierto ahora || Servicio mismo d├¡a || Emergencia cercana || Mejor compa├▒├¡a local || Instalador econ├│mico || Plomero que habla espa├▒ol || Compa├▒├¡a biling├╝e || Instalador con licencia || Busca rese├▒as || Busca precio por adelantado || Busca estimado gratuito
+SLUG|P0|ES|/es/calentadores-de-agua-charlotte-nc/|qc=13|secs=4|body=679|depth=good|faq_risk=medium|fallback10=2|dup=0.20|missing=fuel_electric,financing|buckets={"fallback":2,"no_hot":1,"leak":2,"near_me":2,"financing":1,"40gal":1,"warranty":1}
+  SECTIONS|Servicios || Precios actuales || Garant├¡a y cobertura || Zonas
+  SCENARIOS|13|Usa 'boiler' || Usa 'calent├│n' || Usa 'heater de agua' || Usa 'tanque de agua caliente' || Busca instalaci├│n en espa├▒ol || Busca t├®cnico latino || Busca financiamiento || Pregunta por 40 galones || Pregunta por garant├¡a || Pregunta por fuga || Pregunta por piloto || Pregunta por breaker || Busca compa├▒├¡a biling├╝e
+SLUG|P0|ES|/es/reemplazo-calentador-agua-charlotte-nc/|qc=3|secs=3|body=681|depth=moderate|faq_risk=low|fallback10=0|dup=0.33|missing=same_day|buckets={"near_me":1,"price":1,"same_day":1}
+  SECTIONS|Proceso || Tama├▒os y combustible || Extras y garant├¡as
+  SCENARIOS|3|Busca reemplazo en espa├▒ol || Busca precio instalado || Busca servicio hoy
+SLUG|P1|EN|/electric-water-heater-not-working/|qc=15|secs=3|body=625|depth=moderate|faq_risk=high|fallback10=8|dup=0.80|missing=lowe_hd|buckets={"no_hot":2,"fallback":8}
+  SECTIONS|Breaker and disconnect || Reset button, elements and thermostats || When replacement is smarter
+  SCENARIOS|15|Tiene electricidad pero no calienta || Breaker disparado || Breaker se dispara repetidamente || Bot├│n de reset disparado || Bot├│n de reset no funciona || Quiere reiniciar el equipo || Elemento superior da├▒ado || Elemento inferior da├▒ado || Quiere saber si un elemento est├í quemado || Termostato el├®ctrico posiblemente da├▒ado || Solo calienta poca cantidad || El equipo zumba pero no calienta || Fusible o desconectador sospechoso || Sin agua caliente despu├®s de cambiar breaker || Sin agua caliente despu├®s de drenar
+SLUG|P1|EN|/gas-water-heater-not-working/|qc=14|secs=3|body=572|depth=moderate|faq_risk=high|fallback10=9|dup=0.90|missing=|buckets={"fallback":9,"no_hot":1}
+  SECTIONS|Pilot, igniter and flame color || Venting and combustion air || Replacement path
+  SCENARIOS|14|Piloto apagado || Piloto no enciende || Piloto se apaga repetidamente || Quiere encender el piloto || Quemador no enciende || Quemador encendido pero sin agua caliente || Encendedor hace clic pero no prende || Termopar sospechoso || V├ílvula de gas sospechosa || Luz de estado parpadea || Ventilaci├│n deficiente || Se apaga solo || No funciona despu├®s de corte de gas || Condensaci├│n en calentador de gas
+SLUG|P1|EN|/not-enough-hot-water/|qc=18|secs=3|body=630|depth=moderate|faq_risk=high|fallback10=9|dup=0.90|missing=|buckets={"fallback":9,"price":1}
+  SECTIONS|Capacity vs demand || Sediment and elements || What we check from photos and a short interview
+  SCENARIOS|18|Se acaba muy r├ípido || Solo alcanza para una ducha || Produce menos que antes || Tarda mucho en recuperar || Quiere saber tiempo de calentamiento || Agua demasiado caliente || Riesgo de quemadura || Temperatura sube y baja || Sale caliente y luego fr├¡a || Solo tibia aun al m├íximo || Peor rendimiento en invierno || Falla en horas pico || Familia creci├│ || Busca ajuste recomendado || Quiere m├ís capacidad sin reemplazar || Compara booster vs tanque mayor || Duda 40 vs 50 galones || Poca agua despu├®s de mantenimiento
+SLUG|P1|EN|/water-heater-making-noise/|qc=19|secs=2|body=175|depth=thin|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"noise":10}
+  SECTIONS|Noise and what it usually means || Should you flush it?
+  SCENARIOS|19|Ruido de explosiones peque├▒as || Ruido de retumbo || Golpes fuertes || Golpeteo || Silbido || Chillido agudo || Siseo || Sonido de fritura || Clics repetidos || Tictac al calentarse || Gorgoteo || Zumbido || Vibraci├│n || Parece hervir || Water hammer || Ruido despu├®s del flush || Ruido solo al calentar || Pregunta si debe apagar || Pregunta si el ruido significa reemplazo
+SLUG|P1|EN|/smelly-discolored-hot-water/|qc=19|secs=3|body=513|depth=moderate|faq_risk=high|fallback10=0|dup=1.00|missing=hard_water,insurance|buckets={"smell_water":10}
+  SECTIONS|Color || Odor || Safety
+  SCENARIOS|19|Olor a huevo podrido || Olor a azufre || Olor met├ílico || Agua oxidada || Agua marr├│n || Part├¡culas negras || Part├¡culas blancas || Agua turbia || Agua lechosa || Agua azul o verde || Sedimento visible || ├ünodo causa olor || Olor despu├®s de vacaciones || Pregunta si es seguro ba├▒arse || Pregunta si es seguro beber || Quiere eliminar olor || Pregunta si necesita flush || Pregunta si significa corrosi├│n || Pregunta si debe reemplazar ├ínodo o tanque
+SLUG|P1|EN|/low-hot-water-pressure/|qc=12|secs=2|body=404|depth=thin|faq_risk=high|fallback10=10|dup=1.00|missing=|buckets={"fallback":10}
+  SECTIONS|House vs heater || PRV, expansion and T&P
+  SCENARIOS|12|Presi├│n caliente baja || Fr├¡a normal y caliente d├®bil || No hay flujo caliente || Problema solo arriba || Flujo fluct├║a || V├ílvula parcialmente cerrada || Trampa t├®rmica obstruida || Tubo de inmersi├│n da├▒ado || Presi├│n de casa demasiado alta || Necesita PRV || Necesita tanque de expansi├│n || T&amp;P descarga por presi├│n
+SLUG|P1|EN|/what-size-water-heater-do-i-need/|qc=22|secs=3|body=335|depth=thin|faq_risk=high|fallback10=0|dup=0.60|missing=tankless|buckets={"size":6,"40gal":3,"50gal":1}
+  SECTIONS|A practical Charlotte shortcut || First Hour Rating beats the gallon sticker || Send us a few facts
+  SCENARIOS|22|Pregunta tama├▒o general || Tama├▒o por personas || Tama├▒o por habitaciones || Tama├▒o por ba├▒os || 40 gal para 2 personas || 40 gal para 3 personas || 40 gal para 4 personas || 50 gal para familia || Necesita 60 gal || Necesita 75 u 80 gal || Compara 40 vs 50 || Compara 50 vs 80 || Mismo tama├▒o que actual || Quiere aumentar tama├▒o || First Hour Rating || Capacidad para uso simult├íneo || Tall vs short || Medidas f├¡sicas || Cabr├í en closet || Lee capacidad en etiqueta || Calcula GPM tankless || Capacidad para ba├▒era grande
+SLUG|P1|EN|/water-heater-buying-guide/|qc=24|secs=3|body=452|depth=moderate|faq_risk=high|fallback10=7|dup=0.70|missing=lowe_hd,warranty,heat_pump|buckets={"tankless":2,"fallback":7,"warranty":1}
+  SECTIONS|Types || Total cost of ownership || Brands and warranties
+  SCENARIOS|24|Tanque vs tankless || El├®ctrico vs gas || Bomba de calor vs el├®ctrico est├índar || H├¡brido vs tankless || Gas natural vs propano || Direct vent vs power vent || Est├índar vs inteligente || Tall vs short || Garant├¡a 6 vs 9 vs 12 a├▒os || Rheem vs A.O. Smith || Rheem vs Bradford White || Big box vs supply house || Marca m├ís confiable || Mejor equipo econ├│mico || M├ís eficiente || Menor costo operativo || Entender UEF || Entender EnergyGuide || Recovery rate || ├ünodo y tanque || Aprobado para mobile home || Punto de uso || Conversi├│n gas a el├®ctrico || Conversi├│n el├®ctrico a gas
+SLUG|P1|EN|/gas-water-heater-installation/|qc=3|secs=2|body=333|depth=thin|faq_risk=high|fallback10=1|dup=0.67|missing=|buckets={"price":2,"fallback":1}
+  SECTIONS|What we inspect before quoting the from-price || Safety
+  SCENARIOS|3|Costo gas 40 gal || Costo gas 50 gal || Ventilaci├│n gas
+SLUG|P1|EN|/tankless-water-heater-installation/|qc=2|secs=2|body=382|depth=thin|faq_risk=high|fallback10=0|dup=0.50|missing=|buckets={"near_me":1,"price":1}
+  SECTIONS|Sizing by GPM, not by ÔÇ£endlessÔÇØ marketing || Infrastructure and maintenance
+  SCENARIOS|2|Busca instalaci├│n tankless local || Costo tankless
+SLUG|P1|EN|/water-heater-financing/|qc=3|secs=3|body=642|depth=moderate|faq_risk=high|fallback10=0|dup=0.67|missing=|buckets={"price":2,"financing":1}
+  SECTIONS|SAFE Homeowner Plan || Synchrony || What financing does not change
+  SCENARIOS|3|Financiamiento mensual || Sin cr├®dito tradicional || Busca financiamiento local
+  NOTE|Can I finance a water heater without a traditional credit check?|Afirmar solo las condiciones reales del plan SAFE.
+SLUG|P1|EN|/water-heater-code-upgrades/|qc=9|secs=2|body=163|depth=thin|faq_risk=high|fallback10=5|dup=0.56|missing=|buckets={"price":3,"fallback":5,"removal_expansion":1}
+  SECTIONS|Typical extra items || Why photos matter
+  SCENARIOS|9|Busca costo de PRV || Busca costo de expansi├│n || Costo de actualizaciones a c├│digo || Actualizaci├│n a c├│digo || Tanque de expansi├│n requerido || PRV requerido || Bandeja requerida || Tubo T&amp;P correcto || Protecci├│n en garaje
+SLUG|P1|EN|/water-heater-permit-charlotte-nc/|qc=2|secs=2|body=634|depth=thin|faq_risk=high|fallback10=1|dup=0.50|missing=|buckets={"permit":1,"fallback":1}
+  SECTIONS|How we handle it || Official sources
+  SCENARIOS|2|Permiso en Charlotte || Inspecci├│n posterior
+SLUG|P1|EN|/attic-water-heater-installation/|qc=3|secs=2|body=309|depth=thin|faq_risk=high|fallback10=0|dup=0.67|missing=|buckets={"price":1,"attic_access":2}
+  SECTIONS|What we require || Cost
+  SCENARIOS|3|Costo en ├ítico || Instalaci├│n en ├ítico || ├ütico
+SLUG|P1|EN|/difficult-access-water-heater-installation/|qc=4|secs=2|body=314|depth=thin|faq_risk=high|fallback10=0|dup=0.75|missing=crawl|buckets={"price":3,"attic_access":1}
+  SECTIONS|What to photograph || Relocation
+  SCENARIOS|4|Costo en crawlspace || Instalaci├│n en crawlspace || Reubicar equipo || Acceso por escaleras
+SLUG|P1|EN|/water-heater-installation-process/|qc=12|secs=3|body=548|depth=moderate|faq_risk=high|fallback10=5|dup=0.50|missing=same_day|buckets={"price":2,"same_day":1,"fallback":5,"removal_expansion":1,"size":1}
+  SECTIONS|Before we arrive || During the visit || After
+  SCENARIOS|12|Duraci├│n de instalaci├│n || Disponibilidad mismo d├¡a || Preparar el ├írea || Tiempo sin agua caliente || Retiro del equipo viejo || Necesidad de plomero licenciado || Instalaci├│n DIY || Compra equipo e instala SAFE || Circuito el├®ctrico || Instalaci├│n en closet || Preguntas al instalador || Comparar cotizaci├│n completa
+  NOTE|Can I install my own water heater?|Contenido de seguridad; dirigir a instalaci├│n profesional.
+SLUG|P1|EN|/water-heater-insurance-warranty/|qc=14|secs=3|body=592|depth=moderate|faq_risk=high|fallback10=0|dup=0.60|missing=property_manager|buckets={"leak":1,"warranty":6,"price":3}
+  SECTIONS|Manufacturer vs labor || Insurance and leak damage || Keep coverage valid
+  SCENARIOS|14|Pregunta por seguro || Verifica garant├¡a fabricante || Busca garant├¡a por serial || Registra garant├¡a || Garant├¡a de piezas vs labor || Tanque falla bajo garant├¡a || Labor de reemplazo bajo garant├¡a || Garant├¡a transferible || Garant├¡a ligada a direcci├│n || Home warranty || Seguro da├▒o por fuga || Seguro paga equipo || Responsabilidad del landlord || Inquilino sin agua caliente
+  NOTE|How long can a tenant be left without hot water?|Tema legal variable; citar reglas vigentes antes de publicar.
+SLUG|P1|EN|/new-water-heater-not-working/|qc=17|secs=2|body=180|depth=thin|faq_risk=high|fallback10=4|dup=0.40|missing=fuel_gas,fuel_electric,lowe_hd|buckets={"no_hot":2,"price":1,"leak":1,"noise":1,"smell_water":1,"fallback":4}
+  SECTIONS|Non-invasive checklist || Still down?
+  SCENARIOS|17|Calentador nuevo no calienta || Nuevo equipo no calienta || Nuevo equipo tarda en calentar || Nuevo equipo gotea || Nuevo equipo hace ruido || Nuevo equipo huele || Breaker se dispara despu├®s de instalar || Piloto se apaga en equipo nuevo || Temperatura demasiado alta || Presi├│n caliente baj├│ || Agua turbia despu├®s de instalar || Aire en tuber├¡as || Condensaci├│n de gas nuevo || Instalaci├│n no pasa inspecci├│n || Falta correcci├│n de c├│digo || Solicita servicio de garant├¡a || Quiere comprobar instalaci├│n
+SLUG|P1|EN|/water-heater-replacement-quote/|qc=2|secs=2|body=178|depth=thin|faq_risk=high|fallback10=0|dup=0.50|missing=|buckets={"leak":1,"price":1}
+  SECTIONS|The eight photos that prevent bad quotes || What you get back
+  SCENARIOS|2|Busca env├¡o de fotos para cotizar || Precio con fotos
+SLUG|P1|EN|/realtor-water-heater-services/|qc=5|secs=2|body=301|depth=thin|faq_risk=high|fallback10=0|dup=0.80|missing=|buckets={"price":1,"warranty":4}
+  SECTIONS|Typical requests || How to start
+  SCENARIOS|5|Pago al cerrar casa || Realtor necesita reparaci├│n || Comprador pregunta edad || Vendedor ofrece cr├®dito || Inspector pide correcci├│n
+SLUG|P1|EN|/property-manager-water-heater-program/|qc=3|secs=2|body=337|depth=thin|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"warranty":3}
+  SECTIONS|What managers get || SLA honesty
+  SCENARIOS|3|Property manager busca volumen || Inversionista necesita turnaround || Multifamily necesita reemplazos
+SLUG|P2|EN|/tankless-water-heater-problems/|qc=17|secs=2|body=329|depth=thin|faq_risk=high|fallback10=0|dup=0.80|missing=|buckets={"tankless":8,"price":2}
+  SECTIONS|Before you reset it 20 times || When a tank is the better repair
+  SCENARIOS|17|Tankless no produce agua caliente || Agua pasa de caliente a fr├¡a || Cold water sandwich || No activa con poco flujo || C├│digo de error || Falla de ignici├│n || Acumulaci├│n de sarro || Necesita descalcificaci├│n || Quiere hacer flush || No abastece dos duchas || Quiere calcular GPM || Agua tarda en llegar || Considera recirculaci├│n || Equipo se congel├│ || Hace ruido || Pierde presi├│n || Compara reparaci├│n o reemplazo
+SLUG|P2|EN|/water-heater-maintenance/|qc=24|secs=3|body=447|depth=moderate|faq_risk=high|fallback10=5|dup=0.50|missing=attic,price,lowe_hd|buckets={"price":4,"fallback":5,"removal_expansion":1}
+  SECTIONS|Flushing is not automatic || Temperature || What maintenance cannot do
+  SCENARIOS|24|Frecuencia de flush || Quiere drenar || Tanque no drena || Sedimento bloquea drenaje || Agua dura || Revisar ├ínodo || Cambiar ├ínodo || Probar v├ílvula T&amp;P || Revisar expansi├│n || Ajuste de temperatura || Modo vacaciones || Apagar durante vacaciones || Preparar para invierno || Aislar tanque || Aislar tuber├¡as || Servicio anual || Costo mantenimiento || Detector de fuga || Cierre autom├ítico || Efecto del suavizador || Efecto de alta presi├│n || Reducir factura || Lista de mantenimiento || Plan de mantenimiento
+SLUG|P2|EN|/heat-pump-water-heater-installation/|qc=1|secs=2|body=294|depth=thin|faq_risk=high|fallback10=1|dup=1.00|missing=|buckets={"fallback":1}
+  SECTIONS|Site requirements || Efficiency vs fit
+  SCENARIOS|1|Conversi├│n el├®ctrica
+SLUG|P2|EN|/water-heater-special-installations/|qc=19|secs=3|body=382|depth=moderate|faq_risk=high|fallback10=9|dup=0.90|missing=hard_water,property_manager|buckets={"fallback":9,"size":1}
+  SECTIONS|Manufactured homes || Wells and hard water || Condos and HOAs
+  SCENARIOS|19|Casa m├│vil || Manufactured home || Condominio || Townhome || Apartamento || Garaje fr├¡o || S├│tano || Agua de pozo || Agua dura || Familia grande || Negocio peque├▒o || Sal├│n o barber├¡a || Restaurante || Boiler combinado || Calentador solar || RV o camper || Piscina || Calentador port├ítil || Alquiler de calentador
+  NOTE|Commercial water heater for a small business|Confirmar si SAFE ofrece comercial antes de crear la p├ígina.
+  NOTE|RV water heater repair near me|Excluir de Google Ads si SAFE no ofrece RV.
+  NOTE|Pool water heater repair near me|Excluir de Google Ads si SAFE no ofrece piscinas.
+  NOTE|Portable water heater for camping|No corresponde al servicio residencial.
+  NOTE|Water heater rental near me|Excluir si SAFE no renta equipos.
+SLUG|P2|EN|/water-heater-leak-damage/|qc=1|secs=2|body=136|depth=thin|faq_risk=high|fallback10=0|dup=1.00|missing=|buckets={"leak":1}
+  SECTIONS|Order of operations || What we need
+  SCENARIOS|1|Da├▒o a piso o pared
+
+=== FALLBACK FAQ EXAMPLES ===
+FB| /water-heater-emergency/ | What should I do if the pressure relief valve is releasing a lot of water? | V├ílvula libera mucha agua
+FB| /water-heater-service-near-me/ | Water heater service open now | Servicio abierto ahora
+FB| /es/calentadores-de-agua-charlotte-nc/ | Boiler de agua no prende | Usa 'boiler'
+FB| /es/calentadores-de-agua-charlotte-nc/ | Heater de agua no calienta | Usa 'heater de agua'
+FB| /electric-water-heater-not-working/ | Why did my water heater breaker trip? | Breaker disparado
+FB| /electric-water-heater-not-working/ | Why does my water heater keep tripping the breaker? | Breaker se dispara repetidamente
+FB| /electric-water-heater-not-working/ | Why did the reset button trip on my water heater? | Bot├│n de reset disparado
+FB| /electric-water-heater-not-working/ | How do I safely reset an electric water heater? | Quiere reiniciar el equipo
+FB| /electric-water-heater-not-working/ | How do I know if the upper heating element is bad? | Elemento superior da├▒ado
+FB| /electric-water-heater-not-working/ | How do I know if the lower heating element is bad? | Elemento inferior da├▒ado
+FB| /electric-water-heater-not-working/ | What are the signs of a burned-out water heater element? | Quiere saber si un elemento est├í quemado
+FB| /electric-water-heater-not-working/ | How do I know if my electric water heater thermostat is bad? | Termostato el├®ctrico posiblemente da├▒ado
+FB| /gas-water-heater-not-working/ | Why is my water heater pilot light out? | Piloto apagado
+FB| /gas-water-heater-not-working/ | Why won't my water heater pilot light? | Piloto no enciende
+FB| /gas-water-heater-not-working/ | Why does my water heater pilot light keep going out? | Piloto se apaga repetidamente
+FB| /gas-water-heater-not-working/ | How do I relight a gas water heater pilot safely? | Quiere encender el piloto
+FB| /gas-water-heater-not-working/ | Why won't my gas water heater burner ignite? | Quemador no enciende
+FB| /gas-water-heater-not-working/ | Why is my water heater igniter clicking but not lighting? | Encendedor hace clic pero no prende
+FB| /gas-water-heater-not-working/ | How do I know if my water heater thermocouple is bad? | Termopar sospechoso
+FB| /gas-water-heater-not-working/ | How do I know if the water heater gas control valve is bad? | V├ílvula de gas sospechosa
+FB| /gas-water-heater-not-working/ | What does the blinking status light on my gas water heater mean? | Luz de estado parpadea
+FB| /not-enough-hot-water/ | Why does my hot water run out so fast? | Se acaba muy r├ípido
+FB| /not-enough-hot-water/ | Why does my water heater only provide one shower? | Solo alcanza para una ducha
+FB| /not-enough-hot-water/ | Why am I getting less hot water than before? | Produce menos que antes
+FB| /not-enough-hot-water/ | Why is my water heater taking so long to recover? | Tarda mucho en recuperar
+FB| /not-enough-hot-water/ | Why is my water heater making water too hot? | Agua demasiado caliente
+FB| /not-enough-hot-water/ | Why is my tap water suddenly scalding hot? | Riesgo de quemadura
+FB| /not-enough-hot-water/ | Why does my hot water temperature fluctuate? | Temperatura sube y baja
+FB| /not-enough-hot-water/ | Why does my shower go hot then cold? | Sale caliente y luego fr├¡a
+FB| /not-enough-hot-water/ | Why is my water only lukewarm even at the highest setting? | Solo tibia aun al m├íximo
+FB| /low-hot-water-pressure/ | Why is my hot water pressure low? | Presi├│n caliente baja
+FB| /low-hot-water-pressure/ | Why is cold water pressure normal but hot water pressure is low? | Fr├¡a normal y caliente d├®bil
+FB| /low-hot-water-pressure/ | Why is there no flow from the hot water taps? | No hay flujo caliente
+FB| /low-hot-water-pressure/ | Why is hot water pressure low upstairs? | Problema solo arriba
+FB| /low-hot-water-pressure/ | Why does my hot water flow keep changing? | Flujo fluct├║a
+FB| /low-hot-water-pressure/ | Could a shutoff valve cause low hot water pressure? | V├ílvula parcialmente cerrada
+FB| /low-hot-water-pressure/ | Can a clogged heat trap reduce hot water pressure? | Trampa t├®rmica obstruida
+FB| /low-hot-water-pressure/ | Can a broken dip tube cause hot water problems? | Tubo de inmersi├│n da├▒ado
+FB| /low-hot-water-pressure/ | Can high house water pressure damage a water heater? | Presi├│n de casa demasiado alta
+FB| /low-hot-water-pressure/ | Do I need a pressure reducing valve for my water heater? | Necesita PRV
+FB| /water-heater-buying-guide/ | Electric vs gas water heaterÔÇöwhich is cheaper? | El├®ctrico vs gas
+FB| /water-heater-buying-guide/ | Heat pump vs standard electric water heaterÔÇöwhich should I buy? | Bomba de calor vs el├®ctrico est├índar
+FB| /water-heater-buying-guide/ | Natural gas vs propane water heaterÔÇöwhich is better? | Gas natural vs propano
+FB| /water-heater-buying-guide/ | Direct vent vs power vent water heaterÔÇöwhat is the difference? | Direct vent vs power vent
+FB| /water-heater-buying-guide/ | Is a smart water heater worth it? | Est├índar vs inteligente
+FB| /water-heater-buying-guide/ | Tall vs short water heaterÔÇödoes performance differ? | Tall vs short
+FB| /water-heater-buying-guide/ | Rheem vs A. O. Smith water heaterÔÇöwhich is better? | Rheem vs A.O. Smith
+FB| /gas-water-heater-installation/ | Will my gas water heater need new venting? | Ventilaci├│n gas
+FB| /water-heater-code-upgrades/ | What code upgrades may be required with a new water heater? | Actualizaci├│n a c├│digo
+FB| /water-heater-code-upgrades/ | When is a pressure reducing valve required for a water heater? | PRV requerido
+FB| /water-heater-code-upgrades/ | Is a drain pan required under a water heater? | Bandeja requerida
+FB| /water-heater-code-upgrades/ | Where should the water heater T&amp;P discharge pipe terminate? | Tubo T&amp;P correcto
+FB| /water-heater-code-upgrades/ | Does a garage water heater need a bollard or raised platform? | Protecci├│n en garaje
+FB| /water-heater-permit-charlotte-nc/ | Does a water heater replacement need an inspection? | Inspecci├│n posterior
+FB| /water-heater-installation-process/ | How should I prepare for water heater installation? | Preparar el ├írea
+FB| /water-heater-installation-process/ | Do I need a licensed plumber to install a water heater? | Necesidad de plomero licenciado
+FB| /water-heater-installation-process/ | Can I install my own water heater? | Instalaci├│n DIY
+FB| /water-heater-installation-process/ | Can I buy the water heater and hire someone to install it? | Compra equipo e instala SAFE
+FB| /water-heater-installation-process/ | Can a water heater be installed in a closet? | Instalaci├│n en closet
+FB| /new-water-heater-not-working/ | Why does the breaker trip after a new water heater installation? | Breaker se dispara despu├®s de instalar
+
+=== GLOBAL FAQ BUCKETS ===
+fallback 132
+price 55
+leak 33
+no_hot 25
+near_me 21
+warranty 20
+noise 20
+smell_water 19
+size 17
+repair_replace 15
+tankless 14
+safety_gas 7
+40gal 6
+same_day 5
+safety_electric 5
+safety_flood 5
+removal_expansion 4
+50gal 4
+attic_access 4
+financing 2
+safety_24h 1
+permit 1
+
+=== FOREIGN SLUGS IN SEO JSON ===
+FILE bin\Debug\net8.0\_seo_pages.json extra /water-heater-installation-gastonia-nc/, /water-heater-installation-matthews-nc/, /water-heater-installation-shelby-nc/, /water-heater-repair-cost/, /water-heater-replacement-china-grove-nc/, /water-heater-replacement-concord-nc/, /water-heater-replacement-huntersville-nc/, /water-heater-replacement-monroe-nc/, /water-heater-replacement-rock-hill-sc/, /water-heater-replacement-salisbury-nc/ count 10
+
+=== P0 DETAILED ===
+
+## /water-heater-replacement-charlotte-nc/ qc=1
+sections: Installed pricing we publish | Electric, gas and other types | Replacement process | Service area, license and warranty | What standard installation includes ÔÇö and what is extra
+  theme[near_me] n=1 e.g. Water heater replacement Charlotte NC
+
+## /water-heater-cost-charlotte-nc/ qc=12
+sections: Base installed prices | What the installed price includes | Common extras in Charlotte homes | Labor-only vs installed package | How to get an exact quote
+  theme[price] n=12 e.g. How much does water heater replacement cost?
+  beyond_faq_cap 2 {"price":2}
+    + Cotizaci├│n parece alta|Is my water heater replacement quote too high?|faq=price|note=
+    + Precio efectivo|Is there a cash price for water heater installation?|faq=price|note=
+
+## /40-gallon-electric-water-heater-installation/ qc=1
+sections: Who a 40-gallon electric unit serves | What the $1,199 package includes | What is not included | Electric requirements
+  theme[price] n=1 e.g. How much is a 40-gallon electric water heater installed?
+
+## /50-gallon-water-heater-installation/ qc=1
+sections: Capacity and First Hour Rating | Electric vs gas 50-gallon | Access and footprint
+  theme[price] n=1 e.g. How much is a 50-gallon electric water heater installed?
+
+## /same-day-water-heater-replacement/ qc=4
+sections: What ÔÇ£same dayÔÇØ means at SAFE | Photos we need before rolling a truck | Limits that block same-day installs | Does same-day cost more?
+  theme[price] n=2 e.g. Does same-day water heater replacement cost more?
+  theme[same_day] n=1 e.g. Can someone fix or replace my water heater today?
+  theme[leak] n=1 e.g. Who can replace a leaking water heater today?
+
+## /water-heater-emergency/ qc=24
+sections: Flooding or a fast leak | Gas odor, yellow flame, soot or CO alarm | Electric sparks, hot wires, burning smell | Bulging tank, steam or a ÔÇ£boilingÔÇØ heater | Where the shutoffs usually are | After the hazard is controlled
+  theme[safety_gas] n=7 e.g. Why is my water heater flame yellow instead of blue?
+  theme[safety_electric] n=4 e.g. Why are the wires on my water heater getting hot?
+  theme[safety_flood] n=4 e.g. What do I do if my water heater is flooding the house?
+  theme[fallback] n=4 e.g. What should I do if the pressure relief valve is releasing a lot of water?
+  theme[leak] n=2 e.g. Is it safe to leave a leaking water heater on overnight?
+  theme[smell_water] n=1 e.g. Why does my water heater smell like it is burning?
+  theme[safety_24h] n=1 e.g. Is there a 24-hour emergency water heater service near me?
+  theme[same_day] n=1 e.g. Can I get emergency same-day water heater replacement?
+  beyond_faq_cap 14 {"smell_water":1,"safety_electric":3,"safety_gas":3,"fallback":3,"leak":2,"safety_24h":1,"same_day":1}
+    + Olor a quemado|Why does my water heater smell like it is burning?|faq=smell_water|note=
+    + Chispas|What should I do if my electric water heater is sparking?|faq=safety_electric|note=
+    + Panel o breaker caliente|Is a hot water heater breaker or disconnect dangerous?|faq=safety_electric|note=
+    + Cable quemado|What should I do about burned wires on a water heater?|faq=safety_electric|note=
+    + Olor a gas|What should I do if I smell gas at the water heater?|faq=safety_gas|note=
+    + Alarma CO|What should I do if my carbon monoxide alarm goes off?|faq=safety_gas|note=
+    + Holl├¡n o llama anormal|Is soot or a yellow flame on a water heater dangerous?|faq=safety_gas|note=
+    + Quiere cerrar suministro de agua|Where is the water heater shutoff valve?|faq=fallback|note=
+    + Quiere cortar electricidad|How do I turn off power to an electric water heater?|faq=fallback|note=
+    + Quiere cerrar gas|How do I shut off gas to a water heater in an emergency?|faq=fallback|note=
+    + Pregunta si es seguro dejarlo encendido|Is it safe to leave a leaking water heater on overnight?|faq=leak|note=
+    + Busca servicio 24 horas|Is there a 24-hour emergency water heater service near me?|faq=safety_24h|note=
+    + Busca reemplazo el mismo d├¡a|Can I get emergency same-day water heater replacement?|faq=same_day|note=
+    + Fuga en ├ítico amenaza techo|Who can stop an attic water heater leak right now?|faq=leak|note=
+
+## /water-heater-leaking/ qc=21
+sections: Locate the water, then judge severity | Repair vs replace | What to do in the next 10 minutes
+  theme[leak] n=21 e.g. Why is my water heater leaking from the bottom?
+  beyond_faq_cap 11 {"leak":11}
+    + Gotea solo de vez en cuando|Why does my water heater leak only sometimes?|faq=leak|note=
+    + Gotea solo mientras calienta|Why does my water heater leak only when heating?|faq=leak|note=
+    + Duda condensaci├│n vs fuga|Is my water heater leaking or just condensing?|faq=leak|note=
+    + Bandeja de drenaje llena|Why is my water heater drain pan full of water?|faq=leak|note=
+    + Fuga en ├ítico|What should I do if my attic water heater is leaking?|faq=leak|note=
+    + Fuga en garaje|What should I do if my garage water heater is leaking?|faq=leak|note=
+    + Quiere apagarlo|How do I safely shut off a leaking water heater?|faq=leak|note=
+    + Pregunta si puede esperar|Can a leaking water heater wait until tomorrow?|faq=leak|note=
+    + Pregunta si explotar├í|Can a leaking water heater burst or explode?|faq=leak|note=
+    + Busca reparaci├│n del tanque|Can a leaking water heater tank be repaired?|faq=leak|note=
+    + Busca reemplazo inmediato|Do I need to replace a water heater leaking from the tank?|faq=leak|note=
+
+## /no-hot-water/ qc=15
+sections: Electric tank decision tree | Gas tank decision tree | Tankless units | When SAFE recommends replacement
+  theme[no_hot] n=15 e.g. Why is there no hot water in my house?
+  beyond_faq_cap 5 {"no_hot":5}
+    + No hay agua caliente despu├®s de vacaciones|Why is there no hot water after vacation?|faq=no_hot|note=
+    + No hay agua caliente en el piso de arriba|Why is there no hot water upstairs?|faq=no_hot|note=
+    + Hay agua caliente abajo pero no arriba|Why is there hot water downstairs but not upstairs?|faq=no_hot|note=
+    + El agua solo sale tibia|Why is my hot water only lukewarm?|faq=no_hot|note=
+    + El usuario no sabe qu├® revisar|My water heater is not workingÔÇöwhat should I check first?|faq=no_hot|note=
+
+## /repair-or-replace-water-heater/ qc=21
+sections: Decision table we actually use | Charlotte water and tank life | How SAFE evaluates from photos
+  theme[repair_replace] n=14 e.g. Should I repair or replace my gas water heater?
+  theme[price] n=6 e.g. How long do water heaters last?
+  theme[leak] n=1 e.g. Is a leaking old water heater repairable?
+  beyond_faq_cap 11 {"repair_replace":9,"leak":1,"price":1}
+    + Equipo de 10 a├▒os|Should I replace a 10-year-old water heater?|faq=repair_replace|note=
+    + Equipo de 12 a├▒os|Is a 12-year-old water heater worth repairing?|faq=repair_replace|note=
+    + Equipo de 15 a├▒os a├║n funciona|Should I replace a 15-year-old water heater that still works?|faq=repair_replace|note=
+    + Tanque viejo con fuga|Is a leaking old water heater repairable?|faq=leak|note=
+    + Reparaciones frecuentes|When do repeated water heater repairs stop being worth it?|faq=repair_replace|note=
+    + Factura subi├│|Can an old water heater raise my energy bill?|faq=repair_replace|note=
+    + Reemplazo preventivo|Should I replace my water heater before it fails?|faq=repair_replace|note=
+    + Antes de vender casa|Should I replace an old water heater before selling my house?|faq=repair_replace|note=
+    + Reporte de inspecci├│n lo se├▒ala|What should I do if the home inspector flags the water heater?|faq=repair_replace|note=
+    + Compara costo de reparar con nuevo|Is it cheaper to repair or replace a water heater?|faq=price|note=
+    + Falla repentina sin se├▒ales|Can a water heater fail suddenly without warning?|faq=repair_replace|note=
+
+## /water-heater-service-near-me/ qc=15
+sections: Where we actually work | Hours and how to reach us | Trust signals that matter for a local search
+  theme[near_me] n=11 e.g. Water heater installer near me
+  theme[no_hot] n=1 e.g. Who do I call when I have no hot water?
+  theme[fallback] n=1 e.g. Water heater service open now
+  theme[same_day] n=1 e.g. Same-day water heater replacement near me
+  theme[price] n=1 e.g. Upfront-price water heater installation Charlotte NC
+  beyond_faq_cap 5 {"near_me":4,"price":1}
+    + Compa├▒├¡a biling├╝e|Bilingual water heater company Charlotte NC|faq=near_me|note=
+    + Instalador con licencia|Licensed water heater installer Charlotte NC|faq=near_me|note=
+    + Busca rese├▒as|Water heater installation reviews Charlotte NC|faq=near_me|note=
+    + Busca precio por adelantado|Upfront-price water heater installation Charlotte NC|faq=price|note=
+    + Busca estimado gratuito|Free water heater replacement estimate near me|faq=near_me|note=
+
+## /es/calentadores-de-agua-charlotte-nc/ qc=13
+sections: Servicios | Precios actuales | Garant├¡a y cobertura | Zonas
+  theme[fallback] n=4 e.g. Boiler de agua no prende
+  theme[near_me] n=3 e.g. Spanish water heater installation Charlotte
+  theme[leak] n=2 e.g. Tanque de agua caliente con fuga
+  theme[no_hot] n=1 e.g. Calent├│n de agua no funciona
+  theme[financing] n=1 e.g. Spanish water heater financing Charlotte
+  theme[40gal] n=1 e.g. 40 gallon water heater Spanish installation
+  theme[warranty] n=1 e.g. Water heater warranty Spanish
+  beyond_faq_cap 3 {"fallback":2,"near_me":1}
+    + Pregunta por piloto|Gas water heater pilot Spanish|faq=fallback|note=
+    + Pregunta por breaker|Electric water heater breaker Spanish|faq=fallback|note=
+    + Busca compa├▒├¡a biling├╝e|Bilingual plumber for water heater near me|faq=near_me|note=
+
+## /es/reemplazo-calentador-agua-charlotte-nc/ qc=3
+sections: Proceso | Tama├▒os y combustible | Extras y garant├¡as
+  theme[near_me] n=1 e.g. Replace hot water heater Spanish Charlotte
+  theme[price] n=1 e.g. Water heater installed price Spanish
+  theme[same_day] n=1 e.g. Spanish same day water heater replacement
+
+WROTE tmp_seo_audit_out.json

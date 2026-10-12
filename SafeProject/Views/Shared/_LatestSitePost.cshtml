@@ -1,0 +1,40 @@
+@model CalentonesAgua.Models.SitePost
+@{
+    var es = CalentonesAgua.Data.SiteLanguage.IsSpanish(Context);
+    var hasImage = !string.IsNullOrWhiteSpace(Model.ImageUrl);
+    var culture = System.Globalization.CultureInfo.GetCultureInfo(es ? "es-ES" : "en-US");
+    var body = (Model.Body ?? "").Trim();
+    var showMore = body.Length > 340;
+}
+<section class="hub-news" aria-label="@(es ? "Última noticia" : "Latest news")">
+    <div class="container">
+        <div class="hub-news-card@(hasImage ? " has-image" : "")">
+            <div class="hub-news-head">
+                <span class="hub-news-badge">@(es ? "NOTICIA" : "NEWS")</span>
+                <time datetime="@Model.CreatedUtc.UtcDateTime.ToString("yyyy-MM-dd")">@Model.CreatedUtc.ToLocalTime().ToString(es ? "d 'de' MMMM, yyyy" : "MMMM d, yyyy", culture)</time>
+            </div>
+            <div class="hub-news-body">
+                @if (hasImage)
+                {
+                    <div class="hub-news-figure"><img src="@Model.ImageUrl" alt="" loading="lazy" /></div>
+                }
+                <div class="hub-news-copy">
+                    <h2 class="hub-news-title">@Model.Title</h2>
+                    @if (body.Length > 0)
+                    {
+                        <p class="hub-news-text">@body</p>
+                    }
+                    @if (showMore)
+                    {
+                        <details class="hub-news-more">
+                            <summary>
+                                <span class="hub-news-more-open">@(es ? "Leer la noticia completa" : "Read the full story")</span>
+                                <span class="hub-news-more-close">@(es ? "Mostrar menos" : "Show less")</span>
+                            </summary>
+                        </details>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

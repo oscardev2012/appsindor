@@ -1,0 +1,16 @@
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Listo</p>
+        <h1>Pedido recibido</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container panel" style="max-width: 640px;">
+        <p>Gracias@(TempData["Nombre"] is string nombre ? $", {nombre}" : ""). Registramos tu solicitud.</p>
+        <p>Folio: <strong>@TempData["Folio"]</strong></p>
+        <p>Total: <strong>$@TempData["Total"]</strong></p>
+        <p class="muted">En un sitio en producción aquí iría el cobro y el correo de confirmación. Esta demo deja el flujo visible de punta a punta.</p>
+        <a class="btn btn-primary" asp-controller="Productos" asp-action="Index">Volver al catálogo</a>
+    </div>
+</section>

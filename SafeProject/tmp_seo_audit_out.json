@@ -1,0 +1,1867 @@
+{
+  "pageRows": [
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/water-heater-replacement-charlotte-nc/",
+      "qc": 1,
+      "secs": 5,
+      "body": 1042,
+      "depth": "strong",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "near_me": 1
+      },
+      "sections": [
+        "Installed pricing we publish",
+        "Electric, gas and other types",
+        "Replacement process",
+        "Service area, license and warranty",
+        "What standard installation includes — and what is extra"
+      ],
+      "minContent": "Precio, tipos, proceso, áreas, licencia, garantía, FAQs",
+      "h1": "Water Heater Replacement in Charlotte, NC",
+      "noteCount": 0,
+      "scenarios": [
+        "Charlotte"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/water-heater-cost-charlotte-nc/",
+      "qc": 12,
+      "secs": 5,
+      "body": 1347,
+      "depth": "strong",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "permit,lowe_hd",
+      "buckets": {
+        "price": 10
+      },
+      "sections": [
+        "Base installed prices",
+        "What the installed price includes",
+        "Common extras in Charlotte homes",
+        "Labor-only vs installed package",
+        "How to get an exact quote"
+      ],
+      "minContent": "Precio base, inclusiones, extras, ejemplos, FAQ",
+      "h1": "Water Heater Installation Cost in Charlotte, NC",
+      "noteCount": 0,
+      "scenarios": [
+        "Costo de reemplazo general",
+        "Costo instalado general",
+        "Costo local Charlotte",
+        "Costo reemplazo Charlotte",
+        "Costo solo mano de obra",
+        "Costo con retiro del viejo",
+        "Costo de permiso",
+        "Pregunta por cargos ocultos",
+        "Precio tienda vs plomero",
+        "Precio Home Depot vs contratista",
+        "Cotización parece alta",
+        "Precio efectivo"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/40-gallon-electric-water-heater-installation/",
+      "qc": 1,
+      "secs": 4,
+      "body": 1061,
+      "depth": "good",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "price": 1
+      },
+      "sections": [
+        "Who a 40-gallon electric unit serves",
+        "What the $1,199 package includes",
+        "What is not included",
+        "Electric requirements"
+      ],
+      "minContent": "Paquete, para quién sirve, inclusiones, extras, garantía",
+      "h1": "40-Gallon Electric Water Heater Installed",
+      "noteCount": 0,
+      "scenarios": [
+        "Costo eléctrico 40 gal"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/50-gallon-water-heater-installation/",
+      "qc": 1,
+      "secs": 3,
+      "body": 785,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "price": 1
+      },
+      "sections": [
+        "Capacity and First Hour Rating",
+        "Electric vs gas 50-gallon",
+        "Access and footprint"
+      ],
+      "minContent": "Capacidad, opciones eléctricas/gas, precio, acceso",
+      "h1": "50-Gallon Water Heater Installation",
+      "noteCount": 0,
+      "scenarios": [
+        "Costo eléctrico 50 gal"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/same-day-water-heater-replacement/",
+      "qc": 4,
+      "secs": 4,
+      "body": 897,
+      "depth": "good",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.5,
+      "missing": "price",
+      "buckets": {
+        "same_day": 1,
+        "leak": 1,
+        "price": 2
+      },
+      "sections": [
+        "What “same day” means at SAFE",
+        "Photos we need before rolling a truck",
+        "Limits that block same-day installs",
+        "Does same-day cost more?"
+      ],
+      "minContent": "Disponibilidad real, pasos, fotos requeridas, límites",
+      "h1": "Same-Day Water Heater Replacement",
+      "noteCount": 0,
+      "scenarios": [
+        "Necesita servicio el mismo día",
+        "Busca servicio hoy",
+        "Costo servicio mismo día",
+        "Costo fin de semana"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/water-heater-emergency/",
+      "qc": 24,
+      "secs": 6,
+      "body": 1490,
+      "depth": "strong",
+      "faqRisk": "medium",
+      "fallback10": 1,
+      "dup": 0.4,
+      "missing": "insurance",
+      "buckets": {
+        "safety_electric": 1,
+        "safety_gas": 4,
+        "safety_flood": 4,
+        "fallback": 1
+      },
+      "sections": [
+        "Flooding or a fast leak",
+        "Gas odor, yellow flame, soot or CO alarm",
+        "Electric sparks, hot wires, burning smell",
+        "Bulging tank, steam or a “boiling” heater",
+        "Where the shutoffs usually are",
+        "After the hazard is controlled"
+      ],
+      "minContent": "Fuga, gas, CO, electricidad, cierre seguro, cuándo evacuar",
+      "h1": "Water Heater Emergency: What to Do Now",
+      "noteCount": 2,
+      "scenarios": [
+        "Cableado recalentado",
+        "Llama amarilla",
+        "Hollín alrededor del equipo",
+        "Olor a gas",
+        "Alarma de monóxido cerca del equipo",
+        "Fuga fuerte e inundación",
+        "Tanque abultado",
+        "Vapor saliendo",
+        "Agua parece hervir",
+        "Válvula libera mucha agua",
+        "Olor a quemado",
+        "Chispas",
+        "Panel o breaker caliente",
+        "Cable quemado",
+        "Alarma CO",
+        "Hollín o llama anormal",
+        "Quiere cerrar suministro de agua",
+        "Quiere cortar electricidad",
+        "Quiere cerrar gas",
+        "Pregunta si es seguro dejarlo encendido",
+        "Busca servicio 24 horas",
+        "Busca reemplazo el mismo día",
+        "Fuga en ático amenaza techo"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/water-heater-leaking/",
+      "qc": 21,
+      "secs": 3,
+      "body": 924,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "price",
+      "buckets": {
+        "leak": 10
+      },
+      "sections": [
+        "Locate the water, then judge severity",
+        "Repair vs replace",
+        "What to do in the next 10 minutes"
+      ],
+      "minContent": "Ubicación de fuga, gravedad, reparar vs reemplazar",
+      "h1": "Why Is My Water Heater Leaking?",
+      "noteCount": 0,
+      "scenarios": [
+        "Fuga desde abajo",
+        "Fuga desde arriba",
+        "Fuga por un costado",
+        "Fuga en conexión de tubería",
+        "Fuga en válvula de drenaje",
+        "Fuga en válvula T&amp;P",
+        "Agua sale por tubo de descarga",
+        "Fuga en nipple superior",
+        "Fuga en la costura del tanque",
+        "Charco pequeño alrededor",
+        "Gotea solo de vez en cuando",
+        "Gotea solo mientras calienta",
+        "Duda condensación vs fuga",
+        "Bandeja de drenaje llena",
+        "Fuga en ático",
+        "Fuga en garaje",
+        "Quiere apagarlo",
+        "Pregunta si puede esperar",
+        "Pregunta si explotará",
+        "Busca reparación del tanque",
+        "Busca reemplazo inmediato"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/no-hot-water/",
+      "qc": 15,
+      "secs": 4,
+      "body": 979,
+      "depth": "good",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "no_hot": 10
+      },
+      "sections": [
+        "Electric tank decision tree",
+        "Gas tank decision tree",
+        "Tankless units",
+        "When SAFE recommends replacement"
+      ],
+      "minContent": "Árbol eléctrico/gas/tankless y punto de decisión",
+      "h1": "No Hot Water? Causes and Next Steps",
+      "noteCount": 1,
+      "scenarios": [
+        "Toda la casa se quedó sin agua caliente",
+        "El usuario despertó sin agua caliente",
+        "El calentador dejó de funcionar de repente",
+        "El equipo parece encendido pero no calienta",
+        "Solo sale agua fría en la ducha",
+        "Ningún grifo tiene agua caliente",
+        "Solo un grifo no tiene agua caliente",
+        "El agua caliente funciona de forma intermitente",
+        "El agua caliente desapareció durante la noche",
+        "No hay agua caliente después de un apagón",
+        "No hay agua caliente después de vacaciones",
+        "No hay agua caliente en el piso de arriba",
+        "Hay agua caliente abajo pero no arriba",
+        "El agua solo sale tibia",
+        "El usuario no sabe qué revisar"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/repair-or-replace-water-heater/",
+      "qc": 21,
+      "secs": 3,
+      "body": 573,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.5,
+      "missing": "price,tankless",
+      "buckets": {
+        "repair_replace": 5,
+        "price": 5
+      },
+      "sections": [
+        "Decision table we actually use",
+        "Charlotte water and tank life",
+        "How SAFE evaluates from photos"
+      ],
+      "minContent": "Edad, fuga, costo, recurrencia, tabla de decisión",
+      "h1": "Repair or Replace Your Water Heater?",
+      "noteCount": 0,
+      "scenarios": [
+        "Busca reemplazo de gas",
+        "Quiere conocer vida útil",
+        "Quiere conocer vida de eléctrico",
+        "Quiere conocer vida de gas",
+        "Quiere conocer vida de tankless",
+        "Quiere calcular edad",
+        "Busca edad por serial",
+        "Pregunta señales de falla",
+        "Decide reparación o reemplazo",
+        "Equipo de 8 años",
+        "Equipo de 10 años",
+        "Equipo de 12 años",
+        "Equipo de 15 años aún funciona",
+        "Tanque viejo con fuga",
+        "Reparaciones frecuentes",
+        "Factura subió",
+        "Reemplazo preventivo",
+        "Antes de vender casa",
+        "Reporte de inspección lo señala",
+        "Compara costo de reparar con nuevo",
+        "Falla repentina sin señales"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "EN",
+      "slug": "/water-heater-service-near-me/",
+      "qc": 15,
+      "secs": 3,
+      "body": 477,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 1,
+      "dup": 0.7,
+      "missing": "same_day",
+      "buckets": {
+        "no_hot": 1,
+        "near_me": 7,
+        "fallback": 1,
+        "same_day": 1
+      },
+      "sections": [
+        "Where we actually work",
+        "Hours and how to reach us",
+        "Trust signals that matter for a local search"
+      ],
+      "minContent": "Áreas, horarios, servicio, señales de confianza",
+      "h1": "Water Heater Service Near Me",
+      "noteCount": 0,
+      "scenarios": [
+        "Busca saber a quién llamar",
+        "Instalador cercano",
+        "Reemplazo cercano",
+        "Instalación cercana",
+        "Servicio abierto ahora",
+        "Servicio mismo día",
+        "Emergencia cercana",
+        "Mejor compañía local",
+        "Instalador económico",
+        "Plomero que habla español",
+        "Compañía bilingüe",
+        "Instalador con licencia",
+        "Busca reseñas",
+        "Busca precio por adelantado",
+        "Busca estimado gratuito"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "ES",
+      "slug": "/es/calentadores-de-agua-charlotte-nc/",
+      "qc": 13,
+      "secs": 4,
+      "body": 679,
+      "depth": "good",
+      "faqRisk": "medium",
+      "fallback10": 2,
+      "dup": 0.2,
+      "missing": "fuel_electric,financing",
+      "buckets": {
+        "fallback": 2,
+        "no_hot": 1,
+        "leak": 2,
+        "near_me": 2,
+        "financing": 1,
+        "40gal": 1,
+        "warranty": 1
+      },
+      "sections": [
+        "Servicios",
+        "Precios actuales",
+        "Garantía y cobertura",
+        "Zonas"
+      ],
+      "minContent": "Servicios, lenguaje natural, precios, garantía, áreas",
+      "h1": "Calentadores de Agua en Charlotte, NC",
+      "noteCount": 0,
+      "scenarios": [
+        "Usa 'boiler'",
+        "Usa 'calentón'",
+        "Usa 'heater de agua'",
+        "Usa 'tanque de agua caliente'",
+        "Busca instalación en español",
+        "Busca técnico latino",
+        "Busca financiamiento",
+        "Pregunta por 40 galones",
+        "Pregunta por garantía",
+        "Pregunta por fuga",
+        "Pregunta por piloto",
+        "Pregunta por breaker",
+        "Busca compañía bilingüe"
+      ]
+    },
+    {
+      "priority": "P0",
+      "language": "ES",
+      "slug": "/es/reemplazo-calentador-agua-charlotte-nc/",
+      "qc": 3,
+      "secs": 3,
+      "body": 681,
+      "depth": "moderate",
+      "faqRisk": "low",
+      "fallback10": 0,
+      "dup": 0.33,
+      "missing": "same_day",
+      "buckets": {
+        "near_me": 1,
+        "price": 1,
+        "same_day": 1
+      },
+      "sections": [
+        "Proceso",
+        "Tamaños y combustible",
+        "Extras y garantías"
+      ],
+      "minContent": "Proceso, precio, tamaños, extras y garantías",
+      "h1": "Reemplazo de Calentador de Agua en Charlotte",
+      "noteCount": 0,
+      "scenarios": [
+        "Busca reemplazo en español",
+        "Busca precio instalado",
+        "Busca servicio hoy"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/electric-water-heater-not-working/",
+      "qc": 15,
+      "secs": 3,
+      "body": 625,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 8,
+      "dup": 0.8,
+      "missing": "lowe_hd",
+      "buckets": {
+        "no_hot": 2,
+        "fallback": 8
+      },
+      "sections": [
+        "Breaker and disconnect",
+        "Reset button, elements and thermostats",
+        "When replacement is smarter"
+      ],
+      "minContent": "Breaker, reset, elementos, termostatos, seguridad",
+      "h1": "Electric Water Heater Not Working",
+      "noteCount": 0,
+      "scenarios": [
+        "Tiene electricidad pero no calienta",
+        "Breaker disparado",
+        "Breaker se dispara repetidamente",
+        "Botón de reset disparado",
+        "Botón de reset no funciona",
+        "Quiere reiniciar el equipo",
+        "Elemento superior dañado",
+        "Elemento inferior dañado",
+        "Quiere saber si un elemento está quemado",
+        "Termostato eléctrico posiblemente dañado",
+        "Solo calienta poca cantidad",
+        "El equipo zumba pero no calienta",
+        "Fusible o desconectador sospechoso",
+        "Sin agua caliente después de cambiar breaker",
+        "Sin agua caliente después de drenar"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/gas-water-heater-not-working/",
+      "qc": 14,
+      "secs": 3,
+      "body": 572,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 9,
+      "dup": 0.9,
+      "missing": "",
+      "buckets": {
+        "fallback": 9,
+        "no_hot": 1
+      },
+      "sections": [
+        "Pilot, igniter and flame color",
+        "Venting and combustion air",
+        "Replacement path"
+      ],
+      "minContent": "Piloto, ignición, llama, gas, ventilación, seguridad",
+      "h1": "Gas Water Heater Not Working",
+      "noteCount": 0,
+      "scenarios": [
+        "Piloto apagado",
+        "Piloto no enciende",
+        "Piloto se apaga repetidamente",
+        "Quiere encender el piloto",
+        "Quemador no enciende",
+        "Quemador encendido pero sin agua caliente",
+        "Encendedor hace clic pero no prende",
+        "Termopar sospechoso",
+        "Válvula de gas sospechosa",
+        "Luz de estado parpadea",
+        "Ventilación deficiente",
+        "Se apaga solo",
+        "No funciona después de corte de gas",
+        "Condensación en calentador de gas"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/not-enough-hot-water/",
+      "qc": 18,
+      "secs": 3,
+      "body": 630,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 9,
+      "dup": 0.9,
+      "missing": "",
+      "buckets": {
+        "fallback": 9,
+        "price": 1
+      },
+      "sections": [
+        "Capacity vs demand",
+        "Sediment and elements",
+        "What we check from photos and a short interview"
+      ],
+      "minContent": "Capacidad, sedimento, elementos, demanda",
+      "h1": "Why Do I Run Out of Hot Water?",
+      "noteCount": 0,
+      "scenarios": [
+        "Se acaba muy rápido",
+        "Solo alcanza para una ducha",
+        "Produce menos que antes",
+        "Tarda mucho en recuperar",
+        "Quiere saber tiempo de calentamiento",
+        "Agua demasiado caliente",
+        "Riesgo de quemadura",
+        "Temperatura sube y baja",
+        "Sale caliente y luego fría",
+        "Solo tibia aun al máximo",
+        "Peor rendimiento en invierno",
+        "Falla en horas pico",
+        "Familia creció",
+        "Busca ajuste recomendado",
+        "Quiere más capacidad sin reemplazar",
+        "Compara booster vs tanque mayor",
+        "Duda 40 vs 50 galones",
+        "Poca agua después de mantenimiento"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-making-noise/",
+      "qc": 19,
+      "secs": 2,
+      "body": 175,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "noise": 10
+      },
+      "sections": [
+        "Noise and what it usually means",
+        "Should you flush it?"
+      ],
+      "minContent": "Un bloque por ruido + nivel de urgencia",
+      "h1": "Water Heater Noises Explained",
+      "noteCount": 0,
+      "scenarios": [
+        "Ruido de explosiones pequeñas",
+        "Ruido de retumbo",
+        "Golpes fuertes",
+        "Golpeteo",
+        "Silbido",
+        "Chillido agudo",
+        "Siseo",
+        "Sonido de fritura",
+        "Clics repetidos",
+        "Tictac al calentarse",
+        "Gorgoteo",
+        "Zumbido",
+        "Vibración",
+        "Parece hervir",
+        "Water hammer",
+        "Ruido después del flush",
+        "Ruido solo al calentar",
+        "Pregunta si debe apagar",
+        "Pregunta si el ruido significa reemplazo"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/smelly-discolored-hot-water/",
+      "qc": 19,
+      "secs": 3,
+      "body": 513,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "hard_water,insurance",
+      "buckets": {
+        "smell_water": 10
+      },
+      "sections": [
+        "Color",
+        "Odor",
+        "Safety"
+      ],
+      "minContent": "Olor, color, ánodo, corrosión, seguridad",
+      "h1": "Smelly, Rusty or Discolored Hot Water",
+      "noteCount": 0,
+      "scenarios": [
+        "Olor a huevo podrido",
+        "Olor a azufre",
+        "Olor metálico",
+        "Agua oxidada",
+        "Agua marrón",
+        "Partículas negras",
+        "Partículas blancas",
+        "Agua turbia",
+        "Agua lechosa",
+        "Agua azul o verde",
+        "Sedimento visible",
+        "Ánodo causa olor",
+        "Olor después de vacaciones",
+        "Pregunta si es seguro bañarse",
+        "Pregunta si es seguro beber",
+        "Quiere eliminar olor",
+        "Pregunta si necesita flush",
+        "Pregunta si significa corrosión",
+        "Pregunta si debe reemplazar ánodo o tanque"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/low-hot-water-pressure/",
+      "qc": 12,
+      "secs": 2,
+      "body": 404,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 10,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "fallback": 10
+      },
+      "sections": [
+        "House vs heater",
+        "PRV, expansion and T&P"
+      ],
+      "minContent": "Aislar casa vs equipo, válvulas, PRV, expansión",
+      "h1": "Low Hot Water Pressure",
+      "noteCount": 0,
+      "scenarios": [
+        "Presión caliente baja",
+        "Fría normal y caliente débil",
+        "No hay flujo caliente",
+        "Problema solo arriba",
+        "Flujo fluctúa",
+        "Válvula parcialmente cerrada",
+        "Trampa térmica obstruida",
+        "Tubo de inmersión dañado",
+        "Presión de casa demasiado alta",
+        "Necesita PRV",
+        "Necesita tanque de expansión",
+        "T&amp;P descarga por presión"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/what-size-water-heater-do-i-need/",
+      "qc": 22,
+      "secs": 3,
+      "body": 335,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.6,
+      "missing": "tankless",
+      "buckets": {
+        "size": 6,
+        "40gal": 3,
+        "50gal": 1
+      },
+      "sections": [
+        "A practical Charlotte shortcut",
+        "First Hour Rating beats the gallon sticker",
+        "Send us a few facts"
+      ],
+      "minContent": "Personas, baños, First Hour Rating, calculadora",
+      "h1": "What Size Water Heater Do I Need?",
+      "noteCount": 0,
+      "scenarios": [
+        "Pregunta tamaño general",
+        "Tamaño por personas",
+        "Tamaño por habitaciones",
+        "Tamaño por baños",
+        "40 gal para 2 personas",
+        "40 gal para 3 personas",
+        "40 gal para 4 personas",
+        "50 gal para familia",
+        "Necesita 60 gal",
+        "Necesita 75 u 80 gal",
+        "Compara 40 vs 50",
+        "Compara 50 vs 80",
+        "Mismo tamaño que actual",
+        "Quiere aumentar tamaño",
+        "First Hour Rating",
+        "Capacidad para uso simultáneo",
+        "Tall vs short",
+        "Medidas físicas",
+        "Cabrá en closet",
+        "Lee capacidad en etiqueta",
+        "Calcula GPM tankless",
+        "Capacidad para bañera grande"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-buying-guide/",
+      "qc": 24,
+      "secs": 3,
+      "body": 452,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 7,
+      "dup": 0.7,
+      "missing": "lowe_hd,warranty,heat_pump",
+      "buckets": {
+        "tankless": 2,
+        "fallback": 7,
+        "warranty": 1
+      },
+      "sections": [
+        "Types",
+        "Total cost of ownership",
+        "Brands and warranties"
+      ],
+      "minContent": "Tipos, combustible, eficiencia, marcas, costo total",
+      "h1": "Water Heater Buying Guide",
+      "noteCount": 0,
+      "scenarios": [
+        "Tanque vs tankless",
+        "Eléctrico vs gas",
+        "Bomba de calor vs eléctrico estándar",
+        "Híbrido vs tankless",
+        "Gas natural vs propano",
+        "Direct vent vs power vent",
+        "Estándar vs inteligente",
+        "Tall vs short",
+        "Garantía 6 vs 9 vs 12 años",
+        "Rheem vs A.O. Smith",
+        "Rheem vs Bradford White",
+        "Big box vs supply house",
+        "Marca más confiable",
+        "Mejor equipo económico",
+        "Más eficiente",
+        "Menor costo operativo",
+        "Entender UEF",
+        "Entender EnergyGuide",
+        "Recovery rate",
+        "Ánodo y tanque",
+        "Aprobado para mobile home",
+        "Punto de uso",
+        "Conversión gas a eléctrico",
+        "Conversión eléctrico a gas"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/gas-water-heater-installation/",
+      "qc": 3,
+      "secs": 2,
+      "body": 333,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 1,
+      "dup": 0.67,
+      "missing": "",
+      "buckets": {
+        "price": 2,
+        "fallback": 1
+      },
+      "sections": [
+        "What we inspect before quoting the from-price",
+        "Safety"
+      ],
+      "minContent": "Ventilación, gas, tamaños, precio, seguridad",
+      "h1": "Gas Water Heater Installation",
+      "noteCount": 0,
+      "scenarios": [
+        "Costo gas 40 gal",
+        "Costo gas 50 gal",
+        "Ventilación gas"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/tankless-water-heater-installation/",
+      "qc": 2,
+      "secs": 2,
+      "body": 382,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.5,
+      "missing": "",
+      "buckets": {
+        "near_me": 1,
+        "price": 1
+      },
+      "sections": [
+        "Sizing by GPM, not by “endless” marketing",
+        "Infrastructure and maintenance"
+      ],
+      "minContent": "GPM, infraestructura, costo, mantenimiento",
+      "h1": "Tankless Water Heater Installation",
+      "noteCount": 0,
+      "scenarios": [
+        "Busca instalación tankless local",
+        "Costo tankless"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-financing/",
+      "qc": 3,
+      "secs": 3,
+      "body": 642,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.67,
+      "missing": "",
+      "buckets": {
+        "price": 2,
+        "financing": 1
+      },
+      "sections": [
+        "SAFE Homeowner Plan",
+        "Synchrony",
+        "What financing does not change"
+      ],
+      "minContent": "Planes reales, elegibilidad, pagos, disclosures",
+      "h1": "Water Heater Financing Options",
+      "noteCount": 1,
+      "scenarios": [
+        "Financiamiento mensual",
+        "Sin crédito tradicional",
+        "Busca financiamiento local"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-code-upgrades/",
+      "qc": 9,
+      "secs": 2,
+      "body": 163,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 5,
+      "dup": 0.56,
+      "missing": "",
+      "buckets": {
+        "price": 3,
+        "fallback": 5,
+        "removal_expansion": 1
+      },
+      "sections": [
+        "Typical extra items",
+        "Why photos matter"
+      ],
+      "minContent": "PRV, expansión, pan, T&P, venting, ejemplos",
+      "h1": "Water Heater Code Upgrades and Extra Costs",
+      "noteCount": 0,
+      "scenarios": [
+        "Busca costo de PRV",
+        "Busca costo de expansión",
+        "Costo de actualizaciones a código",
+        "Actualización a código",
+        "Tanque de expansión requerido",
+        "PRV requerido",
+        "Bandeja requerida",
+        "Tubo T&amp;P correcto",
+        "Protección en garaje"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-permit-charlotte-nc/",
+      "qc": 2,
+      "secs": 2,
+      "body": 634,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 1,
+      "dup": 0.5,
+      "missing": "",
+      "buckets": {
+        "permit": 1,
+        "fallback": 1
+      },
+      "sections": [
+        "How we handle it",
+        "Official sources"
+      ],
+      "minContent": "Regla vigente, contratista, inspección, fuentes oficiales",
+      "h1": "Water Heater Permits in Charlotte, NC",
+      "noteCount": 0,
+      "scenarios": [
+        "Permiso en Charlotte",
+        "Inspección posterior"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/attic-water-heater-installation/",
+      "qc": 3,
+      "secs": 2,
+      "body": 309,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.67,
+      "missing": "",
+      "buckets": {
+        "price": 1,
+        "attic_access": 2
+      },
+      "sections": [
+        "What we require",
+        "Cost"
+      ],
+      "minContent": "Riesgo, pan, drenaje, acceso, costo variable",
+      "h1": "Attic Water Heater Replacement",
+      "noteCount": 0,
+      "scenarios": [
+        "Costo en ático",
+        "Instalación en ático",
+        "Ático"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/difficult-access-water-heater-installation/",
+      "qc": 4,
+      "secs": 2,
+      "body": 314,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.75,
+      "missing": "crawl",
+      "buckets": {
+        "price": 3,
+        "attic_access": 1
+      },
+      "sections": [
+        "What to photograph",
+        "Relocation"
+      ],
+      "minContent": "Crawlspace, closet, escaleras, reubicación",
+      "h1": "Water Heater Installation in Tight or Difficult Spaces",
+      "noteCount": 0,
+      "scenarios": [
+        "Costo en crawlspace",
+        "Instalación en crawlspace",
+        "Reubicar equipo",
+        "Acceso por escaleras"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-installation-process/",
+      "qc": 12,
+      "secs": 3,
+      "body": 548,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 5,
+      "dup": 0.5,
+      "missing": "same_day",
+      "buckets": {
+        "price": 2,
+        "same_day": 1,
+        "fallback": 5,
+        "removal_expansion": 1,
+        "size": 1
+      },
+      "sections": [
+        "Before we arrive",
+        "During the visit",
+        "After"
+      ],
+      "minContent": "Antes, durante, después, tiempo, retiro, inspección",
+      "h1": "What to Expect During Water Heater Installation",
+      "noteCount": 1,
+      "scenarios": [
+        "Duración de instalación",
+        "Disponibilidad mismo día",
+        "Preparar el área",
+        "Tiempo sin agua caliente",
+        "Retiro del equipo viejo",
+        "Necesidad de plomero licenciado",
+        "Instalación DIY",
+        "Compra equipo e instala SAFE",
+        "Circuito eléctrico",
+        "Instalación en closet",
+        "Preguntas al instalador",
+        "Comparar cotización completa"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-insurance-warranty/",
+      "qc": 14,
+      "secs": 3,
+      "body": 592,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.6,
+      "missing": "property_manager",
+      "buckets": {
+        "leak": 1,
+        "warranty": 6,
+        "price": 3
+      },
+      "sections": [
+        "Manufacturer vs labor",
+        "Insurance and leak damage",
+        "Keep coverage valid"
+      ],
+      "minContent": "Fabricante vs labor, transferibilidad, leak damage",
+      "h1": "Water Heater Warranty and Insurance Guide",
+      "noteCount": 1,
+      "scenarios": [
+        "Pregunta por seguro",
+        "Verifica garantía fabricante",
+        "Busca garantía por serial",
+        "Registra garantía",
+        "Garantía de piezas vs labor",
+        "Tanque falla bajo garantía",
+        "Labor de reemplazo bajo garantía",
+        "Garantía transferible",
+        "Garantía ligada a dirección",
+        "Home warranty",
+        "Seguro daño por fuga",
+        "Seguro paga equipo",
+        "Responsabilidad del landlord",
+        "Inquilino sin agua caliente"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/new-water-heater-not-working/",
+      "qc": 17,
+      "secs": 2,
+      "body": 180,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 4,
+      "dup": 0.4,
+      "missing": "fuel_gas,fuel_electric,lowe_hd",
+      "buckets": {
+        "no_hot": 2,
+        "price": 1,
+        "leak": 1,
+        "noise": 1,
+        "smell_water": 1,
+        "fallback": 4
+      },
+      "sections": [
+        "Non-invasive checklist",
+        "Still down?"
+      ],
+      "minContent": "Checklist no invasivo, garantía, llamada",
+      "h1": "New Water Heater Not Working",
+      "noteCount": 0,
+      "scenarios": [
+        "Calentador nuevo no calienta",
+        "Nuevo equipo no calienta",
+        "Nuevo equipo tarda en calentar",
+        "Nuevo equipo gotea",
+        "Nuevo equipo hace ruido",
+        "Nuevo equipo huele",
+        "Breaker se dispara después de instalar",
+        "Piloto se apaga en equipo nuevo",
+        "Temperatura demasiado alta",
+        "Presión caliente bajó",
+        "Agua turbia después de instalar",
+        "Aire en tuberías",
+        "Condensación de gas nuevo",
+        "Instalación no pasa inspección",
+        "Falta corrección de código",
+        "Solicita servicio de garantía",
+        "Quiere comprobar instalación"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/water-heater-replacement-quote/",
+      "qc": 2,
+      "secs": 2,
+      "body": 178,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.5,
+      "missing": "",
+      "buckets": {
+        "leak": 1,
+        "price": 1
+      },
+      "sections": [
+        "The eight photos that prevent bad quotes",
+        "What you get back"
+      ],
+      "minContent": "Formulario de 8 fotos y campos obligatorios",
+      "h1": "Water Heater Quote From Photos",
+      "noteCount": 0,
+      "scenarios": [
+        "Busca envío de fotos para cotizar",
+        "Precio con fotos"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/realtor-water-heater-services/",
+      "qc": 5,
+      "secs": 2,
+      "body": 301,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.8,
+      "missing": "",
+      "buckets": {
+        "price": 1,
+        "warranty": 4
+      },
+      "sections": [
+        "Typical requests",
+        "How to start"
+      ],
+      "minContent": "Inspección, closing, carta, pago al cierre si aplica",
+      "h1": "Water Heater Services for Realtors",
+      "noteCount": 0,
+      "scenarios": [
+        "Pago al cerrar casa",
+        "Realtor necesita reparación",
+        "Comprador pregunta edad",
+        "Vendedor ofrece crédito",
+        "Inspector pide corrección"
+      ]
+    },
+    {
+      "priority": "P1",
+      "language": "EN",
+      "slug": "/property-manager-water-heater-program/",
+      "qc": 3,
+      "secs": 2,
+      "body": 337,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "warranty": 3
+      },
+      "sections": [
+        "What managers get",
+        "SLA honesty"
+      ],
+      "minContent": "Volumen, SLA, documentación, garantías por dirección",
+      "h1": "Water Heater Replacement for Property Managers",
+      "noteCount": 0,
+      "scenarios": [
+        "Property manager busca volumen",
+        "Inversionista necesita turnaround",
+        "Multifamily necesita reemplazos"
+      ]
+    },
+    {
+      "priority": "P2",
+      "language": "EN",
+      "slug": "/tankless-water-heater-problems/",
+      "qc": 17,
+      "secs": 2,
+      "body": 329,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 0.8,
+      "missing": "",
+      "buckets": {
+        "tankless": 8,
+        "price": 2
+      },
+      "sections": [
+        "Before you reset it 20 times",
+        "When a tank is the better repair"
+      ],
+      "minContent": "Errores, flow, escala, ignición, recirculación",
+      "h1": "Tankless Water Heater Problems",
+      "noteCount": 0,
+      "scenarios": [
+        "Tankless no produce agua caliente",
+        "Agua pasa de caliente a fría",
+        "Cold water sandwich",
+        "No activa con poco flujo",
+        "Código de error",
+        "Falla de ignición",
+        "Acumulación de sarro",
+        "Necesita descalcificación",
+        "Quiere hacer flush",
+        "No abastece dos duchas",
+        "Quiere calcular GPM",
+        "Agua tarda en llegar",
+        "Considera recirculación",
+        "Equipo se congeló",
+        "Hace ruido",
+        "Pierde presión",
+        "Compara reparación o reemplazo"
+      ]
+    },
+    {
+      "priority": "P2",
+      "language": "EN",
+      "slug": "/water-heater-maintenance/",
+      "qc": 24,
+      "secs": 3,
+      "body": 447,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 5,
+      "dup": 0.5,
+      "missing": "attic,price,lowe_hd",
+      "buckets": {
+        "price": 4,
+        "fallback": 5,
+        "removal_expansion": 1
+      },
+      "sections": [
+        "Flushing is not automatic",
+        "Temperature",
+        "What maintenance cannot do"
+      ],
+      "minContent": "Flush, ánodo, T&P, presión, fugas, calendario",
+      "h1": "Water Heater Maintenance Guide",
+      "noteCount": 0,
+      "scenarios": [
+        "Frecuencia de flush",
+        "Quiere drenar",
+        "Tanque no drena",
+        "Sedimento bloquea drenaje",
+        "Agua dura",
+        "Revisar ánodo",
+        "Cambiar ánodo",
+        "Probar válvula T&amp;P",
+        "Revisar expansión",
+        "Ajuste de temperatura",
+        "Modo vacaciones",
+        "Apagar durante vacaciones",
+        "Preparar para invierno",
+        "Aislar tanque",
+        "Aislar tuberías",
+        "Servicio anual",
+        "Costo mantenimiento",
+        "Detector de fuga",
+        "Cierre automático",
+        "Efecto del suavizador",
+        "Efecto de alta presión",
+        "Reducir factura",
+        "Lista de mantenimiento",
+        "Plan de mantenimiento"
+      ]
+    },
+    {
+      "priority": "P2",
+      "language": "EN",
+      "slug": "/heat-pump-water-heater-installation/",
+      "qc": 1,
+      "secs": 2,
+      "body": 294,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 1,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "fallback": 1
+      },
+      "sections": [
+        "Site requirements",
+        "Efficiency vs fit"
+      ],
+      "minContent": "Espacio, ruido, condensado, circuito, eficiencia",
+      "h1": "Heat Pump Water Heater Installation",
+      "noteCount": 0,
+      "scenarios": [
+        "Conversión eléctrica"
+      ]
+    },
+    {
+      "priority": "P2",
+      "language": "EN",
+      "slug": "/water-heater-special-installations/",
+      "qc": 19,
+      "secs": 3,
+      "body": 382,
+      "depth": "moderate",
+      "faqRisk": "high",
+      "fallback10": 9,
+      "dup": 0.9,
+      "missing": "hard_water,property_manager",
+      "buckets": {
+        "fallback": 9,
+        "size": 1
+      },
+      "sections": [
+        "Manufactured homes",
+        "Wells and hard water",
+        "Condos and HOAs"
+      ],
+      "minContent": "Mobile/manufactured, well, hard water, condo",
+      "h1": "Water Heaters for Special Home Conditions",
+      "noteCount": 5,
+      "scenarios": [
+        "Casa móvil",
+        "Manufactured home",
+        "Condominio",
+        "Townhome",
+        "Apartamento",
+        "Garaje frío",
+        "Sótano",
+        "Agua de pozo",
+        "Agua dura",
+        "Familia grande",
+        "Negocio pequeño",
+        "Salón o barbería",
+        "Restaurante",
+        "Boiler combinado",
+        "Calentador solar",
+        "RV o camper",
+        "Piscina",
+        "Calentador portátil",
+        "Alquiler de calentador"
+      ]
+    },
+    {
+      "priority": "P2",
+      "language": "EN",
+      "slug": "/water-heater-leak-damage/",
+      "qc": 1,
+      "secs": 2,
+      "body": 136,
+      "depth": "thin",
+      "faqRisk": "high",
+      "fallback10": 0,
+      "dup": 1,
+      "missing": "",
+      "buckets": {
+        "leak": 1
+      },
+      "sections": [
+        "Order of operations",
+        "What we need"
+      ],
+      "minContent": "Detener, documentar, mitigar, coordinar",
+      "h1": "Water Heater Leak Damage: Next Steps",
+      "noteCount": 0,
+      "scenarios": [
+        "Daño a piso o pared"
+      ]
+    }
+  ],
+  "fallbackExamples": [
+    [
+      "/water-heater-emergency/",
+      "What should I do if the pressure relief valve is releasing a lot of water?",
+      "Válvula libera mucha agua"
+    ],
+    [
+      "/water-heater-service-near-me/",
+      "Water heater service open now",
+      "Servicio abierto ahora"
+    ],
+    [
+      "/es/calentadores-de-agua-charlotte-nc/",
+      "Boiler de agua no prende",
+      "Usa 'boiler'"
+    ],
+    [
+      "/es/calentadores-de-agua-charlotte-nc/",
+      "Heater de agua no calienta",
+      "Usa 'heater de agua'"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "Why did my water heater breaker trip?",
+      "Breaker disparado"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "Why does my water heater keep tripping the breaker?",
+      "Breaker se dispara repetidamente"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "Why did the reset button trip on my water heater?",
+      "Botón de reset disparado"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "How do I safely reset an electric water heater?",
+      "Quiere reiniciar el equipo"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "How do I know if the upper heating element is bad?",
+      "Elemento superior dañado"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "How do I know if the lower heating element is bad?",
+      "Elemento inferior dañado"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "What are the signs of a burned-out water heater element?",
+      "Quiere saber si un elemento está quemado"
+    ],
+    [
+      "/electric-water-heater-not-working/",
+      "How do I know if my electric water heater thermostat is bad?",
+      "Termostato eléctrico posiblemente dañado"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "Why is my water heater pilot light out?",
+      "Piloto apagado"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "Why won't my water heater pilot light?",
+      "Piloto no enciende"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "Why does my water heater pilot light keep going out?",
+      "Piloto se apaga repetidamente"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "How do I relight a gas water heater pilot safely?",
+      "Quiere encender el piloto"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "Why won't my gas water heater burner ignite?",
+      "Quemador no enciende"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "Why is my water heater igniter clicking but not lighting?",
+      "Encendedor hace clic pero no prende"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "How do I know if my water heater thermocouple is bad?",
+      "Termopar sospechoso"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "How do I know if the water heater gas control valve is bad?",
+      "Válvula de gas sospechosa"
+    ],
+    [
+      "/gas-water-heater-not-working/",
+      "What does the blinking status light on my gas water heater mean?",
+      "Luz de estado parpadea"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why does my hot water run out so fast?",
+      "Se acaba muy rápido"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why does my water heater only provide one shower?",
+      "Solo alcanza para una ducha"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why am I getting less hot water than before?",
+      "Produce menos que antes"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why is my water heater taking so long to recover?",
+      "Tarda mucho en recuperar"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why is my water heater making water too hot?",
+      "Agua demasiado caliente"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why is my tap water suddenly scalding hot?",
+      "Riesgo de quemadura"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why does my hot water temperature fluctuate?",
+      "Temperatura sube y baja"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why does my shower go hot then cold?",
+      "Sale caliente y luego fría"
+    ],
+    [
+      "/not-enough-hot-water/",
+      "Why is my water only lukewarm even at the highest setting?",
+      "Solo tibia aun al máximo"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Why is my hot water pressure low?",
+      "Presión caliente baja"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Why is cold water pressure normal but hot water pressure is low?",
+      "Fría normal y caliente débil"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Why is there no flow from the hot water taps?",
+      "No hay flujo caliente"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Why is hot water pressure low upstairs?",
+      "Problema solo arriba"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Why does my hot water flow keep changing?",
+      "Flujo fluctúa"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Could a shutoff valve cause low hot water pressure?",
+      "Válvula parcialmente cerrada"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Can a clogged heat trap reduce hot water pressure?",
+      "Trampa térmica obstruida"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Can a broken dip tube cause hot water problems?",
+      "Tubo de inmersión dañado"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Can high house water pressure damage a water heater?",
+      "Presión de casa demasiado alta"
+    ],
+    [
+      "/low-hot-water-pressure/",
+      "Do I need a pressure reducing valve for my water heater?",
+      "Necesita PRV"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Electric vs gas water heater—which is cheaper?",
+      "Eléctrico vs gas"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Heat pump vs standard electric water heater—which should I buy?",
+      "Bomba de calor vs eléctrico estándar"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Natural gas vs propane water heater—which is better?",
+      "Gas natural vs propano"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Direct vent vs power vent water heater—what is the difference?",
+      "Direct vent vs power vent"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Is a smart water heater worth it?",
+      "Estándar vs inteligente"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Tall vs short water heater—does performance differ?",
+      "Tall vs short"
+    ],
+    [
+      "/water-heater-buying-guide/",
+      "Rheem vs A. O. Smith water heater—which is better?",
+      "Rheem vs A.O. Smith"
+    ],
+    [
+      "/gas-water-heater-installation/",
+      "Will my gas water heater need new venting?",
+      "Ventilación gas"
+    ],
+    [
+      "/water-heater-code-upgrades/",
+      "What code upgrades may be required with a new water heater?",
+      "Actualización a código"
+    ],
+    [
+      "/water-heater-code-upgrades/",
+      "When is a pressure reducing valve required for a water heater?",
+      "PRV requerido"
+    ],
+    [
+      "/water-heater-code-upgrades/",
+      "Is a drain pan required under a water heater?",
+      "Bandeja requerida"
+    ],
+    [
+      "/water-heater-code-upgrades/",
+      "Where should the water heater T&amp;P discharge pipe terminate?",
+      "Tubo T&amp;P correcto"
+    ],
+    [
+      "/water-heater-code-upgrades/",
+      "Does a garage water heater need a bollard or raised platform?",
+      "Protección en garaje"
+    ],
+    [
+      "/water-heater-permit-charlotte-nc/",
+      "Does a water heater replacement need an inspection?",
+      "Inspección posterior"
+    ],
+    [
+      "/water-heater-installation-process/",
+      "How should I prepare for water heater installation?",
+      "Preparar el área"
+    ],
+    [
+      "/water-heater-installation-process/",
+      "Do I need a licensed plumber to install a water heater?",
+      "Necesidad de plomero licenciado"
+    ],
+    [
+      "/water-heater-installation-process/",
+      "Can I install my own water heater?",
+      "Instalación DIY"
+    ],
+    [
+      "/water-heater-installation-process/",
+      "Can I buy the water heater and hire someone to install it?",
+      "Compra equipo e instala SAFE"
+    ],
+    [
+      "/water-heater-installation-process/",
+      "Can a water heater be installed in a closet?",
+      "Instalación en closet"
+    ],
+    [
+      "/new-water-heater-not-working/",
+      "Why does the breaker trip after a new water heater installation?",
+      "Breaker se dispara después de instalar"
+    ],
+    [
+      "/new-water-heater-not-working/",
+      "Why does the pilot go out on a new gas water heater?",
+      "Piloto se apaga en equipo nuevo"
+    ],
+    [
+      "/new-water-heater-not-working/",
+      "Why is my new water heater set too hot?",
+      "Temperatura demasiado alta"
+    ],
+    [
+      "/new-water-heater-not-working/",
+      "Why is hot water pressure lower after replacement?",
+      "Presión caliente bajó"
+    ],
+    [
+      "/water-heater-maintenance/",
+      "How do I drain and flush a water heater?",
+      "Quiere drenar"
+    ],
+    [
+      "/water-heater-maintenance/",
+      "Why won't my water heater drain?",
+      "Tanque no drena"
+    ],
+    [
+      "/water-heater-maintenance/",
+      "How do I remove sediment from a water heater?",
+      "Sedimento bloquea drenaje"
+    ],
+    [
+      "/water-heater-maintenance/",
+      "When should I replace the water heater anode rod?",
+      "Cambiar ánodo"
+    ],
+    [
+      "/water-heater-maintenance/",
+      "What is the best water heater temperature setting?",
+      "Ajuste de temperatura"
+    ],
+    [
+      "/heat-pump-water-heater-installation/",
+      "What electrical upgrades are needed for a heat pump water heater?",
+      "Conversión eléctrica"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "What water heater do I need for a mobile home?",
+      "Casa móvil"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "Can a standard water heater be installed in a manufactured home?",
+      "Manufactured home"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "Who replaces a water heater in a condo?",
+      "Condominio"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "Water heater replacement for apartment unit",
+      "Apartamento"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "What water heater works best in a cold garage?",
+      "Garaje frío"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "Can I install a water heater in a basement?",
+      "Sótano"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "What water heater is best for well water?",
+      "Agua de pozo"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "What water heater is best for hard water?",
+      "Agua dura"
+    ],
+    [
+      "/water-heater-special-installations/",
+      "Best water heater for a large family",
+      "Familia grande"
+    ]
+  ],
+  "faqBucketGlobal": {
+    "near_me": 21,
+    "price": 55,
+    "same_day": 5,
+    "leak": 33,
+    "safety_electric": 5,
+    "safety_gas": 7,
+    "safety_flood": 5,
+    "fallback": 132,
+    "smell_water": 19,
+    "safety_24h": 1,
+    "no_hot": 25,
+    "repair_replace": 15,
+    "financing": 2,
+    "40gal": 6,
+    "warranty": 20,
+    "noise": 20,
+    "removal_expansion": 4,
+    "size": 17,
+    "50gal": 4,
+    "tankless": 14,
+    "permit": 1,
+    "attic_access": 4
+  }
+}

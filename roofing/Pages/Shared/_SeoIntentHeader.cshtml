@@ -1,0 +1,17 @@
+@{
+    var lang = ViewData["Lang"] as string ?? "en";
+    var en = ViewData["SeoEn"] as string ?? "/";
+    var es = ViewData["SeoEs"] as string ?? "/es";
+    var isEs = lang == "es";
+    var home = isEs ? "/es" : "/";
+    var homeLabel = isEs ? "Inicio" : "Home";
+    var faqLabel = "FAQ";
+    var contactLabel = isEs ? "Contacto" : "Contact";
+    var langLabel = isEs ? "ENGLISH" : "ESPAÑOL";
+    var langHref = isEs ? en : es;
+    var alert = ViewData["SeoAlert"] as string ?? (isEs ? "¿Liqueo activo o techo abierto?" : "Active leak or open roof?");
+}
+<div class="claim-alert"><div class="site-shell"><span>@alert</span><a href="tel:+19808005991">@(isEs ? "Llamar ahora" : "Call now") (980) 800-5991</a></div></div>
+<header class="claim-header"><div class="site-shell"><a href="@home" class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><strong>MAJESTIC</strong><small>ROOFING, INC.</small></span></a>
+<nav><a href="@home">@homeLabel</a><a href="#process">@(isEs ? "Proceso" : "Process")</a><a href="#faq">@faqLabel</a><a href="@(isEs ? "/es/preguntas-frecuentes" : "/faqs")">@(isEs ? "Todas las FAQ" : "All FAQs")</a><a href="#contact">@contactLabel</a></nav>
+<a class="language-toggle language-link" href="@langHref">@langLabel</a></div></header>

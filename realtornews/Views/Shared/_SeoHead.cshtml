@@ -1,0 +1,59 @@
+@{
+    var title = Seo.PageTitle(ViewData["Title"]?.ToString());
+    var description = Seo.Description(ViewData["Description"]?.ToString());
+    var canonical = ViewData["Canonical"] as string ?? Seo.Absolute(Context.Request, Context.Request.Path);
+    var image = Seo.Image(Context.Request, ViewData["OgImage"] as string);
+    var ogType = ViewData["OgType"] as string ?? "website";
+    var robots = Seo.Robots(ViewData, Context.Request.Path);
+    var crumbs = ViewData["Crumbs"] as IReadOnlyList<SeoCrumb>;
+    var extra = ViewData["Schema"] as Dictionary<string, object?>;
+    var nodes = new List<Dictionary<string, object?>> { Seo.Organization(Context.Request), Seo.WebSite(Context.Request) };
+    if (crumbs is { Count: > 0 })
+    {
+        nodes.Add(Seo.Breadcrumb(Context.Request, crumbs.Select(c => (c.Name, c.Path)).ToList()));
+    }
+    if (extra is not null)
+    {
+        nodes.Add(extra);
+    }
+}
+<title>@title</title>
+<meta name="description" content="@description" />
+<meta name="robots" content="@robots" />
+<meta name="googlebot" content="@robots" />
+<meta name="author" content="@Seo.Brand" />
+<meta name="theme-color" content="#0a2342" />
+<meta name="geo.region" content="US-NC" />
+<meta name="geo.placename" content="Charlotte" />
+<meta name="geo.position" content="35.2271;-80.8431" />
+<meta name="ICBM" content="35.2271, -80.8431" />
+<link rel="canonical" href="@canonical" />
+@if (!Seo.IsPrivate(Context.Request.Path))
+{
+    <link rel="alternate" type="application/rss+xml" title="Charlotte Realtor news" href="@Seo.Absolute(Context.Request, "/news/rss.xml")" />
+}
+<meta property="og:type" content="@ogType" />
+<meta property="og:site_name" content="@Seo.Brand" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="@title" />
+<meta property="og:description" content="@description" />
+<meta property="og:url" content="@canonical" />
+<meta property="og:image" content="@image" />
+<meta property="og:image:alt" content="@title" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="@title" />
+<meta name="twitter:description" content="@description" />
+<meta name="twitter:image" content="@image" />
+@if (ViewData["PublishedTime"] is DateTimeOffset published)
+{
+    <meta property="article:published_time" content="@published.UtcDateTime.ToString("yyyy-MM-ddTHH:mm:ssZ")" />
+}
+@if (ViewData["ModifiedTime"] is DateTimeOffset modified)
+{
+    <meta property="article:modified_time" content="@modified.UtcDateTime.ToString("yyyy-MM-ddTHH:mm:ssZ")" />
+}
+@if (ViewData["ArticleSection"] is string articleSection)
+{
+    <meta property="article:section" content="@articleSection" />
+}
+@Html.Raw("<script type=\"application/ld+json\">")@Seo.JsonLd(nodes.ToArray())@Html.Raw("</script>")

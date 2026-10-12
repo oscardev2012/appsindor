@@ -1,0 +1,230 @@
+@{
+    ViewData["Title"] = "SAFE Field Team Portal";
+    ViewData["Description"] = "Bilingual field workspace for SAFE technicians, approved work orders, checklists, photos, messages and change orders.";
+}
+<section class="gateway" id="gateway">
+    <div class="gateway-copy">
+      <div class="gateway-brand"><div class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.2 12 4l9 7.2V21h-6.2v-6.1H9.2V21H3v-9.8Z" fill="white"/></svg></div><div><strong>SAFE Field Team</strong><span>SAFE Project Solution by Safe HVAC Solution LLC</span></div></div>
+      <div class="gateway-message">
+        <div class="eyebrow" data-i18n="gatewayEyebrow">Your assigned work · One clear place</div>
+        <h1 data-i18n="gatewayTitle">Know what to do next, from arrival to completion.</h1>
+        <p data-i18n="gatewayCopy">Open approved work orders, check in at the property, request access, message the assigned Realtor and Management, upload photos and request changes.</p>
+        <div class="gateway-flow"><span>Assigned</span><b>›</b><span>Check in</span><b>›</b><span>Complete</span><b>›</b><span>Photos</span><b>›</b><span>Management review</span></div>
+      </div>
+      <div class="gateway-foot" data-i18n="gatewayFoot">English is the default language. Every user can switch to Spanish.</div>
+    </div>
+    <div class="signin-wrap">
+      <form class="signin-card" id="signinForm">
+        <div class="signin-top"><h2 id="gateTitle" data-i18n="gateTitle">SAFE Field Team</h2><div class="language-switch" aria-label="Language"><button type="button" class="active language-option" data-lang="en">EN</button><button type="button" class="language-option" data-lang="es">ES</button></div></div>
+        <div id="gateChoices">
+          <p class="signin-help gate-intro" data-i18n="gateIntro">Create a profile, or sign in if you already have one.</p>
+          <div class="gate-actions">
+            <button class="primary" type="button" id="showCreate" data-i18n="createProfile">Create profile</button>
+            <button class="secondary" type="button" id="showSignIn" data-i18n="signInExisting">I already have an account</button>
+          </div>
+        </div>
+        <div id="gateCreate" hidden>
+          <div class="field"><label data-i18n="fullName">Full name</label><input id="profileName" autocomplete="name" required></div>
+          <div class="field"><label data-i18n="workEmail">Work email</label><input type="email" id="createEmail" placeholder="name@@company.com" autocomplete="email" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}" title="nombre@empresa.com"></div>
+          <div class="field"><label data-i18n="password">Password</label><input type="password" id="createPassword" autocomplete="new-password" minlength="6" required></div>
+          <div class="field"><label data-i18n="companyName">Company / legal name</label><input id="createCompany" autocomplete="organization" maxlength="200"></div>
+          <div class="field"><label data-i18n="phone10">Phone (10 digits)</label><input id="createPhone" inputmode="numeric" autocomplete="tel-national" maxlength="10" pattern="\d{10}" placeholder="7045550000"></div>
+          <div class="field"><label data-i18n="specialties">What work do you specialize in?</label><div class="specialty-grid" id="createSpecialties"></div></div>
+          <button class="primary" type="submit" data-i18n="createProfile">Create profile</button>
+          <button class="gate-link" type="button" id="createToSignIn" data-i18n="haveAccount">Already have an account? Sign in</button>
+        </div>
+        <div id="gateSignIn" hidden>
+          <div class="field"><label data-i18n="workEmail">Work email</label><input type="email" id="signInEmail" placeholder="name@@company.com" autocomplete="username" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}" title="nombre@empresa.com"></div>
+          <div class="field"><label data-i18n="password">Password</label><input type="password" id="signInPassword" autocomplete="current-password" required></div>
+          <button class="primary" type="submit" data-i18n="signInExisting">Sign in</button>
+          <button class="gate-link" type="button" id="signInToCreate" data-i18n="needAccount">No account yet? Create a profile</button>
+        </div>
+        <div class="preview-label" data-i18n="previewAs">SAMPLE ONLY</div>
+        <div class="portal-options">
+          <button type="button" class="portal-choice" data-portal="preview"><span>✓</span><span data-i18n="worker">Open sample view</span></button>
+        </div>
+        <p class="signin-help" data-i18n="previewNote">The sample does not create an account and does not sign you in.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="portal-workspace portal-hidden" id="portalWorkspace">
+    <header class="portal-bar">
+      <div class="portal-bar-left"><div class="portal-logo"><div class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.2 12 4l9 7.2V21h-6.2v-6.1H9.2V21H3v-9.8Z" fill="white"/></svg></div>SAFE Field Team</div><span class="portal-role" id="portalRole">Worker Workspace</span></div>
+      <div class="portal-bar-right"><button type="button" class="secondary portal-home"><span data-i18n="goBack">← Back</span></button><div class="language-switch"><button type="button" class="active language-option" data-lang="en">EN</button><button type="button" class="language-option" data-lang="es">ES</button></div><div class="avatar" id="portalAvatar">G</div></div>
+    </header>
+    <div class="workspace-wrap" id="workspaceContent"></div>
+  </section>
+
+  <div class="app portal-hidden" id="managementApp">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11.2 12 4l9 7.2V21h-6.2v-6.1H9.2V21H3v-9.8Z" fill="white"/></svg></div>
+        <div><strong>SAFE Core</strong><small>Management System</small></div>
+      </div>
+      <div class="nav-label">Operaciones</div>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="active" data-view="dashboard"><span class="nav-icon">⌂</span>Resumen</button>
+        <button data-view="clients"><span class="nav-icon">◎</span>Clientes</button>
+        <button data-view="properties"><span class="nav-icon">◇</span>Propiedades</button>
+        <button data-view="estimates"><span class="nav-icon">▤</span>Estimates</button>
+        <button data-view="invoices"><span class="nav-icon">＄</span>Invoices y pagos</button>
+        <button data-view="team"><span class="nav-icon">◉</span>Equipo y trabajos</button>
+      </nav>
+      <div class="nav-label">Sistema</div>
+      <nav class="nav">
+        <button data-view="prices"><span class="nav-icon">▦</span>Catálogo de precios</button>
+        <button data-view="integrations"><span class="nav-icon">⌘</span>Integraciones</button>
+      </nav>
+      <div class="side-footer">
+        <div class="sync"><span class="sync-dot"></span>Sistema sincronizado</div>
+        <div class="profile"><div class="avatar">M</div><div><b>Management</b><span>SAFE Core</span></div></div>
+      </div>
+    </aside>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <main class="main">
+      <header class="topbar">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menú">☰</button>
+          <div class="crumb"><strong id="crumbTitle">Resumen</strong><span>SAFE Project Solution</span></div>
+        </div>
+        <div class="top-actions">
+          <div class="search"><input id="globalSearch" type="search" placeholder="Buscar cliente, dirección o invoice"></div>
+          <button class="icon-btn" aria-label="Notificaciones">♢<span class="notice"></span></button>
+          <button class="secondary portal-home">All portals</button>
+          <div class="language-switch"><button type="button" class="active language-option" data-lang="en">EN</button><button type="button" class="language-option" data-lang="es">ES</button></div>
+          <button class="secondary" id="quickEstimate">＋ Nuevo estimate</button>
+        </div>
+      </header>
+      <div class="content">
+        <section class="view active" id="view-dashboard">
+          <div class="view-head">
+            <div><h1>Buenos días</h1><p>Lo importante para operar SAFE hoy, en una sola vista.</p></div>
+            <div class="head-actions"><button class="secondary" id="addClientTop">＋ Cliente</button><button class="primary open-estimate">＋ Crear estimate</button></div>
+          </div>
+          <div class="flow" aria-label="Flujo operativo">
+            <div class="flow-step done"><span class="step-num">✓</span>Lead</div><span class="flow-arrow">›</span>
+            <div class="flow-step done"><span class="step-num">✓</span>Cliente</div><span class="flow-arrow">›</span>
+            <div class="flow-step current"><span class="step-num">3</span>Estimate</div><span class="flow-arrow">›</span>
+            <div class="flow-step"><span class="step-num">4</span>Work order</div><span class="flow-arrow">›</span>
+            <div class="flow-step"><span class="step-num">5</span>Invoice</div><span class="flow-arrow">›</span>
+            <div class="flow-step"><span class="step-num">6</span>Pagado</div>
+          </div>
+          <div class="stat-grid">
+            <div class="stat"><div class="stat-top"><span>Ventas abiertas</span><span class="stat-icon">＄</span></div><strong class="mono" id="dashSales">$0</strong><span class="delta">Desde IndorDB</span></div>
+            <div class="stat"><div class="stat-top"><span>Por aprobar</span><span class="stat-icon">✓</span></div><strong id="dashApprovals">0</strong><span class="delta">Solicitudes nuevas</span></div>
+            <div class="stat"><div class="stat-top"><span>Trabajos activos</span><span class="stat-icon">⌂</span></div><strong id="dashJobs">0</strong><span class="delta">Órdenes vivas</span></div>
+            <div class="stat"><div class="stat-top"><span>Por cobrar</span><span class="stat-icon">▤</span></div><strong class="mono" id="dashAR">$0</strong><span class="delta">Invoices</span></div>
+          </div>
+          <div class="grid-main">
+            <div class="card">
+              <div class="card-head"><h2>Proyectos recientes</h2><a href="#" data-go="estimates">Ver todos</a></div>
+              <div class="table-card"><table><thead><tr><th>Cliente / propiedad</th><th>Proyecto</th><th>Estado</th><th>Total</th><th></th></tr></thead><tbody id="dashProjectsBody">
+                <tr><td colspan="5">Aún no hay proyectos en IndorDB.</td></tr>
+              </tbody></table></div>
+            </div>
+            <div>
+              <div class="card" style="margin-bottom:18px"><div class="card-head"><h2>Necesitan aprobación</h2><span class="badge red" id="dashPendingBadge">0</span></div><div class="card-body" id="dashApprovalsBody">
+                <p>Cuando un Realtor envíe una solicitud, aparece aquí.</p>
+              </div>
+              <div class="card"><div class="card-head"><h2>Actividad reciente</h2></div><div class="card-body" id="dashActivityBody">
+                <p>Los eventos de IndorDB aparecen aquí.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-clients">
+          <div class="view-head"><div><h1>Clientes</h1><p>Contactos, propiedades, trabajos y comunicación en un mismo expediente.</p></div><button class="primary open-client">＋ Agregar cliente</button></div>
+          <div class="toolbar"><input id="clientSearch" placeholder="Buscar por nombre, teléfono o correo"><select><option>Todos los clientes</option><option>Con trabajo activo</option><option>Realtor referral</option></select></div>
+          <div class="card table-card"><table><thead><tr><th>Cliente</th><th>Contacto</th><th>Propiedad</th><th>Origen</th><th>Último trabajo</th><th></th></tr></thead><tbody id="clientsBody">
+            <tr><td colspan="6">Aún no hay clientes. Usa Agregar cliente.</td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="view" id="view-properties">
+          <div class="view-head"><div><h1>Propiedades</h1><p>Cada casa conserva inspection reports, estimates, fotografías, trabajos y garantías.</p></div><button class="primary">＋ Agregar propiedad</button></div>
+          <div class="section-grid" id="propertiesGrid">
+            <p>Aún no hay propiedades en IndorDB.</p>
+          </div>
+        </section>
+
+        <section class="view" id="view-estimates">
+          <div class="view-head"><div><h1>Estimates</h1><p>Crea, compara, aprueba y convierte el alcance aceptado en invoice.</p></div><button class="primary open-estimate">＋ Nuevo estimate</button></div>
+          <div class="toolbar"><input id="estimateSearch" placeholder="Buscar estimate, cliente o propiedad"><select><option>Todos los estados</option><option>Borrador</option><option>Enviado</option><option>Aprobado</option></select></div>
+          <div class="card table-card"><table><thead><tr><th>Estimate</th><th>Cliente / propiedad</th><th>Alcance</th><th>Estado</th><th>Total</th><th></th></tr></thead><tbody id="estimatesBody">
+            <tr><td colspan="6">Aún no hay estimates en IndorDB.</td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="view" id="view-invoices">
+          <div class="view-head"><div><h1>Invoices y pagos</h1><p>El invoice nace del estimate aprobado, sin volver a escribir el alcance.</p></div><button class="primary">＋ Crear invoice</button></div>
+          <div class="stat-grid"><div class="stat"><div class="stat-top"><span>Facturado</span></div><strong id="invBilled">$0</strong><span class="delta">IndorDB</span></div><div class="stat"><div class="stat-top"><span>Pagado</span></div><strong id="invPaid">$0</strong><span class="delta">Pagado</span></div><div class="stat"><div class="stat-top"><span>Pendiente</span></div><strong id="invOpen">$0</strong><span class="delta">Abierto</span></div><div class="stat"><div class="stat-top"><span>Invoices</span></div><strong id="invCount">0</strong><span class="delta">Registros</span></div></div>
+          <div class="card table-card"><table><thead><tr><th>Invoice</th><th>Cliente</th><th>Emitido</th><th>Estado</th><th>Total</th><th>Saldo</th><th></th></tr></thead><tbody id="invoicesBody">
+            <tr><td colspan="7">Aún no hay invoices en IndorDB.</td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="view" id="view-team">
+          <div class="view-head"><div><h1>Equipo y trabajos</h1><p>Asignaciones sencillas para oficina, estimadores y trabajadores desde el teléfono.</p></div><button class="primary">＋ Asignar trabajo</button></div>
+          <div class="section-grid" id="teamGrid">
+            <p>Cuando Operations asigne un trabajador, aparece aquí.</p>
+          </div>
+        </section>
+
+        <section class="view" id="view-prices">
+          <div class="view-head"><div><h1>Catálogo maestro de precios</h1><p>Una sola fuente para Realtor Consult, estimates, invoices y management.</p></div><div class="head-actions"><button class="secondary" id="dictatePrice">◉ Dictar experiencia</button><button class="primary">＋ Agregar precio</button></div></div>
+          <div class="toolbar"><input id="priceSearch" placeholder="Buscar reparación, palabra del inspector o categoría"><select id="tradeFilter"><option value="">Todos los rubros</option><option>Pisos</option><option>Baños</option><option>HVAC</option><option>Crawlspace</option><option>Pintura</option></select></div>
+          <div class="card table-card"><table><thead><tr><th>Servicio</th><th>Unidad / tamaño</th><th>Precio público</th><th>Costo interno</th><th>Margen objetivo</th><th>Fuente</th><th></th></tr></thead><tbody id="priceBody">
+            <tr data-trade="Pisos"><td><div class="price-name"><span class="trade-icon">P</span><div><div class="name">Instalación LVP completa</div><div class="sub">Incluye material básico + instalación</div></div></div></td><td>1,000+ ft²</td><td class="name">$6.50 / ft²</td><td>$3.10–$3.60 / ft²</td><td class="margin">40–52%</td><td><span class="badge blue">Historial + oficial</span></td><td><button class="mini">Editar</button></td></tr>
+            <tr data-trade="Pisos"><td><div class="price-name"><span class="trade-icon">P</span><div><div class="name">LVP área pequeña</div><div class="sub">Cuarto, baño o área aislada</div></div></div></td><td>Hasta 500 ft²</td><td class="name">$12.00 / ft²</td><td>Según alcance</td><td class="margin">Revisar</td><td><span class="badge gray">Regla de tamaño</span></td><td><button class="mini">Editar</button></td></tr>
+            <tr data-trade="Baños"><td><div class="price-name"><span class="trade-icon">B</span><div><div class="name">Remodelación baño básica</div><div class="sub">Baño regular · materiales básicos</div></div></div></td><td>Proyecto</td><td class="name">Desde $8,500</td><td>Solo management</td><td class="margin">Por calcular</td><td><span class="badge blue">Precio oficial</span></td><td><button class="mini">Editar</button></td></tr>
+            <tr data-trade="Crawlspace"><td><div class="price-name"><span class="trade-icon">C</span><div><div class="name">Crawlspace makeover</div><div class="sub">Limpieza + barrera + fungicida</div></div></div></td><td>Paquete base</td><td class="name">$3,500</td><td>Solo management</td><td class="margin">Por trabajo</td><td><span class="badge blue">Precio oficial</span></td><td><button class="mini">Editar</button></td></tr>
+            <tr data-trade="Pintura"><td><div class="price-name"><span class="trade-icon">T</span><div><div class="name">Retoque de pintura</div><div class="sub">Casa pequeña antes de venta</div></div></div></td><td>Casa pequeña</td><td class="name">$2,500</td><td>Según días</td><td class="margin">Objetivo 40%</td><td><span class="badge gray">Experiencia</span></td><td><button class="mini">Editar</button></td></tr>
+            <tr data-trade="HVAC"><td><div class="price-name"><span class="trade-icon">H</span><div><div class="name">Visita diagnóstica</div><div class="sub">HVAC / reparación general</div></div></div></td><td>Visita</td><td class="name">$100</td><td>Operación</td><td class="margin">Servicio</td><td><span class="badge blue">Precio oficial</span></td><td><button class="mini">Editar</button></td></tr>
+          </tbody></table></div>
+        </section>
+
+        <section class="view" id="view-integrations">
+          <div class="view-head"><div><h1>Integraciones</h1><p>Conexiones preparadas alrededor de una sola API y el mismo historial de clientes.</p></div><span class="badge blue">Vista de arquitectura</span></div>
+          <div class="section-grid">
+            <div class="info-tile"><div class="tile-top"><div class="big-icon">Ó</div><span class="badge amber">Preparar API</span></div><h3>Algoritmo de Óscar</h3><p>Recibe realtors detectados y los convierte en leads asignables.</p><div class="connection"><span>Entrada</span><b>Webhook seguro</b></div></div>
+            <div class="info-tile"><div class="tile-top"><div class="big-icon">G</div><span class="badge gray">No conectado</span></div><h3>Gmail</h3><p>Enviar, recibir y guardar conversaciones dentro del cliente.</p><div class="connection"><span>Método</span><b>OAuth</b></div></div>
+            <div class="info-tile"><div class="tile-top"><div class="big-icon">M</div><span class="badge gray">No conectado</span></div><h3>Facebook e Instagram</h3><p>Conectar cuentas profesionales autorizadas y conservar mensajes.</p><div class="connection"><span>Proveedor</span><b>Meta</b></div></div>
+            <div class="info-tile"><div class="tile-top"><div class="big-icon">＄</div><span class="badge gray">No conectado</span></div><h3>Pagos</h3><p>Cobrar deposits, invoices y aportaciones de gift cards.</p><div class="connection"><span>Propuesto</span><b>Stripe</b></div></div>
+            <div class="info-tile coming"><div class="tile-top"><div class="big-icon">↗</div><span class="badge gray">Futuro</span></div><h3>Realtor Consult</h3><p>Usará esta misma tabla para orientar precios sin mostrar costos internos.</p><div class="connection"><span>Fuente</span><b>Price API</b></div></div>
+            <div class="info-tile coming"><div class="tile-top"><div class="big-icon">▤</div><span class="badge gray">Futuro</span></div><h3>Portal del cliente</h3><p>Firmar estimate, aprobar cambios, pagar y consultar garantías.</p><div class="connection"><span>Acceso</span><b>Enlace seguro</b></div></div>
+          </div>
+          <div class="card" style="margin-top:18px"><div class="card-head"><h2>Quién verá qué</h2></div><div class="card-body"><div class="role-strip"><button class="role-pill active">Management · todo</button><button class="role-pill">Office · estimates e invoices</button><button class="role-pill">Worker · trabajos</button><button class="role-pill">Marketing · leads</button><button class="role-pill">Realtor · sus clientes</button><button class="role-pill">Cliente · su proyecto</button></div></div></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="clientModal" role="dialog" aria-modal="true" aria-labelledby="clientModalTitle">
+    <div class="modal"><div class="modal-head"><h2 id="clientModalTitle">Agregar cliente</h2><button class="close" data-close="clientModal">×</button></div><div class="modal-body"><div class="form-grid">
+      <div class="field"><label>Nombre</label><input id="newClientName" placeholder="Nombre completo"></div><div class="field"><label>Teléfono</label><input id="newClientPhone" placeholder="Teléfono"></div>
+      <div class="field"><label>Correo electrónico</label><input id="newClientEmail" type="email" placeholder="correo@cliente.com"></div><div class="field"><label>Origen</label><select><option>Directo</option><option>Realtor referral</option><option>Google</option><option>Facebook</option></select></div>
+      <div class="field full"><label>Dirección de la propiedad</label><input id="newClientAddress" placeholder="Dirección, ciudad, estado y ZIP"></div><div class="field full"><label>Notas</label><textarea placeholder="Qué necesita el cliente"></textarea></div>
+    </div></div><div class="modal-foot"><button class="secondary" data-close="clientModal">Cancelar</button><button class="primary" id="saveClient">Guardar cliente</button></div></div>
+  </div>
+
+  <div class="modal-backdrop" id="estimateModal" role="dialog" aria-modal="true" aria-labelledby="estimateModalTitle">
+    <div class="modal"><div class="modal-head"><h2 id="estimateModalTitle">Crear estimate</h2><button class="close" data-close="estimateModal">×</button></div><div class="modal-body">
+      <div class="form-grid"><div class="field"><label>Cliente</label><select id="estClient"><option value="">Aún no hay clientes</option></select></div><div class="field"><label>Propiedad</label><select id="estProperty"><option value="">Aún no hay propiedades</option></select></div><div class="field full"><label>Nombre del proyecto</label><input id="estProjectName" placeholder="Nombre del proyecto"></div></div>
+      <div class="estimate-lines" id="estimateLines">
+        <div class="estimate-line"><select class="line-service"><option value="100">Visita diagnóstica</option><option value="3500">Crawlspace makeover</option><option value="2500">Retoque de pintura</option><option value="6500">LVP completo · 1,000 ft²</option><option value="8500">Remodelación baño básica</option></select><input class="line-qty" type="number" min="1" value="1" aria-label="Cantidad"><input class="line-price" value="$100.00" aria-label="Precio"><button class="remove-line" aria-label="Eliminar">×</button></div>
+      </div>
+      <button class="ghost" id="addLine">＋ Agregar trabajo del catálogo</button>
+      <div class="total-box"><div><span>Total preliminar</span><strong id="estimateTotal">$100.00</strong></div></div>
+    </div><div class="modal-foot"><button class="secondary" data-close="estimateModal">Guardar borrador</button><button class="primary" id="saveEstimate">Crear y revisar</button></div></div>
+  </div>
+
+  <div class="drawer-cover" id="drawerCover"></div>
+  <aside class="drawer" id="estimateDrawer" aria-label="Detalle de estimate"><div class="drawer-head"><button id="closeDrawer">×</button><span class="badge green" id="drawerStatus">IndorDB</span><h2 id="drawerTitle">—</h2><p id="drawerSub">Selecciona un registro</p></div><div class="drawer-body">
+    <div class="summary-box"><div class="summary-row"><span>Estado</span><b id="drawerState">—</b></div><div class="summary-row total"><span>Total</span><b id="drawerTotal">$0.00</b></div></div>
+    <div class="drawer-section"><h3>Alcance</h3><p id="drawerScope" style="font-size:.84rem;color:var(--muted)">Aún no hay un estimate abierto.</p></div>
+    <div class="drawer-section"><h3>Próximo paso</h3><p style="font-size:.84rem;color:var(--muted)">Los estimates y work orders se guardan en IndorDB cuando los creas desde esta pantalla.</p></div>
+    <div class="drawer-actions"><button class="secondary" id="makeWorkOrder">Crear work order</button><button class="primary" id="convertInvoice">Convertir en invoice</button></div>
+  </div></aside>
+  <div class="toast" id="toast">Acción completada</div>

@@ -1,0 +1,74 @@
+<section class="toolPageIntro">
+    <p class="eyebrow">Preparaci&#xF3;n financiera &#xB7; Sin credit pull</p>
+    <h1>Calcula un punto de partida antes de pedir una preaprobaci&#xF3;n.</h1>
+    <p>Una herramienta clara para organizar preguntas sobre ingresos, deudas, fondos, ITIN o Social Security. Solamente un lender autorizado puede verificar documentos y aprobar un pr&#xE9;stamo.</p>
+</section>
+<section class="qualifyTool fullTool" data-qualify-calc id="buying-power">
+    <div class="qualifyInputs">
+        <p class="eyebrow">Estimador educativo de poder de compra</p>
+        <h2>&#xBF;Qu&#xE9; rango de casa podr&#xED;as conversar con un lender?</h2>
+        <p>Ajusta los n&#xFA;meros. El c&#xE1;lculo combina ingresos, deudas, fondos disponibles, tasa supuesta y un escenario de deuda total. No revisa cr&#xE9;dito ni aprueba pr&#xE9;stamos.</p>
+        <div class="inputDeck">
+            <div class="formGrid">
+                <label>Ingreso bruto mensual del hogar
+                    <div class="moneyInput"><span>$</span><input type="number" min="0" step="100" value="7000" /></div>
+                </label>
+                <label>Deudas mensuales
+                    <div class="moneyInput"><span>$</span><input type="number" min="0" step="25" value="650" /></div>
+                </label>
+            </div>
+            <div class="formGrid">
+                <label>Fondos disponibles para comprar
+                    <div class="moneyInput"><span>$</span><input type="number" min="0" step="500" value="25000" /></div>
+                </label>
+                <label>Pago inicial supuesto
+                    <select><option value="3">3%</option><option value="3.5">3.5%</option><option value="5" selected>5%</option><option value="10">10%</option><option value="20">20%</option></select>
+                </label>
+            </div>
+            <div class="formGrid">
+                <label>Tasa supuesta
+                    <div class="suffixInput"><input type="number" min="1" max="15" step=".05" value="6.5" /><span>%</span></div>
+                </label>
+                <label>Escenario de deuda total
+                    <select>
+                        <option value="36" selected>36% — conservador</option>
+                        <option value="43">43% — para conversar</option>
+                        <option value="45">45% — revisi&#xF3;n adicional</option>
+                    </select>
+                </label>
+            </div>
+            <div class="formGrid">
+                <label>Historial actual de trabajo/negocio
+                    <select><option selected>2+ years</option><option>1–2 years</option><option>New job / Nuevo empleo</option><option>Self-employed / Negocio propio</option></select>
+                </label>
+                <label>Documento para explorar
+                    <select><option selected>Social Security</option><option>ITIN</option><option>No estoy seguro/a</option></select>
+                </label>
+            </div>
+            <label>HOA / mes
+                <div class="moneyInput"><span>$</span><input type="number" min="0" step="10" value="0" /></div>
+            </label>
+        </div>
+    </div>
+    <div class="qualifyResult" aria-live="polite">
+        <p class="eyebrow">Rango inicial estimado</p>
+        <strong>$204,595 – $240,700</strong>
+        <span>Precio ilustrativo de vivienda</span>
+        <div class="resultFacts">
+            <p><b>$1,870</b>Vivienda mensual m&#xE1;xima dentro del escenario</p>
+            <p><b>$12,035</b>Pago inicial aproximado al m&#xE1;ximo</p>
+            <p><b>$7,221</b>Reserva ilustrativa para cierre (3%)</p>
+        </div>
+        <div class="limitNote income">
+            <b>Hoy limita m&#xE1;s la relaci&#xF3;n ingreso/deuda.</b>
+            <p>Eso indica qu&#xE9; pregunta llevar primero al lender. Programas, cr&#xE9;dito, reservas, impuestos, seguro, HOA y documentaci&#xF3;n pueden cambiar el resultado.</p>
+        </div>
+        <details>
+            <summary>&#xBF;C&#xF3;mo se calcula?</summary>
+            <p>Usa un escenario de DTI total de 36%, resta deudas y HOA, estima principal/inter&#xE9;s a 30 a&#xF1;os, impuestos de 1.0%, seguro de 0.45%, posible PMI y reserva de cierre de 3%. Son supuestos editables, no t&#xE9;rminos de un lender.</p>
+        </details>
+        <p class="privacyNote">Privacidad: tus ingresos, deudas y fondos se calculan solamente en tu navegador y no se env&#xED;an ni guardan.</p>
+    @{ ViewData["FormKind"] = "buy"; ViewData["FormCompact"] = true; }
+    <partial name="_GoogleForm" />
+    </div>
+</section>

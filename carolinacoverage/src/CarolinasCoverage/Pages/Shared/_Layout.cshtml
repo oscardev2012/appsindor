@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="@(ViewData["Lang"] ?? "en")">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <partial name="_SeoHead" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/extras.css" asp-append-version="true">
+    <link rel="shortcut icon" href="~/favicon.svg">
+    <link rel="icon" href="~/favicon.svg">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+    @await RenderSectionAsync("Head", required: false)
+</head>
+<body class="antialiased">
+    <a class="skipLink" href="#contenido">@(ViewData["Lang"] as string == "en" ? "Skip to content" : "Saltar al contenido")</a>
+    @RenderBody()
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

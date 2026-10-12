@@ -1,0 +1,61 @@
+@model NewsPost
+@{
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+    var callout = NewsFormatter.FirstCallout(Model.Body);
+}
+<article class="social-post @(Model.IsArticle ? "news-post" : "")">
+    <div class="post-author">
+        <span class="avatar">@Model.RealtorInitials</span>
+        <div>
+            <strong><a asp-controller="Realtors" asp-action="Profile" asp-route-slug="@Model.RealtorSlug">@Model.RealtorName</a></strong>
+            <span>@(Model.RealtorBrokerage ?? "Charlotte Realtor") · @EasternTime.Stamp(Model.PublishedUtc ?? Model.CreatedUtc)</span>
+        </div>
+        @if (User.RealtorId() != Model.RealtorId)
+        {
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <form asp-controller="Realtors" asp-action="Follow" asp-route-slug="@Model.RealtorSlug" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="returnUrl" value="@returnUrl" />
+                    <button type="submit">@(Model.FollowingAuthor ? "Following" : "+ Follow")</button>
+                </form>
+            }
+            else
+            {
+                <a class="follow-link" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@returnUrl">+ Follow</a>
+            }
+        }
+    </div>
+    <div class="post-topic">
+        <span>@Model.Category.ToUpperInvariant()</span>
+        <strong>@(Model.City ?? "Charlotte")</strong>
+    </div>
+    <h2><a asp-controller="News" asp-action="Details" asp-route-slug="@Model.Slug">@Model.Title</a></h2>
+    @if (!string.IsNullOrWhiteSpace(Model.CoverImageUrl))
+    {
+        <figure class="post-figure">
+            <img src="@Model.CoverImageUrl" alt="@Model.Title" />
+        </figure>
+    }
+    <p>@Model.Teaser</p>
+    @if (!string.IsNullOrWhiteSpace(callout))
+    {
+        <div class="post-advice">@callout</div>
+    }
+    <div class="post-actions">
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            <form asp-controller="Feed" asp-action="Like" asp-route-id="@Model.Id" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="returnUrl" value="@returnUrl" />
+                <button class="@(Model.LikedByMe ? "liked" : null)" type="submit">♡ @Model.LikeCount Helpful</button>
+            </form>
+        }
+        else
+        {
+            <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="@returnUrl">♡ @Model.LikeCount Helpful</a>
+        }
+        <a asp-controller="News" asp-action="Details" asp-route-slug="@Model.Slug">◯ @Model.CommentCount Comments</a>
+        <a asp-controller="News" asp-action="Details" asp-route-slug="@Model.Slug">Leer completa →</a>
+    </div>
+</article>

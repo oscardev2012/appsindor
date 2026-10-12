@@ -1,0 +1,33 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/SAFE Portales/">
+    <Project Path="RealtorSiteCore/SafeManagement.Data/SafeManagement.Data.csproj" />
+    <Project Path="RealtorSiteCore/SafeManagement.FieldTeam/SafeManagement.FieldTeam.csproj" />
+    <Project Path="RealtorSiteCore/SafeManagement.Operations/SafeManagement.Operations.csproj" />
+    <Project Path="RealtorSiteCore/SafeManagement.Realtor/SafeManagement.Realtor.csproj" />
+  </Folder>
+  <Folder Name="/SAFE Marketplace/">
+    <Project Path="marketplacesafe/MarketplaceSafe.csproj" />
+  </Folder>
+  <Folder Name="/Calentones/">
+    <Project Path="SafeProject/CalentonesAgua.csproj" />
+    <Project Path="SafeProject/CalentonesAgua.Tests/CalentonesAgua.Tests.csproj" />
+    <Project Path="SafeHeaterSmsAgent/SafeHeaterSmsAgent.csproj" />
+  </Folder>
+  <Folder Name="/Noticias/">
+    <Project Path="IndorNews/IndorNews.csproj" />
+    <Project Path="realtornews/RealtorNews.csproj" />
+  </Folder>
+  <Folder Name="/Sitios/">
+    <Project Path="carolinacoverage/src/CarolinasCoverage/CarolinasCoverage.csproj" />
+    <Project Path="roofing/MajesticRoofing.csproj" />
+    <Project Path="realtor/ManuelaRuiz.Web/ManuelaRuiz.Web.csproj" />
+  </Folder>
+  <Folder Name="/Herramientas/">
+    <Project Path="RealtorSiteCore/NcOpportunityFinder/NcOpportunityFinder.csproj" />
+  </Folder>
+</Solution>

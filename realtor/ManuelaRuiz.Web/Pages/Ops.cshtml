@@ -1,0 +1,45 @@
+@page "/ops"
+@model OpsModel
+@using System.Globalization
+@{
+    var en = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.Equals("en", StringComparison.OrdinalIgnoreCase);
+    ViewData["Title"] = en ? "Ops · Leads (sandbox)" : "Ops · Leads (sandbox)";
+    ViewData["Robots"] = "noindex, nofollow";
+}
+<section class="opsPage">
+    <p class="eyebrow">@(en ? "Internal board" : "Tablero interno")</p>
+    <h1>@(en ? "In-memory leads" : "Leads en memoria")</h1>
+    <p class="sectionLead">@(en ? "Demo only. Restarting the app clears this list. No email, CRM or credit pull." : "Solo demo. Reiniciar la app borra esta lista. Sin email, CRM ni credit pull.")</p>
+    @if (Model.Leads.Count == 0)
+    {
+        <p>@(en ? "No leads yet. Submit a search, consult or qualify form." : "Todavía no hay leads. Envía un formulario de búsqueda, consulta o qualify.")</p>
+    }
+    else
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>@(en ? "When" : "Cuándo")</th>
+                    <th>@(en ? "Type" : "Tipo")</th>
+                    <th>@(en ? "Name" : "Nombre")</th>
+                    <th>Email</th>
+                    <th>@(en ? "Phone" : "Teléfono")</th>
+                    <th>@(en ? "Details" : "Detalle")</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var lead in Model.Leads)
+            {
+                <tr>
+                    <td>@lead.CreatedAt.LocalDateTime.ToString("g")</td>
+                    <td>@lead.Kind</td>
+                    <td>@lead.Name</td>
+                    <td>@lead.Email</td>
+                    <td>@lead.Phone</td>
+                    <td>@string.Join(" · ", lead.Fields.Where(f => f.Key is not "name" and not "email" and not "phone" and not "consent").Select(f => $"{f.Key}: {f.Value}"))</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+</section>

@@ -1,0 +1,155 @@
+@model CalentonesAgua.Models.SeoPage
+@using System.Globalization
+@{
+    var es = Model.Language.Equals("es", StringComparison.OrdinalIgnoreCase);
+    var dateCulture = es ? CultureInfo.GetCultureInfo("es-US") : CultureInfo.GetCultureInfo("en-US");
+    var reviewed = es
+        ? Model.Reviewed.ToString("d 'de' MMMM 'de' yyyy", dateCulture)
+        : Model.Reviewed.ToString("MMMM d, yyyy", dateCulture);
+}
+
+<section class="page-hero">
+    <div class="container seo-hero">
+        <nav class="seo-crumbs" aria-label="@(es ? "Migas de pan" : "Breadcrumb")">
+            <a href="/">@(es ? "Inicio" : "Home")</a>
+            <span>/</span>
+            <span>@Model.H1</span>
+        </nav>
+        <span class="eyebrow">@Model.Eyebrow</span>
+        <h1>@Model.H1</h1>
+        <p class="seo-answer">@Model.AnswerFirst</p>
+        <div class="hero-actions">
+            <a class="button button-red" href="@Model.CtaHref">@Model.CtaLabel</a>
+            <a class="button button-outline" href="@Model.SecondaryCtaHref">@Model.SecondaryCtaLabel</a>
+        </div>
+        <p class="seo-byline">@(es ? "Revisado" : "Reviewed") @reviewed · @Model.Author · HOME INDOR TECHNOLOGY INC</p>
+    </div>
+</section>
+
+@if (Model.ShowSafetyBar)
+{
+    <section class="safety-bar">
+        <div class="container">
+            <strong>@(es ? "Seguridad inmediata:" : "Immediate safety:")</strong>
+            <span>@(es ? "Olor a gas o alarma de CO: salga y llame al 911 o a la compañía de gas." : "Gas odor or CO alarm: leave and call 911 or the utility.")</span>
+            <span>@(es ? "Agua en partes eléctricas: no toque el equipo." : "Water on electrical parts: do not touch the unit.")</span>
+            <span>@(es ? "Descarga caliente continua: nunca tape la tubería T&P." : "Continuous hot discharge: never cap the T&P pipe.")</span>
+        </div>
+    </section>
+}
+
+@if (Model.ShowPricing)
+{
+    <section class="section seo-pricing">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow blue">@(es ? "PRECIOS INSTALADOS PUBLICADOS" : "PUBLISHED INSTALLED PRICING")</span>
+                <h2>@(es ? "Números reales, no un tanque sin instalar." : "Real installed numbers—not an uninstalled tank.")</h2>
+            </div>
+            <div class="catalog-grid seo-price-grid">
+                <article class="catalog-card featured-card">
+                    <span class="card-label">40-GAL ELECTRIC</span>
+                    <h3>$1,199 <small>+ tax</small></h3>
+                    <p>@(es ? "Equipo promocional $200 + instalación estándar $999." : "$200 promotional unit + $999 standard installation.")</p>
+                    <a href="/40-gallon-electric-water-heater-installation/">@(es ? "Ver paquete →" : "See package →")</a>
+                </article>
+                <article class="catalog-card">
+                    <span class="card-label">50-GAL ELECTRIC</span>
+                    <h3>$1,349 <small>+ tax</small></h3>
+                    <p>@(es ? "Reemplazo estándar confirmado." : "Confirmed standard replacement.")</p>
+                    <a href="/50-gallon-water-heater-installation/">@(es ? "Ver 50 galones →" : "See 50-gal →")</a>
+                </article>
+                <article class="catalog-card">
+                    <span class="card-label">GAS</span>
+                    <h3>@(es ? "Desde $1,449" : "From $1,449") <small>+ tax</small></h3>
+                    <p>@(es ? "Sujeto a ventilación y línea de gas." : "Subject to venting and gas-line conditions.")</p>
+                    <a href="/gas-water-heater-installation/">@(es ? "Instalación a gas →" : "Gas installation →")</a>
+                </article>
+            </div>
+            <p class="seo-fine">@(es ? "Tanque de expansión desde $149. Extra de tubería desde $199. Código, ático, fugas y reubicación se aprueban por escrito. No prometemos 24/7." : "Expansion tank from $149. Extra piping from $199. Code, attic, leak damage and relocation are approved in writing. We do not promise 24/7 coverage.")</p>
+        </div>
+    </section>
+}
+
+<section class="section">
+    <div class="container seo-layout">
+        <article class="seo-article prose">
+            @foreach (var block in Model.Sections)
+            {
+                <h2>@block.Heading</h2>
+                @if (!string.IsNullOrWhiteSpace(block.Body))
+                {
+                    foreach (var para in block.Body.Split("\n\n", StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        <p>@para</p>
+                    }
+                }
+                @if (block.Bullets is { Count: > 0 })
+                {
+                    <ul>
+                        @foreach (var bullet in block.Bullets)
+                        {
+                            <li>@bullet</li>
+                        }
+                    </ul>
+                }
+            }
+
+            @if (Model.Faqs.Count > 0)
+            {
+                <h2>@(es ? "Preguntas frecuentes de esta intención" : "Questions grouped on this page")</h2>
+                <p>@(es ? "Las búsquedas relacionadas se responden aquí en lugar de crear una URL por pregunta." : "Related searches are answered here instead of creating one URL per question.")</p>
+                <div class="faq-list seo-faq">
+                    @foreach (var faq in Model.Faqs)
+                    {
+                        <details>
+                            <summary>@faq.Question <span>+</span></summary>
+                            <p>@faq.Answer</p>
+                        </details>
+                    }
+                </div>
+            }
+        </article>
+        <aside class="seo-aside">
+            <div class="seo-cta-card">
+                <span class="eyebrow">@(es ? "COTIZAR" : "NEXT STEP")</span>
+                <h2>@(es ? "Fotos, luego precio escrito." : "Photos, then a written price.")</h2>
+                <p>@(es ? $"Texto {SiteContact.TextDisplay} o llame {SiteContact.CallDisplay}. Charlotte, Shelby y China Grove." : $"Text {SiteContact.TextDisplay} or call {SiteContact.CallDisplay}. Charlotte, Shelby and China Grove.")</p>
+                <a class="button button-red" href="@Model.CtaHref">@Model.CtaLabel</a>
+                <a class="button button-outline" href="@SiteContact.TextHref">@(es ? "Enviar fotos" : "Text photos")</a>
+            </div>
+            @if (Model.Related.Count > 0)
+            {
+                <div class="seo-related">
+                    <strong>@(es ? "Páginas relacionadas" : "Related pages")</strong>
+                    @foreach (var link in Model.Related)
+                    {
+                        <a href="@link.Slug">@link.Label</a>
+                    }
+                </div>
+            }
+            <div class="seo-related">
+                <strong>@(es ? "Mapa del sitio" : "More SAFE guides")</strong>
+                <a href="/site-map/">@(es ? "Todas las páginas de intención" : "All intent pages")</a>
+                <a href="/about/">@(es ? "Quiénes somos" : "About SAFE")</a>
+                <a href="/water-heater-replacement-charlotte-nc/">Charlotte replacement</a>
+                <a href="/water-heater-cost-charlotte-nc/">Installed cost</a>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="section check-section">
+    <div class="container check-card">
+        <div>
+            <span class="eyebrow light">@(es ? "REVISIÓN POR FOTOS" : "PHOTO REVIEW")</span>
+            <h2>@(es ? "Muéstrenos el calentador que tiene." : "Show us the water heater you have.")</h2>
+            <p>@(es ? "Dirección, combustible, tamaño y fotos claras. Confirmamos el paquete estándar o los extras." : "Address, fuel, size and clear photos. We confirm the standard package or the extras.")</p>
+        </div>
+        <div>
+            <a class="button button-red button-large" href="@SiteContact.TextHref">Text @SiteContact.TextDisplay</a>
+            <a class="button button-white button-large" href="@SiteContact.CallHref">Call @SiteContact.CallDisplay</a>
+            <a class="button button-outline button-large" href="/water-heater-replacement-quote/">@(es ? "Formulario de cotización" : "Photo quote form")</a>
+        </div>
+    </div>
+</section>

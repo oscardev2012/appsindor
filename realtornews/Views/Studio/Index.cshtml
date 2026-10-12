@@ -1,0 +1,88 @@
+@model StudioHomeViewModel
+@{
+    Layout = "_StudioLayout";
+    ViewData["Title"] = "Dashboard";
+}
+<div class="app-topbar">
+    <div>
+        <p>TU PANEL</p>
+        <h1>@Model.Realtor.FullName</h1>
+    </div>
+    <a class="button gold" asp-action="Compose">Crear noticia</a>
+</div>
+@if (TempData["Saved"] is string saved)
+{
+    <div class="notification-strip"><span class="live-dot"></span><div><strong>Listo</strong><p>@saved</p></div></div>
+}
+<div class="performance-grid">
+    <div><strong>@Model.Realtor.PostCount</strong><span>Noticias publicadas</span></div>
+    <div><strong>@Model.Realtor.FollowerCount</strong><span>Seguidores</span></div>
+    <div><strong>@Model.Realtor.FollowingCount</strong><span>Siguiendo</span></div>
+    <div><strong>@Model.Questions.Count</strong><span>Preguntas abiertas</span></div>
+</div>
+
+<section class="desk-heading">
+    <div>
+        <p class="eyebrow">TUS NOTICIAS</p>
+        <h2>Lo que se ve en el menú principal</h2>
+    </div>
+</section>
+@if (Model.Posts.Count == 0)
+{
+    <div class="empty-panel">
+        <p>Crea tu primera noticia. Al publicarla aparece en <strong>Noticias</strong> del menú, en Home y en el feed.</p>
+        <a class="button primary" asp-action="Compose">Crear noticia</a>
+    </div>
+}
+else
+{
+    <div class="question-queue">
+        @foreach (var post in Model.Posts)
+        {
+            <article class="queue-card @(post.IsPublished ? "" : "answered")">
+                <div class="queue-meta">
+                    <em>@post.PostType</em>
+                    <span>@post.Category · @(post.IsPublished ? "En el menú" : "Borrador")</span>
+                </div>
+                <h3>@post.Title</h3>
+                <p>@post.Teaser</p>
+                <div class="composer-actions">
+                    <a class="button outline" asp-action="Edit" asp-route-id="@post.Id">Editar</a>
+                    @if (post.IsPublished)
+                    {
+                        <a class="button outline" asp-controller="News" asp-action="Details" asp-route-slug="@post.Slug">Ver en el sitio</a>
+                    }
+                    <form asp-action="Delete" asp-route-id="@post.Id" method="post" onsubmit="return confirm('¿Eliminar esta noticia?');">
+                        @Html.AntiForgeryToken()
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </article>
+        }
+    </div>
+}
+
+<section class="desk-heading">
+    <div>
+        <p class="eyebrow">PREGUNTAS DEL PÚBLICO</p>
+        <h2>Responde con una noticia</h2>
+    </div>
+</section>
+<div class="question-queue">
+    @foreach (var question in Model.Questions)
+    {
+        <article class="queue-card priority">
+            <div class="queue-meta">
+                <em>@question.Topic</em>
+                <span>@EasternTime.Stamp(question.CreatedUtc)</span>
+            </div>
+            <h3>@question.Body</h3>
+            <p>Preguntó @question.FirstName</p>
+            <a class="button primary" asp-action="Compose" asp-route-title="@question.Body">Responder en una noticia</a>
+        </article>
+    }
+    @if (Model.Questions.Count == 0)
+    {
+        <p class="muted">No hay preguntas abiertas ahora.</p>
+    }
+</div>

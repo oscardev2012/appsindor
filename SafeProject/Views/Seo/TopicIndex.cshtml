@@ -1,0 +1,34 @@
+@model List<CalentonesAgua.Data.SeoHubGroup>
+
+<section class="page-hero">
+    <div class="container seo-hero">
+        <nav class="seo-crumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Topic map</span>
+        </nav>
+        <span class="eyebrow">INTENT MAP</span>
+        <h1>Water heater topics Google can actually crawl.</h1>
+        <p class="seo-answer">SAFE does not publish one thin page per search. Related questions live on 38 strong pages that answer the problem and lead to a photo quote or a call. This map is how people—and Google—move between them.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container seo-hub-grid">
+        @foreach (var group in Model)
+        {
+            <article class="seo-hub-card">
+                <h2>@group.Heading</h2>
+                <ul>
+                    @foreach (var topic in group.Pages)
+                    {
+                        <li>
+                            <a href="@topic.Slug">@topic.H1</a>
+                            <small>@topic.Priority · @topic.Cluster</small>
+                        </li>
+                    }
+                </ul>
+            </article>
+        }
+    </div>
+</section>

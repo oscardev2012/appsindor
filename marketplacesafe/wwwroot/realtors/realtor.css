@@ -1,0 +1,250 @@
+.detail-nav button {
+  border: 1px solid #b9c6cc;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 800;
+}
+.realtor-hero {
+  background: linear-gradient(125deg, #eef5f5, #fff4e5);
+}
+.journey {
+  padding: 78px clamp(20px, 7vw, 110px);
+  background: #fff;
+}
+.journey-heading {
+  max-width: 900px;
+}
+.journey-heading h2,
+.cases h2,
+.closing-pay h2,
+.service-band h2 {
+  font: 800 clamp(30px, 4vw, 48px)/1.08 Manrope;
+  margin: 5px 0 14px;
+}
+.journey-heading > p:last-child {
+  font-size: 18px;
+  color: #607080;
+}
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 34px;
+}
+.journey-grid article {
+  border: 1px solid #dbe2e7;
+  border-radius: 15px;
+  padding: 22px;
+  background: #f8faf9;
+}
+.journey-grid article > span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #17334a;
+  color: #fff;
+  font-weight: 900;
+}
+.journey-grid h3 {
+  font: 800 19px Manrope;
+  margin: 15px 0 8px;
+}
+.journey-grid p {
+  color: #607080;
+  font-size: 14px;
+}
+.journey-grid b {
+  font-size: 13px;
+  color: #397469;
+}
+.realtor-tool-band {
+  background: #f4f7f8;
+}
+.journey-grid a {
+  display: block;
+  border: 1px solid #dbe2e7;
+  border-radius: 15px;
+  padding: 22px;
+  background: #fff;
+  color: inherit;
+}
+.journey-grid a:hover {
+  border-color: #9eb2bc;
+  transform: translateY(-2px);
+}
+.journey-grid a > span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #17334a;
+  color: #fff;
+  font-weight: 900;
+}
+.journey-grid a h3 {
+  font: 800 19px Manrope;
+  margin: 15px 0 8px;
+}
+.journey-grid a p {
+  color: #607080;
+  font-size: 14px;
+}
+.journey-grid a b {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #397469;
+}
+@media (max-width: 900px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.closing-pay {
+  padding: 70px clamp(20px, 8vw, 120px);
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 7vw;
+  align-items: center;
+  background: #17334a;
+  color: #fff;
+}
+.closing-pay > div > p:last-child {
+  color: #cbd6dc;
+  font-size: 17px;
+}
+.closing-pay aside {
+  background: #fff;
+  color: #142334;
+  padding: 25px;
+  border-radius: 15px;
+}
+.closing-pay aside strong {
+  font: 800 20px Manrope;
+}
+.closing-pay li {
+  margin: 8px 0;
+  color: #50636f;
+}
+.closing-pay aside p {
+  font-size: 12px;
+  color: #71808a;
+  border-top: 1px solid #dbe2e7;
+  padding-top: 12px;
+}
+.cases {
+  padding: 76px clamp(20px, 8vw, 120px);
+  background: #eef5f5;
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+.case-grid article {
+  background: #fff;
+  border-radius: 14px;
+  padding: 21px;
+}
+.case-grid h3 {
+  font: 800 18px Manrope;
+  margin: 0 0 12px;
+}
+.case-grid ul {
+  padding-left: 18px;
+  color: #607080;
+  font-size: 14px;
+}
+.case-grid li {
+  margin: 8px 0;
+}
+.service-band {
+  padding: 60px clamp(20px, 8vw, 120px);
+  background: #fff;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 6vw;
+  align-items: center;
+}
+.service-band p {
+  color: #607080;
+  font-size: 17px;
+}
+.service-band a {
+  font-weight: 900;
+  color: #2f6e65;
+}
+.boundaries {
+  background: #fff8ed;
+}
+.mobile-detail-bar {
+  display: none;
+}
+@media (max-width: 850px) {
+  .journey-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .case-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .closing-pay,
+  .service-band {
+    grid-template-columns: 1fr;
+  }
+  .detail-nav a:not(.primary) {
+    display: none;
+  }
+  .detail-brand small {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .journey,
+  .cases,
+  .closing-pay,
+  .service-band {
+    padding: 52px 17px;
+  }
+  .journey-grid,
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-header {
+    height: 68px;
+    padding: 0 14px;
+  }
+  .detail-nav .primary {
+    display: none;
+  }
+  .mobile-detail-bar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    background: #17334a;
+    padding: 9px;
+    gap: 8px;
+  }
+  .mobile-detail-bar a {
+    text-align: center;
+    background: #fff;
+    color: #17334a;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 850;
+  }
+  .mobile-detail-bar a + a {
+    background: #d89337;
+  }
+  .detail-footer {
+    padding-bottom: 80px;
+  }
+}

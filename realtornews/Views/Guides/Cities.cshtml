@@ -1,0 +1,73 @@
+@{
+    var count = LocalCatalog.Regions.Sum(r => r.Places.Count);
+}
+<section class="page-hero">
+    <div>
+        <p class="eyebrow">REGIONAL DIRECTORY · @count COMMUNITIES</p>
+        <h1>Want to get to know a city?</h1>
+        <p>Search Charlotte-region communities, then compare commute, home type, taxes, and the questions a local Realtor would ask before you assume every address works the same way.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">FIND A COMMUNITY BY DIRECTION</p>
+            <h2>Approximately within a one-hour drive · traffic varies</h2>
+        </div>
+    </div>
+    <div class="region-grid">
+        @foreach (var region in LocalCatalog.Regions)
+        {
+            <article class="region-card">
+                <h3>@region.Title</h3>
+                <p>@region.Summary</p>
+                <ul>
+                    @foreach (var place in region.Places)
+                    {
+                        <li>
+                            @if (LocalCatalog.FeaturedCities.Any(c => c.Slug == place.Slug))
+                            {
+                                <a href="#@place.Slug"><strong>@place.Name</strong></a>
+                            }
+                            else
+                            {
+                                <strong>@place.Name</strong>
+                            }
+                            <small>@place.County · @place.State</small>
+                        </li>
+                    }
+                </ul>
+            </article>
+        }
+    </div>
+    <p class="muted">“Approximately one hour” is an orientation guide, not a commute promise. Test the route at the hour you expect to travel.</p>
+</section>
+
+@foreach (var city in LocalCatalog.FeaturedCities)
+{
+    <section class="section city-guide" id="@city.Slug">
+        <div class="city-copy">
+            <span class="eyebrow">@city.Founded</span>
+            <h2>@city.Name</h2>
+            <p>@city.Body</p>
+            <div class="profile-meta">
+                @foreach (var tag in city.Tags)
+                {
+                    <span>@tag</span>
+                }
+            </div>
+        </div>
+        <aside class="city-aside">
+            <strong>Questions to explore</strong>
+            <ul>
+                @foreach (var question in city.Questions)
+                {
+                    <li>@question</li>
+                }
+            </ul>
+            <div class="post-advice">@city.Tip</div>
+            <a class="button outline" asp-controller="Questions" asp-action="Index" asp-route-topic="Relocation">Ask a Realtor about @city.Name</a>
+        </aside>
+    </section>
+}

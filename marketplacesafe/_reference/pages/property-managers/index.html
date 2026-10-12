@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Property & Construction Manager Service Prices | SAFE Contractor
+    </title>
+    <meta
+      name="description"
+      content="Charlotte property, apartment, and construction manager service directory with starting, typical, and complex price ranges."
+    />
+    <meta name="robots" content="index,follow" />
+    <link
+      rel="canonical"
+      href="https://safe-contractor-charlotte.ricardo-rive-1053.chatgpt.site/property-managers/"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../detail.css" />
+    <link rel="stylesheet" href="manager.css" />
+  </head>
+  <body>
+    <header class="detail-header">
+      <a class="detail-brand" href="../"
+        >SAFE Contractor<small>Charlotte & surrounding areas</small></a
+      >
+      <nav class="detail-nav">
+        <a href="#directory">Service prices</a
+        ><a href="#program">Management program</a
+        ><button id="pmLanguage" type="button">ES</button
+        ><a class="primary" href="sms:+16506696890">Text work order</a>
+      </nav>
+    </header>
+    <main>
+      <section class="pm-hero">
+        <div>
+          <p
+            class="eyebrow"
+            data-en="Property & construction operations"
+            data-es="Operaciones de propiedades y construcción"
+          >
+            Property & construction operations
+          </p>
+          <h1
+            data-en="One service directory for every property need."
+            data-es="Un directorio de servicios para cada necesidad de la propiedad."
+          >
+            One service directory for every property need.
+          </h1>
+          <p
+            data-en="For property managers, apartment managers, investors, HOAs, and construction managers who need clear planning prices, documented scopes, and one place to route work."
+            data-es="Para property managers, administradores de apartamentos, inversionistas, HOAs y construction managers que necesitan precios de planificación, alcances documentados y un solo lugar para coordinar trabajos."
+          >
+            For property managers, apartment managers, investors, HOAs, and
+            construction managers who need clear planning prices, documented
+            scopes, and one place to route work.
+          </p>
+        </div>
+        <aside>
+          <strong data-en="Send one work order" data-es="Envíe una sola orden"
+            >Send one work order</strong
+          ><span data-en="Property + unit" data-es="Propiedad + unidad"
+            >Property + unit</span
+          ><span data-en="Priority and access" data-es="Prioridad y acceso"
+            >Priority and access</span
+          ><span data-en="Photos or report" data-es="Fotos o reporte"
+            >Photos or report</span
+          ><span data-en="Approval limit" data-es="Límite de aprobación"
+            >Approval limit</span
+          ><a
+            href="sms:+16506696890?&body=Property%20management%20work%20order%3A%20Property%3A%20%20Unit%3A%20%20Priority%3A%20"
+            >Start request →</a
+          >
+        </aside>
+      </section>
+      <section class="pm-explain">
+        <article>
+          <b>Starting / Inicial</b>
+          <p
+            data-en="Straightforward scope, good access, standard materials, and no hidden damage."
+            data-es="Alcance sencillo, buen acceso, materiales estándar y sin daños ocultos."
+          >
+            Straightforward scope, good access, standard materials, and no
+            hidden damage.
+          </p>
+        </article>
+        <article>
+          <b>Typical / Típico</b>
+          <p
+            data-en="The price most common qualifying work orders may fall near after review."
+            data-es="El precio donde puede caer la mayoría de trabajos que califican después de revisarlos."
+          >
+            The price most common qualifying work orders may fall near after
+            review.
+          </p>
+        </article>
+        <article>
+          <b>Complex / Complejo</b>
+          <p
+            data-en="Larger quantity, difficult access, premium materials, permits, or connected repairs."
+            data-es="Mayor cantidad, acceso difícil, materiales premium, permisos o reparaciones conectadas."
+          >
+            Larger quantity, difficult access, premium materials, permits, or
+            connected repairs.
+          </p>
+        </article>
+      </section>
+      <section class="pm-directory" id="directory">
+        <div class="pm-heading">
+          <div>
+            <p
+              class="eyebrow"
+              data-en="Manager price directory"
+              data-es="Directorio de precios para managers"
+            >
+              Manager price directory
+            </p>
+            <h2
+              data-en="Search common work orders"
+              data-es="Busque órdenes de trabajo comunes"
+            >
+              Search common work orders
+            </h2>
+          </div>
+          <p
+            data-en="Planning ranges for Charlotte-area properties. Final written scope controls."
+            data-es="Rangos de planificación para propiedades del área de Charlotte. El alcance escrito final controla."
+          >
+            Planning ranges for Charlotte-area properties. Final written scope
+            controls.
+          </p>
+        </div>
+        <div class="pm-search">
+          <input
+            id="pmSearch"
+            type="search"
+            placeholder="Search: turnover, toilet, paint, HVAC, roof…"
+          /><select id="pmCategory" aria-label="Category">
+            <option value="all">All categories</option>
+            <option>Turnover</option>
+            <option>Interior</option>
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>HVAC</option>
+            <option>Exterior</option>
+            <option>Cleaning</option>
+            <option>Projects</option>
+          </select>
+        </div>
+        <p class="pm-count" id="pmCount"></p>
+        <div class="pm-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-en="Service" data-es="Servicio">Service</th>
+                <th data-en="Starting" data-es="Inicial">Starting</th>
+                <th data-en="Typical" data-es="Típico">Typical</th>
+                <th data-en="Complex" data-es="Complejo">Complex</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="pmRows"></tbody>
+          </table>
+        </div>
+        <p
+          class="pm-disclaimer"
+          data-en="Ranges are educational planning figures, not guaranteed bids. Tax, materials, quantity, occupied-unit protection, after-hours response, permits, code corrections, difficult access, hidden conditions, engineering, specialty testing, and work outside the approved scope may change the total. No additional work proceeds without approval."
+          data-es="Los rangos son cifras educativas para planificar, no cotizaciones garantizadas. Impuestos, materiales, cantidad, protección de unidades ocupadas, servicio fuera de horario, permisos, correcciones de código, acceso difícil, condiciones ocultas, ingeniería, pruebas y trabajo fuera del alcance aprobado pueden cambiar el total. No se hace trabajo adicional sin autorización."
+        >
+          Ranges are educational planning figures, not guaranteed bids. Tax,
+          materials, quantity, occupied-unit protection, after-hours response,
+          permits, code corrections, difficult access, hidden conditions,
+          engineering, specialty testing, and work outside the approved scope
+          may change the total. No additional work proceeds without approval.
+        </p>
+      </section>
+      <section class="detail-section white" id="program">
+        <p
+          class="eyebrow"
+          data-en="Built for repeat work"
+          data-es="Diseñado para trabajo recurrente"
+        >
+          Built for repeat work
+        </p>
+        <h2
+          data-en="A cleaner property-management workflow"
+          data-es="Un proceso más ordenado para manejar propiedades"
+        >
+          A cleaner property-management workflow
+        </h2>
+        <div class="detail-grid">
+          <article>
+            <h3 data-en="Triage & dispatch" data-es="Prioridad y despacho">
+              Triage & dispatch
+            </h3>
+            <p
+              data-en="Classify emergency, urgent, turnover, preventive, or planned work and route it to the right specialty."
+              data-es="Clasifique emergencia, urgente, turnover, preventivo o planificado y envíelo a la especialidad correcta."
+            >
+              Classify emergency, urgent, turnover, preventive, or planned work
+              and route it to the right specialty.
+            </p>
+          </article>
+          <article>
+            <h3 data-en="Approval controls" data-es="Controles de aprobación">
+              Approval controls
+            </h3>
+            <p
+              data-en="Record not-to-exceed limits, scope changes, tenant access, and who can approve additional work."
+              data-es="Registre límites máximos, cambios de alcance, acceso del tenant y quién puede aprobar trabajo adicional."
+            >
+              Record not-to-exceed limits, scope changes, tenant access, and who
+              can approve additional work.
+            </p>
+          </article>
+          <article>
+            <h3 data-en="Closeout package" data-es="Paquete de cierre">
+              Closeout package
+            </h3>
+            <p
+              data-en="Collect completion photos, invoice, warranty, permit information, model/serial numbers, and unresolved recommendations."
+              data-es="Reciba fotos finales, invoice, garantía, permisos, modelos/seriales y recomendaciones pendientes."
+            >
+              Collect completion photos, invoice, warranty, permit information,
+              model/serial numbers, and unresolved recommendations.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="detail-cta">
+        <h2
+          data-en="Need pricing for multiple units or a project?"
+          data-es="¿Necesita precios para varias unidades o un proyecto?"
+        >
+          Need pricing for multiple units or a project?
+        </h2>
+        <p
+          data-en="Send the property count, unit types, scope list, timeline, and access plan."
+          data-es="Envíe la cantidad de propiedades, tipos de unidades, lista de trabajos, calendario y plan de acceso."
+        >
+          Send the property count, unit types, scope list, timeline, and access
+          plan.
+        </p>
+        <div>
+          <a
+            href="sms:+16506696890?&body=Property%20manager%20request%3A%20Properties%2Funits%3A%20%20Scope%3A%20%20Timeline%3A%20"
+            >Text 650-669-6890</a
+          ><a href="tel:+17048396126">Call 704-839-6126</a>
+        </div>
+      </section>
+    </main>
+    <footer class="detail-footer">
+      <strong>SAFE Contractor</strong
+      ><span>Charlotte and surrounding NC/SC communities</span>
+    </footer>
+    <nav class="mobile-detail-bar">
+      <a href="tel:+17048396126">Call SAFE</a
+      ><a href="sms:+16506696890">Text work order</a>
+    </nav>
+    <script src="manager.js"></script>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3e1580bbba98e1b',t:'MTc4OTkxMjY5NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

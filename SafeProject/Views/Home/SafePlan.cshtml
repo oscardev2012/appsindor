@@ -1,0 +1,161 @@
+@model SafePlanViewModel
+
+<section class="page-hero">
+    <div class="container">
+        <span class="eyebrow">SAFE HOMEOWNER PLAN</span>
+        <h1>Check SAFE Water Heater Financing Eligibility.</h1>
+        <p>Start with $200 toward a qualifying promotional water heater and request financing for an eligible standard installation balance. Warranty coverage comes with the qualifying installation.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container form-shell">
+        @if (ViewBag.Submitted == true)
+        {
+            <div class="success-card">
+                <span class="eyebrow">Request received</span>
+                <strong>@ViewBag.Reference</strong>
+                <p>SAFE will review this preliminary eligibility request. This is not approval or a contract. Keep your reference number for follow-up.</p>
+                <a class="button button-red" href="/">Return home</a>
+            </div>
+        }
+        else
+        {
+            <div class="eligibility-summary">
+                <div><span>$200</span><strong>toward the qualifying promotional water heater</strong></div>
+                <div><span>Eligible balance</span><strong>standard installation may be financed after approval</strong></div>
+                <div><span>Included</span><strong>manufacturer + SAFE labor warranty coverage*</strong></div>
+            </div>
+            <form asp-action="SafePlan" method="post" class="form-card">
+                @Html.AntiForgeryToken()
+                <div class="form-section">
+                    <h2>1. Homeowner contact</h2>
+                    <p>SAFE uses this information to review and follow up on your request.</p>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label asp-for="FirstName"></label>
+                            <input asp-for="FirstName" />
+                            <span class="field-error" asp-validation-for="FirstName"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="LastName"></label>
+                            <input asp-for="LastName" />
+                            <span class="field-error" asp-validation-for="LastName"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" />
+                            <span class="field-error" asp-validation-for="Email"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="Phone"></label>
+                            <input asp-for="Phone" />
+                            <span class="field-error" asp-validation-for="Phone"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>2. Property</h2>
+                    <p>SAFE financing eligibility is limited to qualifying homeowner properties and installation conditions.</p>
+                    <div class="field-grid">
+                        <div class="field full">
+                            <label asp-for="Address"></label>
+                            <input asp-for="Address" />
+                            <span class="field-error" asp-validation-for="Address"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="City"></label>
+                            <input asp-for="City" />
+                            <span class="field-error" asp-validation-for="City"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="State"></label>
+                            <select asp-for="State">
+                                <option>North Carolina</option>
+                                <option>South Carolina</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label asp-for="Zip"></label>
+                            <input asp-for="Zip" />
+                            <span class="field-error" asp-validation-for="Zip"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="OwnProperty"></label>
+                            <select asp-for="OwnProperty">
+                                <option value="">Select one</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                            <span class="field-error" asp-validation-for="OwnProperty"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>3. Water heater need</h2>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label asp-for="CurrentType"></label>
+                            <select asp-for="CurrentType">
+                                <option value="">Select one</option>
+                                <option>Electric</option>
+                                <option>Natural gas</option>
+                                <option>LP gas</option>
+                                <option>Not sure</option>
+                            </select>
+                            <span class="field-error" asp-validation-for="CurrentType"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="TankSize"></label>
+                            <select asp-for="TankSize">
+                                <option value="">Select one</option>
+                                <option>40 gallon</option>
+                                <option>50 gallon</option>
+                                <option>Other / not sure</option>
+                            </select>
+                            <span class="field-error" asp-validation-for="TankSize"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="Timing"></label>
+                            <select asp-for="Timing">
+                                <option value="">Select one</option>
+                                <option>Emergency / no hot water</option>
+                                <option>Within 7 days</option>
+                                <option>Within 30 days</option>
+                                <option>Planning ahead</option>
+                            </select>
+                            <span class="field-error" asp-validation-for="Timing"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="Leaking"></label>
+                            <select asp-for="Leaking">
+                                <option value="">Select one</option>
+                                <option>No</option>
+                                <option>Yes</option>
+                                <option>Not sure</option>
+                            </select>
+                            <span class="field-error" asp-validation-for="Leaking"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>4. Authorization</h2>
+                    <div class="check-row">
+                        <input asp-for="AuthorizeContact" />
+                        <label asp-for="AuthorizeContact">Optional: I agree to receive customer-care SMS from SAFE Water Heater about this request. Frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. Privacy: /privacy/ Terms: /terms/. Unchecked by default.</label>
+                    </div>
+                    <span class="field-error" asp-validation-for="AuthorizeContact"></span>
+                    <div class="check-row">
+                        <input asp-for="UnderstandTerms" />
+                        <label asp-for="UnderstandTerms">I understand this is a preliminary eligibility request—not approval or a contract. The $200 applies toward a qualifying promotional unit; eligible installation financing, tax, non-standard work and final terms must be confirmed in writing. Warranty coverage is included with the qualifying installation and is not a separate financed product.</label>
+                    </div>
+                    <span class="field-error" asp-validation-for="UnderstandTerms"></span>
+                    <div class="form-submit" style="margin-top:18px">
+                        <button class="button button-red button-large" type="submit">Check my SAFE eligibility</button>
+                    </div>
+                    <p class="eligibility-footnote">*Manufacturer coverage is subject to the exact unit and model terms. SAFE’s two-year labor warranty is subject to inspection, exclusions and the written warranty.</p>
+                </div>
+            </form>
+        }
+    </div>
+</section>

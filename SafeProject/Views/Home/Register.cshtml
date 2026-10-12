@@ -1,0 +1,118 @@
+@model WarrantyRegisterViewModel
+
+<section class="page-hero">
+    <div class="container">
+        <span class="eyebrow">ONLINE WARRANTY REGISTRATION</span>
+        <h1>Register Your Water Heater Warranty Online.</h1>
+        <p>Submit the property, equipment and installation details below. You will receive a unique SAFE warranty reference when the record is saved.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container form-shell">
+        @if (ViewBag.Submitted == true)
+        {
+            <div class="success-card">
+                <span class="eyebrow">Warranty record saved</span>
+                <strong>@ViewBag.Reference</strong>
+                <p>Keep this SAFE warranty reference for inspections and service follow-up. Registration does not change the manufacturer’s written warranty.</p>
+                <div class="hero-actions">
+                    <a class="button button-red" href="/reviews/">Leave a Google review</a>
+                    <a class="button button-outline" href="/warranty">Read coverage</a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="form-intro">
+                <h2 style="color:var(--blue);margin:0 0 8px;font-size:28px">Register a completed SAFE installation</h2>
+                <p>Fields marked * are required. Photos are stored privately and used only to document equipment and support service follow-up.</p>
+            </div>
+            <form asp-action="Register" method="post" enctype="multipart/form-data" class="form-card">
+                @Html.AntiForgeryToken()
+                <div class="form-section">
+                    <h2>1. Homeowner</h2>
+                    <p>Who should SAFE contact about this warranty?</p>
+                    <div class="field-grid">
+                        <div class="field"><label asp-for="FirstName"></label><input asp-for="FirstName" /><span class="field-error" asp-validation-for="FirstName"></span></div>
+                        <div class="field"><label asp-for="LastName"></label><input asp-for="LastName" /><span class="field-error" asp-validation-for="LastName"></span></div>
+                        <div class="field"><label asp-for="Email"></label><input asp-for="Email" /><span class="field-error" asp-validation-for="Email"></span></div>
+                        <div class="field"><label asp-for="Phone"></label><input asp-for="Phone" /><span class="field-error" asp-validation-for="Phone"></span></div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>2. Installation property</h2>
+                    <p>Use the address where this water heater is installed.</p>
+                    <div class="field-grid">
+                        <div class="field"><label asp-for="Address"></label><input asp-for="Address" /><span class="field-error" asp-validation-for="Address"></span></div>
+                        <div class="field"><label asp-for="Unit"></label><input asp-for="Unit" /></div>
+                        <div class="field"><label asp-for="City"></label><input asp-for="City" /><span class="field-error" asp-validation-for="City"></span></div>
+                        <div class="field">
+                            <label asp-for="State"></label>
+                            <select asp-for="State"><option>North Carolina</option><option>South Carolina</option></select>
+                        </div>
+                        <div class="field"><label asp-for="Zip"></label><input asp-for="Zip" /><span class="field-error" asp-validation-for="Zip"></span></div>
+                        <div class="field"><label asp-for="InstallationDate"></label><input asp-for="InstallationDate" type="date" /><span class="field-error" asp-validation-for="InstallationDate"></span></div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>3. Water heater</h2>
+                    <p>Copy model and serial numbers exactly from the manufacturer label.</p>
+                    <div class="field-grid">
+                        <div class="field"><label asp-for="Manufacturer"></label><input asp-for="Manufacturer" /><span class="field-error" asp-validation-for="Manufacturer"></span></div>
+                        <div class="field"><label asp-for="ModelNumber"></label><input asp-for="ModelNumber" /><span class="field-error" asp-validation-for="ModelNumber"></span></div>
+                        <div class="field"><label asp-for="SerialNumber"></label><input asp-for="SerialNumber" /><span class="field-error" asp-validation-for="SerialNumber"></span></div>
+                        <div class="field">
+                            <label asp-for="TankSize"></label>
+                            <select asp-for="TankSize"><option value="">Select one</option><option>40 gallon</option><option>50 gallon</option><option>Other / not sure</option></select>
+                            <span class="field-error" asp-validation-for="TankSize"></span>
+                        </div>
+                        <div class="field">
+                            <label asp-for="Type"></label>
+                            <select asp-for="Type"><option value="">Select one</option><option>Electric</option><option>Natural gas</option><option>LP gas</option><option>Other / not sure</option></select>
+                            <span class="field-error" asp-validation-for="Type"></span>
+                        </div>
+                        <div class="field"><label asp-for="Invoice"></label><input asp-for="Invoice" /></div>
+                        <div class="field full"><label asp-for="Technician"></label><input asp-for="Technician" /></div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>4. Photos</h2>
+                    <p>JPEG, PNG or WebP. Maximum 8 MB per photo.</p>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label>Manufacturer label photo *</label>
+                            <div class="upload-zone"><input type="file" name="labelPhoto" accept="image/*" /></div>
+                            <small>Make model and serial numbers readable.</small>
+                        </div>
+                        <div class="field">
+                            <label>Full installation photo *</label>
+                            <div class="upload-zone"><input type="file" name="installPhoto" accept="image/*" /></div>
+                            <small>Show the tank, connections and surrounding area.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>5. Follow-up</h2>
+                    <div class="field full">
+                        <label asp-for="Notes"></label>
+                        <textarea asp-for="Notes"></textarea>
+                    </div>
+                    <div class="check-row">
+                        <input asp-for="AuthorizeContact" />
+                        <label asp-for="AuthorizeContact">Optional: I agree to receive customer-care SMS from SAFE Water Heater about this warranty registration. Frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. Privacy: /privacy/ Terms: /terms/. Unchecked by default.</label>
+                    </div>
+                    <span class="field-error" asp-validation-for="AuthorizeContact"></span>
+                    <div class="check-row">
+                        <input asp-for="Certify" />
+                        <label asp-for="Certify">I certify that the information submitted is accurate. I understand registration does not alter the manufacturer’s written warranty or guarantee that a future claim is covered.</label>
+                    </div>
+                    <span class="field-error" asp-validation-for="Certify"></span>
+                    <div class="form-submit" style="margin-top:18px">
+                        <button class="button button-red button-large" type="submit">Register my warranty</button>
+                    </div>
+                </div>
+            </form>
+        }
+    </div>
+</section>

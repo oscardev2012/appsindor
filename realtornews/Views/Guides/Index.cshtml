@@ -1,0 +1,33 @@
+@{
+    var selected = (string)(ViewBag.Category ?? "all");
+    var guides = (IEnumerable<GuideCard>)(ViewBag.Guides ?? LocalCatalog.StageGuides);
+    var filters = new[] { "all", "Buying", "Selling", "Investing", "Homeownership" };
+}
+<section class="page-hero">
+    <div>
+        <p class="eyebrow">START WHERE YOU ARE</p>
+        <h1>@(selected == "all" ? "Guides for every stage" : $"{selected} guides for Charlotte")</h1>
+        <p>@(selected == "Selling"
+            ? "What to fix before listing, how pricing ranges are built, and how to prepare the home without wasting money on cosmetics."
+            : "Buying, selling, investing, and taking care of a home—plain-language starting points from the Charlotte network.")</p>
+    </div>
+</section>
+<section class="section">
+    <div class="guide-filters">
+        @foreach (var filter in filters)
+        {
+            <a class="@(string.Equals(selected, filter, StringComparison.OrdinalIgnoreCase) ? "active" : null)" asp-action="Index" asp-route-category="@(filter == "all" ? null : filter)">@(filter == "all" ? "All guides" : filter)</a>
+        }
+    </div>
+    <div class="card-grid">
+        @foreach (var guide in guides)
+        {
+            <article class="guide-card">
+                <span class="story-section">@guide.Category.ToUpperInvariant()</span>
+                <h3>@guide.Title</h3>
+                <p>@guide.Summary</p>
+                <a asp-controller="Questions" asp-action="Index" asp-route-topic="@guide.Category">Ask about this →</a>
+            </article>
+        }
+    </div>
+</section>

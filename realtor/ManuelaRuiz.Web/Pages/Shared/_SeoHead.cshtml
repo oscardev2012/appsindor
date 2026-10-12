@@ -1,0 +1,59 @@
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(Context);
+    var page = SeoCatalog.Find(SiteLocale.CatalogKey(Context));
+    var title = page is null
+        ? (ViewData["Title"] as string ?? (en ? "Manuela Ruiz | Bilingual Realtor in Charlotte NC" : "Manuela Ruiz | Realtor bilingüe en Charlotte NC"))
+        : (en ? page.TitleEn : page.TitleEs);
+    var description = page is null
+        ? (ViewData["Description"] as string ?? "")
+        : (en ? page.DescriptionEn : page.DescriptionEs);
+    var index = page?.Index ?? false;
+    if (ViewData["Robots"] is string robotsOverride)
+    {
+        index = !robotsOverride.Contains("noindex", StringComparison.OrdinalIgnoreCase);
+    }
+    var publicPath = SiteLocale.PublicPath(Context);
+    var canonical = SiteLocale.Absolute(Context, publicPath);
+    var key = SiteLocale.CatalogKey(Context);
+    var urlEs = SiteLocale.Absolute(Context, key);
+    var urlEn = SiteLocale.Absolute(Context, SiteLocale.WithEnglishPrefix(key));
+    var ogImage = SiteLocale.Absolute(Context, "/img/manuela-ruiz.jpg");
+    var ogType = page?.OgType ?? "website";
+    var robots = index ? "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" : "noindex, nofollow";
+    var jsonLd = SeoJson.Build(Context, page, en);
+}
+<title>@title</title>
+<meta name="description" content="@description" />
+<meta name="robots" content="@robots" />
+<meta name="googlebot" content="@robots" />
+<meta name="author" content="Manuela Ruiz" />
+<meta name="geo.region" content="US-NC" />
+<meta name="geo.placename" content="Charlotte" />
+<meta name="geo.position" content="@($"{SiteFacts.Latitude.ToString(System.Globalization.CultureInfo.InvariantCulture)};{SiteFacts.Longitude.ToString(System.Globalization.CultureInfo.InvariantCulture)}")" />
+<meta name="ICBM" content="@($"{SiteFacts.Latitude.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {SiteFacts.Longitude.ToString(System.Globalization.CultureInfo.InvariantCulture)}")" />
+<link rel="canonical" href="@canonical" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+@if (ViewData["PreloadHero"] as bool? == true)
+{
+<link rel="preload" as="image" href="/img/manuela-ruiz.jpg" fetchpriority="high" />
+}
+<link rel="alternate" hreflang="es" href="@urlEs" />
+<link rel="alternate" hreflang="en" href="@urlEn" />
+<link rel="alternate" hreflang="x-default" href="@urlEs" />
+<meta property="og:type" content="@ogType" />
+<meta property="og:site_name" content="Manuela Ruiz Realty" />
+<meta property="og:locale" content="@(en ? "en_US" : "es_US")" />
+<meta property="og:locale:alternate" content="@(en ? "es_US" : "en_US")" />
+<meta property="og:title" content="@title" />
+<meta property="og:description" content="@description" />
+<meta property="og:url" content="@canonical" />
+<meta property="og:image" content="@ogImage" />
+<meta property="og:image:width" content="1275" />
+<meta property="og:image:height" content="1650" />
+<meta property="og:image:alt" content="@(en ? "Manuela Ruiz, bilingual Realtor in Charlotte, North Carolina" : "Manuela Ruiz, Realtor bilingüe en Charlotte, North Carolina")" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="@title" />
+<meta name="twitter:description" content="@description" />
+<meta name="twitter:image" content="@ogImage" />
+<script type="application/ld+json">@Html.Raw(jsonLd)</script>

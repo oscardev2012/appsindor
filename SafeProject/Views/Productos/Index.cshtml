@@ -1,0 +1,74 @@
+@model CatalogoViewModel
+
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">Tienda</p>
+        <h1>Catálogo de calentones</h1>
+        <p class="lead">Filtra por tipo o busca por litros, gas, eléctrico o solar. Precios en pesos mexicanos.</p>
+    </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="filters">
+            <a class="chip @(string.IsNullOrEmpty(Model.Tipo) ? "active" : "")" asp-action="Index" asp-route-q="@Model.Busqueda" asp-route-orden="@Model.Orden">Todos</a>
+            <a class="chip @(Model.Tipo == "GasPaso" ? "active" : "")" asp-action="Index" asp-route-tipo="GasPaso" asp-route-q="@Model.Busqueda" asp-route-orden="@Model.Orden">Gas de paso</a>
+            <a class="chip @(Model.Tipo == "GasDeposito" ? "active" : "")" asp-action="Index" asp-route-tipo="GasDeposito" asp-route-q="@Model.Busqueda" asp-route-orden="@Model.Orden">Depósito</a>
+            <a class="chip @(Model.Tipo == "Electrico" ? "active" : "")" asp-action="Index" asp-route-tipo="Electrico" asp-route-q="@Model.Busqueda" asp-route-orden="@Model.Orden">Eléctricos</a>
+            <a class="chip @(Model.Tipo == "Solar" ? "active" : "")" asp-action="Index" asp-route-tipo="Solar" asp-route-q="@Model.Busqueda" asp-route-orden="@Model.Orden">Solares</a>
+            <a class="chip @(Model.Tipo == "Hibrido" ? "active" : "")" asp-action="Index" asp-route-tipo="Hibrido" asp-route-q="@Model.Busqueda" asp-route-orden="@Model.Orden">Híbridos</a>
+        </div>
+
+        <div class="toolbar">
+            <form class="search-form" method="get" asp-action="Index">
+                @if (!string.IsNullOrEmpty(Model.Tipo))
+                {
+                    <input type="hidden" name="tipo" value="@Model.Tipo" />
+                }
+                <input type="hidden" name="orden" value="@Model.Orden" />
+                <input class="form-control" type="search" name="q" value="@Model.Busqueda" placeholder="Buscar: 16 litros, solar, eléctrico..." />
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+            <form method="get" asp-action="Index">
+                @if (!string.IsNullOrEmpty(Model.Tipo))
+                {
+                    <input type="hidden" name="tipo" value="@Model.Tipo" />
+                }
+                @if (!string.IsNullOrEmpty(Model.Busqueda))
+                {
+                    <input type="hidden" name="q" value="@Model.Busqueda" />
+                }
+                @{
+                    var ordenes = new SelectList(new[]
+                    {
+                        new { Value = "destacados", Text = "Destacados" },
+                        new { Value = "precio-asc", Text = "Precio: menor a mayor" },
+                        new { Value = "precio-desc", Text = "Precio: mayor a menor" },
+                        new { Value = "capacidad", Text = "Mayor capacidad" }
+                    }, "Value", "Text", Model.Orden);
+                }
+                <select class="form-select" name="orden" asp-items="ordenes" onchange="this.form.submit()"></select>
+            </form>
+        </div>
+
+        <p class="muted">@Model.Total equipos encontrados</p>
+
+        @if (Model.Productos.Count == 0)
+        {
+            <div class="empty-state">
+                <h2>No hay coincidencias</h2>
+                <p class="muted">Prueba otro tipo o borra la búsqueda.</p>
+                <a class="btn btn-primary" asp-action="Index">Ver catálogo completo</a>
+            </div>
+        }
+        else
+        {
+            <div class="product-grid">
+                @foreach (var producto in Model.Productos)
+                {
+                    <partial name="_ProductoCard" model="producto" />
+                }
+            </div>
+        }
+    </div>
+</section>

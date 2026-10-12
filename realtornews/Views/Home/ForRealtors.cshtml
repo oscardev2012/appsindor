@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Realtor Learning Center | Teach Charlotte in your own voice";
+    ViewData["Description"] = "Charlotte Realtors can register, follow colleagues, answer public questions, and publish the news readers see on this site.";
+    ViewData["Crumbs"] = new List<SeoCrumb> { new("Home", "/"), new("For Realtors", "/for-realtors") };
+}
+@await Html.PartialAsync("_DbBanner", (string?)ViewBag.DbError)
+
+<section class="join-hero">
+    <div>
+        <p class="eyebrow">REALTOR LEARNING CENTER</p>
+        <h1>Teach Charlotte in your own voice.</h1>
+        <p>Register as a Realtor, publish news and answers, and follow colleagues. What you publish is what the public sees on Home, Social Feed, and Magazine.</p>
+        <div class="hero-actions">
+            <a class="button gold" asp-controller="Account" asp-action="Register">Register as a Realtor</a>
+            <a class="button outline" asp-controller="Account" asp-action="Login">Sign in to Realtor Desk</a>
+        </div>
+    </div>
+    <aside>
+        <span>DAILY COMMITMENT</span>
+        <strong>20 min</strong>
+        <div><b>1+</b><small>published answer</small></div>
+        <div><b>100%</b><small>author review</small></div>
+        <div><b>@(ViewBag.RealtorCount ?? 0)</b><small>Realtors already on the network</small></div>
+    </aside>
+</section>
+
+<section class="section join-workflow">
+    <div class="join-steps">
+        <article><span>01</span><h3>Register</h3><p>Create your public profile with your real name, brokerage, and market.</p></article>
+        <article><span>02</span><h3>Follow</h3><p>Build a feed of Charlotte Realtors whose work you respect.</p></article>
+        <article><span>03</span><h3>Write</h3><p>Answer a public question or publish a market note in your own words.</p></article>
+        <article><span>04</span><h3>Review</h3><p>Nothing goes live until you approve the wording under your name.</p></article>
+        <article><span>05</span><h3>Publish</h3><p>The same post appears on the social feed, magazine, and home page.</p></article>
+    </div>
+</section>
+
+<section class="join-standards">
+    <div>
+        <p class="eyebrow">STANDARDS</p>
+        <h2>Useful, local, and responsible.</h2>
+    </div>
+    <ul>
+        <li>Use your real name and current professional information.</li>
+        <li>Serve only the states and topics you are qualified to discuss.</li>
+        <li>Do not publish client-identifying information.</li>
+        <li>Cite current sources for changing rules, programs, and data.</li>
+    </ul>
+</section>

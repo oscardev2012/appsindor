@@ -1,0 +1,47 @@
+@page "/es/reclamo-de-techo-denegado-o-pago-bajo"
+@{
+    ViewData["Lang"] = "es";
+    ViewData["SeoEn"] = "/roof-claim-denied-or-underpaid";
+    ViewData["SeoEs"] = "/es/reclamo-de-techo-denegado-o-pago-bajo";
+}
+<main class="resource-site" lang="es">
+    @await Html.PartialAsync("_SeoIntentHeader")
+    <section class="resource-hero warranty-hero">
+        <div class="site-shell">
+            <p class="eyebrow eyebrow-light">Reclamo de techo denegado o pago bajo</p>
+            <h1>Reclamo de techo denegado o pago bajo: siguientes pasos</h1>
+            <p>Una denegación o un estimate bajo es decisión de la aseguradora. Majestic puede re-inspeccionar, fotografiar ítems faltantes y hablar si un suplemento o una segunda mirada está justificada por construcción. No garantizamos que se revierta. Usted sigue siendo el claimant.</p>
+            <div class="hero-actions">
+                <a class="button button-gold" href="/es/proceso-de-reclamo-de-techo">Proceso del reclamo</a>
+                <a class="button button-ghost" href="/es/suplementos-de-reclamos-de-techo-charlotte-nc">Suplementos</a>
+            </div>
+        </div>
+    </section>
+    <section class="resource-body section" id="process">
+        <div class="site-shell resource-sections">
+            <article><span>01</span><div>
+                <h2>Lea con cuidado la denegación o el estimate</h2>
+                <p>Pida a la aseguradora la razón por escrito: wear and tear, matching, fecha de pérdida, exclusión de póliza o documentación insuficiente. Fotos, fechas y el número original del claim importan. NCDOI publica guía para consumidores; use fuentes oficiales, no scripts de redes.</p>
+            </div></article>
+            <article><span>02</span><div>
+                <h2>Cuándo ayuda una re-inspección del contratista</h2>
+                <p>Si el techo todavía tiene aberturas de tormenta, flashing omitido o ítems de código, una lista documentada de construcción puede apoyar una conversación con el adjuster. Si el techo simplemente está viejo, igual puede necesitar reparación o reemplazo—y igual no lo paga la aseguranza. Son problemas distintos.</p>
+            </div></article>
+            <article><span>03</span><div>
+                <h2>Lo que Majestic no va a decir</h2>
+                <p>No prometemos que la compañía pague, no condonamos su deductible ni “logramos que aprueben el claim.” Explicamos el techo, escribimos un alcance y construimos lo que usted autorice.</p>
+            </div></article>
+        </div>
+    </section>
+    <section class="faq-section section" id="faq">
+        <div class="site-shell faq-layout">
+            <div><p class="eyebrow">FAQ</p><h2>Preguntas de claim denegado</h2></div>
+            <div class="faq-list">
+                <details><summary>Me denegaron el claim del techo. ¿Y ahora?<span>+</span></summary><p>Pida la denegación por escrito. Confirme plazos para apelar o reabrir. Comparta la carta y las fotos con un contratista si quiere revisión de construcción. Considere recursos de NCDOI para consumidores.</p></details>
+                <details><summary>El estimate de la aseguranza está muy bajo. ¿Pueden hacer suplemento?<span>+</span></summary><p>Si faltan líneas respecto al sistema real del techo, un suplemento puede ser apropiado. Sigue siendo decisión de la compañía. Vea la página de suplementos.</p></details>
+                <details><summary>¿Debo contratar abogado o public adjuster?<span>+</span></summary><p>Eso lo decide usted. Majestic es el contratista de roofing, no es consejo legal ni public adjuster.</p></details>
+            </div>
+        </div>
+    </section>
+    @await Html.PartialAsync("_SeoIntentFooter")
+</main>

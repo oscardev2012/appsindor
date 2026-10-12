@@ -1,0 +1,111 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment HostEnv
+@using Microsoft.Extensions.Hosting
+@using System.Globalization
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(Context);
+    var home = SiteLocale.Localize(Context, "/");
+    var langHref = SiteLocale.AlternatePath(Context);
+    var isDev = HostEnv.IsDevelopment();
+}
+<!DOCTYPE html>
+<html lang="@(en ? "en" : "es")" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#122137" />
+    <meta name="color-scheme" content="light" />
+    <partial name="_SeoHead" />
+    <link rel="icon" href="~/favicon.ico" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,650;0,9..40,700;0,9..40,800;1,9..40,400&amp;family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&amp;display=swap" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="skip" href="#top">@(en ? "Skip to content" : "Saltar al contenido")</a>
+    @if (isDev)
+    {
+    <div class="sandboxBanner">
+        <strong>@(en ? "Local demo" : "Demo local")</strong>
+        @(en ? "· No live CRM, no credit pull, no loan application." : "· Sin CRM productivo, sin credit pull, sin solicitud de préstamo.")
+        · <a href="@SiteLocale.Localize(Context, "/ops")">@(en ? "Internal leads" : "Leads internos")</a>
+    </div>
+    }
+    <header>
+        <a class="brand" href="@home">
+            <i>MR</i>
+            <span>
+                <b>Manuela Ruiz</b>
+                <small>NC Broker #350810</small>
+            </span>
+        </a>
+        <nav aria-label="@(en ? "Primary" : "Principal")">
+            <a href="@SiteLocale.Localize(Context, "/search")">@(en ? "Search homes" : "Buscar casas")</a>
+            <a href="@SiteLocale.Localize(Context, "/qualify")">@(en ? "How much can I buy?" : "¿Cuánto puedo comprar?")</a>
+            <a href="@SiteLocale.Localize(Context, "/buyers")">@(en ? "Buyers" : "Compradores")</a>
+            <a href="@SiteLocale.Localize(Context, "/sellers")">@(en ? "Sellers" : "Vendedores")</a>
+            <a href="@SiteLocale.Localize(Context, "/relocation")">Relocation</a>
+            <a href="@SiteLocale.Localize(Context, "/areas")">@(en ? "Cities" : "Ciudades")</a>
+            <a href="@SiteLocale.Localize(Context, "/sold")">@(en ? "Properties" : "Propiedades")</a>
+            <a href="@SiteLocale.Localize(Context, "/programs")">@(en ? "Programs" : "Programas")</a>
+            <a href="@SiteLocale.Localize(Context, "/faq")">FAQ</a>
+        </nav>
+        <details class="mobileMenu">
+            <summary aria-label="@(en ? "Open navigation" : "Abrir navegación")">☰</summary>
+            <div>
+                <a href="@SiteLocale.Localize(Context, "/search")">@(en ? "Search homes" : "Buscar casas")</a>
+                <a href="@SiteLocale.Localize(Context, "/qualify")">@(en ? "Calculator" : "Calculadora")</a>
+                <a href="@SiteLocale.Localize(Context, "/buyers")">@(en ? "Buyers" : "Compradores")</a>
+                <a href="@SiteLocale.Localize(Context, "/sellers")">@(en ? "Sellers" : "Vendedores")</a>
+                <a href="@SiteLocale.Localize(Context, "/relocation")">Relocation</a>
+                <a href="@SiteLocale.Localize(Context, "/areas")">@(en ? "Cities" : "Ciudades")</a>
+                <a href="@SiteLocale.Localize(Context, "/sold")">@(en ? "Properties" : "Propiedades")</a>
+                <a href="@SiteLocale.Localize(Context, "/programs")">@(en ? "Programs" : "Programas")</a>
+                <a href="@SiteLocale.Localize(Context, "/faq")">FAQ</a>
+            </div>
+        </details>
+        <a class="lang btn ghost" style="padding:10px 15px;border-radius:99px;border:1px solid #bdc9c1;font-weight:800" href="@langHref" hreflang="@(en ? "es" : "en")" lang="@(en ? "es" : "en")">@(en ? "ES · Español" : "EN · English")</a>
+    </header>
+
+    <main id="top">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="brand">
+            <i>MR</i>
+            <span>
+                <b>Manuela Ruiz</b>
+                <small>Guerra &amp; Associates Realty LLC · NC #350810</small>
+            </span>
+        </div>
+        <address class="footerNap">
+            <a href="@SiteFacts.MapsUrl" target="_blank" rel="noreferrer">6230 Fairview Rd Suite 105, Charlotte, NC 28210</a><br />
+            <a href="tel:+17048308486">704-830-8486</a>
+            · <a href="mailto:manuelaruiz.realty@@gmail.com">manuelaruiz.realty@@gmail.com</a>
+        </address>
+        <p>@(en
+            ? "© 2026 · Equal Housing Opportunity · Educational information; not legal, tax, credit, or insurance advice."
+            : "© 2026 · Equal Housing Opportunity · Información educativa; no asesoría legal, fiscal, crediticia ni de seguros.")</p>
+        <nav class="footerNav" aria-label="@(en ? "Footer" : "Pie de página")">
+            <a href="@SiteLocale.Localize(Context, "/faq")">@(en ? "FAQ" : "Preguntas frecuentes")</a>
+            <a href="@SiteLocale.Localize(Context, "/buyers")">@(en ? "Buyers" : "Compradores")</a>
+            <a href="@SiteLocale.Localize(Context, "/sellers")">@(en ? "Sellers" : "Vendedores")</a>
+            <a href="@SiteLocale.Localize(Context, "/itin-home-buyers")">ITIN</a>
+            <a href="@SiteLocale.Localize(Context, "/first-time-buyers")">@(en ? "First home" : "Primera vivienda")</a>
+            <a href="@SiteLocale.Localize(Context, "/programs")">@(en ? "Programs" : "Programas")</a>
+            <a href="@SiteLocale.Localize(Context, "/home-valuation")">@(en ? "Home value" : "Valor de casa")</a>
+            <a href="@SiteLocale.Localize(Context, "/areas")">@(en ? "Cities" : "Ciudades")</a>
+            <a href="@SiteLocale.Localize(Context, "/service-area")">@(en ? "Service area" : "Área de servicio")</a>
+            <a href="@SiteLocale.Localize(Context, "/sold")">@(en ? "Portfolio" : "Portafolio")</a>
+            <a href="@SiteLocale.Localize(Context, "/resources")">@(en ? "Knowledge center" : "Centro de conocimiento")</a>
+            @if (isDev)
+            {
+                <a href="@SiteLocale.Localize(Context, "/ops")">Ops / leads</a>
+            }
+        </nav>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

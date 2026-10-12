@@ -1,0 +1,48 @@
+@page "/service-area"
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(ViewContext.HttpContext);
+}
+<div class="detailPage">
+<section class="detailHero">
+    <p class="eyebrow">@(en ? "Coverage · Carolinas" : "Cobertura · Carolinas")</p>
+    <h1>@(en ? "Real Estate Service Area Around Charlotte" : "Área de servicio de bienes raíces alrededor de Charlotte")</h1>
+    <p>@(en
+        ? "Manuela is licensed in North Carolina and based in Charlotte. She evaluates opportunities about two hours from the city. Rock Hill, Fort Mill and other South Carolina inquiries are coordinated or referred with a professional who holds an active SC license."
+        : "Manuela está licenciada en North Carolina y trabaja desde Charlotte. Evalúa oportunidades aproximadamente a dos horas de la ciudad. Consultas de Rock Hill, Fort Mill y otras zonas de South Carolina se coordinan o refieren con un profesional que tenga licencia activa en SC.")</p>
+    <div class="actions">
+        <a class="btn primary" href="#consult">@(en ? "Confirm my ZIP" : "Confirmar mi ZIP")</a>
+        <a class="btn ghost" href="@SiteLocale.Localize(ViewContext.HttpContext, "/areas")">@(en ? "City guides" : "Guías de ciudades")</a>
+    </div>
+</section>
+<section class="detailContext">
+    <div>
+        <p class="eyebrow">@(en ? "How coverage works" : "Cómo funciona la cobertura")</p>
+        <h2>@(en ? "A radius, not a promise for every town." : "Un radio, no una promesa para cada pueblo.")</h2>
+        <p>@(en
+            ? "The keyword list includes hundreds of North Carolina places. Useful local pages need unique copy and proof. These six city pages are the first published set. For any other ZIP, Manuela confirms inventory, drive time and representation before scheduling."
+            : "La lista de palabras clave incluye cientos de lugares de North Carolina. Una página local útil necesita texto y prueba propios. Estas seis ciudades son el primer set publicado. Para cualquier otro ZIP, Manuela confirma inventario, tiempo de traslado y representación antes de agendar.")</p>
+    </div>
+    <ul>
+        <li><span>✓</span>Charlotte, Matthews, Huntersville</li>
+        <li><span>✓</span>Concord, Gastonia, Statesville</li>
+        <li><span>✓</span>@(en ? "Raleigh and other NC areas via the brokerage network" : "Raleigh y otras zonas de NC mediante la red del brokerage")</li>
+        <li><span>✓</span>@(en ? "South Carolina only with applicable representation" : "South Carolina solo con representación aplicable")</li>
+    </ul>
+</section>
+<partial name="_CityLinks" />
+<partial name="_SeoFaq" />
+<section class="detailConsult" id="consult">
+    <div>
+        <p class="eyebrow">@(en ? "Bilingual consultation" : "Consulta bilingüe")</p>
+        <h2>@(en ? "Tell Manuela the ZIP before you drive." : "Dile a Manuela el ZIP antes de manejar.")</h2>
+        <p>@(en ? "Coverage is confirmed case by case." : "La cobertura se confirma caso por caso.")</p>
+    </div>
+    @{
+        ViewData["LeadSource"] = "service-area";
+        ViewData["LeadExtraName"] = en ? "Target city or ZIP" : "Ciudad o ZIP objetivo";
+        ViewData["LeadExtraPlaceholder"] = "Charlotte, Concord, 28027…";
+    }
+    <partial name="_IntakeForm" />
+</section>
+</div>

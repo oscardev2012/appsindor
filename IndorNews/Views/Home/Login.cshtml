@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Entrar · Indor News";
+}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <p class="eyebrow">INTERNO</p>
+        <h1 class="h3 mb-2">Indor News</h1>
+        <p class="text-secondary">Publica una noticia y elige en qué web aparece. Solo la más reciente de cada sitio se muestra al público.</p>
+        <div class="card-panel mt-4">
+            <form method="post" asp-action="Login">
+                @Html.AntiForgeryToken()
+                @if (ViewBag.Configured is false)
+                {
+                    <p class="text-danger mb-0">Configura <code>Updates:AdminPassword</code> antes de entrar.</p>
+                }
+                else
+                {
+                    @if (ViewBag.Error is string err)
+                    {
+                        <p class="text-danger">@err</p>
+                    }
+                    <label class="form-label" for="password">Contraseña</label>
+                    <input class="form-control mb-3" id="password" name="password" type="password" required autocomplete="current-password" />
+                    <button class="btn btn-publish" type="submit">Entrar</button>
+                }
+            </form>
+        </div>
+    </div>
+</div>

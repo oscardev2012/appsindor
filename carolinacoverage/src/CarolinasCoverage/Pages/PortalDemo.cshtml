@@ -1,0 +1,69 @@
+@page "/portal-demo"
+@model PortalDemoModel
+@{
+    var en = Model.En;
+    var items = en
+        ? new[]
+        {
+            new[] { "Policy change", "CC-DEMO-1048", "Waiting for policy validation", "The request is reviewed before any change is sent to the insurer." },
+            new[] { "Certificate of insurance", "CC-DEMO-1049", "Delivery details to confirm", "The certificate is prepared after the policy and recipient requirement are validated." },
+            new[] { "Renewal", "CC-DEMO-1050", "Options under review", "The agent confirms dates, eligibility, and options before a renewal." },
+            new[] { "Non-emergency claim", "CC-DEMO-1051", "Follow-up next business day", "This view organizes contact; the insurer keeps its official claim process." }
+        }
+        : new[]
+        {
+            new[] { "Cambio de póliza", "CC-DEMO-1048", "Esperando validación de póliza", "La solicitud se revisa antes de enviar cualquier cambio a la aseguradora." },
+            new[] { "Certificado de seguro", "CC-DEMO-1049", "Datos de entrega por confirmar", "El certificado se prepara cuando se valida la póliza y el requisito del destinatario." },
+            new[] { "Renovación", "CC-DEMO-1050", "Revisión de opciones", "El agente confirma fechas, elegibilidad y opciones antes de una renovación." },
+            new[] { "Reclamo no urgente", "CC-DEMO-1051", "Seguimiento el siguiente día hábil", "Esta vista organiza el contacto; la aseguradora mantiene su proceso oficial de reclamo." }
+        };
+    var future = en
+        ? " Future flow: secure form → validation → assignment → email/SMS update → insurer confirmation."
+        : " Flujo futuro: formulario seguro → validación → asignación → actualización por email/SMS → confirmación de aseguradora.";
+}
+<main class="portalDemo" id="contenido">
+    <div class="innerTop">
+        <a href="@Lang.Home(en)">← Carolinas Coverage</a>
+        <partial name="_LanguageSwitch" />
+    </div>
+    <header>
+        <p class="eyebrow">@(en ? "MY POLICY - PREVIEW" : "MI PÓLIZA - VISTA PREVIA")</p>
+        <h1>@(en ? "One place to follow every request." : "Un solo lugar para seguir cada solicitud.")</h1>
+        <p>@(en ? "This simulation shows how the client will see requests, next steps, and updates when authorized integrations are active." : "Esta simulación muestra cómo el cliente verá solicitudes, próximos pasos y actualizaciones cuando las integraciones autorizadas estén activas.")</p>
+    </header>
+    <section>
+        <aside>
+            <b>@(en ? "Client dashboard" : "Panel de cliente")</b>
+            <span class="active">@(en ? "Overview" : "Resumen")</span>
+            <span>@(en ? "My policies" : "Mis pólizas")</span>
+            <span>@(en ? "Requests" : "Solicitudes")</span>
+            <span>@(en ? "Documents" : "Documentos")</span>
+            <span>@(en ? "Messages" : "Mensajes")</span>
+        </aside>
+        <div class="portalContent">
+            <div class="portalNotice">
+                <b>@(en ? "Demonstration mode" : "Modo demostración")</b>
+                <span>@(en ? "There is no sign-in, data submission, or real documents." : "No hay inicio de sesión, envío de datos ni documentos reales.")</span>
+            </div>
+            <h2>@(en ? "Recent requests" : "Solicitudes recientes")</h2>
+            <div class="requestList">
+                @for (var i = 0; i < items.Length; i++)
+                {
+                    var item = items[i];
+                    <button type="button" class="@(i == 0 ? "open" : null)" data-portal-item>
+                        <span><b>@item[0]</b><small>@item[1]</small></span>
+                        <em>@item[2] ›</em>
+                        <p>@item[3]<strong>@future</strong></p>
+                    </button>
+                }
+            </div>
+            <div class="portalActions">
+                <a href="@Lang.Service(en, "change")">@(en ? "Request a change" : "Solicitar cambio")</a>
+                <a href="@Lang.Service(en, "evidence")">@(en ? "Request proof" : "Pedir evidencia")</a>
+                <a href="@Lang.Service(en, "renewal")">@(en ? "Renew or cancel" : "Renovar o cancelar")</a>
+                <a href="@Lang.Service(en, "claim")">@(en ? "Report an incident" : "Reportar incidente")</a>
+            </div>
+        </div>
+    </section>
+    <footer>@(en ? "Customer-experience demonstration. The live portal will require authentication, access control, consent, and authorized connections to agency and insurer systems." : "Demostración de experiencia del cliente. El portal real requerirá autenticación, control de acceso, consentimiento y conexiones autorizadas con los sistemas de la agencia y las aseguradoras.")</footer>
+</main>

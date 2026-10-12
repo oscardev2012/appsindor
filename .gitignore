@@ -1,0 +1,13 @@
+bin/
+obj/
+artifacts/
+TestResults/
+PubTmp/
+.vs/
+.vscode/
+.idea/
+node_modules/
+.nuget-packages/
+*.user
+*.suo
+*.log

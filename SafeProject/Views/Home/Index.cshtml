@@ -1,0 +1,445 @@
+﻿@{
+    var es = CalentonesAgua.Data.SiteLanguage.IsSpanish(Context);
+    string T(string en, string esText) => es ? esText : en;
+}
+@if (ViewData["LatestSitePost"] is CalentonesAgua.Models.SitePost latestPost && !string.IsNullOrWhiteSpace(latestPost.Title))
+{
+    <partial name="_LatestSitePost" model="latestPost" />
+}
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <span class="eyebrow">CHARLOTTE · SHELBY · CHINA GROVE · MINT HILL, NC</span>
+            <h1>@(T("Water heater replacement Charlotte NC. Also serving Shelby, China Grove & Mint Hill.", "Reemplazo de calentador de agua en Charlotte NC. También Shelby, China Grove y Mint Hill."))</h1>
+            <p class="hero-lead">@(T("SAFE Water Heater (a hot water heater installer, not a 24-hour drain plumber) does one thing: replace and install tanks across the Charlotte metro with published pricing, photo quotes and simple ways to pay.", "SAFE Water Heater (instalador de calentadores, no un plomero de desagües 24 horas) hace una cosa: reemplazar e instalar tanques en el metro de Charlotte con precios publicados, cotización por fotos y formas simples de pagar."))</p>
+            <div class="price-equation" id="pricing">
+                <div>
+                    <span>@(T("40-GAL ELECTRIC UNIT", "UNIDAD ELÉCTRICA 40 GAL"))</span>
+                    <strong><sup>$</sup>200</strong>
+                    <small>@(T("promotional equipment price*", "precio promocional del equipo*"))</small>
+                </div>
+                <b>+</b>
+                <div>
+                    <span>@(T("STANDARD INSTALLATION", "INSTALACIÓN ESTÁNDAR"))</span>
+                    <strong><sup>$</sup>999</strong>
+                    <small>@(T("professional replacement scope*", "alcance de reemplazo profesional*"))</small>
+                </div>
+            </div>
+            <div class="package-total">
+                <span>@(T("STANDARD CASH PACKAGE", "PAQUETE DE CONTADO"))</span>
+                <strong>@(T("$1,199 + applicable tax", "$1,199 + impuesto aplicable"))</strong>
+            </div>
+            <div class="hero-actions">
+                <a href="#check" class="button button-red button-large">@(T("Check my water heater", "Revisar mi calentador"))</a>
+                <a class="button button-red button-large" href="@SiteContact.TextHref">@(T($"Text {SiteContact.TextPretty}", $"Texto {SiteContact.TextPretty}"))</a>
+                <a class="button button-outline button-large" href="@SiteContact.CallHref">@(T($"Call {SiteContact.CallDisplay}", $"Llamar {SiteContact.CallDisplay}"))</a>
+            </div>
+            <partial name="_SmsProgramNotice" />
+            <div class="trust-strip">
+                <span>✓ @(T("Old tank removal", "Retiro del tanque viejo"))</span>
+                <span>✓ @(T("Startup + testing", "Arranque y prueba"))</span>
+                <span>✓ @(T("2-year labor warranty", "2 años de mano de obra"))</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="specialist-tag">
+                <span>@(T("WATER HEATERS", "CALENTADORES"))</span>
+                <strong>@(T("ONLY", "SOLO"))</strong>
+            </div>
+            <img src="~/safe-electric-water-heater-hero.png" alt="@(T("Professional electric tank water heater installed by SAFE Water Heater in Charlotte, NC", "Calentador eléctrico instalado por SAFE Water Heater en Charlotte, NC"))" />
+            <div class="image-note">
+                <img src="~/safe-shield.svg" alt="" />
+                <span>
+                    <strong>@(T("5-year manufacturer warranty*", "Garantía de fabricante 5 años*"))</strong>
+                    <small>@(T("+ 2-year SAFE installation labor warranty", "+ 2 años de mano de obra SAFE"))</small>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container fine-print">@(T("*$200 promotional equipment price applies to a qualifying 40-gallon electric water heater. $999 standard installation assumes a normal replacement using suitable existing connections. Code corrections, leaks, electrical or gas changes, relocation, difficult access and non-standard work are additional with customer approval. Warranty terms and exclusions apply.", "*El precio promocional de $200 aplica a un calentador eléctrico de 40 galones calificado. Los $999 de instalación estándar asumen un reemplazo normal con conexiones existentes adecuadas. Código, fugas, cambios eléctricos o de gas, reubicación y acceso difícil son extras con su aprobación. Aplican términos de garantía."))</div>
+</section>
+
+<section class="specialty-band">
+    <div class="container specialty-grid">
+        <div><span>01</span><strong>@(T("Water heater sales", "Venta de calentadores"))</strong></div>
+        <div><span>02</span><strong>@(T("Professional replacement", "Reemplazo profesional"))</strong></div>
+        <div><span>03</span><strong>@(T("Warranty registration", "Registro de garantía"))</strong></div>
+        <div><span>04</span><strong>@(T("Service follow-up", "Seguimiento"))</strong></div>
+    </div>
+</section>
+
+<section class="section" id="guides">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow blue">@(T("WHAT PEOPLE SEARCH", "LO QUE LA GENTE BUSCA"))</span>
+            <h2>@(T("Strong pages for the searches that actually convert.", "Páginas fuertes para las búsquedas que sí convierten."))</h2>
+            <p>@(T("Related questions are grouped here—not one URL per Google query. Start with replacement, cost, a leak, or Spanish-language help.", "Agrupamos las preguntas aquí: no una URL por cada búsqueda de Google. Empiece por reemplazo, precio, una fuga o la guía en español."))</p>
+        </div>
+        <div class="catalog-grid">
+            <article class="catalog-card featured-card">
+                <span class="card-label">P0</span>
+                <h3>@(T("Replace in Charlotte", "Reemplazo en Charlotte"))</h3>
+                <p>@(T("Installed packages, process, warranty and service area.", "Paquetes instalados, proceso, garantía y zona de servicio."))</p>
+                <a href="/water-heater-replacement-charlotte-nc/">@(T("Open replacement guide →", "Abrir guía de reemplazo →"))</a>
+            </article>
+            <article class="catalog-card">
+                <span class="card-label">P0</span>
+                <h3>@(T("See the real cost", "Vea el precio real"))</h3>
+                <p>@(T("$1,199 / $1,349 / gas from $1,449, plus extras from photos.", "$1,199 / $1,349 / gas desde $1,449, más extras según fotos."))</p>
+                <a href="/water-heater-cost-charlotte-nc/">@(T("Open pricing guide →", "Abrir guía de precios →"))</a>
+            </article>
+            <article class="catalog-card">
+                <span class="card-label">P0</span>
+                <h3>@(T("Emergency or leak", "Emergencia o fuga"))</h3>
+                <p>@(T("Shutoff steps first. Same-day only when a crew is actually free.", "Primero los pasos de cierre. El mismo día solo si hay cuadrilla libre."))</p>
+                <a href="/water-heater-emergency/">@(T("Emergency steps →", "Pasos de emergencia →"))</a>
+            </article>
+            <article class="catalog-card">
+                <span class="card-label">ES</span>
+                <h3>Calentadores en español</h3>
+                <p>Precios, garantía y cotización en Charlotte.</p>
+                <a href="/es/calentadores-de-agua-charlotte-nc/">Abrir guía en español →</a>
+            </article>
+        </div>
+        <p class="seo-cluster-links" style="margin-top:20px">
+            <a href="/site-map/">All 38 topic pages</a>
+            <a href="/about/">Who publishes this site</a>
+            <a href="/water-heater-replacement-quote/">Quote from photos</a>
+        </p>
+    </div>
+</section>
+
+<section class="section" id="how">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow blue">@(T("A FOCUSED REPLACEMENT PROCESS", "UN PROCESO DE REEMPLAZO CLARO"))</span>
+            <h2>@(T("From one photo to reliable hot water.", "De una foto a agua caliente de verdad."))</h2>
+            <p>@(T("Our intake is designed specifically around water heaters, so we collect the information that helps us identify equipment and installation conditions before the crew arrives.", "El ingreso está pensado solo para calentadores: juntamos lo que hace falta para identificar el equipo y las condiciones antes de que llegue la cuadrilla."))</p>
+        </div>
+        <div class="steps-grid">
+            <article class="step-card">
+                <span>01</span>
+                <h3>@(T("Send your water heater", "Envíe su calentador"))</h3>
+                <p>@(T("Share the address, fuel type, tank size and clear photos.", "Comparta dirección, combustible, tamaño y fotos claras."))</p>
+            </article>
+            <article class="step-card">
+                <span>02</span>
+                <h3>@(T("Confirm the replacement", "Confirmar el reemplazo"))</h3>
+                <p>@(T("We review standard scope, visible code needs and the right unit.", "Revisamos el alcance estándar, código visible y el equipo correcto."))</p>
+            </article>
+            <article class="step-card">
+                <span>03</span>
+                <h3>@(T("Choose how to pay", "Elija cómo pagar"))</h3>
+                <p>@(T("Pay in full, ask about the SAFE plan or apply through Synchrony.", "Pague de contado, pregunte por el plan SAFE o aplique con Synchrony."))</p>
+            </article>
+            <article class="step-card">
+                <span>04</span>
+                <h3>@(T("Schedule installation", "Agendar la instalación"))</h3>
+                <p>@(T("A water-heater crew removes the old tank, installs, starts and tests.", "La cuadrilla retira el tanque viejo, instala, arranca y prueba."))</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section price-section">
+    <div class="container">
+        <div class="section-heading centered">
+            <span class="eyebrow">@(T("CURRENT INSTALLED PRICING", "PRECIOS INSTALADOS ACTUALES"))</span>
+            <h2>@(T("Choose the water heater your home needs.", "Elija el calentador que su casa necesita."))</h2>
+            <p>@(T("Final scope is confirmed from your photos and property conditions before scheduling.", "El alcance final se confirma con fotos y las condiciones de la propiedad antes de agendar."))</p>
+        </div>
+        <div class="catalog-grid">
+            <article class="catalog-card featured-card">
+                <span class="card-label">HERO OFFER</span>
+                <h3>40-gal electric</h3>
+                <strong>$1,199 <small>+ tax</small></strong>
+                <p>Qualifying unit + standard professional installation.</p>
+                <a href="/40-gallon-electric-water-heater-installation/">Check this offer →</a>
+            </article>
+            <article class="catalog-card">
+                <span class="card-label">MORE CAPACITY</span>
+                <h3>50-gal electric</h3>
+                <strong>$1,349 <small>+ tax</small></strong>
+                <p>Standard replacement scope, subject to confirmation.</p>
+                <a href="/50-gallon-water-heater-installation/">Check this option →</a>
+            </article>
+            <article class="catalog-card">
+                <span class="card-label">GAS</span>
+                <h3>40-gal gas</h3>
+                <strong>From $1,449 <small>+ tax</small></strong>
+                <p>Configuration, venting and connections must be reviewed.</p>
+                <a href="/gas-water-heater-installation/">Send gas heater photo →</a>
+            </article>
+            <article class="catalog-card">
+                <span class="card-label">ADD-ON</span>
+                <h3>Expansion tank</h3>
+                <strong>From $149</strong>
+                <p>Standard add-on during replacement; minor piping from $199.</p>
+                <a href="/water-heater-code-upgrades/">Check requirements →</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section payment-section" id="financing">
+    <div class="container payment-grid">
+        <div>
+            <span class="eyebrow light">THREE WAYS TO MOVE FORWARD</span>
+            <h2>Choose the payment path that fits.</h2>
+            <p>The replacement comes first. The payment option should make it easier to say yes without hiding the scope.</p>
+            <a href="/water-heater-financing/" class="button button-white">Compare financing options</a>
+        </div>
+        <div class="payment-cards">
+            <article>
+                <span>PAY IN FULL</span>
+                <strong>$1,199 + tax</strong>
+                <p>40-gallon electric promotional package.</p>
+            </article>
+            <article>
+                <span>SAFE HOMEOWNER PLAN</span>
+                <strong>Start with $200*</strong>
+                <p>Check preliminary eligibility to finance an eligible standard installation balance. Included warranty coverage comes with the qualifying installation.</p>
+                <a href="/financing/safe-plan">Check SAFE eligibility →</a>
+            </article>
+            <article class="synchrony-card synchrony-home-card">
+                <span>SYNCHRONY</span>
+                <strong>Scan or click the QR</strong>
+                <p>Continue directly to the Synchrony application assigned to HOME INDOR TECHNOLOGY INC. Subject to Synchrony approval and terms.</p>
+                <a class="mini-qr" href="https://www.synchrony.com/mmc/S6239195200?sitecode=acewel402" target="_blank" rel="noopener noreferrer">
+                    <img src="~/synchrony-financing-qr.png" alt="HOME INDOR TECHNOLOGY INC Synchrony financing QR code" />
+                    Apply with SAFE →
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section help-preview">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow blue">WATER HEATER HELP</span>
+            <h2>Know the warning signs.</h2>
+            <p>No hot water, a leaking tank, unusual noise or rusty water can point to different problems. SAFE helps determine whether a common repair is practical or replacement is the better decision.</p>
+        </div>
+        <div class="help-preview-grid">
+            <article>
+                <span>01</span>
+                <h3>No hot water</h3>
+                <p>Heating element, thermostat, breaker, ignition or gas-control issues.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <h3>Leaking tank</h3>
+                <p>Connections may be repairable; tank-body leaks usually require replacement.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <h3>Runs out quickly</h3>
+                <p>Component failure, sediment, sizing or increased household demand.</p>
+            </article>
+            <article>
+                <span>04</span>
+                <h3>Popping or rumbling</h3>
+                <p>Often related to sediment buildup and should be evaluated.</p>
+            </article>
+        </div>
+        <div class="hero-actions">
+            <a href="/water-heater-problems" class="button button-red">View common problems</a>
+            <a href="/faqs" class="button button-outline">Browse all FAQs</a>
+        </div>
+    </div>
+</section>
+
+<section class="section warranty-preview">
+    <div class="container warranty-grid">
+        <div>
+            <span class="eyebrow blue">PROTECTED AFTER INSTALLATION</span>
+            <h2>Register the unit. Keep the coverage organized.</h2>
+            <p>Customers can register model, serial number, installation date, address and equipment photos online. SAFE can then follow the record through inspection, service and resolution.</p>
+            <div class="warranty-points">
+                <div>
+                    <strong>5 years*</strong>
+                    <span>Manufacturer’s limited unit warranty</span>
+                </div>
+                <div>
+                    <strong>2 years</strong>
+                    <span>SAFE installation labor warranty</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="/warranty/register" class="button button-red">Register my warranty</a>
+                <a href="/warranty" class="button button-outline">Read coverage</a>
+            </div>
+        </div>
+        <div class="record-card">
+            <div class="record-top">
+                <span>SAFE WARRANTY RECORD</span>
+                <b>REGISTERED</b>
+            </div>
+            <dl>
+                <div><dt>Property</dt><dd>Installation address</dd></div>
+                <div><dt>Equipment</dt><dd>Manufacturer • model • serial</dd></div>
+                <div><dt>Coverage</dt><dd>Manufacturer + SAFE labor</dd></div>
+                <div><dt>Follow-up</dt><dd>Inspection • service • resolution</dd></div>
+            </dl>
+        </div>
+    </div>
+</section>
+
+<section class="section market-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">CHARLOTTE-BASED. LOCALLY FOCUSED.</span>
+            <h2>Two dedicated city programs. One water-heater system.</h2>
+        </div>
+        <div class="market-grid">
+            <a href="/shelby">
+                <span>CLEVELAND COUNTY</span>
+                <h3>Shelby, NC</h3>
+                <p>Dedicated homeowner promotion and route-based scheduling.</p>
+                <b>View Shelby service →</b>
+            </a>
+            <a href="/china-grove">
+                <span>ROWAN COUNTY</span>
+                <h3>China Grove, NC</h3>
+                <p>Dedicated replacement program with Charlotte-based support.</p>
+                <b>View China Grove service →</b>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section service-area" id="service-area">
+    <div class="container">
+        <div class="section-heading service-area-lead">
+            <span class="eyebrow blue">SERVICE AREA</span>
+            <h2>Where SAFE installs water heaters.</h2>
+            <p>SAFE Water Heater is Charlotte-based and covers homeowners along the Charlotte–Shelby–China Grove corridor. If you live in one of the cities below, you can buy and install a new water heater with us — residential replacement is our specialty.</p>
+        </div>
+        <div class="service-area-grid">
+            <div class="service-area-card anchor"><a href="/water-heater-replacement-charlotte-nc/"><b>Charlotte</b><small>Mecklenburg County, NC</small></a></div>
+            <div class="service-area-card anchor"><a href="/shelby"><b>Shelby</b><small>Cleveland County, NC</small></a></div>
+            <div class="service-area-card anchor"><a href="/china-grove"><b>China Grove</b><small>Rowan County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Mint Hill</b><small>Mecklenburg County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Gastonia</b><small>Gaston County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Kings Mountain</b><small>Cleveland County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Cherryville</b><small>Gaston County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Belmont</b><small>Gaston County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Mount Holly</b><small>Gaston County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Cornelius</b><small>Mecklenburg County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Huntersville</b><small>Mecklenburg County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Concord</b><small>Cabarrus County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Kannapolis</b><small>Cabarrus County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Salisbury</b><small>Rowan County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Mooresville</b><small>Iredell County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Matthews</b><small>Mecklenburg County, NC</small></a></div>
+            <div class="service-area-card"><a href="/water-heater-service-near-me/"><b>Rock Hill</b><small>York County, SC</small></a></div>
+        </div>
+        <p class="service-area-note">Do not see your city? SAFE routinely serves neighboring towns inside the same corridor. Text your address to @SiteContact.TextDisplay. Details: <a href="/water-heater-service-near-me/">water heater service near me</a>.</p>
+    </div>
+</section>
+
+<section class="section charlotte-problems" id="common-problems-charlotte">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">CHARLOTTE HOMEOWNER GUIDE</span>
+            <h2>The 5 most common water heater problems in Charlotte.</h2>
+            <p>Hard water, older tanks and the Charlotte-area climate create a specific set of failure patterns. Here is what we see the most — and when it is time to stop troubleshooting and call a professional.</p>
+        </div>
+        <div class="charlotte-problems-grid">
+            <article class="charlotte-problem-card">
+                <span>01</span>
+                <h3>No hot water or only lukewarm water</h3>
+                <p>On electric units, the most common cause is a burned-out heating element or a failed thermostat. On gas units, it is usually a faulty thermocouple, pilot-light or gas-control problem.</p>
+                <em>When to call a professional: Call a professional if resetting the breaker or relighting the pilot does not restore hot water within one heating cycle.</em>
+            </article>
+            <article class="charlotte-problem-card">
+                <span>02</span>
+                <h3>Popping, rumbling or whistling noises</h3>
+                <p>Almost always sediment build-up on the bottom of the tank — very common across the Charlotte metro area because of hard water. The sediment traps steam, which pops as it escapes.</p>
+                <em>When to call a professional: Schedule a professional inspection before the noise turns into recurrent overheating or a stuck relief valve.</em>
+            </article>
+            <article class="charlotte-problem-card">
+                <span>03</span>
+                <h3>Water pooling around the tank</h3>
+                <p>Could be the temperature-and-pressure relief valve, a loose connection, or the tank shell corroding from the inside out. A tank-shell leak is not repairable — the unit must be replaced.</p>
+                <em>When to call a professional: Shut off the water supply and call SAFE the same day. Water on electrical parts is a safety hazard.</em>
+            </article>
+            <article class="charlotte-problem-card">
+                <span>04</span>
+                <h3>Rust-colored water or a rotten-egg smell</h3>
+                <p>Indicates internal tank corrosion (the sacrificial anode rod is spent) or bacterial growth if the heater was off for weeks. Both progress quickly if ignored.</p>
+                <em>When to call a professional: Compare the hot- and cold-water sides. If only the hot side is affected, call a professional to inspect the anode and tank condition.</em>
+            </article>
+            <article class="charlotte-problem-card">
+                <span>05</span>
+                <h3>Water heater older than 10-15 years</h3>
+                <p>Many Charlotte-area homes still run water heaters past their designed service life, which sharply raises the risk of a sudden tank failure and flood damage.</p>
+                <em>When to call a professional: Book a preventive assessment — replacing a working old unit on your schedule is always cheaper than an emergency call after a tank ruptures.</em>
+            </article>
+        </div>
+        <div class="hero-actions" style="margin-top:28px">
+            <a href="/water-heater-leaking/" class="button button-red">Leaking tank</a>
+            <a href="/no-hot-water/" class="button button-outline">No hot water</a>
+            <a href="/water-heater-problems" class="button button-outline">Full problem guide</a>
+        </div>
+    </div>
+</section>
+
+<section class="section choose-installer" id="choose-installer">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow blue">CHOOSING AN INSTALLER</span>
+            <h2>How to choose a water heater installer in Charlotte.</h2>
+            <p>A water heater is a long-lived investment. Look for a company that focuses on water heaters, publishes installed pricing, offers an installation labor warranty, and documents every job so the manufacturer warranty stays valid.</p>
+        </div>
+        <div class="choose-installer-grid">
+            <article class="installer-lead">
+                <span class="eyebrow">SAFE WATER HEATER</span>
+                <h3>Why homeowners across the Charlotte metro pick SAFE.</h3>
+                <ul>
+                    <li><strong>Water-heater specialists</strong> — one product line, one focused installation crew.</li>
+                    <li><strong>Clear installed pricing</strong> — $1,199 + tax for the qualifying 40-gal electric package, with any non-standard work approved in writing before scheduling.</li>
+                    <li><strong>Two ways to pay</strong> — SAFE Homeowner Plan (start with $200) or Synchrony through HOME INDOR TECHNOLOGY INC.</li>
+                    <li><strong>2-year SAFE installation labor warranty</strong> on top of the manufacturer’s limited unit warranty, with online registration and a follow-up dashboard.</li>
+                    <li><strong>Charlotte-based</strong> — same day-of texting with photos, same crews serving Shelby and China Grove.</li>
+                </ul>
+                <a href="/financing/safe-plan" class="button button-red button-large">Request a SAFE quote</a>
+            </article>
+            <aside class="installer-others">
+                <p>Other well-known water-heater installers homeowners in the Charlotte area may also research:</p>
+                <ul>
+                    <li>
+                        <strong>Water Heater Experts (Mooresville / Lake Norman)</strong>
+                        <span>A well-known water-heater–focused installer serving the Lake Norman / Mooresville corridor.</span>
+                    </li>
+                    <li>
+                        <strong>HOTCO – The Water Heater Company</strong>
+                        <span>A regionally recognized water-heater specialty company operating in the greater Charlotte market.</span>
+                    </li>
+                    <li>
+                        <strong>E.A. Jones Plumbing Services</strong>
+                        <span>A full-service Charlotte-area plumber that also handles water-heater replacement.</span>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="section check-section" id="check">
+    <div class="container check-card">
+        <div>
+            <span class="eyebrow light">@(T("CHECK AVAILABILITY", "CONSULTAR DISPONIBILIDAD"))</span>
+            <h2>@(T("Show us the water heater you have.", "Muéstrenos el calentador que tiene."))</h2>
+            <p>@(T("Text your address and a photo of the tank and model label. We’ll help confirm the right replacement and standard scope.", "Envíe su dirección y una foto del tanque y de la etiqueta. Confirmamos el reemplazo y el alcance estándar."))</p>
+        </div>
+        <div>
+            <a class="button button-red button-large" href="@SiteContact.TextHref">@(T($"Text {SiteContact.TextPretty}", $"Texto {SiteContact.TextPretty}"))</a>
+            <a class="button button-white button-large" href="@SiteContact.CallHref">@(T($"Call {SiteContact.CallDisplay}", $"Llamar {SiteContact.CallDisplay}"))</a>
+            <a class="button button-outline button-large" href="mailto:safeprojectsolution@gmail.com?subject=Water%20Heater%20Question">@(T("Email SAFE directly", "Escribir a SAFE"))</a>
+            <partial name="_SmsProgramNotice" />
+        </div>
+    </div>
+</section>

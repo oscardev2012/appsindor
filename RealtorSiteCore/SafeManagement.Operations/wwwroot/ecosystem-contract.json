@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.1.0",
+  "catalog_version": "2026.09.28-02",
+  "source_of_truth": "safe_management",
+  "default_locale": "en-US",
+  "supported_locales": ["en-US", "es-US"],
+  "portals": {
+    "realtor": {
+      "url": "https://safe-ecosystem-crm-preview.ricardo-rive-1053.chatgpt.site",
+      "writes": ["realtor_request", "inspection_report", "client_message", "job_message", "access_instruction", "gift_card_request"],
+      "reads": ["approved_public_price", "estimate_status", "project_summary", "worker_arrival", "job_progress", "client_facing_update"]
+    },
+    "management": {
+      "url": "https://safe-management-operations.ricardo-rive-1053.chatgpt.site",
+      "owns": ["approval", "price_catalog", "assignment", "permissions", "invoice", "audit_log"]
+    },
+    "worker": {
+      "url": "https://safe-management-core.ricardo-rive-1053.chatgpt.site",
+      "writes": ["check_in", "access_request", "job_message", "task_status", "photo", "receipt", "change_order", "completion"],
+      "reads": ["approved_work_order", "schedule", "scope", "materials", "safety_note", "access_instruction", "shared_job_thread", "management_message"]
+    }
+  },
+  "shared_ids": [
+    "organization_id",
+    "request_id",
+    "contact_id",
+    "property_id",
+    "inspection_report_id",
+    "estimate_id",
+    "work_order_id",
+    "thread_id",
+    "invoice_id",
+    "price_catalog_version"
+  ],
+  "workflow": [
+    "realtor_draft",
+    "submitted_to_management",
+    "management_review",
+    "pricing_approved",
+    "awaiting_client",
+    "work_order_ready",
+    "assigned",
+    "in_progress",
+    "completion_review",
+    "invoiced",
+    "paid",
+    "closed"
+  ],
+  "events": [
+    "realtor_request.submitted",
+    "estimate.approved",
+    "work_order.created",
+    "work_order.assigned",
+    "worker.checked_in",
+    "worker.arrival_notified",
+    "access.requested",
+    "access.instruction_sent",
+    "job_message.sent",
+    "job_message.read",
+    "worker.task_completed",
+    "photo.uploaded",
+    "change_order.requested",
+    "job.completed",
+    "invoice.issued",
+    "payment.received",
+    "realtor_update.published"
+  ],
+  "communications": {
+    "external_channels": ["gmail", "whatsapp_business", "facebook_messenger", "instagram_dm", "sms"],
+    "internal_channel": "safe_job_thread",
+    "thread_participants": ["assigned_realtor", "assigned_worker", "management_dispatch"],
+    "message_fields": ["message_id", "thread_id", "property_id", "work_order_id", "sender_role", "channel", "original_language", "original_body", "translated_body", "delivery_status", "created_at"],
+    "secure_access_rule": "Access codes must be encrypted, visible only to assigned participants, masked after use, and retained in the audit log without exposing the plaintext value."
+  },
+  "notification_rules": [
+    {
+      "event": "worker.checked_in",
+      "recipients": ["assigned_realtor", "management_dispatch"],
+      "message": "The assigned worker arrived at the property."
+    },
+    {
+      "event": "access.requested",
+      "recipients": ["assigned_realtor", "management_dispatch"],
+      "message": "The worker is waiting for property access instructions."
+    },
+    {
+      "event": "access.instruction_sent",
+      "recipients": ["assigned_worker", "management_dispatch"],
+      "message": "Secure access instructions are available in the job thread."
+    },
+    {
+      "event": "change_order.requested",
+      "recipients": ["management_approver"],
+      "message": "Field work outside the approved scope requires a Management decision."
+    }
+  ],
+  "role_visibility": {
+    "realtor": {
+      "may_view": ["public_price", "client_estimate", "project_summary", "worker_arrival", "job_thread", "approved_message"],
+      "must_not_view": ["internal_cost", "margin", "worker_pay", "bank_data", "other_realtors"]
+    },
+    "worker": {
+      "may_view": ["assigned_scope", "schedule", "property_contact", "job_thread", "access_instruction", "materials", "approved_customer_price_when_granted"],
+      "must_not_view": ["company_margin", "bank_data", "unassigned_clients", "realtor_referral_earnings"]
+    },
+    "management": {
+      "may_view": ["all_operational_records", "internal_cost", "margin", "audit_log", "integration_health"]
+    }
+  },
+  "sample_trace": {
+    "request_id": "REQ-1047",
+    "property_id": "PROP-1022-LFD",
+    "estimate_id": "EST-2026-1022-01",
+    "work_order_id": "WO-2026-1047",
+    "thread_id": "THR-REQ-1047",
+    "status": "assigned"
+  }
+}

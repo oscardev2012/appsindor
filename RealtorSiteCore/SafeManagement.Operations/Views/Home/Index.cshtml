@@ -1,0 +1,82 @@
+@{
+    ViewData["Title"] = "SAFE Management — Operations Console";
+    ViewData["Description"] = "SAFE operations console for Realtor requests, estimates, projects, crews, invoices and connected systems.";
+}
+<section class="mgmt-gate" id="mgmtGate">
+  <form class="mgmt-gate-card" id="mgmtGateForm">
+    <div class="mgmt-gate-brand"><span class="brand-mark">S+</span><div><strong>SAFE MANAGEMENT</strong><small data-i18n="brandSub">Operations Console</small></div></div>
+    <div class="mgmt-gate-lang"><button type="button" class="language" id="mgmtLang">ES</button></div>
+    <h1 id="mgmtGateTitle" data-i18n="gateTitle">SAFE Management</h1>
+    <div id="mgmtChoices">
+      <p data-i18n="gateIntro">Create a profile, or sign in if you already have one.</p>
+      <button class="button primary wide" type="button" id="mgmtShowCreate" data-i18n="createProfile">Create profile</button>
+      <button class="button secondary wide" type="button" id="mgmtShowSignIn" data-i18n="signInExisting">I already have an account</button>
+    </div>
+    <div id="mgmtCreate" hidden>
+      <label><span data-i18n="fullName">Full name</span><input id="mgmtCreateName" autocomplete="name" required></label>
+      <label><span>Email</span><input id="mgmtCreateEmail" type="email" placeholder="name@@company.com" autocomplete="email" required></label>
+      <label><span data-i18n="password">Password</span><input id="mgmtCreatePassword" type="password" autocomplete="new-password" minlength="6" required></label>
+      <button class="button primary wide" type="submit" data-i18n="createProfile">Create profile</button>
+      <button class="gate-link" type="button" id="mgmtCreateToSignIn" data-i18n="haveAccount">Already have an account? Sign in</button>
+    </div>
+    <div id="mgmtSignIn" hidden>
+      <label><span>Email</span><input id="mgmtSignInEmail" type="email" placeholder="name@@company.com" autocomplete="username" required></label>
+      <label><span data-i18n="password">Password</span><input id="mgmtSignInPassword" type="password" autocomplete="current-password" required></label>
+      <button class="button primary wide" type="submit" data-i18n="signInExisting">Sign in</button>
+      <button class="gate-link" type="button" id="mgmtSignInToCreate" data-i18n="needAccount">No account yet? Create a profile</button>
+    </div>
+  </form>
+</section>
+<div class="shell">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="back-button" id="backButton" aria-label="Go back">←</button>
+      <button class="brand" data-route="overview"><span class="brand-mark">S+</span><span><strong>SAFE MANAGEMENT</strong><small data-i18n="brandSub">Operations Console</small></span></button>
+      <div class="global-search" id="globalSearchWrap"><span>⌕</span><input id="globalSearch" data-placeholder-en="Search address, client, Realtor, job or repair…" data-placeholder-es="Busca dirección, cliente, Realtor, trabajo o reparación…"><kbd>⌘ K</kbd><div class="search-results" id="searchResults"></div></div>
+      <div class="top-actions"><button class="language" id="languageButton">ES</button><button class="button secondary" type="button" id="mgmtSignOut" data-i18n="signOut">Sign out</button><button class="notification" id="notificationButton" aria-label="Notifications">◌<b>0</b></button><button class="admin-profile" id="adminProfile"><span id="mgmtInitial">SM</span><i></i></button></div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="workspace-card"><span class="workspace-icon">S+</span><div><small data-i18n="workspace">PRIVATE WORKSPACE</small><strong>SAFE Management</strong><span>NC / SC Operations</span></div></div>
+      <nav class="nav" id="nav">
+        <span class="nav-group" data-i18n="commandCenter">COMMAND CENTER</span>
+        <button data-route="overview" class="active"><span>⌂</span><b data-i18n="overview">Overview</b></button>
+        <button data-route="intake"><span>⇥</span><b data-i18n="intake">Realtor Intake</b><em>0</em></button>
+        <button data-route="approvals"><span>✓</span><b data-i18n="approvals">Pricing Approvals</b><em>0</em></button>
+        <span class="nav-group" data-i18n="relationships">RELATIONSHIPS</span>
+        <button data-route="realtors"><span>◎</span><b data-i18n="realtors">Realtor Partners</b></button>
+        <button data-route="leads"><span>✦</span><b data-i18n="leads">Lead Pipeline</b><em>0</em></button>
+        <button data-route="clients"><span>◇</span><b data-i18n="clients">Clients & Properties</b></button>
+        <button data-route="messages"><span>◌</span><b data-i18n="messages">Messages</b><em>0</em></button>
+        <span class="nav-group" data-i18n="operations">OPERATIONS</span>
+        <button data-route="estimates"><span>▤</span><b data-i18n="estimates">Estimates</b></button>
+        <button data-route="projects"><span>▦</span><b data-i18n="projects">Projects</b></button>
+        <button data-route="assignments"><span>↗</span><b data-i18n="assignments">Crew Assignments</b></button>
+        <button data-route="invoices"><span>$</span><b data-i18n="invoices">Invoices & Payments</b></button>
+        <span class="nav-group" data-i18n="control">CONTROL</span>
+        <button data-route="catalog"><span>≡</span><b data-i18n="catalog">Price Catalog</b><em id="catalogCount">264</em></button>
+        <button data-route="promotions"><span>%</span><b data-i18n="promotions">Promotions</b></button>
+        <button data-route="referrals"><span>☆</span><b data-i18n="referrals">Gifts & Referrals</b></button>
+        <button data-route="integrations"><span>∞</span><b data-i18n="integrations">Integrations</b><i class="status-dot"></i></button>
+      </nav>
+    </aside>
+
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="detail-drawer" id="detailDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow" id="drawerEyebrow">REQUEST</span><h2 id="drawerTitle">Property request</h2></div><button class="close" id="closeDrawer">×</button></div>
+    <div class="drawer-body" id="drawerBody"></div>
+    <div class="drawer-actions" id="drawerActions"></div>
+  </aside>
+
+  <div class="modal" id="newRequestModal" role="dialog" aria-modal="true" aria-labelledby="newRequestTitle">
+    <form class="modal-card" id="newRequestForm">
+      <div class="modal-head"><div><span class="eyebrow">MANUAL INTAKE</span><h2 id="newRequestTitle" data-i18n="addRequest">Add a property request</h2></div><button type="button" class="close" data-close="modal">×</button></div>
+      <div class="form-grid"><label><span data-i18n="propertyAddress">Property address</span><input id="newAddress" required placeholder="Street, city, state"></label><label><span data-i18n="source">Source</span><select id="newSource"><option>Realtor Portal</option><option>Phone</option><option>Gmail</option><option>Oscar Lead Engine</option></select></label><label><span data-i18n="contact">Contact</span><input id="newContact" required placeholder="Realtor or client"></label><label><span data-i18n="dueDate">Due date</span><input id="newDue" type="date" value="2026-09-29"></label><label class="full"><span data-i18n="requestDetails">What needs Management review?</span><textarea id="newDetails" rows="4" placeholder="Inspection report, repair price, estimate, scheduling…"></textarea></label></div>
+      <div class="modal-actions"><button type="button" class="button secondary" data-close="modal" data-i18n="cancel">Cancel</button><button class="button primary" type="submit" data-i18n="createRequest">Create request</button></div>
+    </form>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>

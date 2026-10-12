@@ -1,0 +1,57 @@
+@model IReadOnlyList<CalentonesAgua.Data.AiFaqGroup>
+@{
+    var es = CalentonesAgua.Data.SiteLanguage.IsSpanish(Context);
+}
+
+<section class="page-hero">
+    <div class="container seo-hero">
+        <span class="eyebrow">@(es ? "PREGUNTAS QUE LA GENTE ESCRIBE" : "HOW PEOPLE ASK")</span>
+        <h1>@(es
+            ? "Preguntas frecuentes de calentador de agua en Charlotte."
+            : "Water heater FAQs the way people ask Google and chat tools.")</h1>
+        <p class="seo-answer">@(es
+            ? "Cada respuesta empieza con el dato. Así es como suelen citar Google, ChatGPT y herramientas similares. No es un listado de 200 URLs. Los detalles largos están en las guías."
+            : "Each answer starts with the fact—the pattern Google, ChatGPT and similar tools quote. These match “how much,” “what should I do,” “near me” and “40 vs 50 gallon,” not one thin URL per keyword.")</p>
+        <div class="hero-actions">
+            <a class="button button-red" href="@SiteContact.TextHref">@(es ? $"Texto {SiteContact.TextDisplay}" : $"Text {SiteContact.TextDisplay}")</a>
+            <a class="button button-outline" href="@SiteContact.CallHref">@(es ? $"Llamar {SiteContact.CallDisplay}" : $"Call {SiteContact.CallDisplay}")</a>
+        </div>
+        <p class="seo-cluster-links">
+            <a href="/water-heater-cost-charlotte-nc/">Cost</a>
+            <a href="/water-heater-leaking/">Leaking</a>
+            <a href="/no-hot-water/">No hot water</a>
+            <a href="/water-heater-service-near-me/">Near me</a>
+            <a href="/es/calentadores-de-agua-charlotte-nc/">Español</a>
+        </p>
+    </div>
+</section>
+
+<section class="section faq-section">
+    <div class="container faq-page-layout">
+        <aside class="faq-nav">
+            <strong>@(es ? "Ir a" : "Jump to")</strong>
+            @foreach (var group in Model)
+            {
+                <a href="#@group.Id">@(es ? group.EsLabel : group.Label)</a>
+            }
+        </aside>
+        <div>
+            @foreach (var group in Model)
+            {
+                <div class="faq-group" id="@group.Id">
+                    <span class="eyebrow blue">@(es ? group.EsLabel : group.Label)</span>
+                    <div class="faq-list">
+                        @foreach (var item in group.Items)
+                        {
+                            <details>
+                                <summary>@item.Question <span>+</span></summary>
+                                <p class="faq-direct">@item.Answer</p>
+                                <p><a href="@item.MoreHref">@(es ? "Guía completa" : "Full guide") →</a></p>
+                            </details>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

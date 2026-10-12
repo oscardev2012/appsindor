@@ -1,0 +1,7 @@
+bin/
+obj/
+agent.db
+appsettings.json
+appsettings.Development.json
+.vs/
+_manuals/

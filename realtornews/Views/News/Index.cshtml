@@ -1,0 +1,77 @@
+@model MagazinePageViewModel
+@{
+    ViewData["Title"] = "Charlotte Buyer & Home Magazine";
+    ViewData["Description"] = "Daily Charlotte real estate news and longer explainers published by local Realtors for buyers, sellers, and homeowners.";
+    ViewData["Crumbs"] = new List<SeoCrumb> { new("Home", "/"), new("Magazine & News", "/news") };
+}
+@await Html.PartialAsync("_DbBanner", Model.DbError)
+
+<section class="magazine-masthead">
+    <div>
+        <p>CHARLOTTE BUYER &amp; HOME GUIDE</p>
+        <h1>The daily magazine</h1>
+        <span>Stories published by Realtors · @EasternTime.LongDate(DateTimeOffset.UtcNow)</span>
+    </div>
+    <aside>
+        <span>FROM THE DESK</span>
+        <strong>@(Model.Lead?.RealtorName ?? "Waiting for the first issue")</strong>
+        <p>Longer articles and market notes appear here after a Realtor publishes them.</p>
+        <a asp-controller="Account" asp-action="Register">Write the next story →</a>
+    </aside>
+</section>
+
+<section class="section">
+    @if (Model.Lead is null)
+    {
+        <div class="empty-panel">
+            <p>The magazine fills from Realtor articles. Register and publish a longer story to open the first issue.</p>
+            <a class="button gold" asp-controller="Studio" asp-action="Compose">Publish a story</a>
+            <a class="button outline" asp-action="Preview" style="margin-left:8px">Ver formato de ejemplo</a>
+        </div>
+    }
+    else
+    {
+        <div class="magazine-lead">
+            <article>
+                <div class="magazine-lead-image" style="@(string.IsNullOrWhiteSpace(Model.Lead.CoverImageUrl) ? null : $"background-image:linear-gradient(150deg,rgba(10,35,66,.18),rgba(122,62,34,.16)),url('{Model.Lead.CoverImageUrl}')")"><span>@Model.Lead.Category.ToUpperInvariant()</span></div>
+                <div class="magazine-lead-copy">
+                    <div class="meta"><span>@Model.Lead.Category</span><span>@EasternTime.LongDate(Model.Lead.PublishedUtc ?? Model.Lead.CreatedUtc)</span></div>
+                    <h2>@Model.Lead.Title</h2>
+                    <p>@Model.Lead.Teaser</p>
+                    <a class="button primary" asp-action="Details" asp-route-slug="@Model.Lead.Slug">Read the explainer →</a>
+                </div>
+            </article>
+            <div class="edition-sidebar">
+                @foreach (var story in Model.Stories.Take(4))
+                {
+                    <a asp-action="Details" asp-route-slug="@story.Slug">
+                        <strong>•</strong>
+                        <span>
+                            <b>@story.Title</b>
+                            <small>@story.RealtorName</small>
+                        </span>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="magazine-story-grid">
+            @foreach (var story in Model.Stories)
+            {
+                <article class="magazine-story">
+                    @if (!string.IsNullOrWhiteSpace(story.CoverImageUrl))
+                    {
+                        <img class="story-thumb" src="@story.CoverImageUrl" alt="@story.Title" />
+                    }
+                    <span class="story-section">@story.Category.ToUpperInvariant()</span>
+                    <h3><a asp-action="Details" asp-route-slug="@story.Slug">@story.Title</a></h3>
+                    <p>@story.Teaser</p>
+                    <div class="story-credit">
+                        <span class="avatar">@story.RealtorInitials</span>
+                        <span>@story.RealtorName · @EasternTime.LongDate(story.PublishedUtc ?? story.CreatedUtc)</span>
+                    </div>
+                    <a asp-action="Details" asp-route-slug="@story.Slug">Read the full recommendation →</a>
+                </article>
+            }
+        </div>
+    }
+</section>

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @await Html.PartialAsync("_SeoHead")
+    <link rel="icon" type="image/svg+xml" href="~/favicon.svg" asp-append-version="true" />
+    <link rel="apple-touch-icon" href="~/favicon.svg" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @if (ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index")
+    {
+        <link rel="preload" as="image" href="~/img/hero-charlotte.jpg" asp-append-version="true" />
+    }
+</head>
+<body>
+    <div class="utility-bar">
+        <span>Charlotte home, city, and real estate education · @EasternTime.LongDate(DateTimeOffset.UtcNow)</span>
+        <span>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-controller="Studio" asp-action="Index">Mi panel</a>
+                <text> · </text>
+                <a asp-controller="Studio" asp-action="Compose">Crear noticia</a>
+                <text> · </text>
+                <form asp-controller="Account" asp-action="Logout" method="post" class="inline-form">
+                    @Html.AntiForgeryToken()
+                    <button type="submit">Salir</button>
+                </form>
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Register">Registro Realtor</a>
+                <text> · </text>
+                <a asp-controller="Account" asp-action="Login">Iniciar sesión →</a>
+            }
+        </span>
+    </div>
+    <header class="site-header">
+        <a class="brand" asp-controller="Home" asp-action="Index" aria-label="Home">
+            <span class="brand-mark">CR</span>
+            <span><strong>Charlotte Realtor</strong><small>Recommendations</small></span>
+        </a>
+        <button class="menu-btn" type="button" aria-label="Open menu" data-menu-toggle>Menu</button>
+        <nav class="nav" aria-label="Main navigation" data-nav>
+            <a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : null)">Home</a>
+            <a asp-controller="Feed" asp-action="Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Feed" ? "active" : null)">Social Feed</a>
+            <div class="nav-news @(ViewContext.RouteData.Values["controller"]?.ToString() == "News" ? "active" : null)">
+                <a asp-controller="News" asp-action="Index">Magazine &amp; News</a>
+                @await Component.InvokeAsync("LatestNews")
+            </div>
+            <a asp-controller="Guides" asp-action="Seasonal" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Seasonal" ? "active" : null)">Seasonal Guide</a>
+            <a asp-controller="Guides" asp-action="Cities" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Cities" ? "active" : null)">Cities</a>
+            <a asp-controller="Realtors" asp-action="Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Realtors" ? "active" : null)">Our Realtors</a>
+            <a asp-controller="Home" asp-action="ForRealtors" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "ForRealtors" ? "active" : null)">For Realtors</a>
+            <a asp-controller="Vendors" asp-action="Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Vendors" ? "active" : null)">Preferred Vendors</a>
+            <a class="nav-cta" asp-controller="Questions" asp-action="Index">Ask a Question</a>
+        </nav>
+    </header>
+    <main>
+        @await Html.PartialAsync("_Crumbs")
+        @RenderBody()
+    </main>
+    <footer>
+        <div class="footer-brand">
+            <span class="brand-mark">CR</span>
+            <div>
+                <strong>Charlotte Realtor Recommendations</strong>
+                <p>Local knowledge for confident real estate decisions.</p>
+            </div>
+        </div>
+        <div>
+            <strong>Explore</strong>
+            <a asp-controller="Feed" asp-action="Index">Social Feed</a>
+            <a asp-controller="News" asp-action="Index">Daily News</a>
+            <a asp-controller="Guides" asp-action="Seasonal">Seasonal Guide</a>
+            <a asp-controller="Guides" asp-action="Cities">Cities</a>
+        </div>
+        <div>
+            <strong>Learn</strong>
+            <a asp-controller="Home" asp-action="ForRealtors">Realtor Education</a>
+            <a asp-controller="Vendors" asp-action="Index">Preferred Vendors</a>
+            <a asp-controller="Questions" asp-action="Index">Ask a question</a>
+            <a asp-controller="Guides" asp-action="Index" asp-route-category="Selling">Selling</a>
+            <a asp-controller="Guides" asp-action="Index" asp-route-category="Buying">Buying</a>
+            <a href="/sitemap.xml">Sitemap</a>
+        </div>
+        <div>
+            <strong>Cuenta</strong>
+            <a asp-controller="Account" asp-action="Login">Iniciar sesión</a>
+            <a asp-controller="Studio" asp-action="Index">Mi panel</a>
+            <a asp-controller="Studio" asp-action="Compose">Crear noticia</a>
+        </div>
+        <p class="disclaimer">Educational content only. Real estate, lending, tax, and legal circumstances vary. Consult the appropriate licensed professional for advice about your situation.</p>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

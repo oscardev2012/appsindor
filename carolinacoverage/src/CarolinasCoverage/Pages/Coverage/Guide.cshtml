@@ -1,0 +1,124 @@
+@page "/coverage/{product}"
+@model CarolinasCoverage.Pages.Coverage.GuideModel
+@{
+    var en = Model.En;
+    var copy = Model.Copy;
+    var glossary = en ? Model.Catalog.GlossaryEn : Model.Catalog.GlossaryEs;
+}
+<main class="guidePage" id="contenido">
+    <div class="guideTop">
+        <a href="@Lang.Home(en)">← Carolinas Coverage</a>
+        @{ ViewData["LangSwitchTheme"] = "dark"; }
+        <partial name="_LanguageSwitch" />
+    </div>
+    <partial name="_HubMini" />
+    <nav class="crumbs" aria-label="@(en ? "Breadcrumb" : "Miga de pan")">
+        <ol>
+            @foreach (var crumb in Model.Breadcrumbs)
+            {
+                var last = crumb == Model.Breadcrumbs[^1];
+                <li>
+                    @if (last)
+                    {
+                        <span aria-current="page">@crumb.Name</span>
+                    }
+                    else
+                    {
+                        <a href="@crumb.Url">@crumb.Name</a>
+                    }
+                </li>
+            }
+        </ol>
+    </nav>
+    <section class="guideHero">
+        <p>@copy.Label</p>
+        <span>@Model.Product.Icon</span>
+        <h1>@copy.Title</h1>
+        <div>
+            <p>@copy.Intro</p>
+            <a href="@Lang.Quote(en)">@(en ? "Discuss my options" : "Hablar sobre mis opciones") →</a>
+        </div>
+    </section>
+    <section class="guideStory">
+        <p class="eyebrow">@(en ? "WE START BY UNDERSTANDING" : "EMPEZAMOS POR ENTENDER")</p>
+        <h2>@(en ? "A conversation before a policy." : "Una conversación antes de una póliza.")</h2>
+        <p>@copy.Story</p>
+        <div class="guideCarriers">
+            <strong>@(en ? "Confirmed carrier options for this conversation:" : "Opciones de aseguradoras confirmadas para esta conversación:")</strong>
+            <span>@string.Join(" · ", Model.Product.Carriers)</span>
+            <small>@(en ? "This list does not guarantee availability, rate, or acceptance; the agent confirms product, state, ZIP code, appointment, and eligibility." : "La lista no garantiza disponibilidad, tarifa o aceptación; el agente confirma producto, estado, ZIP code, appointment y elegibilidad.")</small>
+        </div>
+    </section>
+    <section class="guideGrid">
+        <article>
+            <span>◌</span>
+            <h2>@(en ? "Common coverage categories" : "Coberturas comunes")</h2>
+            <ul>
+                @foreach (var item in copy.Common)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        </article>
+        <article>
+            <span>01</span>
+            <h2>@(en ? "How a claim commonly works" : "Cómo suele funcionar un reclamo")</h2>
+            <ol>
+                @foreach (var item in copy.Claim)
+                {
+                    <li>@item</li>
+                }
+            </ol>
+        </article>
+        <article>
+            <span>02</span>
+            <h2>@(en ? "What an agent may ask" : "Lo que un agente puede preguntar")</h2>
+            <ul>
+                @foreach (var item in copy.Ask)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        </article>
+    </section>
+    <section class="guideGlossary">
+        <p class="eyebrow">@(en ? "CONCEPTS FOR READING YOUR POLICY" : "CONCEPTOS PARA LEER TU PÓLIZA")</p>
+        <h2>@(en ? "Words worth knowing." : "Las palabras que vale la pena conocer.")</h2>
+        <div>
+            @foreach (var item in glossary)
+            {
+                <article>
+                    <strong>@item[0]</strong>
+                    <p>@item[1]</p>
+                </article>
+            }
+        </div>
+    </section>
+    @if (copy.Related is { Length: > 0 })
+    {
+        <section class="guideRelated">
+            <p class="eyebrow">@(en ? "YOU MAY ALSO WANT TO REVIEW" : "TAMBIÉN PODRÍAS REVISAR")</p>
+            <div>
+                @foreach (var related in copy.Related)
+                {
+                    if (Model.Catalog.Guides.TryGetValue(related, out var relatedGuide))
+                    {
+                        var relatedCopy = en ? relatedGuide.En : relatedGuide.Es;
+                        <a href="@Lang.Coverage(en, related)"><span>@relatedGuide.Icon</span>@relatedCopy.Label →</a>
+                    }
+                }
+            </div>
+        </section>
+    }
+    <section class="guideNote">
+        <strong>@(en ? "Important:" : "Importante:")</strong> @copy.Note
+    </section>
+    <section class="guideClaim">
+        <div>
+            <p class="eyebrow">@(en ? "DID SOMETHING ALREADY HAPPEN?" : "¿YA OCURRIÓ ALGO?")</p>
+            <h2>@(en ? "We can help you identify the next step." : "Podemos ayudarte a ubicar el siguiente paso.")</h2>
+            <p>@(en ? "For emergencies or injuries, call 911. For general claim-process help, contact Carolinas Coverage or your policy insurer." : "Para emergencias o lesiones, llama al 911. Para ayuda general con el proceso de reclamo, comunícate con Carolinas Coverage o la aseguradora de tu póliza.")</p>
+        </div>
+        <a href="tel:+17045953429">704-595-3429</a>
+    </section>
+</main>

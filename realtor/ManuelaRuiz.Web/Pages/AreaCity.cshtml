@@ -1,0 +1,67 @@
+@page "/areas/{slug}"
+@model ManuelaRuiz.Web.Pages.AreaCityModel
+@using ManuelaRuiz.Web.Services
+@{
+    var en = SiteLocale.IsEnglish(ViewContext.HttpContext);
+    var city = Model.City;
+    var bullets = en ? city.BulletsEn : city.BulletsEs;
+}
+<div class="detailPage">
+<section class="detailHero">
+    <p class="eyebrow">@city.Name, NC · @city.County</p>
+    <h1>@(en ? city.H1En : city.H1Es)</h1>
+    <p>@(en ? city.LeadEn : city.LeadEs)</p>
+    <div class="actions">
+        <a class="btn primary" href="#consult">@(en ? "Prepare my consultation" : "Preparar mi consulta")</a>
+        <a class="btn ghost" href="@SiteLocale.Localize(ViewContext.HttpContext, "/search")">@(en ? "Start a home search" : "Empezar una búsqueda")</a>
+    </div>
+</section>
+<section class="detailContext">
+    <div>
+        <p class="eyebrow">@(en ? "How Manuela helps you" : "Cómo te ayuda Manuela")</p>
+        <h2>@(en ? $"Work from {city.Name}, not a county slogan." : $"Trabajar desde {city.Name}, no desde un eslogan del condado.")</h2>
+        <p>@(en ? city.ContextEn : city.ContextEs)</p>
+    </div>
+    <ul>
+        @foreach (var bullet in bullets)
+        {
+            <li><span>✓</span>@bullet</li>
+        }
+    </ul>
+</section>
+<section class="detailSteps">
+    <p class="eyebrow">@(en ? "What to compare here" : "Qué comparar aquí")</p>
+    <h2>@(en ? "Property-level decisions." : "Decisiones a nivel de propiedad.")</h2>
+    <div>
+        <article><span>01</span><h3>@(en ? "Commute" : "Traslado")</h3><p>@(en ? $"Drive {city.Name} at the hour you actually travel — not Sunday afternoon." : $"Maneja {city.Name} a la hora real de tu rutina, no un domingo por la tarde.")</p></article>
+        <article><span>02</span><h3>@(en ? "Total monthly cost" : "Costo mensual total")</h3><p>@(en ? "Taxes, insurance, HOA and condition change the payment more than a listing headline." : "Impuestos, seguro, HOA y condición cambian el pago más que el titular del anuncio.")</p></article>
+        <article><span>03</span><h3>@(en ? "Inventory right now" : "Inventario ahora")</h3><p>@(en ? "Manuela reviews current listings for your criteria. This page is not a live MLS feed." : "Manuela revisa listados actuales según tus criterios. Esta página no es un feed de MLS.")</p></article>
+        <article><span>04</span><h3>@(en ? "Resale vs new construction" : "Resale vs obra nueva")</h3><p>@(en ? "Builder reps work for the builder. Confirm representation before you register." : "El representante del builder trabaja para el builder. Confirme representación antes de registrarse.")</p></article>
+        <article><span>05</span><h3>@(en ? "Bilingual process" : "Proceso bilingüe")</h3><p>@(en ? "Offers, inspections and closing calendars in English or Spanish." : "Ofertas, inspecciones y calendario de cierre en inglés o español.")</p></article>
+        <article><span>06</span><h3>@(en ? "Proof of work" : "Prueba de trabajo")</h3><p>@(en ? "See documented buyer and seller work, then ask whether this city fits your file." : "Revisa trabajo documentado de compradores y vendedores, y pregunta si esta ciudad encaja.")</p></article>
+    </div>
+</section>
+<section class="detailLinks">
+    <p class="eyebrow">@(en ? "Next steps" : "Próximos pasos")</p>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/search")">@(en ? $"Search homes near {city.Name} →" : $"Buscar casas cerca de {city.Name} →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/buyers")">@(en ? "Buy a home in Charlotte and NC →" : "Comprar casa en Charlotte y NC →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/home-valuation")">@(en ? "What is my home worth? →" : "¿Cuánto vale mi casa? →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/service-area")">@(en ? "Full service area →" : "Área de servicio completa →")</a>
+    <a href="@SiteLocale.Localize(ViewContext.HttpContext, "/sold")">@(en ? "Portfolio →" : "Portafolio →")</a>
+</section>
+<partial name="_CityLinks" />
+<partial name="_SeoFaq" />
+<section class="detailConsult" id="consult">
+    <div>
+        <p class="eyebrow">@(en ? "Bilingual consultation" : "Consulta bilingüe")</p>
+        <h2>@(en ? $"Tell Manuela what you need in {city.Name}." : $"Dile a Manuela qué necesitas en {city.Name}.")</h2>
+        <p>@(en ? "A consultation is not a listing portal and not a loan application." : "Una consulta no es un portal de listados ni una solicitud de préstamo.")</p>
+    </div>
+    @{
+        ViewData["LeadSource"] = city.Slug;
+        ViewData["LeadExtraName"] = en ? "Priority in this city" : "Prioridad en esta ciudad";
+        ViewData["LeadExtraPlaceholder"] = en ? "Buy, sell, first home, ITIN…" : "Comprar, vender, primera casa, ITIN…";
+    }
+    <partial name="_IntakeForm" />
+</section>
+</div>

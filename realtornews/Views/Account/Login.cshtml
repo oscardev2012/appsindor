@@ -1,0 +1,25 @@
+@model LoginViewModel
+@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Iniciar sesión";
+}
+
+<div class="login-form-card">
+    <span class="avatar">CR</span>
+    <p class="eyebrow">PANEL DEL REALTOR</p>
+    <h2>Entra a tu dashboard</h2>
+    <p>Usa el email con el que te registraste para publicar noticias.</p>
+    <form method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="ReturnUrl" />
+        <div asp-validation-summary="All" class="form-errors"></div>
+        <label>Email
+            <input asp-for="Email" type="email" required autocomplete="username" />
+        </label>
+        <label>Contraseña
+            <input asp-for="Password" type="password" required autocomplete="current-password" />
+        </label>
+        <button class="button primary wide" type="submit">Entrar al panel</button>
+        <small>¿No tienes cuenta? <a asp-action="Register">Registro Realtor</a></small>
+    </form>
+</div>

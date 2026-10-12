@@ -1,0 +1,28 @@
+@using CarolinasCoverage.Site
+@{
+    var request = ViewContext.HttpContext.Request;
+    var en = Lang.IsEnglish(request);
+    var esUrl = Lang.ToSpanish(request);
+    var enUrl = Lang.ToEnglish(request);
+}
+<div class="langWelcome" id="langWelcome" hidden>
+    <div class="langWelcome-card" role="dialog" aria-modal="true" aria-labelledby="langWelcomeTitle">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <p class="eyebrow">Atención en español e inglés</p>
+        <h2 id="langWelcomeTitle">Elige tu idioma</h2>
+        <p class="langWelcome-sub">Choose your language. Carolinas Coverage offers personal service in Spanish and English.</p>
+        <div class="langWelcome-choices">
+            <a class="langWelcome-choice @(en ? null : "is-on")" href="@esUrl" hreflang="es" lang="es" data-lang-choice="es">
+                <span class="langWelcome-code">ES</span>
+                <b>Español</b>
+                <small>Bienvenido. Cobertura clara, atención personal.</small>
+            </a>
+            <a class="langWelcome-choice @(en ? "is-on" : null)" href="@enUrl" hreflang="en" lang="en" data-lang-choice="en">
+                <span class="langWelcome-code">EN</span>
+                <b>English</b>
+                <small>Welcome. Clear coverage, personal service.</small>
+            </a>
+        </div>
+        <button class="langWelcome-skip" type="button" id="langWelcomeSkip">@(en ? "Continue in English" : "Continuar en español")</button>
+    </div>
+</div>

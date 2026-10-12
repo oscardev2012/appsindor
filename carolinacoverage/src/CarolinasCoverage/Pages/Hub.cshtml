@@ -1,0 +1,95 @@
+@page
+@model CarolinasCoverage.Pages.HubModel
+@{
+    var en = Model.En;
+    var hub = Model.Hub;
+    var faqs = Model.Faqs;
+}
+<main class="guidePage hubPage" id="contenido">
+    <div class="guideTop">
+        <a href="@Lang.Home(en)">← Carolinas Coverage</a>
+        @{ ViewData["LangSwitchTheme"] = "dark"; }
+        <partial name="_LanguageSwitch" />
+    </div>
+    <partial name="_HubMini" />
+    <nav class="crumbs" aria-label="@(en ? "Breadcrumb" : "Miga de pan")">
+        <ol>
+            @foreach (var crumb in Model.Breadcrumbs)
+            {
+                var last = crumb == Model.Breadcrumbs[^1];
+                <li>
+                    @if (last)
+                    {
+                        <span aria-current="page">@crumb.Name</span>
+                    }
+                    else
+                    {
+                        <a href="@crumb.Url">@crumb.Name</a>
+                    }
+                </li>
+            }
+        </ol>
+    </nav>
+    <section class="guideHero">
+        <p>@(en ? hub.EyebrowEn : hub.EyebrowEs)</p>
+        <span>@hub.Icon</span>
+        <h1>@(en ? hub.H1En : hub.H1Es)</h1>
+        <div>
+            <p>@(en ? hub.IntroEn : hub.IntroEs)</p>
+            <a href="@(hub.Id == "contact" ? "tel:+17045953429" : Lang.Quote(en))">@(en ? hub.CtaEn : hub.CtaEs) →</a>
+        </div>
+    </section>
+    @foreach (var section in hub.Sections)
+    {
+        <section class="hubSection">
+            <h2>@(en ? section.H2En : section.H2Es)</h2>
+            <p>@(en ? section.BodyEn : section.BodyEs)</p>
+        </section>
+    }
+    @if (faqs.Count > 0)
+    {
+        <section class="faq hubFaq" id="faq">
+            <div>
+                <p class="eyebrow">FAQ</p>
+                <h2>@(en ? "Questions people ask" : "Preguntas frecuentes")</h2>
+                <p><a href="@FaqHubCatalog.Path(en)">@(en ? "All FAQs" : "Todas las preguntas") →</a></p>
+            </div>
+            <div class="faqList">
+                @foreach (var item in faqs)
+                {
+                    <details>
+                        <summary>@item.Question <span>+</span></summary>
+                        <p>@item.Answer</p>
+                    </details>
+                }
+            </div>
+        </section>
+    }
+    @if (Model.Related.Count > 0)
+    {
+        <section class="guideRelated">
+            <p class="eyebrow">@(en ? "RELATED PAGES" : "PÁGINAS RELACIONADAS")</p>
+            <div>
+                @foreach (var related in Model.Related)
+                {
+                    <a href="@related.Path(en)"><span>@related.Icon</span>@(en ? related.H1En : related.H1Es) →</a>
+                }
+            </div>
+        </section>
+    }
+    <section class="guideNote">
+        <strong>@(en ? "Important:" : "Importante:")</strong>
+        @(en ? hub.NoteEn : hub.NoteEs)
+        @(en
+            ? " Coverage, availability, price and eligibility depend on the final policy, state and insurer approval. This site does not issue a binding quote."
+            : " La cobertura, disponibilidad, precio y elegibilidad dependen de la póliza final, el estado y la aprobación de la aseguradora. Este sitio no emite una cotización vinculante.")
+    </section>
+    <section class="guideClaim">
+        <div>
+            <p class="eyebrow">Carolinas Coverage Insurance Agency</p>
+            <h2>410 Westinghouse Blvd, Suite B<br>Charlotte, NC 28273</h2>
+            <p>@(en ? "North Carolina and South Carolina. Spanish and English contact paths." : "Carolina del Norte y Carolina del Sur. Contacto en español e inglés.")</p>
+        </div>
+        <a href="tel:+17045953429">704-595-3429</a>
+    </section>
+</main>

@@ -1,0 +1,74 @@
+@using MajesticRoofing.Seo
+@inject ISeoService Seo
+@{
+    var seoPage = Seo.Current;
+    var title = seoPage.Title;
+    var description = seoPage.Description;
+    var ogImage = seoPage.OgImage;
+    var lang = seoPage.Lang;
+}
+<!DOCTYPE html>
+<html lang="@lang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@title</title>
+    <meta name="description" content="@description" />
+    <meta name="robots" content="@seoPage.Robots" />
+    <meta name="author" content="Majestic Roofing, Inc." />
+    <meta name="theme-color" content="#17324d" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="geo.region" content="US-NC" />
+    <meta name="geo.placename" content="Charlotte" />
+    <meta name="geo.position" content="35.2269;-80.7311" />
+    <meta name="ICBM" content="35.2269, -80.7311" />
+    <link rel="canonical" href="@seoPage.Canonical" />
+    <link rel="alternate" hreflang="en" href="@seoPage.AlternateEn" />
+    <link rel="alternate" hreflang="es" href="@seoPage.AlternateEs" />
+    <link rel="alternate" hreflang="x-default" href="@seoPage.AlternateEn" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="@(seoPage.Origin)/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="@(seoPage.Origin)/llms.txt" />
+    <link rel="me" href="@seoPage.Instagram" />
+    <link rel="me" href="@seoPage.Facebook" />
+    <meta property="og:site_name" content="Majestic Roofing" />
+    <meta property="og:title" content="@title" />
+    <meta property="og:description" content="@description" />
+    <meta property="og:type" content="@seoPage.OgType" />
+    <meta property="og:url" content="@seoPage.Canonical" />
+    <meta property="og:locale" content="@seoPage.OgLocale" />
+    <meta property="og:locale:alternate" content="@seoPage.OgLocaleAlternate" />
+    <meta property="og:image" content="@ogImage" />
+    <meta property="og:image:alt" content="@title" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@title" />
+    <meta name="twitter:description" content="@description" />
+    <meta name="twitter:url" content="@seoPage.Canonical" />
+    <meta name="twitter:image" content="@ogImage" />
+    <meta name="twitter:image:alt" content="@title" />
+    @if (!string.IsNullOrWhiteSpace(seoPage.GoogleSiteVerification))
+    {
+        <meta name="google-site-verification" content="@seoPage.GoogleSiteVerification" />
+    }
+    @if (!string.IsNullOrWhiteSpace(seoPage.BingSiteVerification))
+    {
+        <meta name="msvalidate.01" content="@seoPage.BingSiteVerification" />
+    }
+    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/projects/roof-project-11.jpeg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" as="image" href="@seoPage.OgImagePath" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/lang.css" />
+    <script src="/js/lang-boot.js"></script>
+    @if (!string.IsNullOrEmpty(seoPage.JsonLd))
+    {
+        <script type="application/ld+json">@Html.Raw(seoPage.JsonLd)</script>
+    }
+</head>
+<body>
+    @RenderBody()
+    <script src="/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+@page "/service/{type}"
+@model CarolinasCoverage.Pages.Service.DemoModel
+<script type="application/json" id="service-data">@Html.Raw(Model.Payload)</script>
+<main class="servicePage" id="contenido"></main>

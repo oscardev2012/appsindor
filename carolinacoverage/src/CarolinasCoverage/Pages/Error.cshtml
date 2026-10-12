@@ -1,0 +1,32 @@
+﻿@page
+@model ErrorModel
+@{
+    var en = Model.En;
+    var missing = Model.StatusCodeValue == 404;
+}
+<main class="servicePage" id="contenido">
+    <a class="serviceBack" href="@Lang.Home(en)">← Carolinas Coverage</a>
+    <section class="serviceShell">
+        <p class="eyebrow">@(missing ? "404" : Model.StatusCodeValue.ToString())</p>
+        <div class="serviceSuccess">
+            <h1>@(missing
+                ? (en ? "We could not find that page." : "No encontramos esa página.")
+                : (en ? "Something went wrong." : "Algo salió mal."))</h1>
+            <p>@(missing
+                ? (en ? "The link may be outdated. Compare auto, home, renters, pet, or business insurance from the homepage." : "El enlace puede estar desactualizado. Compara seguro de auto, hogar, inquilinos, mascotas o negocio desde el inicio.")
+                : (en ? "Please try again or call the agency." : "Inténtalo de nuevo o llama a la agencia."))</p>
+            <div>
+                <b>Carolinas Coverage Insurance Agency</b>
+                <p>410 Westinghouse Blvd, Suite B, Charlotte, NC 28273<br><a href="tel:+17045953429">704-595-3429</a></p>
+            </div>
+            <a class="button" href="@Lang.Home(en)">@(en ? "Back to home" : "Volver al inicio")</a>
+            <p>
+                <a class="textCta" href="@Lang.Coverage(en, "auto")">@(en ? "Auto insurance" : "Seguro de auto")</a>
+                · <a class="textCta" href="@Lang.Coverage(en, "home")">@(en ? "Home insurance" : "Seguro de casa")</a>
+                · <a class="textCta" href="@FaqHubCatalog.Path(en)">FAQ</a>
+                · <a class="textCta" href="@(en ? "/about" : "/es/nosotros")">@(en ? "About" : "Nosotros")</a>
+                · <a class="textCta" href="@Lang.Contact(en)">@(en ? "Contact" : "Contacto")</a>
+            </p>
+        </div>
+    </section>
+</main>

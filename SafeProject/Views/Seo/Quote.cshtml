@@ -1,0 +1,170 @@
+@model CalentonesAgua.Models.SeoQuoteViewModel
+@{
+    var page = ViewData["SeoPage"] as CalentonesAgua.Models.SeoPage;
+}
+
+<section class="quote-landing">
+    <div class="container quote-landing-grid">
+        <div>
+            <p class="eyebrow">@(page?.Eyebrow ?? "PHOTO QUOTE")</p>
+            <h1>@(page?.H1 ?? "Water Heater Quote From Photos")</h1>
+            <p class="quote-landing-lead">From $1,199 + tax for a qualifying 40-gal electric replacement in Charlotte. Fill this in now — we call you back.</p>
+
+            <div class="form-shell quote-landing-form" id="quote-form">
+                @if (ViewBag.Submitted == true)
+                {
+                    <div class="success-card">
+                        <span class="eyebrow">Quote request received</span>
+                        <strong>@ViewBag.Reference</strong>
+                        @if (ViewBag.SmsConsent == true)
+                        {
+                            <p>We may text you at the number you provided about this quote and scheduling. You can also text photos to @SiteContact.TextPretty. Reply STOP to unsubscribe, HELP for help.</p>
+                        }
+                        else
+                        {
+                            <p>We will not send you SMS unless you text us first. We may call @SiteContact.CallDisplay, or you can opt in by texting photos to @SiteContact.TextPretty.</p>
+                        }
+                        <a class="button button-red" href="@SiteContact.TextHref">Text @SiteContact.TextPretty if you want SMS</a>
+                    </div>
+                }
+                else
+                {
+                    <form asp-controller="Seo" asp-action="Quote" method="post" class="form-card">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="UtmSource" />
+                        <input type="hidden" asp-for="UtmCampaign" />
+                        <input type="hidden" asp-for="Gclid" />
+                        <input type="hidden" asp-for="LandingPath" />
+                        <div class="visually-hidden" aria-hidden="true">
+                            <label for="lead-hp">Leave blank</label>
+                            <input asp-for="CompanyWebsite" id="lead-hp" tabindex="-1" autocomplete="off" />
+                        </div>
+                        <div class="form-section">
+                            <h2>Register for a callback</h2>
+                            <p>Name and phone. We call you back.</p>
+                            <div asp-validation-summary="ModelOnly" class="field-error"></div>
+                            <div class="field-grid quote-core-fields">
+                                <div class="field">
+                                    <label asp-for="Name"></label>
+                                    <input asp-for="Name" autofocus autocomplete="name" />
+                                    <span class="field-error" asp-validation-for="Name"></span>
+                                </div>
+                                <div class="field">
+                                    <label asp-for="Phone"></label>
+                                    <input asp-for="Phone" type="tel" inputmode="tel" autocomplete="tel" />
+                                    <span class="field-error" asp-validation-for="Phone"></span>
+                                </div>
+                            </div>
+                            <details class="quote-more">
+                                <summary>Optional details (address, tank, email)</summary>
+                                <div class="field-grid">
+                                <div class="field">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" autocomplete="email" />
+                                    <span class="field-error" asp-validation-for="Email"></span>
+                                </div>
+                                <div class="field">
+                                    <label asp-for="City"></label>
+                                    <input asp-for="City" autocomplete="address-level2" />
+                                    <span class="field-error" asp-validation-for="City"></span>
+                                </div>
+                                <div class="field full">
+                                    <label asp-for="Address"></label>
+                                    <input asp-for="Address" autocomplete="street-address" />
+                                </div>
+                                <div class="field">
+                                    <label asp-for="Fuel"></label>
+                                    <select asp-for="Fuel">
+                                        <option value="">Select</option>
+                                        <option>Electric tank</option>
+                                        <option>Gas tank</option>
+                                        <option>Tankless</option>
+                                        <option>Not sure</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label asp-for="TankSize"></label>
+                                    <select asp-for="TankSize">
+                                        <option value="">Select</option>
+                                        <option>40 gallon</option>
+                                        <option>50 gallon</option>
+                                        <option>Other / unknown</option>
+                                    </select>
+                                </div>
+                                <div class="field full">
+                                    <label asp-for="Issue"></label>
+                                    <input asp-for="Issue" placeholder="Leaking, no hot water, replacement before it fails…" />
+                                </div>
+                                </div>
+                            </details>
+                            <div class="field full sms-consent">
+                                <label>
+                                    <input asp-for="SmsConsent" data-val="false" />
+                                    <span>
+                                        Optional: I agree to receive customer-care SMS about this quote. Reply STOP to cancel. Not required to submit.
+                                        <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+                                    </span>
+                                </label>
+                            </div>
+                            <button class="button button-red button-large" type="submit">Submit quote request</button>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+        <aside class="quote-landing-aside">
+            <div class="seo-cta-card">
+                <span class="eyebrow">PUBLISHED PACKAGES</span>
+                <ul class="quote-price-list">
+                    <li><strong>$1,199</strong> 40-gal electric + tax</li>
+                    <li><strong>$1,349</strong> 50-gal electric + tax</li>
+                    <li><strong>From $1,449</strong> gas tank + tax</li>
+                </ul>
+                <p>Only when photos confirm a like-for-like standard replacement. Extras are written first.</p>
+                <a class="button button-red" href="@SiteContact.TextHref">Text photos @SiteContact.TextDisplay</a>
+                <a class="quote-call-link" href="@SiteContact.CallHref">Call @SiteContact.CallDisplay</a>
+            </div>
+            @if (page?.Related.Count > 0)
+            {
+                <div class="seo-related">
+                    <strong>Related pages</strong>
+                    @foreach (var link in page.Related)
+                    {
+                        <a href="@link.Slug">@link.Label</a>
+                    }
+                </div>
+            }
+        </aside>
+    </div>
+</section>
+
+@if (page is not null)
+{
+    <section class="section quote-landing-details">
+        <div class="container seo-hero">
+            <article class="seo-article prose">
+                @foreach (var block in page.Sections)
+                {
+                    <h2>@block.Heading</h2>
+                    @if (!string.IsNullOrWhiteSpace(block.Body))
+                    {
+                        <p>@block.Body</p>
+                    }
+                    @if (block.Bullets is { Count: > 0 })
+                    {
+                        <ul>
+                            @foreach (var bullet in block.Bullets)
+                            {
+                                <li>@bullet</li>
+                            }
+                        </ul>
+                    }
+                }
+            </article>
+        </div>
+    </section>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

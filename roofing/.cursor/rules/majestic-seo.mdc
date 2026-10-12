@@ -1,0 +1,13 @@
+---
+description: Majestic Roofing SEO — one intent per page, bilingual, claim-safe copy
+alwaysApply: true
+---
+
+# SEO
+
+- One search intent per URL. Variants go in sections/FAQ, not new pages.
+- Titles and descriptions live in `Seo/SeoCatalog.cs`. Add every new route pair there and in `wwwroot/js/lang-boot.js`.
+- Service area: ~90 minutes from Charlotte, NC or Rock Hill, SC. Raleigh is out of area.
+- Do not promise claim approval, deductible waiver, 24/7, or same-day repair.
+- New landings use `resource-site` chrome (`_SeoIntentHeader` / `_SeoIntentFooter`).
+- After SEO HTML changes: `dotnet build` and verify the live URL plus `/sitemap.xml`.

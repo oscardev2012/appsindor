@@ -1,0 +1,49 @@
+@{
+    var city = ViewData["City"] as string ?? "Shelby";
+    var county = ViewData["County"] as string ?? "Cleveland County";
+}
+
+<section class="page-hero city-hero">
+    <div class="container city-hero-grid">
+        <div>
+            <span class="eyebrow">@city.ToUpperInvariant() HOMEOWNER SPECIAL</span>
+            <h1>@city, NC Water Heater Replacement Specialists.</h1>
+            <p>SAFE Water Heater is a Charlotte-based team focused on water heater sales, replacement, warranty records and service follow-up for homeowners in @city.</p>
+            <div class="hero-actions">
+                <a class="button button-red" href="/water-heater-replacement-quote/">Check availability</a>
+                <a class="button button-outline" href="@SiteContact.CallHref">Call SAFE</a>
+            </div>
+        </div>
+        <div class="city-price">
+            <span>40-GALLON ELECTRIC PROMOTION</span>
+            <strong>$1,199</strong>
+            <p>$200 qualifying water heater + $999 standard professional installation, plus applicable tax.</p>
+            <p>Other current options: 50-gal electric $1,349 + tax; 40-gal gas from $1,449 + tax; expansion tank from $149.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container prose" style="max-width:820px">
+        <h2>Why @city is on a dedicated page</h2>
+        <p>SAFE runs regular water-heater routes through @city in @county. This page exists because we actually schedule here—not to manufacture a keyword URL. Standard packages match Charlotte: 40-gal electric $1,199 + tax, 50-gal electric $1,349 + tax, 40-gal gas from $1,449 + tax, subject to photos and access.</p>
+        <h2>A water-heater-only process for @county</h2>
+        <p>This site and the service behind it are dedicated to water heaters. We review the existing unit, tank size, electric or gas configuration, visible connections, access and property conditions before scheduling.</p>
+        <h2>What standard replacement includes</h2>
+        <ul>
+            <li>Removal and disposal of the existing water heater.</li>
+            <li>Placement and connection of the qualifying replacement unit using suitable existing connections.</li>
+            <li>Startup, basic operational testing and homeowner handoff.</li>
+            <li>Online warranty registration and organized follow-up record.</li>
+        </ul>
+        <h2>Payment options</h2>
+        <p>Customers may pay in full, ask about the SAFE Homeowner Plan or explore the separate Synchrony home-improvement financing option. Synchrony approval and terms are controlled by Synchrony.</p>
+        <h2>Warranty support</h2>
+        <p>The installed unit may carry a five-year limited manufacturer warranty subject to the exact model’s written terms. SAFE also provides a two-year limited installation labor warranty for qualifying defects caused by SAFE’s original workmanship, subject to technician inspection and the written warranty.</p>
+        <div class="hero-actions">
+            <a class="button button-red" href="/water-heater-replacement-quote/">Get a photo quote</a>
+            <a class="button button-outline" href="/water-heater-cost-charlotte-nc/">See installed pricing</a>
+            <a class="button button-outline" href="/water-heater-service-near-me/">Full service area</a>
+        </div>
+    </div>
+</section>
