@@ -172,6 +172,17 @@ function nowTimeLocal(){const d=new Date();return `${pad2(d.getHours())}:${pad2(
 function validPhone(value){return !value||/^\d{10}$/.test(value)}
 document.addEventListener('input',e=>{if(e.target.matches?.('[data-phone]')){const clean=e.target.value.replace(/\D/g,'').slice(0,10);if(clean!==e.target.value)e.target.value=clean}});
 function validEmail(value){return /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(String(value||'').trim())}
+function validityText(f){
+  const v=f.validity;
+  if(v.valueMissing)return f.type==='checkbox'?t('Check this box to continue.','Marca esta casilla para continuar.'):f.tagName==='SELECT'?t('Choose an option from the list.','Elige una opción de la lista.'):t('Fill out this field.','Completa este campo.');
+  if(f.type==='email'&&(v.typeMismatch||v.patternMismatch))return I18N.badEmail[state.lang==='en'?0:1];
+  if(v.patternMismatch&&f.matches('[data-phone]'))return PHONE_ERROR();
+  if(v.tooShort)return t(`Use at least ${f.minLength} characters.`,`Usa al menos ${f.minLength} caracteres.`);
+  if(v.valid)return '';
+  return t('Check the value of this field.','Revisa el valor de este campo.');
+}
+document.addEventListener('invalid',e=>{const f=e.target;if(f.validity.customError&&!f.dataset.portalMsg)return;f.setCustomValidity('');const msg=validityText(f);if(msg){f.setCustomValidity(msg);f.dataset.portalMsg='1'}},true);
+['input','change'].forEach(type=>document.addEventListener(type,e=>{const f=e.target;if(f?.dataset?.portalMsg){f.setCustomValidity('');delete f.dataset.portalMsg}},true));
 const CHARLOTTE_FIRMS=['Allen Tate / Howard Hanna','Berkshire Hathaway HomeServices Carolinas Realty','Coldwell Banker Realty','Compass','Corcoran HM Properties','Cottingham Chalk Hayes Realtors','Dickens Mitchener & Associates','eXp Realty','Helen Adams Realty','Ivester Jackson Distinctive Properties','Keller Williams Realty','Mark Spain Real Estate','Nest Realty','Premier Sotheby\'s International Realty','RE/MAX Executive','Real Broker','Realty ONE Group','Redfin','Savvy + Co. Real Estate','Wilkinson ERA Real Estate'];
 const NO_FIRM='None';
 function firmLabel(value){return value===NO_FIRM?t('No firm','Ninguna'):String(value||'')}
