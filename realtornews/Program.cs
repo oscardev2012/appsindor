@@ -21,6 +21,7 @@ builder.Services.AddResponseCompression(options =>
 });
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<RealtorNewsStore>();
+builder.Services.AddSingleton<HubLatestPostClient>();
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services
     .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

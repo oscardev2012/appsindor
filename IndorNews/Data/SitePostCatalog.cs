@@ -8,6 +8,8 @@ public static class SitePostCatalog
         ("roofing", "Majestic Roofing"),
         ("realtor", "Manuela Ruiz Realtor"),
         ("carolina", "Carolinas Coverage"),
+        ("realestatedesk", "Charlotte Real Estate Desk"),
+        ("safecomfort", "Safe Comfort (HVAC)"),
     ];
 
     public static bool TryNormalize(string? site, out string key)
