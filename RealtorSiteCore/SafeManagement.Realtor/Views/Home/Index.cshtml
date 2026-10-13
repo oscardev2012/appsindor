@@ -4,9 +4,9 @@
 }
 <div class="app">
     <header class="topbar">
-      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu" aria-expanded="false">☰</button>
-      <button class="global-back" id="globalBack" aria-label="Go back">←</button>
-      <button class="brand" data-route="home" aria-label="SAFE Realtor home">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu" data-aria-es="Abrir menú" aria-expanded="false">☰</button>
+      <button class="global-back" id="globalBack" aria-label="Go back" data-aria-es="Volver">←</button>
+      <button class="brand" data-route="home" aria-label="SAFE Realtor home" data-aria-es="Inicio de SAFE Realtor">
         <span class="brand-mark">S+</span>
         <span><strong>SAFE REALTOR</strong><small data-i18n="brandSub">Property Repair Intelligence</small></span>
       </button>
@@ -20,12 +20,12 @@
         <button class="top-btn member-only" id="estimateTray"><span data-i18n="estimateTray">Estimate</span><b id="estimateCount">0</b></button>
         <button class="top-btn language" id="languageBtn">ES</button>
         <button class="sign-in-top guest-only" id="signInTop" data-i18n="signIn">Sign in</button>
-        <button class="profile member-only" id="profileBtn" aria-label="Open profile" aria-expanded="false"><span id="profileInitial">RP</span><i></i></button>
+        <button class="profile member-only" id="profileBtn" aria-label="Open profile" data-aria-es="Abrir perfil" aria-expanded="false"><span id="profileInitial">RP</span><i></i></button>
       </div>
     </header>
 
     <aside class="public-menu guest-only" id="publicMenu" aria-hidden="true">
-      <div class="menu-drawer-head"><div><span class="brand-mark">S+</span><strong>SAFE REALTOR</strong></div><button class="close" id="closePublicMenu" aria-label="Close menu">×</button></div>
+      <div class="menu-drawer-head"><div><span class="brand-mark">S+</span><strong>SAFE REALTOR</strong></div><button class="close" id="closePublicMenu" aria-label="Close menu" data-aria-es="Cerrar menú">×</button></div>
       <div class="menu-intro"><span class="eyebrow" data-i18n="realtorTools">REALTOR TOOLS</span><h2 data-i18n="menuQuestion">What do you need for this property?</h2><p data-i18n="menuIntro">Start with the question your buyer or seller is asking.</p></div>
       <nav class="public-menu-nav">
         <span class="nav-section" data-i18n="beforeLogin">BEFORE SIGN IN</span>
@@ -83,7 +83,7 @@
       <main class="main" id="main" tabindex="-1"></main>
     </div>
 
-    <nav class="mobile-bottom member-only" id="mobileBottom" aria-label="Main navigation">
+    <nav class="mobile-bottom member-only" id="mobileBottom" aria-label="Main navigation" data-aria-es="Navegación principal">
       <button data-route="home"><span>⌂</span><small data-i18n="navHome">Home</small></button>
       <button data-route="search"><span>⌕</span><small data-i18n="prices">Prices</small></button>
       <button data-route="report"><span>⇧</span><small data-i18n="reportShort">Report</small></button>
@@ -97,7 +97,7 @@
   <aside class="drawer" id="estimateDrawer" aria-hidden="true">
     <div class="drawer-head">
       <div><span class="eyebrow" data-i18n="draftEstimate">Draft estimate</span><h2 data-i18n="selectedRepairs">Selected repairs</h2></div>
-      <button class="close" data-close="drawer" aria-label="Close">×</button>
+      <button class="close" data-close="drawer" aria-label="Close" data-aria-es="Cerrar">×</button>
     </div>
     <div class="drawer-body" id="estimateItems"></div>
     <div class="drawer-foot">
@@ -110,13 +110,13 @@
     <div class="modal-card gift-modal-card">
       <div class="modal-head">
         <div><span class="eyebrow" data-i18n="giftBuilder">Gift card builder</span><h2 id="giftTitle" data-i18n="createClosingGift">Create a closing gift</h2></div>
-        <button class="close" data-close="modal" aria-label="Close">×</button>
+        <button class="close" data-close="modal" aria-label="Close" data-aria-es="Cerrar">×</button>
       </div>
       <div class="gift-editor">
         <div class="gift-form">
-          <label><span data-i18n="clientName">Client name</span><input id="giftName" placeholder="New homeowner"></label>
-          <label><span data-i18n="propertyAddress">Property address</span><input id="giftAddress" placeholder="Street, city, state"></label>
-          <label><span data-i18n="realtyFirm">Realty firm</span><input id="giftFirm" value="Your Realty Firm"></label>
+          <label><span data-i18n="clientName">Client name</span><input id="giftName" placeholder="New homeowner" data-placeholder-en="New homeowner" data-placeholder-es="Nuevo propietario"></label>
+          <label><span data-i18n="propertyAddress">Property address</span><input id="giftAddress" placeholder="Street, city, state" data-placeholder-en="Street, city, state" data-placeholder-es="Calle, ciudad, estado"></label>
+          <label><span data-i18n="realtyFirm">Realty firm</span><input id="giftFirm" placeholder="Your Realty Firm" data-placeholder-en="Your Realty Firm" data-placeholder-es="Tu firma inmobiliaria"></label>
           <label><span data-i18n="giftValue">Gift value</span><select id="giftValue"><option value="50" data-i18n="gift50">$50 — SAFE covers 100%</option><option value="100">$100 — Realtor $50 + SAFE $50</option><option value="250">$250 — Realtor $125 + SAFE $125</option><option value="300">$300 — Realtor $150 + SAFE $150</option></select></label>
           <label><span data-i18n="firmLogo">Realty firm logo</span><span class="file-control"><input type="file" id="giftLogo" accept="image/png,image/jpeg,image/webp,image/svg+xml"><b data-i18n="uploadLogo">Upload required logo</b><small id="giftLogoName"></small></span></label>
         </div>
@@ -134,12 +134,12 @@
 
   <div class="modal" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="requestTitle">
     <div class="modal-card">
-      <div class="modal-head"><div><span class="eyebrow" data-i18n="safeRequest">SAFE work request</span><h2 id="requestTitle" data-i18n="sendManagement">Send to Management</h2></div><button class="close" data-close="modal" aria-label="Close">×</button></div>
+      <div class="modal-head"><div><span class="eyebrow" data-i18n="safeRequest">SAFE work request</span><h2 id="requestTitle" data-i18n="sendManagement">Send to Management</h2></div><button class="close" data-close="modal" aria-label="Close" data-aria-es="Cerrar">×</button></div>
       <div class="form-grid">
-        <label class="full"><span data-i18n="sendTo">Send to</span><input id="requestEmail" type="email" placeholder="name@@email.com" autocomplete="email"><small data-i18n="sendToHelp">Email of the person who should receive this.</small></label>
-        <label><span data-i18n="propertyAddress">Property address</span><input id="requestAddress" placeholder="Property address"></label>
-        <label><span data-i18n="clientName">Client name</span><input id="requestClient" placeholder="Client name"></label>
-        <label class="full"><span data-i18n="requestNotes">What needs to happen?</span><textarea id="requestNotes" rows="4" placeholder="Describe the repair, timing and anything SAFE should know."></textarea></label>
+        <label class="full"><span data-i18n="sendTo">Send to</span><input id="requestEmail" type="email" placeholder="name@@email.com" data-placeholder-en="name@@email.com" data-placeholder-es="nombre@@correo.com" autocomplete="email"><small data-i18n="sendToHelp">Email of the person who should receive this.</small></label>
+        <label><span data-i18n="propertyAddress">Property address</span><input id="requestAddress" placeholder="Property address" data-placeholder-en="Property address" data-placeholder-es="Dirección de la propiedad"></label>
+        <label><span data-i18n="clientName">Client name</span><input id="requestClient" placeholder="Client name" data-placeholder-en="Client name" data-placeholder-es="Nombre del cliente"></label>
+        <label class="full"><span data-i18n="requestNotes">What needs to happen?</span><textarea id="requestNotes" rows="4" placeholder="Describe the repair, timing and anything SAFE should know." data-placeholder-en="Describe the repair, timing and anything SAFE should know." data-placeholder-es="Describe la reparación, los tiempos y lo que SAFE deba saber."></textarea></label>
       </div>
       <div class="connection-note"><span>↗</span><p><strong data-i18n="privateHandoff">Private handoff</strong><br><span data-i18n="handoffCopy">Management receives the property, selected repairs and your notes. Internal prices and crew data remain private.</span></p></div>
       <div class="modal-actions"><button class="button secondary" data-close="modal" data-i18n="cancel">Cancel</button><button class="button primary" id="sendRequest" data-i18n="sendRequest">Send request</button></div>
@@ -148,11 +148,11 @@
 
   <div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
     <div class="modal-card">
-      <div class="modal-head"><div><span class="eyebrow" data-i18n="quoteEyebrow">CLIENT QUOTE</span><h2 id="quoteTitle" data-i18n="generateSend">Generate and send</h2></div><button class="close" data-close="modal" aria-label="Close">×</button></div>
+      <div class="modal-head"><div><span class="eyebrow" data-i18n="quoteEyebrow">CLIENT QUOTE</span><h2 id="quoteTitle" data-i18n="generateSend">Generate and send</h2></div><button class="close" data-close="modal" aria-label="Close" data-aria-es="Cerrar">×</button></div>
       <div class="form-grid">
-        <label><span data-i18n="clientName">Client name</span><input id="quoteClient" placeholder="Buyer or seller"></label>
-        <label><span data-i18n="clientEmail">Client email</span><input id="quoteEmail" type="email" placeholder="name@@email.com"></label>
-        <label class="full"><span data-i18n="propertyAddress">Property address</span><input id="quoteAddress" placeholder="Street, city, state"></label>
+        <label><span data-i18n="clientName">Client name</span><input id="quoteClient" placeholder="Buyer or seller" data-placeholder-en="Buyer or seller" data-placeholder-es="Comprador o vendedor"></label>
+        <label><span data-i18n="clientEmail">Client email</span><input id="quoteEmail" type="email" placeholder="name@@email.com" data-placeholder-en="name@@email.com" data-placeholder-es="nombre@@correo.com"></label>
+        <label class="full"><span data-i18n="propertyAddress">Property address</span><input id="quoteAddress" placeholder="Street, city, state" data-placeholder-en="Street, city, state" data-placeholder-es="Calle, ciudad, estado"></label>
         <label class="full"><span data-i18n="quoteOptionLabel">Option to send</span><select id="quoteOption"><option value="" data-i18n="chooseOption">Choose an option</option><option value="minimum" data-i18n="optMinimum">Minimum repairs</option><option value="recommended" data-i18n="optRecommended">Recommended plan</option><option value="complete" data-i18n="optComplete">Complete improvement</option></select></label>
       </div>
       <pre class="quote-preview" id="quotePreview"></pre>
@@ -162,8 +162,8 @@
 
   <div class="modal login-modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
     <div class="modal-card login-card">
-      <button class="close login-close" data-close="modal" aria-label="Close">×</button>
-      <div class="login-brand"><span class="brand-mark">S+</span><div><strong>SAFE REALTOR</strong><small>Partner workspace</small></div></div>
+      <button class="close login-close" data-close="modal" aria-label="Close" data-aria-es="Cerrar">×</button>
+      <div class="login-brand"><span class="brand-mark">S+</span><div><strong>SAFE REALTOR</strong><small data-i18n="loginWorkspace">Partner workspace</small></div></div>
       <span class="eyebrow" data-i18n="realtorAccess">REALTOR ACCESS</span>
       <h2 id="loginTitle" data-i18n="gateTitle">SAFE Realtor</h2>
       <p class="session-notice" id="sessionNotice" data-i18n="sessionExpired" role="status" hidden>Your session closed after 30 minutes of inactivity. Sign in again to continue.</p>
@@ -177,14 +177,14 @@
       <form id="loginForm" class="login-form">
         <div id="realtorCreate" hidden>
           <label><span data-i18n="fullName">Full name</span><input id="createName" autocomplete="name" required></label>
-          <label><span>Email</span><input id="createEmail" type="email" placeholder="name@@firm.com" autocomplete="email" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
+          <label><span>Email</span><input id="createEmail" type="email" placeholder="name@@firm.com" data-placeholder-en="name@@firm.com" data-placeholder-es="nombre@@firma.com" autocomplete="email" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
           <label><span data-i18n="password">Password</span><input id="createPassword" type="password" autocomplete="new-password" minlength="6" required></label>
           <label><span data-i18n="realtyFirm">Realty firm</span><span class="firm-field" id="createFirmField"></span></label>
           <button class="button primary wide" type="submit" data-i18n="createProfile">Create profile</button>
           <button class="text-button" type="button" id="createToSignIn" data-i18n="haveAccount">Already have an account? Sign in</button>
         </div>
         <div id="realtorSignIn" hidden>
-          <label><span>Email</span><input id="signInEmail" type="email" placeholder="name@@firm.com" autocomplete="username" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
+          <label><span>Email</span><input id="signInEmail" type="email" placeholder="name@@firm.com" data-placeholder-en="name@@firm.com" data-placeholder-es="nombre@@firma.com" autocomplete="username" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
           <label><span data-i18n="password">Password</span><input id="signInPassword" type="password" autocomplete="current-password" required></label>
           <button class="button primary wide" type="submit" data-i18n="signInExisting">Sign in</button>
           <button class="text-button" type="button" id="signInToCreate" data-i18n="needAccount">No account yet? Create a profile</button>
