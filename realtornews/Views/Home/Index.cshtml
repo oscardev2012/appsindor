@@ -14,6 +14,7 @@
     var featured = Model.Realtors.FirstOrDefault();
 }
 @await Html.PartialAsync("_DbBanner", Model.DbError)
+@await Component.InvokeAsync("HubLatestPost")
 
 <section class="hero">
     <div class="hero-copy">
