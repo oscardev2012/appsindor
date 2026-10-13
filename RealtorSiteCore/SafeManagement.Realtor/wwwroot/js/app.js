@@ -98,6 +98,7 @@ function applyLanguage(){
   document.querySelectorAll('[data-i18n]').forEach(node=>{const pair=I18N[node.dataset.i18n];if(pair)node.textContent=pair[state.lang==='en'?0:1]});
   document.querySelectorAll('[data-placeholder-en]').forEach(node=>node.placeholder=state.lang==='en'?node.dataset.placeholderEn:node.dataset.placeholderEs);
   el('languageBtn').textContent=state.lang==='en'?'ES':'EN';
+  const shortcut=el('searchShortcut');if(shortcut){shortcut.textContent=`${/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent)?'⌘':'Ctrl'} K`;shortcut.title=t('Shortcut to search','Atajo para buscar')}
   if(state.loggedIn)paintRealtor();
 }
 function navigate(route){
