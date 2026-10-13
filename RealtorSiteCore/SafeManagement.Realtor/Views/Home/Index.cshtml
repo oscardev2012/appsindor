@@ -177,14 +177,14 @@
       <form id="loginForm" class="login-form">
         <div id="realtorCreate" hidden>
           <label><span data-i18n="fullName">Full name</span><input id="createName" autocomplete="name" required></label>
-          <label><span>Email</span><input id="createEmail" type="email" placeholder="name@@firm.com" data-placeholder-en="name@@firm.com" data-placeholder-es="nombre@@firma.com" autocomplete="email" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
+          <label><span data-i18n="emailLabel">Email</span><input id="createEmail" type="email" placeholder="name@@firm.com" data-placeholder-en="name@@firm.com" data-placeholder-es="nombre@@firma.com" autocomplete="email" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
           <label><span data-i18n="password">Password</span><input id="createPassword" type="password" autocomplete="new-password" minlength="6" required></label>
           <label><span data-i18n="realtyFirm">Realty firm</span><span class="firm-field" id="createFirmField"></span></label>
           <button class="button primary wide" type="submit" data-i18n="createProfile">Create profile</button>
           <button class="text-button" type="button" id="createToSignIn" data-i18n="haveAccount">Already have an account? Sign in</button>
         </div>
         <div id="realtorSignIn" hidden>
-          <label><span>Email</span><input id="signInEmail" type="email" placeholder="name@@firm.com" data-placeholder-en="name@@firm.com" data-placeholder-es="nombre@@firma.com" autocomplete="username" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
+          <label><span data-i18n="emailLabel">Email</span><input id="signInEmail" type="email" placeholder="name@@firm.com" data-placeholder-en="name@@firm.com" data-placeholder-es="nombre@@firma.com" autocomplete="username" required pattern="[^@@\s]+@@[^@@\s]+\.[A-Za-z]{2,}"></label>
           <label><span data-i18n="password">Password</span><input id="signInPassword" type="password" autocomplete="current-password" required></label>
           <button class="button primary wide" type="submit" data-i18n="signInExisting">Sign in</button>
           <button class="text-button" type="button" id="signInToCreate" data-i18n="needAccount">No account yet? Create a profile</button>
