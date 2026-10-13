@@ -23,7 +23,7 @@ const I18N={
   beforeLogin:['BEFORE SIGN IN','ANTES DE ENTRAR'],homeHelp:['See what SAFE can help with','Mira cómo SAFE puede ayudarte'],searchHelp:['Answer “What could this cost?”','Responde “¿Cuánto podría costar?”'],reportHelp:['Organize findings before due diligence ends','Organiza hallazgos antes de que termine el periodo de revisión'],
   estimateHelp:['Compare repair, credit or review','Compara reparación, crédito o revisión'],followupHelp:['Know who needs an answer today','Mira quién necesita respuesta hoy'],loginMenuHelp:['Open clients, messages and closing tools','Abre clientes, mensajes y herramientas de cierre'],
   overview:['OVERVIEW','RESUMEN'],propertyDecisions:['PROPERTY DECISIONS','DECISIONES DE LA PROPIEDAD'],clientRelationship:['CLIENT RELATIONSHIP','RELACIÓN CON CLIENTES'],closingReferrals:['CLOSING & REFERRALS','CIERRE Y REFERIDOS'],account:['ACCOUNT','CUENTA'],
-  gateTitle:['SAFE Realtor','SAFE Realtor'],gateIntro:['Create a profile, or sign in if you already have one.','Crea un perfil, o ingresa si ya tienes una cuenta.'],
+  gateTitle:['SAFE Realtor','SAFE Realtor'],sessionExpired:['Your session closed after 30 minutes of inactivity. Sign in again to continue.','Tu sesión se cerró tras 30 minutos sin actividad. Vuelve a entrar para continuar.'],gateIntro:['Create a profile, or sign in if you already have one.','Crea un perfil, o ingresa si ya tienes una cuenta.'],
   createProfile:['Create profile','Crear perfil'],signInExisting:['I already have an account','Ya tengo una cuenta'],fullName:['Full name','Nombre completo'],password:['Password','Contraseña'],
   haveAccount:['Already have an account? Sign in','¿Ya tienes cuenta? Ingresar'],needAccount:['No account yet? Create a profile','¿No tienes cuenta? Crear perfil'],
   badEmail:['Enter a complete email, such as name@firm.com','Escribe un correo completo, como nombre@firma.com'],shortPassword:['Use at least 6 characters.','Usa al menos 6 caracteres.'],
@@ -146,7 +146,12 @@ function closeNavMenus(){
 function realtorAccounts(){try{return JSON.parse(localStorage.getItem('safe-realtor-accounts')||'[]')}catch{return[]}}
 function saveRealtorAccounts(list){localStorage.setItem('safe-realtor-accounts',JSON.stringify(list))}
 function readRealtorSession(){try{return JSON.parse(sessionStorage.getItem('safe-realtor-session')||'null')}catch{return null}}
-function rememberRealtor(account){state.account=account;sessionStorage.setItem('safe-realtor-session',JSON.stringify(account));paintRealtor()}
+function rememberRealtor(account){state.account=account;sessionStorage.setItem('safe-realtor-session',JSON.stringify(account));markActive(true);paintRealtor()}
+const IDLE_LIMIT=30*60*1000;
+function markActive(force){const now=Date.now();if(!force&&now-(markActive.at||0)<30000)return;markActive.at=now;sessionStorage.setItem('safe-realtor-active',String(now))}
+function sessionIdle(){return Date.now()-(Number(sessionStorage.getItem('safe-realtor-active'))||0)>IDLE_LIMIT}
+function endIdleSession(){sessionStorage.removeItem('safe-realtor-session');sessionStorage.removeItem('safe-realtor-active');sessionStorage.setItem('safe-realtor-expired',JSON.stringify({email:state.account?.email||'',route:state.route}))}
+function expireIfIdle(){if(!state.loggedIn||!sessionIdle())return;endIdleSession();location.reload()}
 async function sendCompanyEmail(to,subject,body){
   try{
     const r=await fetch('/api/safe/email',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({to,subject,body,replyTo:state.account?.email||'',replyName:state.account?.name||''})});
@@ -200,6 +205,7 @@ function showRealtorGate(mode){
 function enterRealtor(account,message){
   state.logo='';state.connections=[];state.channelMessages=[];state.tipSends=[];state.giftCards=[];state.giftLogo='';
   rememberRealtor(account);
+  if(el('sessionNotice'))el('sessionNotice').hidden=true;
   loadTipStore().then(()=>render());
   state.loggedIn=true;
   state.reportReady=false;
@@ -1549,7 +1555,7 @@ function setupGlobal(){
   el('signInTop').onclick=()=>openModal('loginModal');
   el('profileBtn').onclick=e=>{e.stopPropagation();const menu=el('profileMenu'),open=!menu.classList.contains('open');menu.classList.toggle('open',open);menu.setAttribute('aria-hidden',String(!open));el('profileBtn').setAttribute('aria-expanded',String(open))};
   el('profileMenu').querySelectorAll('[data-route]').forEach(b=>b.onclick=()=>navigate(b.dataset.route));
-  el('signOutBtn').onclick=()=>{clearSessionWork();localStorage.removeItem('safe-demo-login');sessionStorage.removeItem('safe-realtor-session');state.account=null;state.loggedIn=false;state.route='welcome';location.hash='welcome';closeProfileMenu();closeNavMenus();applyAccessMode();render();toast(t('Signed out','Sesión cerrada'))};
+  el('signOutBtn').onclick=()=>{clearSessionWork();localStorage.removeItem('safe-demo-login');sessionStorage.removeItem('safe-realtor-session');sessionStorage.removeItem('safe-realtor-active');state.account=null;state.loggedIn=false;state.route='welcome';location.hash='welcome';closeProfileMenu();closeNavMenus();applyAccessMode();render();toast(t('Signed out','Sesión cerrada'))};
   el('showRealtorCreate').onclick=()=>showRealtorGate('create');
   el('showRealtorSignIn').onclick=()=>showRealtorGate('signin');
   el('createToSignIn').onclick=()=>showRealtorGate('signin');
@@ -1661,11 +1667,20 @@ function setupGlobal(){
 async function init(){
   localStorage.removeItem('safe-demo-login');
   state.account=readRealtorSession();
+  if(state.account&&sessionIdle()){endIdleSession();state.account=null}
+  let expired=null;try{expired=JSON.parse(sessionStorage.getItem('safe-realtor-expired')||'null')}catch{}
+  sessionStorage.removeItem('safe-realtor-expired');
+  if(expired&&expired.route&&expired.route!=='welcome')state.pendingRoute=expired.route;
   state.loggedIn=!!state.account;
+  if(state.loggedIn)markActive(true);
   localStorage.removeItem('safe-estimate');
   if(state.loggedIn){loadEstimate();loadReports()}else{state.estimate=[];state.reportReady=false;state.reportName='';state.reports=[]}
   if(state.loggedIn&&state.route==='welcome')state.route='home';
   applyLanguage();setupGlobal();applyAccessMode();updateCounts();renderDrawer();
+  if(expired){el('sessionNotice').hidden=false;openModal('loginModal');showRealtorGate('signin');el('signInEmail').value=expired.email||''}
+  ['pointerdown','keydown','scroll','touchstart'].forEach(type=>document.addEventListener(type,()=>{if(!state.loggedIn)return;if(sessionIdle())expireIfIdle();else markActive()},{passive:true,capture:true}));
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)expireIfIdle()});
+  setInterval(expireIfIdle,60000);
   try{const es=await fetch('repair-catalog-es.json');if(es.ok)Object.assign(catalogES,await es.json())}catch{}
   try{let response=await fetch('/api/realtor/catalog');if(!response.ok)response=await fetch('repair-catalog.json');state.catalog=await response.json()}catch(e){console.error(e);toast(t('Repair catalog is temporarily unavailable','El catálogo no está disponible temporalmente'))}
   state.estimate.forEach(r=>{const c=state.catalog.find(x=>x.id===r.id);if(c&&!r.finding&&r.notes!==c.notes){r.finding=r.notes||'';r.notes=c.notes}});
