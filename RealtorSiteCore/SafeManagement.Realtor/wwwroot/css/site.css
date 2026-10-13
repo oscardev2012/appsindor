@@ -333,4 +333,6 @@ button.thread.active{background:#eff8f8;border-left:4px solid var(--blue)}
 .consent-row input{margin-top:3px}
 .form-warning{margin:12px 23px 0;padding:10px 12px;border-radius:12px;background:#fff1ee;color:#b23a26;font-weight:700;font-size:14px}
 .muted-note{color:var(--muted);font-size:13px}
+.page-head{flex-wrap:wrap}
+.page-head>div:first-child{flex:1 1 420px;min-width:0}
 @media(max-width:850px){.inbox .threads{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.inbox button.thread{min-width:230px;border-bottom:0;border-right:1px solid var(--line)}}
