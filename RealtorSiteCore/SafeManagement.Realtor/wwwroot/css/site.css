@@ -315,6 +315,8 @@ button.thread.active{background:#eff8f8;border-left:4px solid var(--blue)}
 .plan-status{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .plan-form textarea{width:100%;border:1px solid #cbd7de;border-radius:11px;padding:12px;background:#fff;color:var(--ink);min-height:90px;font:inherit}
 .plan-form .full{grid-column:1/-1}
+.plan-realtor .field-title{font-weight:850}
+.plan-realtor-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;min-height:46px}
 .closeout-card .step-row{display:flex;gap:9px;align-items:center}
 .closeout-card .step-row b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;background:#e2e8ec;color:#718392}
 .closeout-card .step-row.done b{background:var(--green);color:#fff}
