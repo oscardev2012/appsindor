@@ -426,9 +426,19 @@ const copy={
       document.getElementById('portalWorkspace').classList.remove('portal-hidden');resetWizard();wiz.requests=[];fieldLog.items=[];renderPortal('worker');loadFieldRequests();loadFieldActivity();
       window.scrollTo(0,0);
     }
+    function clearCreateForm(){
+      ['profileName','createEmail','createPassword','createCompany','createPhone'].forEach(id=>{const el=document.getElementById(id);if(el){el.value='';el.setCustomValidity('')}});
+      document.querySelectorAll('#createSpecialties input[type=checkbox]').forEach(c=>c.checked=false);
+    }
+    function clearSignInForm(){
+      ['signInEmail','signInPassword'].forEach(id=>{const el=document.getElementById(id);if(el){el.value='';el.setCustomValidity('')}});
+    }
     function showGate(mode){
       const choices=document.getElementById('gateChoices'),create=document.getElementById('gateCreate'),sign=document.getElementById('gateSignIn'),title=document.getElementById('gateTitle');
       if(!choices)return;
+      if(mode==='create')clearCreateForm();
+      if(mode==='signin')clearSignInForm();
+      if(mode==='choices'){clearCreateForm();clearSignInForm()}
       choices.hidden=mode!=='choices';create.hidden=mode!=='create';sign.hidden=mode!=='signin';
       create.querySelectorAll('input,button').forEach(el=>{if(el.type!=='button')el.disabled=mode!=='create'});
       sign.querySelectorAll('input,button').forEach(el=>{if(el.type!=='button')el.disabled=mode!=='signin'});
