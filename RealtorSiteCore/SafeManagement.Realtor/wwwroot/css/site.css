@@ -167,7 +167,7 @@ button.thread.active{background:#eff8f8;border-left:4px solid var(--blue)}
 .estimator-summary strong{font-size:20px;color:var(--navy)}
 .estimator-summary span{font-size:11px;color:var(--muted)}
 .estimate-matrix{border:1px solid var(--line);border-radius:15px;overflow:auto}
-.estimate-matrix-row{display:grid;grid-template-columns:2.1fr .65fr .8fr 1fr 1fr 1fr;gap:12px;align-items:center;padding:13px 14px;border-top:1px solid var(--line);min-width:980px}
+.estimate-matrix-row{display:grid;grid-template-columns:2.2fr .7fr .9fr 1.1fr 1.1fr;gap:12px;align-items:center;padding:13px 14px;border-top:1px solid var(--line);min-width:860px}
 .estimate-matrix-row:first-child{border-top:0}
 .estimate-matrix-row:nth-child(odd):not(.matrix-head){background:#fafcfd}
 .estimate-matrix-row>div:first-child{display:grid;gap:3px}
