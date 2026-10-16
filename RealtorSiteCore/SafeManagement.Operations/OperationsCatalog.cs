@@ -30,10 +30,11 @@ public class OperationsCatalogStore
         if (id is null)
         {
             kind = "custom";
+            // ItemId is NVARCHAR(20): keep the temporary key short (p + 19 hex chars).
             using var reserve = db.Command("""
                 INSERT INTO dbo.SafeOpsCatalogItems (ItemId, Kind, Data, UpdatedBy)
                 OUTPUT INSERTED.Seq
-                VALUES (CONCAT(N'pending-', NEWID()), N'custom', N'{}', @by)
+                VALUES (CONCAT(N'p', LEFT(REPLACE(CONVERT(NVARCHAR(36), NEWID()), N'-', N''), 19)), N'custom', N'{}', @by)
                 """, tx).With("@by", by);
             var seq = (int)reserve.ExecuteScalar()!;
             id = $"C{seq:0000}";

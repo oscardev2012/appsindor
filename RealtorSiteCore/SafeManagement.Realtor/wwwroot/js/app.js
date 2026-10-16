@@ -130,7 +130,19 @@ function toast(message){const box=el('toast');box.textContent=message;box.classL
 function estimateKey(){return state.account?.email?`safe-estimate:${state.account.email.toLowerCase()}`:''}
 function loadEstimate(){if(!estimateKey()){state.estimate=[];state.transportAmount=0;return}try{state.estimate=JSON.parse(localStorage.getItem(estimateKey())||'[]')}catch{state.estimate=[]}state.transportAmount=Number(localStorage.getItem(estimateKey()+':transport'))||0}
 function persistEstimate(){if(estimateKey()){localStorage.setItem(estimateKey(),JSON.stringify(state.estimate));localStorage.setItem(estimateKey()+':transport',String(state.transportAmount||0))};updateCounts();renderDrawer()}
-function clearSessionWork(){const key=estimateKey();state.plan=null;state.plans=[];state.clientProfiles=[];state.planQuery='';state.estimate=[];state.transportAmount=0;state.reportReady=false;state.reportName='';state.reports=[];state.reportReading=false;localStorage.removeItem('safe-estimate');sessionStorage.removeItem('safe-realtor-reports');if(key){localStorage.removeItem(key);localStorage.removeItem(key+':transport')};updateCounts();renderDrawer()}
+function clearQuoteForm(){['quoteClient','quoteEmail','quoteAddress'].forEach(id=>{const n=el(id);if(n)n.value=''});if(el('quoteOption'))el('quoteOption').value=state.repairOption||'recommended';refreshQuote()}
+function resetQuoteWork({plan=true,estimate=true,reports=true}={}){
+  const key=estimateKey();
+  if(estimate){
+    state.estimate=[];state.transportAmount=0;state.repairOption='recommended';
+    localStorage.removeItem('safe-estimate');
+    if(key){localStorage.removeItem(key);localStorage.removeItem(key+':transport');localStorage.removeItem(key+':sent')}
+  }
+  if(reports){state.reports=[];state.reportReady=false;state.reportName='';state.reportReading=false;sessionStorage.removeItem('safe-realtor-reports')}
+  if(plan){state.plan=newPlan();state.planQuery='';if(planDraftKey())localStorage.removeItem(planDraftKey());keepPlanDraft()}
+  clearQuoteForm();updateCounts();renderDrawer();
+}
+function clearSessionWork(){const key=estimateKey();state.plan=null;state.plans=[];state.clientProfiles=[];state.planQuery='';state.estimate=[];state.transportAmount=0;state.repairOption='recommended';state.reportReady=false;state.reportName='';state.reports=[];state.reportReading=false;localStorage.removeItem('safe-estimate');sessionStorage.removeItem('safe-realtor-reports');if(planDraftKey())localStorage.removeItem(planDraftKey());if(key){localStorage.removeItem(key);localStorage.removeItem(key+':transport');localStorage.removeItem(key+':sent')};clearQuoteForm();updateCounts();renderDrawer()}
 function visitKey(){return state.account?.email?`safe-realtor-visits:${state.account.email.toLowerCase()}`:'safe-realtor-visits'}
 function loadVisits(){try{return JSON.parse(localStorage.getItem(visitKey())||'[]')}catch{return[]}}
 function saveVisits(list){localStorage.setItem(visitKey(),JSON.stringify(list));updateCounts()}
@@ -313,7 +325,9 @@ function removeRepair(id){state.estimate=state.estimate.filter(x=>x.id!==id);per
 function clearEstimate(){
   const n=state.estimate.length;if(!n)return;
   if(!confirm(t(`Remove all ${n} repairs from the estimate? This cannot be undone.`,`¿Quitar las ${n} reparaciones del estimado? No se puede deshacer.`)))return;
-  state.estimate=[];state.repairOption='';state.transportAmount=0;persistEstimate();
+  state.estimate=[];state.repairOption='recommended';state.transportAmount=0;persistEstimate();
+  if(estimateKey())localStorage.removeItem(estimateKey()+':sent');
+  clearQuoteForm();
   if(['estimates','search','report'].includes(state.route))render();
   toast(t('The estimate is empty','El estimado quedó vacío'));
 }
@@ -349,6 +363,13 @@ function openQuote(option){
   if(!state.estimate.length){toast(t('Add repairs before generating the quote.','Agrega reparaciones antes de generar la cotización.'));return}
   const chosen=option||state.repairOption||'recommended';
   state.repairOption=chosen;
+  clearQuoteForm();
+  const plan=state.plan;
+  if(plan&&(plan.clientName||plan.address||plan.clientEmail)){
+    if(el('quoteClient'))el('quoteClient').value=plan.clientName||'';
+    if(el('quoteEmail'))el('quoteEmail').value=plan.clientEmail||'';
+    if(el('quoteAddress'))el('quoteAddress').value=plan.address||'';
+  }
   syncQuoteSelect();
   refreshQuote();
   openModal('quoteModal');
@@ -391,7 +412,7 @@ function homeView(){
   <section class="today-panel"><div><span class="eyebrow">${t('TODAY','HOY')}</span><h2>${headline}</h2><p>${sub}</p></div><button class="button primary" data-route="${arrived.length?'messages':'followups'}">${arrived.length?t('Open job thread','Abrir conversación'):t('See today’s follow-ups','Ver seguimientos')} →</button></section>
   <section class="transaction-navigator"><div class="section-intro compact"><span class="eyebrow">${t('TRANSACTION STAGE','ETAPA DE LA TRANSACCIÓN')}</span><h2>${t('Where are you in the deal?','¿En qué parte del proceso estás?')}</h2><p>${t('Choose the stage and we will take you to the right tool.','Escoge la etapa y te llevamos a la herramienta correcta.')}</p></div><div class="transaction-steps"><button data-route="search" data-deal-stage="1"${stageOn(1)}><span>1</span><strong>${t('Showing or pre-offer','Visita o antes de la oferta')}</strong><small>${t('Check a repair price','Consultar un precio')}</small></button><button data-route="report" data-deal-stage="2"${stageOn(2)}><span>2</span><strong>${t('Under contract / due diligence','Bajo contrato / periodo de revisión')}</strong><small>${t('Review inspection findings','Revisar hallazgos')}</small></button><button data-route="estimates" data-deal-stage="3"${stageOn(3)}><span>3</span><strong>${t('Repair negotiation','Negociación de reparaciones')}</strong><small>${t('Prepare buyer/seller options','Preparar opciones')}</small></button><button data-route="followups" data-deal-stage="4"${stageOn(4)}><span>4</span><strong>${t('Closing and after closing','Cierre y después del cierre')}</strong><small>${t('Follow up and stay remembered','Dar seguimiento')}</small></button></div></section>
   <section class="workspace-choices"><div class="section-intro compact"><h2>${t('What do you want to do?','¿Qué quieres hacer?')}</h2><p>${t('Start with one task—the system keeps the client and property connected.','Comienza con una tarea; el sistema mantiene conectado al cliente y la propiedad.')}</p></div><div class="workspace-grid">
-    <button class="workspace-card plan-launch" data-route="repairplan"><span class="new-ribbon">${t('NEW','NUEVO')}</span><span class="workspace-icon">＋</span><strong>${t('Build my repair plan','Crear mi plan de reparaciones')}</strong><small>${t('Time, hourly labor and fixed price before approving','Tiempo, mano de obra por hora y precio fijo antes de aprobar')}</small><b>→</b></button>
+    <button class="workspace-card plan-launch" data-action="new-repair-plan"><span class="new-ribbon">${t('NEW','NUEVO')}</span><span class="workspace-icon">＋</span><strong>${t('Build my repair plan','Crear mi plan de reparaciones')}</strong><small>${t('Time, hourly labor and fixed price before approving','Tiempo, mano de obra por hora y precio fijo antes de aprobar')}</small><b>→</b></button>
     <button class="workspace-card coral-card" data-route="report"><span class="workspace-icon">PDF</span><strong>${t('Analyze inspection','Analizar inspección')}</strong><small>${t('Upload and organize findings','Subir y organizar problemas')}</small><b>→</b></button>
     <button class="workspace-card" data-route="search"><span class="workspace-icon">⌕</span><strong>${t(`Search ${count} repair prices`,`Buscar ${count} precios`)}</strong><small>${t('Find minor, medium and full scopes','Encuentra alcance menor, medio y completo')}</small><b>→</b></button>
     <button class="workspace-card" data-route="messages"><span class="workspace-icon">◌</span><strong>${t('Message a client','Mandar mensaje')}</strong><small>${t('Email, text or approved social channel','Correo, texto o red aprobada')}</small><b>→</b></button>
@@ -689,7 +710,12 @@ function bindPlan(){
   document.querySelectorAll('[data-plan-step]').forEach(b=>b.onclick=()=>planGo(Number(b.dataset.planStep)));
   document.querySelectorAll('[data-plan-next]').forEach(b=>b.onclick=()=>planGo(p.step+1));
   document.querySelectorAll('[data-plan-prev]').forEach(b=>b.onclick=()=>planGo(p.step-1));
-  if(el('planNew'))el('planNew').onclick=()=>{if(p.items.length&&!p.id&&!confirm(t('Start a new plan? The current draft has not been saved.','¿Empezar un plan nuevo? El borrador actual no se ha guardado.')))return;state.plan=newPlan();state.planQuery='';keepPlanDraft();render()};
+  if(el('planNew'))el('planNew').onclick=()=>{
+    const dirty=!!(p.items.length||p.clientName||p.address||state.estimate.length);
+    if(dirty&&!p.id&&!confirm(t('Start a new plan? The current draft and quote will be cleared.','¿Empezar un plan nuevo? Se borrará el borrador y la cotización actual.')))return;
+    resetQuoteWork({plan:true,estimate:true,reports:true});
+    render();
+  };
   if(el('planPicker'))el('planPicker').onchange=e=>{const row=(state.plans||[]).find(x=>String(x.id)===e.target.value);if(!row)return;state.plan=JSON.parse(JSON.stringify(row));keepPlanDraft();render()};
   if(el('planClient'))el('planClient').onchange=()=>{const c=clientRows().find(x=>x.name===el('planClient').value.trim());if(!c)return;if(el('planClientEmail')&&!el('planClientEmail').value)el('planClientEmail').value=c.email||'';if(el('planAddress')&&!el('planAddress').value)el('planAddress').value=c.address||''};
   ['planClient','planClientEmail','planAddress','planStage','planClose','planGoal','planDate','planWindow','planAccess'].forEach(id=>{const n=el(id);if(n)n.addEventListener('change',()=>{planReadForm(p);keepPlanDraft()})});
@@ -1269,6 +1295,14 @@ function bindPage(){
   if(el('transportAmount'))el('transportAmount').oninput=()=>{state.transportAmount=Math.max(0,Number(el('transportAmount').value)||0);persistEstimate();paintOptionPrices()};
   document.querySelectorAll('[data-action="support"]').forEach(b=>b.onclick=()=>{if(!state.loggedIn){state.pendingRoute='home';openModal('loginModal')}else openModal('requestModal')});
   document.querySelectorAll('[data-action="generate-quote"]').forEach(b=>b.onclick=()=>openQuote(state.repairOption));
+  document.querySelectorAll('[data-action="new-repair-plan"]').forEach(b=>b.onclick=()=>{
+    if(!state.loggedIn){state.pendingRoute='repairplan';openModal('loginModal');return}
+    const p=currentPlan();
+    const dirty=!!(p.items.length||p.clientName||p.address||p.id||state.estimate.length);
+    if(dirty&&!confirm(t('Start a new repair plan? Previous draft and quote details will be cleared.','¿Empezar un plan de reparaciones nuevo? Se borrarán el borrador y los datos de la cotización anterior.'))){navigate('repairplan');return}
+    if(dirty)resetQuoteWork({plan:true,estimate:true,reports:true});
+    navigate('repairplan');
+  });
   document.querySelectorAll('[data-action="open-estimate"]').forEach(b=>b.onclick=openDrawer);
   document.querySelectorAll('[data-action="back"]').forEach(b=>b.onclick=goBack);
   document.querySelectorAll('[data-search]').forEach(b=>b.onclick=()=>{state.query=b.dataset.search;navigate('search')});
