@@ -11,7 +11,16 @@ const copy={
     }
     async function refreshHub(rerender=false){
       if(!window.SafeApi){fillManagement();return false}
-      try{const before=JSON.stringify([liveJobs(),liveMessages()]);applyHub(await SafeApi.get('/api/safe/snapshot?portal=core'));fillManagement();if(rerender&&portalState.portal==='worker'&&before!==JSON.stringify([liveJobs(),liveMessages()]))renderPortal('worker');return true}
+      try{
+        const beforeJobs=JSON.stringify(liveJobs()),beforeMsgs=JSON.stringify(liveMessages());
+        applyHub(await SafeApi.get('/api/safe/snapshot?portal=core'));fillManagement();
+        if(portalState.portal==='worker'){
+          const jobsChanged=beforeJobs!==JSON.stringify(liveJobs()),msgsChanged=beforeMsgs!==JSON.stringify(liveMessages());
+          if(rerender&&jobsChanged)renderPortal('worker');
+          else if(msgsChanged)refreshMessageCenter();
+        }
+        return true;
+      }
       catch(e){console.warn('IndorDB snapshot unavailable',e);fillManagement();return false}
     }
     function liveJobs(){return portalState.hub?.workOrders||[]}
@@ -233,12 +242,20 @@ const copy={
       document.querySelectorAll('.wizard-back').forEach(b=>b.onclick=()=>{portalState.wizard=Math.max(1,portalState.wizard-1);rerender()});
       document.querySelectorAll('.wizard-send').forEach(b=>b.onclick=async()=>{busy(b,true,L('Sending…','Enviando…'));if(await sendWorkerRequest(true)){toast(L('Estimate request sent to Management','Solicitud de estimate enviada a Management'));resetWizard();rerender()}else busy(b,false)});
     }
+    function chatBubbleHtml(m){
+      return `<div class="bubble ${m.senderRole==='Worker'?'mine':''}">${m.senderRole==='Worker'?'':`<b>${esc(m.senderName)}</b><br>`}${esc(m.body)}<small>${esc(m.senderRole||'')} · ${esc(m.channel||'job')}</small></div>`;
+    }
+    function threadBubbles(){
+      const msgs=liveMessages();
+      const acts=fieldLog.items.filter(a=>a.kind!=='message'&&a.kind!=='reply');
+      if(!msgs.length&&!acts.length)return `<div class="bubble"><b>Management</b><br>${L('The assigned Realtor will receive your arrival and access requests here.','El Realtor asignado recibirá aquí tu llegada y solicitudes de acceso.')}<small>${esc(portalState.threadId||'IndorDB')}</small></div>`;
+      const stamp=v=>{const t=new Date(v||0).getTime();return Number.isFinite(t)?t:0};
+      return [...msgs.map(m=>({t:stamp(m.created||m.createdAt),html:chatBubbleHtml(m)})),...acts.map(a=>({t:stamp(a.createdAt),html:activityBubbleHtml(a)}))]
+        .sort((a,b)=>a.t-b.t).map(x=>x.html).join('');
+    }
     function renderMessageCenter(type){
       const isEmail=portalState.channel==='email';
-      const list=liveMessages();
-      const acts=activityBubbles();
-      const bubbles=!list.length&&acts?acts:(list.length?list.map(m=>`<div class="bubble ${m.senderRole==='Worker'?'mine':''}">${m.senderRole==='Worker'?'':`<b>${esc(m.senderName)}</b><br>`}${esc(m.body)}<small>${esc(m.senderRole||'')} · ${esc(m.channel||'job')}</small></div>`).join('')+acts:`<div class="bubble"><b>Management</b><br>${L('The assigned Realtor will receive your arrival and access requests here.','El Realtor asignado recibirá aquí tu llegada y solicitudes de acceso.')}<small>${esc(portalState.threadId||'IndorDB')}</small></div>`);
-      return `<aside class="message-center" id="messageCenter"><div class="message-tabs"><button class="channel-tab ${!isEmail?'active':''}" data-channel="message">${L('Shared job thread','Conversación del trabajo')}</button><button class="channel-tab ${isEmail?'active':''}" data-channel="email">Management</button></div><div class="messages">${isEmail?privateBubbles():bubbles}</div><div class="composer"><input id="portalComposer" maxlength="2000" placeholder="${isEmail?L('Write privately to Management…','Escribir privado a Management…'):L('Write to Realtor + Management…','Escribir a Realtor + Management…')}"><button id="portalSend" aria-label="${L('Send','Enviar')}">→</button></div></aside>`;
+      return `<aside class="message-center" id="messageCenter"><div class="message-tabs"><button class="channel-tab ${!isEmail?'active':''}" data-channel="message">${L('Shared job thread','Conversación del trabajo')}</button><button class="channel-tab ${isEmail?'active':''}" data-channel="email">Management</button></div><div class="messages">${isEmail?privateBubbles():threadBubbles()}</div><div class="composer"><input id="portalComposer" maxlength="2000" placeholder="${isEmail?L('Write privately to Management…','Escribir privado a Management…'):L('Write to Realtor + Management…','Escribir a Realtor + Management…')}"><button id="portalSend" aria-label="${L('Send','Enviar')}">→</button></div></aside>`;
     }
     function whenText(v){return new Date(v).toLocaleString(portalState.lang==='es'?'es-US':'en-US',{dateStyle:'short',timeStyle:'short'})}
     function privateBubbles(){
@@ -391,8 +408,8 @@ const copy={
       if(a.kind==='photos')return `▣ ${a.photos.length} ${L('photo(s)','foto(s)')} · ${dl} · ${a.address}${a.body?' — '+a.body:''}`;
       return `＋ ${L('Change requested','Cambio solicitado')} (${dl}): ${a.body}`;
     }
-    function activityBubbles(){
-      return fieldLog.items.filter(a=>a.kind!=='message'&&a.kind!=='reply').reverse().map(a=>`<div class="bubble mine">${esc(activityText(a))}${a.photos?.length?`<div class="fa-bubble-photos">${a.photos.slice(0,4).map(p=>`<img src="${p}" alt="">`).join('')}</div>`:''}<small>${esc(new Date(a.createdAt).toLocaleString(portalState.lang==='es'?'es-US':'en-US',{dateStyle:'short',timeStyle:'short'}))} · ${L('saved','guardado')}</small></div>`).join('');
+    function activityBubbleHtml(a){
+      return `<div class="bubble mine">${esc(activityText(a))}${a.photos?.length?`<div class="fa-bubble-photos">${a.photos.slice(0,4).map(p=>`<img src="${p}" alt="">`).join('')}</div>`:''}<small>${esc(new Date(a.createdAt).toLocaleString(portalState.lang==='es'?'es-US':'en-US',{dateStyle:'short',timeStyle:'short'}))} · ${L('saved','guardado')}</small></div>`;
     }
     function arrivalOf(a){const at=new Date(a.detail);return isNaN(at)?new Date(a.createdAt):at}
     function todayCheckin(){const d=new Date().toDateString();return fieldLog.items.find(a=>a.kind==='checkin'&&arrivalOf(a).toDateString()===d)}
